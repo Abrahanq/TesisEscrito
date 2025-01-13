@@ -1,0 +1,87 @@
+\begin{thebibliography}{10}
+
+\bibitem{ZHANG2021113}
+L.~Zhang, M.~Karimzadeh, M.~Welch, C.~McIntosh, and B.~Wang, ``Chapter 7 -
+  analytics methods and tools for integration of biomedical data in medicine,''
+  in {\em Artificial Intelligence in Medicine} (L.~Xing, M.~L. Giger, and J.~K.
+  Min, eds.), pp.~113--129, Academic Press, 2021.
+
+\bibitem{MedlineECG}
+M.~National Library~of Medicine, ``Electrocardiogram,'' 2020.
+
+\bibitem{Who}
+O.~Organizacion Mundial de~la Salud, ``Enfermedades cardiovasculares (cvds),''
+  2021.
+
+\bibitem{PanTompkins85}
+J.~Pan and W.~J. Tompkins, ``A real-time qrs detection algorithm,'' {\em IEEE
+  Transactions on Biomedical Engineering}, vol.~BME-32, no.~3, pp.~230--236,
+  1985.
+
+\bibitem{Laguna97}
+P.~Laguna, R.~Jané, S.~Olmos, N.~Thakor, H.~Rix, and P.~Caminal, ``Adaptive
+  estimation of qrs complex wave features of ecg signal by the hermite model,''
+  {\em Medical and biological, engineering and computing}, vol.~34, pp.~58--68,
+  02 1996.
+
+\bibitem{Herrero05}
+G.~Herrero, A.~Gotchev, I.~Christov, and K.~Egiazarian, ``Feature extraction
+  for heartbeat classification using independent component analysis and
+  matching pursuits,'' in {\em Proceedings. (ICASSP '05). IEEE International
+  Conference on Acoustics, Speech, and Signal Processing, 2005.}, vol.~4,
+  pp.~iv/725--iv/728 Vol. 4, 2005.
+
+\bibitem{Martinez04}
+J.~P. Martínez, R.~Almeida, S.~Olmos, A.~P. Rocha, and P.~Laguna, ``A
+  wavelet-based ecg delineator: Evaluation on standard databases,'' {\em IEEE
+  transactions on bio-medical engineering}, vol.~51, pp.~570--81, 05 2004.
+
+\bibitem{Sharma15}
+H.~Sharma and K.~Sharma, ``Baseline wander removal of ecg signals using hilbert
+  vibration decomposition,'' {\em Electronics Letters}, vol.~51, pp.~447--449,
+  03 2015.
+
+\bibitem{Khorrami10}
+H.~Khorrami and M.~Moavenian, ``A comparative study of dwt, cwt and dct
+  transformations in ecg arrhythmias classification,'' {\em Expert Syst.
+  Appl.}, vol.~37, pp.~5751--5757, 08 2010.
+
+\bibitem{Song05}
+M.~Song, J.~Lee, S.~Cho, K.-J. Lee, and S.~Yoo, ``Support vector machine based
+  arrhythmia classification using reduced features,'' {\em International
+  Journal of Control, Automation and Systems}, vol.~3, 12 2005.
+
+\bibitem{Yu07}
+S.-N. Yu and C.~Hsiang, ``Electrocardiogram beat classification based wavelet
+  and probabilistic neural network,'' {\em Pattern Recognition Letters},
+  vol.~28, pp.~1142--1150, 07 2007.
+
+\bibitem{Ye10}
+C.~Ye, M.~Coimbra, and B.~Kumar, ``Arrhythmia detection and classification
+  using morphological and dynamic features of ecg signals,'' {\em Conference
+  proceedings : ... Annual International Conference of the IEEE Engineering in
+  Medicine and Biology Society. IEEE Engineering in Medicine and Biology
+  Society. Conference}, vol.~2010, pp.~1918--21, 08 2010.
+
+\bibitem{Dugarte11}
+N.~Dugarte~Jerez, R.~Medina~Molina, and R.~Rojas~Sulbarán, ``Sistema para la
+  adquisición de la señal electrocardiógrafica de alta resolución,'' {\em
+  {Universidad, Ciencia y Tecnolog\~A\-a}}, vol.~15, pp.~206 -- 215, 12 2011.
+
+\bibitem{Zhang24}
+C.-J. Zhang, Yuan-Lu, F.-Q. Tang, H.-P. Cai, Y.-F. Qian, and Chao-Wang, ``Heart
+  failure classification using deep learning to extract spatiotemporal features
+  from ecg,'' {\em BMC Medical Informatics and Decision Making}, vol.~24, 01
+  2024.
+
+\bibitem{Astudillo24}
+V.~Astudillo, D.~Luna, and J.~Muñoz~Chaves, ``Clasificación de arritmias
+  cardiacas usando redes neuronales convolucionales en muestras de ecg,'' {\em
+  Revista EIA}, vol.~21, 01 2024.
+
+\bibitem{vincent2022}
+R.~Vincent, ``From a laboratory to the wearables: a review on history and
+  evolution of electrocardiogram,'' {\em Iberoamerican Journal of Medicine},
+  vol.~4, no.~4, pp.~248--255, 2022.
+
+\end{thebibliography}

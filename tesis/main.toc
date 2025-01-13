@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\chapternumberline {1}El problema}{2}{}%
+\contentsline {section}{\numberline {1.1}Justificación}{3}{}%
+\contentsline {section}{\numberline {1.2}Antecedentes}{3}{}%
+\contentsline {section}{\numberline {1.3}Objetivos}{6}{}%
+\contentsline {subsection}{Objetivo General}{6}{}%
+\contentsline {subsection}{Objetivos específicos}{6}{}%
+\contentsline {chapter}{\chapternumberline {2}Marco Teórico}{7}{}%
+\contentsline {section}{\numberline {2.1}Conceptos básicos}{7}{}%
+\contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{7}{}%
+\contentsline {section}{\numberline {2.2}Conceptos específicos}{10}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{11}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{12}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{13}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{14}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{15}{}%

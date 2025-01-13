@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: bibliografia.bib
+Warning--entry type for "MedlineECG" isn't style-file defined
+--line 16 of file bibliografia.bib
+Warning--entry type for "Who" isn't style-file defined
+--line 24 of file bibliografia.bib
+Name 2 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
+while executing---line 969 of file ieeetr.bst
+Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
+while executing---line 969 of file ieeetr.bst
+You've used 16 entries,
+            1876 wiz_defined-function locations,
+            596 strings with 6810 characters,
+and the built_in function-call counts, 4843 in all, are:
+= -- 472
+> -- 193
+< -- 0
++ -- 70
+- -- 54
+* -- 366
+:= -- 678
+add.period$ -- 16
+call.type$ -- 16
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 230
+empty$ -- 437
+format.name$ -- 54
+if$ -- 1188
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 14
+newline$ -- 51
+num.names$ -- 18
+pop$ -- 40
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 198
+stack$ -- 0
+substring$ -- 372
+swap$ -- 114
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 40
+width$ -- 18
+write$ -- 155
+(There were 2 error messages)
