@@ -9,8 +9,11 @@
 \contentsline {section}{\numberline {2.1}Conceptos básicos}{7}{}%
 \contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{7}{}%
 \contentsline {section}{\numberline {2.2}Conceptos específicos}{10}{}%
-\contentsline {chapter}{\chapternumberline {3}Marco experimental}{11}{}%
-\contentsline {chapter}{\chapternumberline {4}Resultados}{12}{}%
-\contentsline {part}{\partnumberline {I}Conclusiones}{13}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusiones}{14}{}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{15}{}%
+\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{10}{}%
+\contentsline {subsection}{Redes Neuronales}{11}{}%
+\contentsline {subsection}{K-means}{11}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{12}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{13}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{14}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{15}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{16}{}%
