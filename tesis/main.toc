@@ -1,19 +1,23 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\chapternumberline {1}El problema}{2}{}%
 \contentsline {section}{\numberline {1.1}Justificación}{3}{}%
-\contentsline {section}{\numberline {1.2}Antecedentes}{3}{}%
-\contentsline {section}{\numberline {1.3}Objetivos}{6}{}%
-\contentsline {subsection}{Objetivo General}{6}{}%
-\contentsline {subsection}{Objetivos específicos}{6}{}%
-\contentsline {chapter}{\chapternumberline {2}Marco Teórico}{7}{}%
-\contentsline {section}{\numberline {2.1}Conceptos básicos}{7}{}%
-\contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{7}{}%
-\contentsline {section}{\numberline {2.2}Conceptos específicos}{10}{}%
-\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{10}{}%
-\contentsline {subsection}{Redes Neuronales}{11}{}%
-\contentsline {subsection}{K-means}{11}{}%
-\contentsline {chapter}{\chapternumberline {3}Marco experimental}{12}{}%
-\contentsline {chapter}{\chapternumberline {4}Resultados}{13}{}%
-\contentsline {part}{\partnumberline {I}Conclusiones}{14}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusiones}{15}{}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{16}{}%
+\contentsline {section}{\numberline {1.2}Objetivos}{3}{}%
+\contentsline {subsection}{Objetivo General}{3}{}%
+\contentsline {subsection}{Objetivos específicos}{3}{}%
+\contentsline {chapter}{\chapternumberline {2}Marco Teórico}{5}{}%
+\contentsline {section}{\numberline {2.1}Antecedentes}{5}{}%
+\contentsline {subsection}{A Real-Time QRS Detection Algorithm \cite {PanTompkins85}}{5}{}%
+\contentsline {subsection}{A Wavelet-Based ECG Delineator: Evaluation on Standard Databases \cite {Martinez04}}{6}{}%
+\contentsline {subsection}{Nombre del articulo}{7}{}%
+\contentsline {section}{\numberline {2.2}Conceptos básicos}{10}{}%
+\contentsline {subsection}{El corazón}{10}{}%
+\contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{10}{}%
+\contentsline {section}{\numberline {2.3}Conceptos específicos}{13}{}%
+\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{13}{}%
+\contentsline {subsection}{Redes Neuronales}{13}{}%
+\contentsline {subsection}{K-means}{14}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{15}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{16}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{17}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{18}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{19}{}%

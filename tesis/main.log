@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  7 FEB 2025 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  14 MAY 2025 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,141 +509,156 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 17.
+(Font)              <12> on input line 21.
 ) [2] [1
 
 ] [2
 
+] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+
+Overfull \hbox (100.39198pt too wide) in paragraph at lines 105--107
+[]\T1/cmr/bx/n/10.95 Publicación: \T1/cmr/m/n/10.95 IEEE Trans-ac-tions on Biom
+ed-i-cal En-gi-neer-ing \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1109/TBME.
+1985.325532 
+ []
+
+[5
+
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Overfull \hbox (100.39198pt too wide) in paragraph at lines 138--140
+[]\T1/cmr/bx/n/10.95 Publicación: \T1/cmr/m/n/10.95 IEEE Trans-ac-tions on Biom
+ed-i-cal En-gi-neer-ing \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1109/TBME.
+2003.821031 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Underfull \hbox (badness 10000) in paragraph at lines 162--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Underfull \hbox (badness 10000) in paragraph at lines 162--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Underfull \hbox (badness 10000) in paragraph at lines 162--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Underfull \hbox (badness 10000) in paragraph at lines 162--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Underfull \hbox (badness 10000) in paragraph at lines 162--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Underfull \hbox (badness 10000) in paragraph at lines 162--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--94
+Underfull \hbox (badness 10000) in paragraph at lines 162--175
 
  []
 
-[3] [4] [5] [6]
-Overfull \hbox (0.19392pt too wide) in paragraph at lines 112--114
+[7] [8]
+Overfull \hbox (0.19392pt too wide) in paragraph at lines 182--195
 \T1/cmr/m/n/10.95 disponible a la época, pero evolu-cio-nan-do con-tin-u-a-ment
 e, cre-an-do así exámenes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+Overfull \hbox (1.13696pt too wide) in paragraph at lines 182--195
+\T1/cmr/m/n/10.95 El primer ^^Selec-tro-gra-ma^^T hu-mano fue pub-li-ca-do en 1
+887 por el fisiól-o-go británi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--126
+Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--126
+Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--126
+Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--126
+Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--126
+Underfull \hbox (badness 10000) in paragraph at lines 182--195
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--126
-
- []
-
-[7
-
-] [8]
-<Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png, id=53, 1041.8925pt x 1027.8
+[9] [10] [11]
+<Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png, id=63, 1041.8925pt x 1027.8
 4pt>
 File: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png Graphic file (type png)
 
 <use Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>
 Package pdftex.def Info: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png  use
-d on input line 135.
+d on input line 199.
 (pdftex.def)             Requested size: 184.5pt x 182.00766pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--142
+Underfull \hbox (badness 10000) in paragraph at lines 196--206
 
  []
 
-[9 <./Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[12 <./Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 158--160
+[13] [14] [15
 
- []
+] [16
 
-[11] [12
+] [17
 
-] [13
-
-] [14
-
-] (./main.bbl [15
+] (./main.bbl [18
 
 ]
 bibitemlist
-[16
+[19
 
-]) [17]
+]) [20]
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -654,11 +669,11 @@ LaTeX Info: Redefining \% on input line 9.
 Here is how much of TeX's memory you used:
  7408 strings out of 480247
  110349 string characters out of 5896106
- 459949 words of memory out of 5000000
+ 459950 words of memory out of 5000000
  25305 multiletter control sequences out of 15000+600000
  485355 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,12n,68p,1975b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,68p,2574b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf
 /fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pf
@@ -670,10 +685,10 @@ onts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (20 pages, 325396 bytes).
+Output written on main.pdf (23 pages, 332771 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 149 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
