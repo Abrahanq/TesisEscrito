@@ -2345,52 +2345,50 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">bibliografia.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">ZHANG2021113</bcf:citekey>
     <bcf:citekey order="2">MedlineECG</bcf:citekey>
     <bcf:citekey order="3">Who</bcf:citekey>
-    <bcf:citekey order="4">PanTompkins85</bcf:citekey>
-    <bcf:citekey order="5">Laguna97</bcf:citekey>
-    <bcf:citekey order="6">Herrero05</bcf:citekey>
-    <bcf:citekey order="7">Martinez04</bcf:citekey>
-    <bcf:citekey order="8">Sharma15</bcf:citekey>
-    <bcf:citekey order="9">Khorrami10</bcf:citekey>
-    <bcf:citekey order="10">Song05</bcf:citekey>
-    <bcf:citekey order="11">Yu07</bcf:citekey>
-    <bcf:citekey order="12">Ye10</bcf:citekey>
-    <bcf:citekey order="13">Dugarte11</bcf:citekey>
-    <bcf:citekey order="14">Zhang24</bcf:citekey>
-    <bcf:citekey order="15">Astudillo24</bcf:citekey>
-    <bcf:citekey order="16">PanTompkins85</bcf:citekey>
-    <bcf:citekey order="17">Laguna97</bcf:citekey>
-    <bcf:citekey order="18">Martinez04</bcf:citekey>
-    <bcf:citekey order="19">Herrero05</bcf:citekey>
-    <bcf:citekey order="20">Sharma15</bcf:citekey>
-    <bcf:citekey order="21">Song05</bcf:citekey>
-    <bcf:citekey order="22">Ye10</bcf:citekey>
-    <bcf:citekey order="23">Khorrami10</bcf:citekey>
-    <bcf:citekey order="24">Dugarte11</bcf:citekey>
-    <bcf:citekey order="25">vincent2022</bcf:citekey>
-    <bcf:citekey order="26">vincent2022</bcf:citekey>
-    <bcf:citekey order="27">vincent2022</bcf:citekey>
-    <bcf:citekey order="28">ZHANG2021113</bcf:citekey>
-    <bcf:citekey order="29">MedlineECG</bcf:citekey>
-    <bcf:citekey order="30">Who</bcf:citekey>
-    <bcf:citekey order="31">PanTompkins85</bcf:citekey>
-    <bcf:citekey order="32">Laguna97</bcf:citekey>
-    <bcf:citekey order="33">Herrero05</bcf:citekey>
-    <bcf:citekey order="34">Martinez04</bcf:citekey>
-    <bcf:citekey order="35">Sharma15</bcf:citekey>
-    <bcf:citekey order="36">Khorrami10</bcf:citekey>
-    <bcf:citekey order="37">Song05</bcf:citekey>
-    <bcf:citekey order="38">Yu07</bcf:citekey>
-    <bcf:citekey order="39">Ye10</bcf:citekey>
-    <bcf:citekey order="40">Dugarte11</bcf:citekey>
-    <bcf:citekey order="41">Zhang24</bcf:citekey>
-    <bcf:citekey order="42">Astudillo24</bcf:citekey>
-    <bcf:citekey order="43">vincent2022</bcf:citekey>
+    <bcf:citekey order="4">Martinez04</bcf:citekey>
+    <bcf:citekey order="5">Sharma15</bcf:citekey>
+    <bcf:citekey order="6">Khorrami10</bcf:citekey>
+    <bcf:citekey order="7">Song05</bcf:citekey>
+    <bcf:citekey order="8">Yu07</bcf:citekey>
+    <bcf:citekey order="9">Ye10</bcf:citekey>
+    <bcf:citekey order="10">Dugarte11</bcf:citekey>
+    <bcf:citekey order="11">Zhang24</bcf:citekey>
+    <bcf:citekey order="12">Astudillo24</bcf:citekey>
+    <bcf:citekey order="13">PanTompkins85</bcf:citekey>
+    <bcf:citekey order="14">Laguna97</bcf:citekey>
+    <bcf:citekey order="15">Martinez04</bcf:citekey>
+    <bcf:citekey order="16">Herrero05</bcf:citekey>
+    <bcf:citekey order="17">Sharma15</bcf:citekey>
+    <bcf:citekey order="18">Song05</bcf:citekey>
+    <bcf:citekey order="19">Ye10</bcf:citekey>
+    <bcf:citekey order="20">Khorrami10</bcf:citekey>
+    <bcf:citekey order="21">Dugarte11</bcf:citekey>
+    <bcf:citekey order="22">vincent2022</bcf:citekey>
+    <bcf:citekey order="23">vincent2022</bcf:citekey>
+    <bcf:citekey order="24">vincent2022</bcf:citekey>
+    <bcf:citekey order="25">Joliiffe16</bcf:citekey>
+    <bcf:citekey order="26">ZHANG2021113</bcf:citekey>
+    <bcf:citekey order="27">MedlineECG</bcf:citekey>
+    <bcf:citekey order="28">Who</bcf:citekey>
+    <bcf:citekey order="29">Martinez04</bcf:citekey>
+    <bcf:citekey order="30">Sharma15</bcf:citekey>
+    <bcf:citekey order="31">Khorrami10</bcf:citekey>
+    <bcf:citekey order="32">Song05</bcf:citekey>
+    <bcf:citekey order="33">Yu07</bcf:citekey>
+    <bcf:citekey order="34">Ye10</bcf:citekey>
+    <bcf:citekey order="35">Dugarte11</bcf:citekey>
+    <bcf:citekey order="36">Zhang24</bcf:citekey>
+    <bcf:citekey order="37">Astudillo24</bcf:citekey>
+    <bcf:citekey order="38">PanTompkins85</bcf:citekey>
+    <bcf:citekey order="39">Laguna97</bcf:citekey>
+    <bcf:citekey order="40">Herrero05</bcf:citekey>
+    <bcf:citekey order="41">vincent2022</bcf:citekey>
+    <bcf:citekey order="42">Joliiffe16</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2399,13 +2397,4 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="none/global//global/global"
-                type="entry"
-                sortingtemplatename="none"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>
