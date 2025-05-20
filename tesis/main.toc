@@ -8,16 +8,21 @@
 \contentsline {section}{\numberline {2.1}Antecedentes}{5}{}%
 \contentsline {subsection}{A Real-Time QRS Detection Algorithm \cite {PanTompkins85}}{5}{}%
 \contentsline {subsection}{A Wavelet-Based ECG Delineator: Evaluation on Standard Databases \cite {Martinez04}}{6}{}%
-\contentsline {subsection}{Nombre del articulo}{7}{}%
-\contentsline {section}{\numberline {2.2}Conceptos básicos}{10}{}%
-\contentsline {subsection}{El corazón}{10}{}%
-\contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{10}{}%
-\contentsline {section}{\numberline {2.3}Conceptos específicos}{13}{}%
-\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{13}{}%
-\contentsline {subsection}{Redes Neuronales}{13}{}%
-\contentsline {subsection}{K-means}{14}{}%
-\contentsline {chapter}{\chapternumberline {3}Marco experimental}{15}{}%
-\contentsline {chapter}{\chapternumberline {4}Resultados}{16}{}%
-\contentsline {part}{\partnumberline {I}Conclusiones}{17}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusiones}{18}{}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{19}{}%
+\contentsline {subsection}{Feature extraction for heartbeat classification using independent component analysis and matching pursuits \cite {Herrero05}}{7}{}%
+\contentsline {subsection}{Sistema de adquisición multicanal y análisis de la señal electrocardiográfica de alta resolución aplicado a pacientes chagásicos \cite {Dugarte11}}{8}{}%
+\contentsline {subsection}{A comparative study of DWT, CWT and DCT transformations in ECG arrhythmias classification \cite {Khorrami10}.}{9}{}%
+\contentsline {subsection}{Comparison of FCM, PCA and WT techniques for classification ECG arrhythmias using artificial neural network \cite {Ceylan07}.}{10}{}%
+\contentsline {subsection}{Baseline wander removal of ECG signals using Hilbert vibration decomposition \cite {Sharma15}.}{11}{}%
+\contentsline {subsection}{Nombre del articulo}{12}{}%
+\contentsline {section}{\numberline {2.2}Conceptos básicos}{12}{}%
+\contentsline {subsection}{El corazón}{12}{}%
+\contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{12}{}%
+\contentsline {section}{\numberline {2.3}Conceptos específicos}{14}{}%
+\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{14}{}%
+\contentsline {subsection}{Redes Neuronales}{16}{}%
+\contentsline {subsection}{K-means}{16}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{17}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{18}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{19}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{20}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{21}{}%

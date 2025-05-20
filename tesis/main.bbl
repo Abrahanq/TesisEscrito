@@ -18,11 +18,24 @@ J.~Pan and W.~J. Tompkins, ``A real-time qrs detection algorithm,'' {\em IEEE
   Transactions on Biomedical Engineering}, vol.~BME-32, no.~3, pp.~230--236,
   1985.
 
-\bibitem{Laguna97}
-P.~Laguna, R.~Jané, S.~Olmos, N.~Thakor, H.~Rix, and P.~Caminal, ``Adaptive
-  estimation of qrs complex wave features of ecg signal by the hermite model,''
-  {\em Medical and biological, engineering and computing}, vol.~34, pp.~58--68,
-  02 1996.
+\bibitem{Martinez04}
+J.~P. Martínez, R.~Almeida, S.~Olmos, A.~P. Rocha, and P.~Laguna, ``A
+  wavelet-based ecg delineator: Evaluation on standard databases,'' {\em IEEE
+  transactions on bio-medical engineering}, vol.~51, pp.~570--81, 05 2004.
+
+\bibitem{arritmiadb}
+G.~Moody and R.~Mark, ``The impact of the mit-bih arrhythmia database,'' {\em
+  IEEE Engineering in Medicine and Biology Magazine}, vol.~20, no.~3,
+  pp.~45--50, 2001.
+
+\bibitem{qtdb}
+
+
+\bibitem{st-tdb}
+A.~TADDEI, G.~DISTANTE, M.~EMDIN, P.~PISANI, G.~B. MOODY, C.~ZEELENBERG, and
+  C.~MARCHESI, ``The european st-t database: standard for evaluating systems
+  for the analysis of st-t changes in ambulatory electrocardiography,'' {\em
+  European Heart Journal}, vol.~13, pp.~1164--1172, 09 1992.
 
 \bibitem{Herrero05}
 G.~Herrero, A.~Gotchev, I.~Christov, and K.~Egiazarian, ``Feature extraction
@@ -31,20 +44,34 @@ G.~Herrero, A.~Gotchev, I.~Christov, and K.~Egiazarian, ``Feature extraction
   Conference on Acoustics, Speech, and Signal Processing, 2005.}, vol.~4,
   pp.~iv/725--iv/728 Vol. 4, 2005.
 
-\bibitem{Martinez04}
-J.~P. Martínez, R.~Almeida, S.~Olmos, A.~P. Rocha, and P.~Laguna, ``A
-  wavelet-based ecg delineator: Evaluation on standard databases,'' {\em IEEE
-  transactions on bio-medical engineering}, vol.~51, pp.~570--81, 05 2004.
+\bibitem{Dugarte11}
+N.~Dugarte~Jerez, R.~Medina~Molina, and R.~Rojas~Sulbarán, ``Sistema para la
+  adquisición de la señal electrocardiógrafica de alta resolución,'' {\em
+  {Universidad, Ciencia y Tecnolog\~A\-a}}, vol.~15, pp.~206 -- 215, 12 2011.
 
-\bibitem{Sharma15}
-H.~Sharma and K.~Sharma, ``Baseline wander removal of ecg signals using hilbert
-  vibration decomposition,'' {\em Electronics Letters}, vol.~51, pp.~447--449,
-  03 2015.
+\bibitem{cardiosoft}
+Cardiosoft, ``hfqrs-ecg - high frequency qrs electrocardiograph.''
 
 \bibitem{Khorrami10}
 H.~Khorrami and M.~Moavenian, ``A comparative study of dwt, cwt and dct
   transformations in ecg arrhythmias classification,'' {\em Expert Syst.
   Appl.}, vol.~37, pp.~5751--5757, 08 2010.
+
+\bibitem{Ceylan07}
+R.~Ceylan and Y.~Özbay, ``Comparison of fcm, pca and wt techniques for
+  classification ecg arrhythmias using artificial neural network,'' {\em Expert
+  Systems with Applications}, vol.~33, no.~2, pp.~286--295, 2007.
+
+\bibitem{Laguna97}
+P.~Laguna, R.~Jané, S.~Olmos, N.~Thakor, H.~Rix, and P.~Caminal, ``Adaptive
+  estimation of qrs complex wave features of ecg signal by the hermite model,''
+  {\em Medical and biological, engineering and computing}, vol.~34, pp.~58--68,
+  02 1996.
+
+\bibitem{Sharma15}
+H.~Sharma and K.~Sharma, ``Baseline wander removal of ecg signals using hilbert
+  vibration decomposition,'' {\em Electronics Letters}, vol.~51, pp.~447--449,
+  03 2015.
 
 \bibitem{Song05}
 M.~Song, J.~Lee, S.~Cho, K.-J. Lee, and S.~Yoo, ``Support vector machine based
@@ -62,11 +89,6 @@ C.~Ye, M.~Coimbra, and B.~Kumar, ``Arrhythmia detection and classification
   proceedings : ... Annual International Conference of the IEEE Engineering in
   Medicine and Biology Society. IEEE Engineering in Medicine and Biology
   Society. Conference}, vol.~2010, pp.~1918--21, 08 2010.
-
-\bibitem{Dugarte11}
-N.~Dugarte~Jerez, R.~Medina~Molina, and R.~Rojas~Sulbarán, ``Sistema para la
-  adquisición de la señal electrocardiógrafica de alta resolución,'' {\em
-  {Universidad, Ciencia y Tecnolog\~A\-a}}, vol.~15, pp.~206 -- 215, 12 2011.
 
 \bibitem{Zhang24}
 C.-J. Zhang, Yuan-Lu, F.-Q. Tang, H.-P. Cai, Y.-F. Qian, and Chao-Wang, ``Heart
