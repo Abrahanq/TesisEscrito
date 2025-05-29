@@ -8,16 +8,24 @@
 \contentsline {section}{\numberline {2.1}Antecedentes}{5}{}%
 \contentsline {subsection}{A Real-Time QRS Detection Algorithm \cite {PanTompkins85}}{5}{}%
 \contentsline {subsection}{A Wavelet-Based ECG Delineator: Evaluation on Standard Databases \cite {Martinez04}}{6}{}%
-\contentsline {subsection}{Nombre del articulo}{7}{}%
-\contentsline {section}{\numberline {2.2}Conceptos básicos}{10}{}%
-\contentsline {subsection}{El corazón}{10}{}%
-\contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{10}{}%
-\contentsline {section}{\numberline {2.3}Conceptos específicos}{13}{}%
-\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{13}{}%
-\contentsline {subsection}{Redes Neuronales}{13}{}%
-\contentsline {subsection}{K-means}{14}{}%
-\contentsline {chapter}{\chapternumberline {3}Marco experimental}{15}{}%
-\contentsline {chapter}{\chapternumberline {4}Resultados}{16}{}%
-\contentsline {part}{\partnumberline {I}Conclusiones}{17}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusiones}{18}{}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{19}{}%
+\contentsline {subsection}{Feature extraction for heartbeat classification using independent component analysis and matching pursuits \cite {Herrero05}}{7}{}%
+\contentsline {subsection}{Sistema de adquisición multicanal y análisis de la señal electrocardiográfica de alta resolución aplicado a pacientes chagásicos \cite {Dugarte11}}{8}{}%
+\contentsline {subsection}{A comparative study of DWT, CWT and DCT transformations in ECG arrhythmias classification \cite {Khorrami10}.}{9}{}%
+\contentsline {subsection}{Comparison of FCM, PCA and WT techniques for classification ECG arrhythmias using artificial neural network \cite {Ceylan07}.}{10}{}%
+\contentsline {subsection}{Baseline wander removal of ECG signals using Hilbert vibration decomposition \cite {Sharma15}.}{11}{}%
+\contentsline {subsection}{Heart failure classification using deep learning to extract spatiotemporal features from ECG \cite {Zhang24}}{12}{}%
+\contentsline {subsection}{Clasificación de arritmias cardíacas usando redes neuronales convolucionales en muestras de ECG \cite {Astudillo24}}{13}{}%
+\contentsline {section}{\numberline {2.2}Conceptos básicos}{14}{}%
+\contentsline {subsection}{El corazón}{14}{}%
+\contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{14}{}%
+\contentsline {subsection}{El sistema de conducción}{17}{}%
+\contentsline {subsubsection}{Sistema de His-Purkinje}{19}{}%
+\contentsline {section}{\numberline {2.3}Conceptos específicos}{20}{}%
+\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{20}{}%
+\contentsline {subsection}{Redes Neuronales}{20}{}%
+\contentsline {subsection}{K-means}{21}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{22}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{23}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{24}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{25}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{26}{}%

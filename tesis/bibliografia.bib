@@ -29,6 +29,61 @@ abstract = {Recent technologies have enabled us to collect diverse types of geno
     urldate = {08/07/2024}
 }
 
+@online{cardiosoft,
+	author = {Cardiosoft},
+	title = {hfqrs-ecg - high frequency qrs electrocardiograph},
+	url = {http://www.cardiosoft.com/},
+	urldate = {16/05/2025}
+}
+
+%@online{qtdb,
+%	author = {},
+%	title = {},
+%	year = {},
+%	url = {},
+%	urldate = {}
+%}
+
+
+@ARTICLE{arritmiadb,
+	author={Moody, G.B. and Mark, R.G.},
+	journal={IEEE Engineering in Medicine and Biology Magazine}, 
+	title={The impact of the MIT-BIH Arrhythmia Database}, 
+	year={2001},
+	volume={20},
+	number={3},
+	pages={45-50},
+	keywords={Databases;Electrocardiography;History;Heart;Rhythm;Laboratories;Aging;Materials testing;Detectors;Manufacturing},
+	doi={10.1109/51.932724}}
+
+@INPROCEEDINGS{qtdb,
+	author={Laguna, P. and Mark, R.G. and Goldberg, A. and Moody, G.B.},
+	booktitle={Computers in Cardiology 1997}, 
+	title={A database for evaluation of algorithms for measurement of QT and other waveform intervals in the ECG}, 
+	year={1997},
+	volume={},
+	number={},
+	pages={673-676},
+	keywords={Databases;Electrocardiography;Cardiology;Morphology;Medical diagnostic imaging;Ambient intelligence;Cardiac disease;Heart rate;Detectors;Algorithm design and analysis},
+	doi={10.1109/CIC.1997.648140}}
+
+@article{st-tdb,
+	author = {TADDEI, A. and DISTANTE, G. and EMDIN, M. and PISANI, P. and MOODY, G. B. and ZEELENBERG, C. and MARCHESI, C.},
+	title = {The European ST-T database: standard for evaluating systems for the analysis of ST-T changes in ambulatory electrocardiography},
+	journal = {European Heart Journal},
+	volume = {13},
+	number = {9},
+	pages = {1164-1172},
+	year = {1992},
+	month = {09},
+	abstract = {The project for the development of the European ST- T annotated Database originated from a ‘Concerted A ction’ on Ambulatory Monitoring, set up by the European Community in 1985. The goal was to prototype an ECG database for assessing the quality of ambulatory ECG monitoring (A ECG) systems. After the ‘concerted action’, the development of the full database was coordinated by the Institute of Clinical Physiology of the National Research Council (CNR) in Pisa and the Thoraxcenter of Erasmus University in Rotterdam. Thirteen research groups from eight countries provided A ECG tapes and annotated beat by beat the selected 2-channel records, each 2 h in duration. ST segment (ST) and T-wave (T) changes were identified and their onset, offset and peak beats annotated in addition to QRSs, beat types, rhythm and signal quality changes. In 1989, the European Society of Cardiology sponsored the remainder of the project. Recently the 90 records were completed and stored on CD-ROM. The records include 372 ST and 423 T changes. In cooperation with the Biomedical Engineering Centre of MIT (developers of the MIT-BIH arrhythmia database), the annotation scheme was revised to be consistent with both MIT-BIH and American Heart Association formats.},
+	issn = {0195-668X},
+	doi = {10.1093/oxfordjournals.eurheartj.a060332},
+	url = {https://doi.org/10.1093/oxfordjournals.eurheartj.a060332},
+	eprint = {https://academic.oup.com/eurheartj/article-pdf/13/9/1164/1234456/13-9-1164.pdf},
+}
+
+
 @article{Huang2019,
   author={Huang, Jingshan and Chen, Binqiang and Yao, Bin and He, Wangpeng},
   journal={IEEE Access}, 
@@ -192,6 +247,8 @@ doi = {10.1109/IEMBS.2010.5627645}
    publisher = {scielon},
    }
 
+
+
 @article{Zhang24,
 author = {Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang,},
 year = {2024},
@@ -207,7 +264,7 @@ doi = {10.1186/s12911-024-02415-4}
 author = {Astudillo, Victor and Luna, David and Muñoz Chaves, Javier},
 year = {2024},
 month = {01},
-pages = {},
+pages = {1 - 22},
 title = {Clasificación de arritmias cardiacas usando redes neuronales convolucionales en muestras de ECG},
 volume = {21},
 journal = {Revista EIA},
@@ -232,4 +289,28 @@ title = {Principal component analysis: a review and recent developments.},
 journal = {Philosophical transaction. Series A, Mathematical, physical, and engineering sciences},
 year = {2016},
 doi = {10.1098/rsta.2015.0202}
+}
+
+@article{Ceylan07,
+	title = {Comparison of FCM, PCA and WT techniques for classification ECG arrhythmias using artificial neural network},
+	journal = {Expert Systems with Applications},
+	volume = {33},
+	number = {2},
+	pages = {286-295},
+	year = {2007},
+	issn = {0957-4174},
+	doi = {https://doi.org/10.1016/j.eswa.2006.05.014},
+	url = {https://www.sciencedirect.com/science/article/pii/S0957417406001424},
+	author = {Rahime Ceylan and Yüksel Özbay},
+	keywords = {Principal component analysis, Wavelet transform, Fuzzy c-means clustering, ECG, Arrhythmia, Artificial neural network},
+	abstract = {Principal component analysis (PCA) and wavelet transform (WT) are two powerful techniques for feature extraction. In addition, fuzzy c-means clustering (FCM) is among considerable techniques for data reduction. In other words, the aim of using FCM is to decrease the number of segments by grouping similar segments in training data. In this paper, four different structures, FCM-NN, PCA-NN, FCM-PCA-NN and WT-NN, are formed by using these two techniques and fuzzy c-means clustering. In addition, FCM-PCA-NN is the new method proposed in this paper for classification of ECG. This paper presents a comparative study of the classification accuracy of ECG signals by using these four structures for computationally efficient early diagnosis. Neural network used in this study is a well-known neural network architecture named as multi-layered perceptron (MLP) with backpropagation training algorithm. The ECG signals taken from MIT-BIH ECG database, are used in training to classify 10 different arrhythmias. These are normal sinus rhythm, sinus bradycardia, ventricular tachycardia, sinus arrhythmia, atrial premature contraction, paced beat, right bundle branch block, left bundle branch block, atrial fibrillation and atrial flutter. Before testing, the proposed structures are trained by backpropagation algorithm. All of the structures are tested by using experimental ECG records of 92 patients (40 male and 52 female, average age is 39.75±19.06). The test results suggest that FCM-PCA-NN structure can generalize better than PCA-NN and is faster than NN, FCM-NN and WT-NN.}
+}
+
+@incollection{fbbva,
+	author = {Azcona Luis},
+	title = {El electrocardiograma},
+	booktitle = {Libro de la salud del hospital clínico San Carlos y la Fundación BBVA},
+	publisher = {Editorial Nerea, S.A.},
+	year = {2009},
+	pages = {49-56},
 }
