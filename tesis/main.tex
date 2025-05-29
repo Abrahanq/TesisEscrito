@@ -105,7 +105,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Publicación:} IEEE Transactions on Biomedical Engineering
 \textbf{DOI:} 10.1109/TBME.1985.325532
 
-\textbf{Resumen:} Pan y Tompkins presentan el primer algoritmo para detectar en tiempo real el complejo QRS de las señales de ECG. Este algoritmo es capaz de reconocer con fiabilidad los complejos QRS basándose en análisis digitales de la pendiente, la amplitud y la anchura. Además plantan las bases de filtrado que se le debe hacer a una señal de un ECG para reducir las falsas detecciones causadas por los distintos tipos de interferencias presentes en las señales de ECG, aumentando así la sensibilidad de la detección.
+\textbf{Resumen:} Pan y Tompkins presentan el primer algoritmo para detectar en tiempo real el complejo QRS de las señales de ECG. Este algoritmo es capaz de reconocer con fiabilidad los complejos QRS basándose en análisis digitales de la pendiente, la amplitud y la anchura. Además, se plantan las bases de filtrado que se le debe hacer a una señal de ECG para reducir las falsas detecciones causadas por los distintos tipos de interferencias presentes en las señales de ECG, aumentando así la sensibilidad de la detección.
 
 \textbf{Metodología:} 
 \begin{enumerate}
@@ -121,6 +121,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 	\item Se reportó que el porcentaje de acierto del QRS fue de 99.3\%
 \end{itemize}
 
+%Esto está comentado porque no me parecio apropiado poner este articulo entre los antecedentes
 %\subsection{Adaptative estimation of QRS complex wave features of ECG signal by the Hermite model \cite{Laguna97}}
 %\textbf{Autores:} Laguna, P.; Jané, R.; Olmos, S.; Thakor N.V.; Rix, H.; Caminal, P.
 %
@@ -138,20 +139,20 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Publicación:} IEEE Transactions on Biomedical Engineering
 \textbf{DOI:} 10.1109/TBME.2003.821031
 
-\textbf{Resumen:} En este artículo, desarrollan y evalúan un robusto sistema de delineación de ECG de una sola derivación basado en las transformada de ondícula (WT). Primeramente, detectan los complejos QRS para luego delimitar cada QRS, detectando e identificando los picos de las ondas individuales, así como también, los inicios y finales de cada complejo QRS. Finalmente, se realiza la determinación de los picos, inicios y finales de las ondas P y T. Posteriormente, se evalúa este algoritmo en varias bases de datos anotadas manualmente, como MIT-BIH Arritmia \cite{arritmiadb}, QT \cite{qtdb}, ST-T Europea \cite{st-tdb} y otras bases de datos, desarrolladas para propósitos de validación.
+\textbf{Resumen:} En este artículo, desarrollan y evalúan un robusto sistema de delineación de ECG de una sola derivación basado en las transformada de ondícula (WT, por sus siglas en inglés). Primeramente, detectan los complejos QRS para luego delimitar cada QRS, detectando e identificando los picos de las ondas individuales, así como también, los inicios y finales de cada complejo QRS. Finalmente, se realiza la determinación de los picos, inicios y finales de las ondas P y T. Posteriormente, se evalúa este algoritmo en varias bases de datos anotadas manualmente, como MIT-BIH Arritmia \cite{arritmiadb}, QT \cite{qtdb}, ST-T Europea \cite{st-tdb} y otras bases de datos, desarrolladas para propósitos de validación.
 
 \textbf{Metodología:} 
 \begin{itemize}
-	\item Usando la transformada de ondícula discreta, pueden detectar las ondas presentes en un ECG que están compuestas por pendientes y máximos (o mínimos) locales a diferentes escalas, ocurriendo a diferentes instantes de tiempo dentro del ciclo cardíaco.
-	\item Primero, se detecta el complejo QRS para luego detectar e identificar las ondas individuales presentes en este y posteriormente, determinar los limites del complejo QRS.
-	\item Por ultimo se detecta y delimita las ondas T y P respectivamente.
+	\item Usando la transformada de ondícula discreta (DWT, por sus siglas en inglés), pueden detectar las ondas presentes en un ECG que están compuestas por pendientes y máximos (o mínimos) locales a diferentes escalas, ocurriendo a diferentes instantes de tiempo dentro del ciclo cardíaco.
+	\item Primero, se detecta el complejo QRS para luego detectar e identificar las ondas individuales presentes en este; y posteriormente, determinar los limites del complejo QRS.
+	\item Por ultimo se detectan y delimitan las ondas T y P respectivamente.
 \end{itemize}
 
 \textbf{Hallazgos clave:}
 \begin{itemize}
 	\item El algoritmo propuesto por Martínez \textit{et al.} es capaz de identificar y ubicar en función del tiempo las ondas individuales de cada latido.
 	\item Este método es lo suficiente robusto como para permitir la aplicación directa de este sobre señales de ECG sin previo filtrado.
-	\item Obtuvieron un porcentaje de detección superior al 99.86\% para la base de datos Arritmia del MIT-BIH \cite{arritmiadb} y del 99.88\% para la base de datos QT \cite{qtdb}.
+	\item Obtuvieron un porcentaje de detección superior al $99.86\%$ para la base de datos MIT-BIH Arritmia \cite{arritmiadb} y del $99.88\%$ para la base de datos QT \cite{qtdb}.
 \end{itemize}
 
 \subsection{Feature extraction for heartbeat classification using independent component analysis and matching pursuits \cite{Herrero05}}
@@ -161,7 +162,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Publicación:} IEEE
 \textbf{DOI:} 10.1109/ICASSP.2005.1416111
 
-\textbf{Resumen:} En esta investigación, se presenta un método basado en el algoritmo de búsqueda de coincidencias para la extracción de caracteristicas de tiempo-frecuencia que pueden ser usadas para la clasificación de varios tipos de latidos anormales. Luego de esto, investigan sobre la usabilidad del análisis de componentes independientes (ICA) para extraer caracteristicas espaciales de grabaciones de electrocardiogramas de varias derivaciones. El rendimiento de estos diferentes conjuntos de caracteristicas es evaluado usando las grabaciones de la base de datos arritmia del MIT-BIH \cite{arritmiadb}.
+\textbf{Resumen:} En esta investigación, se presenta un método basado en el algoritmo de búsqueda de coincidencias para la extracción de caracteristicas de tiempo-frecuencia que pueden ser usadas para la clasificación de varios tipos de latidos anormales. Luego de esto, investigan sobre la usabilidad del análisis de componentes independientes (ICA, por sus siglas en inglés) para extraer caracteristicas espaciales de grabaciones de electrocardiogramas de varias derivaciones. El rendimiento de estos diferentes conjuntos de caracteristicas es evaluado usando las grabaciones de la base de datos MIT-BIH Arritmia \cite{arritmiadb}.
 
 \textbf{Metodología:} 
 \begin{itemize}
@@ -174,7 +175,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Hallazgos clave:} 
 \begin{itemize}
 	\item Introducen ICA como extractor de caracteristicas para el procesamientos de los ECGs.
-	\item El rendimiento del sistema tuvo una precisión superior al 95\% en la clasificación de 5 tipos de latidos anormales.
+	\item El rendimiento del sistema tuvo una precisión superior al $95\%$ en la clasificación de 5 tipos de latidos anormales.
 	\item La potencia computacional requerida para el sistema propuesto es bastante alta durante el entrenamiento del extractor de caracteristicas
 \end{itemize}
 
@@ -184,43 +185,42 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Publicación:} Conferencia: XI Congreso Internacional de Métodos Numéricos en Ingeniería y Ciencias Aplicadas
 %\textbf{DOI:} no tiene doi porque es una exposicion de una conferencia
 
-\textbf{Resumen:} En este trabajo, se reporta el desarrollo de un sistema integral para adquisición y posterior análisis de la señal electrocardiográfica de alta resolución (ECGAR) de pacientes chagásicos, en el cual utilizan maquinas de soporte vectorial de mínimos cuadrados (LSSVM) para determinar el inicio del complejo QRS y el final de la onda T, para estimar los intervalos QT y QT corregido y comparan su efectividad usando algoritmos de procesamiento implementados en la aplicación Cardiosoft \cite{cardiosoft}. 
+\textbf{Resumen:} En este trabajo, se reporta el desarrollo de un sistema integral para adquisición y posterior análisis de la señal electrocardiográfica de alta resolución (ECGAR) de pacientes chagásicos, en el cual utilizan maquinas de soporte vectorial de mínimos cuadrados (LSSVM, por sus siglas en inglés) para determinar el inicio del complejo QRS y el final de la onda T, para estimar los intervalos QT y QT corregido (\textit{QTc}) y comparan su efectividad usando algoritmos de procesamiento implementados en la aplicación Cardiosoft \cite{cardiosoft}. 
 
 \textbf{Metodología:}
 \begin{itemize}
 	\item Se les realizó un registro ECGAR a 20 pacientes chagásicos, excluyendo pacientes con otras patologías y 20 pacientes de control.
 	\item Utilizan LSSVM para determinar el inicio del complejo QRS y el final de la onda T, entrenadas en base a atributos extraídos de la señal preprocesada y de señales obtenidas mediante descomposiciones con Wavelets.
-	\item Se estiman tanto el intervalo QT y el QT corregidos (QTc) con el uso de las técnicas antes mencionadas.
+	\item Se estiman tanto el intervalo QT y el QT corregido (\textit{QTc}) con el uso de las técnicas antes mencionadas.
 \end{itemize}
 
 \textbf{Hallazgos clave:}
 \begin{itemize}
-	\item Estudian la efectividad de este análisis en el reconocimiento de pacientes chagásicos al procesar 20 pacientes chagásicos y 20 sujetos de control.
+	\item Estudian la efectividad de este análisis en el reconocimiento de pacientes chagásicos al procesar, 20 pacientes chagásicos y 20 sujetos de control.
 	\item Los resultados muestran diferencias estilísticamente significativas entre ambos grupos.
 	\item Validan los algoritmos de procesamiento implementados utilizando como referencia una aplicación denominada Cardiosoft \cite{cardiosoft}.
 \end{itemize}
 
 \subsection{A comparative study of DWT, CWT and DCT transformations in ECG arrhythmias classification \cite{Khorrami10}.}
-\textbf{Autores:} Khorrami, H.; Moavenian Majid.
-
+\textbf{Autores:} Khorrami, H.; Moavenian M.
+ 
 \textbf{Publicación:} Expert Systems with Applications
+\textbf{DOI:} 10.1016/j.eswa.2010.02.033
 
-\textbf{DOI:}https://doi.org/10.1016/j.eswa.2010.02.033
-
-\textbf{Resumen:} En este estudio, se sugiere y comparan el uso de transformadas ondículas discretas (CWT), transformadas ondículas discretas (DWT) y transformada discreta del coseno (DCT), que ya están en uso, con el fin de mejorar la capacidad de dos clasificadores de patrones en clasificación de arritmias en ECG. Se utilizan como clasificadores, redes neuronales perceptrónicas y máquinas de soporte vectorial. Las señales ECG usadas son tomadas de la base de datos Arritmia del MIT-BIH que son usadas para clasificar cuatro diferentes tipos de arritmias. 
+\textbf{Resumen:} En este estudio, se sugiere y comparan el uso de transformadas ondículas discretas (CWT, por sus siglas en inglés), transformadas ondículas discretas (DWT) y transformada discreta del coseno (DCT, por sus siglas en inglés), que ya están en uso, con el fin de mejorar la capacidad de dos clasificadores de patrones en clasificación de arritmias en señales de ECG. Se utilizan como clasificadores, redes neuronales perceptrónicas y máquinas de soporte vectorial. Las señales de ECG usadas son tomadas de la base de datos Arritmia del MIT-BIH que son usadas para clasificar cuatro diferentes tipos de arritmias. 
 
 \textbf{Metodología:}
 \begin{itemize}
 	\item Las técnicas de extracción de caracteristicas CWT, DWT y DCT son aplicadas separadamente a la base de datos antes de su clasificación.
-	\item Utilizan estas características extraídas para clasificar los tipos de arritmia de cada señal ECG, usando redes neuronales perceptrónicas y maquinas de soporte vectorial.
+	\item Utilizan estas características extraídas para clasificar los tipos de arritmia de cada señal de ECG, usando redes neuronales perceptrónicas (NN, por sus siglas en inglés) y máquinas de soporte vectorial (SVM, por sus siglas en inglés).
 	\item Comparan el rendimiento del entrenamiento, el rendimiento de las pruebas y el tiempo de entrenamiento de cada clasificador. 
 \end{itemize}
 
 \textbf{Hallazgos clave:}
 \begin{itemize}
 	\item Los resultados muestran que el mejor método de extracción de caracteristicas dependerá del valor sustancial que se considere para el tiempo de entrenamiento y rendimiento en el entrenamiento y las pruebas.
-	\item El rendimiento de las pruebas usando sólo la derivación II de la señal ECG de la base de datos usada muestra superioridad sobre las máquinas de soporte vectorial.
-	\item El modelo que utiliza como extractor de caracteristicas las DWT y una red neuronal perceptrónicas como clasificador es el que tiene mejor rendimiento tanto en entrenamiento y pruebas, como en tiempo de entrenamiento.
+	\item El rendimiento de las pruebas, usando sólo la derivación II de la señal de ECG usada muestra superioridad sobre las SVM.
+	\item El modelo que utiliza como extractor de caracteristicas las DWT y una NN como clasificador es el que tiene mejor rendimiento tanto en entrenamiento y pruebas, como en tiempo de entrenamiento.
 \end{itemize}
 
 \subsection{Comparison of FCM, PCA and WT techniques for classification ECG arrhythmias using artificial neural network \cite{Ceylan07}.}
@@ -228,21 +228,21 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Autores:} Ceylan, R.; Özbay, Y.
 
 \textbf{Publicación:} Expert Systems with Applications.
-\textbf{DOI:}https://doi.org/10.1016/j.eswa.2006.05.014
+\textbf{DOI:} 10.1016/j.eswa.2006.05.014
 
-\textbf{Resumen:} Este articulo presenta un estudio comparativo de la eficacia en la clasificación de señales ECG usando 4 tipos de estructuras que incluyen poderosas técnicas de reducción de dimensionalidad, como lo son PCA, WT y agrupamiento c-medios difuso (FCM); también usan redes neuronales perceptrónicas (NN) para clasificar tipos de arritmias, usando \cite{arritmiadb}, estas son entrenadas para clasificar 10 diferentes tipos de arritmias. 
+\textbf{Resumen:} Este articulo presenta un estudio comparativo de la eficacia en la clasificación de señales ECG usando 4 tipos de estructuras que incluyen poderosas técnicas de reducción de dimensionalidad, como lo son PCA, WT y agrupamiento c-medios difuso (FCM, por sus siglas en inglés); también usan redes neuronales perceptrónicas (NN) para clasificar tipos de arritmias, usando MIT-BIH Arritmia \cite{arritmiadb}, estas son entrenadas para clasificar 10 diferentes tipos de arritmias. 
 
 \textbf{Metodología:}
 \begin{itemize}
 	\item Utilizando PCA y WT para reducción de caracteristicas en adición de FCM; y NN para clasificar los tipos de arritmia en las señales de ECG, comparan el desempeño de 4 tipos de estructuras propuestas, FCM-NN, PCA-NN, FCM-PCA-NN y WT-NN.
-	\item Prueban cada uno de los modelos propuestos con las señales ECG tomadas de \cite{arritmiadb}.
+	\item Prueban cada uno de los modelos propuestos con las señales de ECG tomadas de MIT-BIH Arritmia\cite{arritmiadb}.
 \end{itemize}
 
 \textbf{Hallazgos clave:}
 \begin{itemize}
 	\item Proponen como nuevo método de clasificación, la estructura FCM-PCA-NN.
 	\item Las pruebas realizadas sugieren que la estructura FCM-PCA-NN puede generalizar mejor que PCA-NN y mucho más rápido de las demás estructuras propuestas.
-	\item Si bien la estructura FCM-PCA-NN presenta el menor error ($5.05\times10^{-9} \% $) al clasificar los tipos de arritmias, es importante señalar que el modelo PCA-NN no se queda atrás en desempeño, teniendo un error de ($4.98\times10^{-9} \%$). Esta mínima diferencia sugiere que ambas arquitecturas, podrían considerarse alternativas viables.
+	\item Si bien, la estructura FCM-PCA-NN presenta el menor error ($5.05\times10^{-9} \% $) al clasificar los tipos de arritmias, es importante señalar que el modelo PCA-NN no se queda atrás en desempeño, teniendo un error de ($4.98\times10^{-9} \%$). Esta mínima diferencia sugiere que ambas arquitecturas, podrían considerarse alternativas viables.
 \end{itemize}
 
 \subsection{Baseline wander removal of ECG signals using Hilbert vibration decomposition \cite{Sharma15}.}
@@ -252,13 +252,13 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Publicación:} Electronics Letters.
 \textbf{DOI:} 10.1016/j.eswa.2010.02.033
 
-\textbf{Resumen:} En este estudio, se propone una técnica para remover el desplazamiento de la línea base (BW, por sus siglas en inglés) de las señales ECG utilizando la descomposición vibracional de Hilbert (HVD). Se plantea que la primera componente (la componente de más alta energía) usando HVD en la señal ECG corresponde al BW de la señal. La técnica propuesta es comparada con otro método basado en descomposición modal empírica (EMD) y matemática morfológica en términos de criterios de correlación y relación señal-ruido. 
+\textbf{Resumen:} En este estudio, se propone una técnica para remover el desplazamiento de la línea base (BW, por sus siglas en inglés) de las señales de ECG utilizando la descomposición vibracional de Hilbert (HVD, por sus siglas en inglés). Se plantea que la primera componente (la componente de más alta energía) usando HVD en la señal de ECG corresponde al BW de la señal. La técnica propuesta es comparada con otro método basado en descomposición modal empírica (EMD, por sus siglas en inglés) y matemática morfológica, en términos de criterios de correlación y relación señal-ruido. 
 
 \textbf{Metodología:}
 \begin{itemize}
 	\item Para lograr remover el desplazamiento de la línea base, primero se descompone la señal ECG usando HVD en sus diversas componentes, siendo la primera de estas, la de más alta energía y por ende, la correspondiente al BW.
-	\item Luego corrigen la señal ECG, sustrayendo la primera componentes de la descomposición vibracional de Hilbert de la señal ECG original.
-	\item Para evaluar el desempeño de la técnica propuesta, se usan las señales electrocardiográficas de la base de datos arritmia \cite{arritmiadb} y le introducen un BW artificial obtenido de un filtrado paso bajo de señales aleatoriamente generadas.
+	\item Luego corrigen la señal de ECG, sustrayendo la primera componente de la HVD de la señal original.
+	\item Para evaluar el desempeño de la técnica propuesta, se usan las señales electrocardiográficas de MIT-BIH Arritmia \cite{arritmiadb} y le introducen un BW artificial obtenido de un filtrado paso bajo de señales aleatoriamente generadas.
 \end{itemize}
 
 \textbf{Hallazgos clave:}
@@ -268,18 +268,62 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 	\item El método propuesto es capaz de desempeñarse mejor bajo condiciones de severa distorsión de la linea base sin afectar la morfología real del ECG.
 \end{itemize}
 
-\subsection{Nombre del articulo}
-\textbf{Autores:}
+\subsection{Heart failure classification using deep learning to extract spatiotemporal features from ECG \cite{Zhang24}}
+\textbf{Autores:} Zhang, C.; Yuan, Lu.; Tang, F.; Cai, H.; Qian, Y.; Wang, C.
 
-\textbf{Publicación:}
+\textbf{Publicación:} BMC Medical Informatics and Decision Making.
+\textbf{DOI:} 10.1186/s12911-024-02415-4
 
-\textbf{DOI:}
-
-\textbf{Resumen:}
+\textbf{Resumen:} La insuficiencia cardíaca es un síndrome con complejas manifestaciones clínicas. Debido al creciente envejecimiento de la población, la insuficiencia cardíaca se ha convertido en uno de los mayores problemas alrededor del mundo. Este estudio, se usa la base de datos pública MIMIC-III para extraer las caracteristicas temporales y espaciales de las señales ECG de paciencias con insuficiencias cardíacas.
 
 \textbf{Metodología:}
+\begin{itemize}
+	\item Desarrollan un modelo de clasificación de insuficiencias cardíacas según el encasillado de la Asociación del Corazón de Nueva York (NYHA, por sus siglas en inglés), basado en un método de aprendizaje profundo.
+	\item Introducen un mecanismo integrativo de atención basado en el modelo CNN-LSTM-SE, segmentando los ECG en segmentos de entre 2 y 20 segundos.
+\end{itemize}
 
 \textbf{Hallazgos clave:}
+\begin{itemize}
+	\item Experimentos mostraron que los segmentos de 12 segundos podrían ser usados con el modelo de aprendizaje profundo propuesto para clasificación de latidos cardíacos.
+	\item La precisión del modelo propuesto fue de $99.09\%$.
+	\item El desempeño del modelo propuesto excede el rendimiento de métodos similares y podría ser usado para prestar asistencia en diagnósticos clínicos.
+\end{itemize}
+
+\subsection{Clasificación de arritmias cardíacas usando redes neuronales convolucionales en muestras de ECG \cite{Astudillo24}}
+\textbf{Autores:} Astudillo-Delgado, V. M.; Revelo-Luna, D. A.; Muñoz-Chaves, J. A.
+
+\textbf{Publicación:} Revista EIA.
+\textbf{DOI:} 10.24050/reia.v21i41.1719
+
+\textbf{Resumen:} Con el objetivo de mejorar la precisión en la identificación de arritmias cardíacas, esta investigación se enfocó en el desarrollo de modelos basados en redes neuronales convolucionales (CNN, por sus siglas en inglés). Se entrenaron 5 modelos de estas, con el mismo numero de muestras e hiperparámetros, para posteriormente evaluar su desempeño, consiguiendo que la arquitectura VGG16 es la más eficaz en la clasificación de arritmias.
+
+\textbf{Metodología:}
+\begin{itemize}
+	\item Utilizando datos provenientes de la MIT-BIH Arritmia \cite{arritmiadb} y datos adquiridos por el simulador de arritmias Bio-Tek BP Pump NIBP y se entrenaron cinco modelos con diferentes arquitecturas, entre estos; VGG16, ResNet-50, AlexNet y dos arquitecturas propuestas por los autores.
+	\item Todos estos modelos fueron entrenaros con el mismo numero de muestras y configuración de hiperparámetros.
+	\item Evalúan el desempeño de cada modelo, utilizando métricas comunes como exactitud, recall, F1-score y precisión (accuracy).
+\end{itemize}
+
+\textbf{Hallazgos clave:}
+\begin{itemize}
+	\item Los resultados demostraron que la arquitectura VGG16 fue la más eficaz en la clasificación de arritmias cardíacas, alcanzando una exactitud del $98.8\%$ en el conjunto de datos arritmia \cite{arritmiadb}. 
+	\item Al evaluar los datos de prueba del simulador Bio-Tek BP Pump NIBP, el modelo customize-2, propuesto por los autores, demostró el mejor rendimiento con una exactitud del $96.3\%$
+	\item Los modelos desarrollados en esta investigación podrían ser una herramienta útil para los médicos en la detección temprana y el tratamiento adecuado de estas afecciones cardiovasculares.
+\end{itemize}
+
+
+%\subsection{Nombre del articulo}
+%\textbf{Autores:}
+%
+%\textbf{Publicación:}
+%
+%\textbf{DOI:}
+%
+%\textbf{Resumen:}
+%
+%\textbf{Metodología:}
+%
+%\textbf{Hallazgos clave:}
 
 %Desde finales del siglo pasado ha habido un creciente interés en los métodos computacionales aplicados a la salud, por ejemplo en 1985, Pan y Tompkins \cite{PanTompkins85} diseñaron un algoritmo para detección de los complejos QRS en tiempo real y con bajo costo computacional, este algoritmo sentó las bases de la implementación de algoritmos de detección y análisis para las señales de electrocardiogramas. En 1996, Laguna \textit{et al.} \cite{Laguna97} presentaron un sistema de estimación del modelo de Hermite adaptativo (AHMES) para la estimación en línea latido a latido de las características que describen el complejo QRS con el modelo de Hermite. Gómez Herrero \textit{et al.} \cite{Herrero05}, presentaron un algoritmo conocido como ``Matching Pursuit'' que ofrece la capacidad de descomponer cualquier señal en un combinación lineal de formas de onda extraídas de un diccionario redundante de funciones llamado Gabor. Este algoritmo se ha reconocido como una herramienta eficaz para realizar transformaciones adaptativas de tiempo-frecuencia en señales de ECG, lo que permite obtener características relevantes en el dominio tiempo-frecuencia. \\
 %
@@ -300,37 +344,69 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \section{Conceptos básicos}
 
 \subsection{El corazón}
-	
+	El corazón es un órgano musculoso del tamaño aproximado de un puño. Funcionalmente se puede dividir en corazón derecho e izquierdo. El corazón derecho consta de aurícula y ventrículos derechos, que se comunican entre sí a través de la válvula tricúspide. El corazón izquierdo está compuesto por la aurícula y el ventrículo izquierdos, que se comunican entre sí a través de la válvula mitral. Su movimiento se divide en dos períodos: sístole y diástole. Durante la sístole el corazón se contrae, expulsando su contenido de sangre. El ventrículo derecho expulsa sangre desoxigenada que proviene de los tejidos hacia los pulmones a través de la arteria pulmonar. El ventrículo izquierdo expulsa sangre oxigenada a todo el organismo (incluyendo las arterias que llevan sangre al propio corazón) a través de la arteria aorta. \\
+	\\
+	Durante la diástole el corazón se relaja ---aunque necesite más energía en este período que durante la sístole--- y ambos ventrículos comienzan a llenarse de sangre. En el caso del izquierdo, la sangre procede de las venas pulmonares (sangre recién oxigenada en los pulmones) a través de la aurícula izquierda. En el caso del ventrículo derecho, se trata de sangre desoxigenada (procedente de todo el organismo y recogida por las venas cavas) que llega a través de la aurícula derecha. Con la expulsión de nuevo de la sangre almacenada en ambos ventrículos, tiene lugar un nuevo ciclo cardíaco. Cada periodo del ciclo cardíaco tiene su correlación en el electrocardiograma, lo cual es de gran utilidad a la hora de diagnosticas muchas enfermedades del corazón.\cite{fbbva}
 
 \subsection{Introducción al Electrocardiograma (ECG)}
 	La humanidad siempre, en su continuo deseo de aprender y entender más, ha querido desentrañar los secretos del cuerpo humano entendiendo su funcionamiento interno. Al principio con técnicas invasivas acordes a la tecnología disponible a la época, pero evolucionando continuamente, creando así exámenes cada vez menos invasivos, con el fin de mejorar el diagnostico, siendo mas preciso y oportuno. Entre esos exámenes se destaca el electrocardiograma (ECG) el cual es una representación visual de la actividad eléctrica del corazón en función del tiempo, que se obtiene desde la superficie corporal, con un electrocardiógrafo, este es el instrumento principal de la electrofisiología cardíaca y tiene una función relevante en el cribado y diagnóstico de las enfermedades cardiovasculares, alteraciones metabólicas y demás utilidades. \\
 	\\
     El primer «electrograma» humano fue publicado en 1887 por el fisiólogo británico Augustus Desiré Waller, de la St. Mary's Medical School de Londres. Utilizó un electrómetro capilar de Lipmann con electrodos aplicados a la espalda y el tórax del sujeto. Demostró que la contracción ventricular precedía a la actividad eléctrica. En su primer informe sobre un registro de la electricidad cardíaca realizado en la superficie corporal, Waller utilizó el término «cardiógrafo».  \\
     \\
-    Einthoven empezó a experimentar con el potencial del capilar para captar corrientes eléctricas diminutas. En 1895 demostró cinco deflexiones que denominó ABCDE en 1895. Creó un ajuste matemático para para tener en cuenta la inercia del sistema capilar, lo que produjo las curvas de corriente que vemos hoy en día. Siguiendo la tradición matemática establecida por Descartes, utilizó la parte terminal de la serie parte terminal de la serie alfabética (PQRST) para denominar estas derivaciones. \\
+    Einthoven empezó a experimentar con el potencial del capilar para captar corrientes eléctricas diminutas. En 1895 demostró cinco deflexiones que denominó \textit{ABCDE} en 1895. Creó un ajuste matemático para tener en cuenta la inercia del sistema capilar, lo que produjo las curvas de corriente que vemos hoy en día. Siguiendo la tradición matemática establecida por Descartes, utilizó la parte terminal de la serie parte alfabética (PQRST) para denominar estas ondas. \\
     \\
-    El pionero de la electrocardiografía, Waller dijo a finales de 1911: «No creo que la electrocardiografía vaya a tener un uso extensivo en los hospitales. A lo sumo puede tener un uso raro y ocasional para proporcionar un registro de alguna anomalía de la actividad cardíaca». Sin embargo, diez años de los estudios clínicos de Einthoven con los galvanómetros de cuerda transformaron este curioso fenómeno fisiológico en un dispositivo de registro clínico indispensable. Las asociaciones de la inversión de la onda T con la angina de pecho y la arteriosclerosis. en 1910, junto con otras arritmias, como el bigeminismo, bloqueo cardíaco completo, hipertrofia ventricular derecha e izquierda, fibrilación y aleteo auricular y ejemplos de diversas cardiopatías. Con su nueva técnica, estandarizó los trazados y formuló el concepto de «triángulo de Einthoven» relacionando relacionando matemáticamente las 3 derivaciones (Derivación III = Derivación II - Derivación I). En 1924, el «Padre de la electrocardiografía» recibió el Premio Nobel de Medicina \cite{vincent2022}.\\
+    El pionero de la electrocardiografía, Waller dijo a finales de 1911: «No creo que la electrocardiografía vaya a tener un uso extensivo en los hospitales. A lo sumo puede tener un uso raro y ocasional para proporcionar un registro de alguna anomalía de la actividad cardíaca». Sin embargo, diez años de los estudios clínicos de Einthoven con los galvanómetros de cuerda transformaron este curioso fenómeno fisiológico en un dispositivo de registro clínico indispensable. Las asociaciones de la inversión de la onda T con la angina de pecho y la arteriosclerosis, en 1910, junto con otras arritmias, como el bigeminismo, bloqueo cardíaco completo, hipertrofia ventricular derecha e izquierda, fibrilación y aleteo auricular y demás ejemplos de diversas cardiopatías. Con su nueva técnica, estandarizó los trazados y formuló el concepto de «triángulo de Einthoven» relacionando matemáticamente las 3 derivaciones (Derivación III = Derivación II - Derivación I). En 1924, el «Padre de la electrocardiografía» recibió el Premio Nobel de Medicina \cite{vincent2022}.\\
     \\
     En 1957, el médico estadounidense Norman Jefferis Holter inventó el ECG dinámico (DCG), a menudo conocido como Holter, en uno de los primeros intentos de combinar monitorización clínica y movilidad. Creó una mochila que pesaba unos 38 kg y tenía un dispositivo que podía registrar la actividad cardíaca del participante. Este portátil permite la monitorización continua de actividad eléctrica del sistema cardiovascular durante 24 horas, lo que ayuda a estudiar las arritmias y a localizar el lugar de la isquemia miocárdica. Reconociendo los beneficios potenciales de un dispositivo de monitorización de este tipo, Holter consiguió convertir su idea en una valiosa herramienta de diagnóstico reduciendo el tamaño y el peso a 1 kg con ayuda de Del Mar Avionics, un conocido fabricante de equipos aeronáuticos \cite{vincent2022}.\\
     \\
     Durante las tres primeras décadas del siglo 20, el ECG de tres derivaciones periféricas fue largamente usado, especialmente luego de mejoras que lo hicieron más portable. A pesar de que el ECG de tres derivaciones era una manera fiable de evaluar arritmias, pronto se reconoció que el corazón incluía «zonas silenciosas» en las que un infarto de miocardio podría no ser detectado. En 1942, Emanuel Goldberger construyó las derivaciones precordiales (unipolares) usando el promedio de las diferencias de potencial de las tres derivaciones periféricas como terminal de referencia, que inicialmente fue creado por Frank N. Wilson, al cual se le conoce como terminal central de Wilson, que ahora se denominan como derivaciones precordiales (V1-V6), donde en 1938, la Asociación Americana del Corazón (AHA) y la Sociedad Cardiaca de Gran Bretaña recomendaron la estandarización del posicionamiento de los electrodos en el pecho para dichas derivaciones. También Goldberger propuso una manera de obtener lo que ahora se llaman derivaciones aumentadas, conocidas por las siglas a-VL, a-VR, y a-VF. 8 años después la AHA recomendó la estandarización del ECG de 12 derivaciones. \cite{vincent2022}\\
     \\
-    En la era digital, la tecnología del silicio y los circuitos circuitos impresos han hecho posible la miniaturización electrónicos. Desde hace algún tiempo, la tecnología ha ganado popularidad en el campo de la medicina y la necesidad de los clientes de controlar su salud ha sido el principal motor. La influencia de los "vestibles" (wearables) ha hecho inevitable la continua investigación y desarrollo de nuevas funciones que pueden evaluar y transmitir datos biométricos en tiempo real. \\ 
+    En la era digital, la tecnología del silicio y los circuitos impresos han hecho posible la miniaturización de electrónicos. Desde hace algún tiempo, la tecnología ha ganado popularidad en el campo de la medicina y la necesidad de los clientes de controlar su salud ha sido el principal motor. La influencia de los "vestibles" (wearables) ha hecho inevitable la continua investigación y desarrollo de nuevas funciones que pueden evaluar y transmitir datos biométricos en tiempo real. \\ 
+    \begin{figure}[h]
+    	\centering
+    	\includegraphics[width=0.5\linewidth]{Sem_1/figuras/1038px-SinusRhythmLabels-es.svg}
+    	\caption{ECG con ritmo sinusal normal y las partes de este debidamente identificadas}
+    	\label{fig:ECGSinusal}
+    \end{figure}
+    \\
     
-    El corazón consta de cuatro partes, dos aurículas y dos ventrículos, el ECG registra los impulsos eléctricos que estimulan estas partes y producen su contracción. Las células cardíacas en reposo se encuentras cargadas o polarizadas; pero la estimulación eléctrica las "despolariza", y se contraen. \\
-	\begin{figure}[h]
-		\centering
-		\includegraphics[width=0.5\linewidth]{Sem_1/figuras/1038px-SinusRhythmLabels-es.svg}
-		\caption{ECG del corazón con ritmo sinusal normal}
-		\label{fig:ECGSinusal}
-	\end{figure}
-	\\
-	Como se observa en la figura \ref{fig:ECGSinusal} el ECG consta de varias ondas representativas de cada etapa de un latido cardíaco, estas son: \\
+    Como se observa en la figura \ref{fig:ECGSinusal} el ECG consta de varias ondas representativas de cada etapa de un latido cardíaco, estas son: \\
+
+	
 	\begin{itemize}
 		\item \textbf{Onda P}: registra la despolarización auricular.
 		\item \textbf{Complejo QRS}: Es la despolarización ventricular.
 		\item \textbf{Onda T}: representa la repolarización ventricular.
 	\end{itemize}
+	
+	Hoy en día el electrocardiograma es un estándar y uno de los primeros exámenes que se le hacen a los pacientes enfermos al ingresar a un centro clínico, este es registrado en un formato especialmente adaptado (tiras de papel milimetrado), estos no suelen durar más de 30 segundos. También puede ser registrada y visualizada de manera continua en un monitor similar a una pantalla de televisión, que suele ser una opción utilizada fundamentalmente en unidades de transporte sanitario medicalizadas y en unidades coronarias o de cuidados intensivos. \\
+	\\
+	Para intentar comprender los principios básicos que explican las oscilaciones en las líneas del ECG conviene conocer, si bien de forma somera, los fundamentos por los cuales se produce el movimiento del corazón, generado a través de microcorrientes eléctricas. De ellos es responsable el sistema de conducción eléctrica del corazón.
+	
+	\subsection{El sistema de conducción}
+	Los impulsos eléctricos en el corazón se conducen mediante un tejido especializado al que se le denomina como sistema de conducción, este se puede describir como una intrincada red de cables a través de los cuales, y de un manera organizada, se realiza la transmisión de las microcorrientes eléctricas que generas el movimiento del corazón. La representación gráfica de estos impulsos (de estas microcorrientes) es el ECG. \\
+	En el corazón normal, la frecuencia cardíaca debe ajustarse a las necesidades concretas que en un determinado momento se precisen (no tenemos las mismas pulsaciones durante el sueño que después de subir cuatro pisos). Por otro lado, las diferentes cámaras (aurículas y ventrículos) deben tener un movimiento sincronizado para que el latido cardíaco resulte eficaz. La sincronía del latido cardíaco, así como la fuerza en la contracción del corazón, se encuentran reguladas, entre otros factores, por el sistema de conducción, que consta de los siguientes elementos: 
+	\begin{itemize}
+		\item Nodo sinoauricular (nodo SA).
+		\item Nodo auriculoventricular (nodo AV).
+		\item Sistema de His-Purkinje.
+	\end{itemize}
+	
+	\subsubsection*{El nodo sinoauricular (nodo SA)} 
+	Está situado en el surco terminal entre la unión lateral de la vena cava superior con la aurícula derecha. Tiene una forma de huso con una cola larga dirigida hacia abajo por el surco terminal y en dirección del orificio de la vena cava inferior, está irrigado por la arteria nodal, rama de la arteria coronaria derecha en el $55\%$ de las veces y el resto por una rama de la arteria circunfleja. La conducción del impulso generado en el nodo, y que llega al nódulo auriculoventricular, se produce a través del músculo miocárdico auricular que por su disposición geométrica favorece la conducción preferencial \cite{fbbva}. 
+	\subsubsection*{El nodo auriculoventricular (nodo AV)}
+	Está localizado en el componente auricular del tabique auriculoventricular muscular, se halla subendocárdico y a la altura del vértice del triángulo delineado por el tendón de Todaro y en la inserción de la valva septal de la válvula tricúspide, estructuras que se unen en el cuerpo fibroso central. Aquí el nodo se continúa como el fascículo auriculoventricular que penetra el cuerpo fibroso y alcanza la cresta del tabique interventricular muscular debajo del septo membranoso y se bifurca en una rama derecha e izquierda. La rama derecha con un fascículo redondeado que hacia adelante se continúa hasta la región apical, penetra en la trabécula septomarginal y alcanza la pared ventricular y al musculo papilar anterior. Sus fibras forman el plexo subendocárdico de Purkinje en los músculos papilares y la pared del ventrículo derecho. Su tamaño es la mitad que el del nodo SA. Durante el paso por el nodo AV, la onda de activación eléctrica sufre una pausa de aproximadamente una décima de segundo, permitiendo así que las aurículas se contraigan y vacíen su contenido de sangre en los ventrículos antes de producirse la propia contracción ventricular. El nodo AV ejercería de esta forma un \textit{efecto embudo} en la canalización de los impulsos eléctricos en su viaje desde las aurículas a los ventrículos \cite{fbbva}.
+	\subsubsection{Sistema de His-Purkinje}
+	Después de atravesar el nodo AV, el impulso cardíaco se propaga por el haz de His y sus ramas ---una serie de fibras especializadas en la conducción eléctrica que discurren de arriba hacia abajo a lo largo del tabique interventricular; dicho haz de His de divide, después de un tronco común, en dos ramas, izquierda y derecha---. Cuando se emplea la expresión \textit{bloqueo de rama izquierda o bloqueo de rama derecha} se hace referencia a la interrupción de la transmisión de los impulsos eléctricos en el corazón en este nivel. Después de atravesar el haz de His, el impulso eléctrico se distribuye por toda la masa ventricular gracias a una red de microfibrillas denominadas fibras de Purkinje; se produce entonces la contracción (y consiguiente expulsión de la sangre) de ambos ventrículos \cite{fbbva}.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg}
+		\caption{Sistema de conducción del corazón \cite{fbbva}.}
+		\label{fig:sis_cond_heart}
+	\end{figure}
+	\subsubsection*{Actividad eléctrica de la célula miocárdica}
+	Aca usar la parte del cap1 del texto de cardiologia donde habla de la actividad electrica de la celula miocardica, pag 72 
+	
 
 \section{Conceptos específicos}
 \subsection{Análisis de Componentes Principales (PCA).}

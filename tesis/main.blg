@@ -27,45 +27,45 @@ Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng an
 while executing---line 969 of file ieeetr.bst
 Name 1 in "Jolliffe, I. T., and Cadima, J." has a comma at the end for entry Joliiffe16
 while executing---line 969 of file ieeetr.bst
-You've used 22 entries,
+You've used 19 entries,
             1876 wiz_defined-function locations,
-            629 strings with 7704 characters,
-and the built_in function-call counts, 6200 in all, are:
-= -- 598
-> -- 245
+            609 strings with 6885 characters,
+and the built_in function-call counts, 5405 in all, are:
+= -- 525
+> -- 193
 < -- 0
-+ -- 90
-- -- 68
-* -- 456
-:= -- 861
-add.period$ -- 21
-call.type$ -- 22
-change.case$ -- 21
++ -- 72
+- -- 53
+* -- 383
+:= -- 736
+add.period$ -- 18
+call.type$ -- 19
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 297
-empty$ -- 575
-format.name$ -- 68
-if$ -- 1526
+cite$ -- 20
+duplicate$ -- 263
+empty$ -- 522
+format.name$ -- 53
+if$ -- 1345
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 18
-newline$ -- 69
-num.names$ -- 23
-pop$ -- 56
+int.to.str$ -- 19
+missing$ -- 15
+newline$ -- 60
+num.names$ -- 20
+pop$ -- 55
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 261
+skip$ -- 232
 stack$ -- 0
-substring$ -- 456
-swap$ -- 142
+substring$ -- 413
+swap$ -- 125
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 51
-width$ -- 24
-write$ -- 205
+while$ -- 46
+width$ -- 21
+write$ -- 177
 (There were 5 error messages)
