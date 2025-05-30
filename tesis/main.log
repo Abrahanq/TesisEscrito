@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  29 MAY 2025 18:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  30 MAY 2025 17:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,22 +449,22 @@ LaTeX Info: Redefining \% on input line 9.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Info: Redefining \. on input line 22.
-LaTeX Info: Redefining \% on input line 22.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Info: Redefining \. on input line 21.
+LaTeX Info: Redefining \% on input line 21.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
@@ -490,7 +490,7 @@ e
 <Sem_1/figuras/ulaLogo.png, id=1, 199.74625pt x 216.81pt>
 File: Sem_1/figuras/ulaLogo.png Graphic file (type png)
 <use Sem_1/figuras/ulaLogo.png>
-Package pdftex.def Info: Sem_1/figuras/ulaLogo.png  used on input line 27.
+Package pdftex.def Info: Sem_1/figuras/ulaLogo.png  used on input line 26.
 (pdftex.def)             Requested size: 129.15225pt x 140.19038pt.
 
 [1
@@ -515,12 +515,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 ] [2
 
 ] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 99--101
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
 
-Overfull \hbox (100.39198pt too wide) in paragraph at lines 105--107
+Overfull \hbox (100.39198pt too wide) in paragraph at lines 104--106
 []\T1/cmr/bx/n/10.95 Publicación: \T1/cmr/m/n/10.95 IEEE Trans-ac-tions on Biom
 ed-i-cal En-gi-neer-ing \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1109/TBME.
 1985.325532 
@@ -529,41 +529,41 @@ ed-i-cal En-gi-neer-ing \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1109/TBME.
 [5
 
 ]
-Overfull \hbox (100.39198pt too wide) in paragraph at lines 139--141
+Overfull \hbox (100.39198pt too wide) in paragraph at lines 138--140
 []\T1/cmr/bx/n/10.95 Publicación: \T1/cmr/m/n/10.95 IEEE Trans-ac-tions on Biom
 ed-i-cal En-gi-neer-ing \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1109/TBME.
 2003.821031 
  []
 
 [6] [7] [8]
-Overfull \hbox (36.2679pt too wide) in paragraph at lines 207--209
+Overfull \hbox (36.2679pt too wide) in paragraph at lines 206--208
 []\T1/cmr/bx/n/10.95 Publicación: \T1/cmr/m/n/10.95 Ex-pert Sys-tems with Ap-pl
 i-ca-tions \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1016/j.eswa.2010.02.033
  
  []
 
 [9]
-Overfull \hbox (39.29399pt too wide) in paragraph at lines 230--232
+Overfull \hbox (39.29399pt too wide) in paragraph at lines 229--231
 []\T1/cmr/bx/n/10.95 Publicación: \T1/cmr/m/n/10.95 Ex-pert Sys-tems with Ap-pl
 i-ca-tions. \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1016/j.eswa.2006.05.01
 4 
  []
 
 [10] [11]
-Overfull \hbox (50.25327pt too wide) in paragraph at lines 274--276
+Overfull \hbox (50.25327pt too wide) in paragraph at lines 273--275
 []\T1/cmr/bx/n/10.95 Publicación: \T1/cmr/m/n/10.95 BMC Med-i-cal In-for-mat-ic
 s and De-ci-sion Mak-ing. \T1/cmr/bx/n/10.95 DOI: \T1/cmr/m/n/10.95 10.1186/s12
 911-
  []
 
 [12]
-Overfull \hbox (1.99477pt too wide) in paragraph at lines 302--303
+Overfull \hbox (1.99477pt too wide) in paragraph at lines 301--302
 []\T1/cmr/m/n/10.95 Utilizando datos prove-nientes de la MIT-BIH Ar-rit-mia [[]
 ] y datos adquiri-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--350
+Underfull \hbox (badness 10000) in paragraph at lines 346--349
 
  []
 
@@ -574,52 +574,52 @@ File: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png Graphic file (type png)
 
 <use Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>
 Package pdftex.def Info: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png  use
-d on input line 367.
+d on input line 366.
 (pdftex.def)             Requested size: 184.5pt x 182.00766pt.
 
-Overfull \hbox (0.19392pt too wide) in paragraph at lines 352--372
+Overfull \hbox (0.19392pt too wide) in paragraph at lines 351--371
 \T1/cmr/m/n/10.95 disponible a la época, pero evolu-cio-nan-do con-tin-u-a-ment
 e, cre-an-do así exámenes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--372
+Underfull \hbox (badness 10000) in paragraph at lines 351--371
 
  []
 
 
-Overfull \hbox (1.13696pt too wide) in paragraph at lines 352--372
+Overfull \hbox (1.13696pt too wide) in paragraph at lines 351--371
 \T1/cmr/m/n/10.95 El primer ^^Selec-tro-gra-ma^^T hu-mano fue pub-li-ca-do en 1
 887 por el fisiól-o-go británi-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--372
+Underfull \hbox (badness 10000) in paragraph at lines 351--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--372
+Underfull \hbox (badness 10000) in paragraph at lines 351--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--372
+Underfull \hbox (badness 10000) in paragraph at lines 351--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--372
+Underfull \hbox (badness 10000) in paragraph at lines 351--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--372
+Underfull \hbox (badness 10000) in paragraph at lines 351--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 352--372
+Underfull \hbox (badness 10000) in paragraph at lines 351--371
 
  []
 
@@ -628,12 +628,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 352--372
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 373--374
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 382--385
+Underfull \hbox (badness 10000) in paragraph at lines 381--384
 
  []
 
@@ -643,31 +643,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 382--385
 File: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg Graphic file (type jpg)
 <use Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>
 Package pdftex.def Info: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg  used
- on input line 403.
-(pdftex.def)             Requested size: 332.09775pt x 194.25726pt.
- [19 <./Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>]
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
+ on input line 402.
+(pdftex.def)             Requested size: 350.54887pt x 205.0576pt.
+<Sem_1/figuras/fonocardiograma.jpeg, id=93, 834.11626pt x 752.8125pt>
+File: Sem_1/figuras/fonocardiograma.jpeg Graphic file (type jpg)
+<use Sem_1/figuras/fonocardiograma.jpeg>
+Package pdftex.def Info: Sem_1/figuras/fonocardiograma.jpeg  used on input line
+ 410.
+(pdftex.def)             Requested size: 295.20113pt x 266.42899pt.
+ [19 <./Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>] [20 <./Sem_1/figuras
+/fonocardiograma.jpeg>] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
-[20] [21] [22
+[23] [24
 
-] [23
+] [25
 
-] [24
+] [26
 
-] (./main.bbl [25
+] (./main.bbl [27
 
 ]
 bibitemlist
-[26
+[28
 
-]) [27]
+]) [29] [30]
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -676,10 +683,10 @@ LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
- 7421 strings out of 480247
- 110775 string characters out of 5896106
- 459055 words of memory out of 5000000
- 25316 multiletter control sequences out of 15000+600000
+ 7433 strings out of 480247
+ 111101 string characters out of 5896106
+ 459136 words of memory out of 5000000
+ 25327 multiletter control sequences out of 15000+600000
  485355 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,12n,68p,2574b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -699,10 +706,10 @@ lic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm109
 xmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200
 .pfb>
-Output written on main.pdf (30 pages, 762621 bytes).
+Output written on main.pdf (33 pages, 933088 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 209 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
