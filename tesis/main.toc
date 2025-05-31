@@ -20,12 +20,12 @@
 \contentsline {subsection}{Introducción al Electrocardiograma (ECG)}{14}{}%
 \contentsline {subsection}{El sistema de conducción}{17}{}%
 \contentsline {subsubsection}{Sistema de His-Purkinje}{19}{}%
-\contentsline {section}{\numberline {2.3}Conceptos específicos}{20}{}%
-\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{20}{}%
-\contentsline {subsection}{Redes Neuronales}{20}{}%
-\contentsline {subsection}{K-means}{21}{}%
-\contentsline {chapter}{\chapternumberline {3}Marco experimental}{22}{}%
-\contentsline {chapter}{\chapternumberline {4}Resultados}{23}{}%
-\contentsline {part}{\partnumberline {I}Conclusiones}{24}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusiones}{25}{}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{26}{}%
+\contentsline {section}{\numberline {2.3}Conceptos específicos}{22}{}%
+\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{22}{}%
+\contentsline {subsection}{Redes Neuronales}{23}{}%
+\contentsline {subsection}{K-means}{23}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{24}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{25}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{26}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{27}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{28}{}%
