@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  30 MAY 2025 17:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  2 JUN 2025 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -509,7 +509,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 29.
+(Font)              <12> on input line 36.
 ) [2] [1
 
 ] [2
@@ -653,28 +653,39 @@ Package pdftex.def Info: Sem_1/figuras/fonocardiograma.jpeg  used on input line
 (pdftex.def)             Requested size: 295.20113pt x 266.42899pt.
  [19 <./Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>] [20 <./Sem_1/figuras
 /fonocardiograma.jpeg>] [21]
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
+Underfull \hbox (badness 10000) in paragraph at lines 423--426
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+[22] [23]
+Overfull \hbox (4.3232pt too wide) in paragraph at lines 450--455
+\T1/cmr/m/n/10.95 istro del ECG, cuya du-ración aprox-i-ma-da es de 10 se-gun-d
+os. El reg-istro obtenido
+ []
+
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
 
  []
 
-[23] [24
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
-] [25
+ []
 
-] [26
+[27] [28] [29
 
-] (./main.bbl [27
+] [30
+
+] [31
+
+] (./main.bbl [32
 
 ]
 bibitemlist
-[28
+[33
 
-]) [29] [30]
+]) [34] [35]
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
@@ -706,10 +717,10 @@ lic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm109
 xmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200
 .pfb>
-Output written on main.pdf (33 pages, 933088 bytes).
+Output written on main.pdf (38 pages, 947494 bytes).
 PDF statistics:
- 209 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 227 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
