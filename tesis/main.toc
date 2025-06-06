@@ -28,11 +28,13 @@
 \contentsline {subsubsection}{Onda T}{24}{}%
 \contentsline {subsection}{Realización de un electrocardiograma}{24}{}%
 \contentsline {section}{\numberline {2.3}Conceptos específicos}{26}{}%
-\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{26}{}%
-\contentsline {subsection}{Redes Neuronales}{27}{}%
-\contentsline {subsection}{K-means}{28}{}%
-\contentsline {chapter}{\chapternumberline {3}Marco experimental}{29}{}%
-\contentsline {chapter}{\chapternumberline {4}Resultados}{30}{}%
-\contentsline {part}{\partnumberline {I}Conclusiones}{31}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusiones}{32}{}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{33}{}%
+\contentsline {subsection}{Aprendizaje Automático}{26}{}%
+\contentsline {subsection}{Análisis de Componentes Principales (PCA).}{27}{}%
+\contentsline {subsection}{Incrustación de vecinos estocásticos distribuidos en t (t-SNE)}{29}{}%
+\contentsline {subsection}{K-means}{30}{}%
+\contentsline {subsection}{Redes Neuronales}{30}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{32}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{33}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{34}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{35}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{36}{}%

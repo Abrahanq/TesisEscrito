@@ -5,6 +5,7 @@
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{wrapfig}
+\usepackage{amsmath}
 \usepackage{csquotes}
 % Configuración de las citas bibliográficas (puedes cambiarlo según tu preferencia)
 %\usepackage[backend=biber,style=ieee]{biblatex}
@@ -460,14 +461,99 @@ El ECG es una prueba diagnóstica asequible, segura y sencilla de realizar, que 
 Para efectuar un ECG no se precisa ninguna preparación en concreto, además que no existen riesgos en la realización de un ECG, ya que es una prueba segura y exenta de ellos. La actividad eléctrica reflejada en el papel es generada por el propio organismo, de ahí que el paciente no sienta nada durante el registro. 
 
 \section{Conceptos específicos}
+
+\subsection{Aprendizaje Automático}
+	El aprendizaje automático se ha vuelto uno de los más importantes temas hoy en día, constantemente se busca la manera de sacar el mayor provecho de los datos que se tengan recopilados con el fin de desarrollar estrategias que ayuden a tener un nivel superior de entendimiento de estos. Con los modelos de aprendizaje automático apropiados, se tiene la habilidad de hacer predicciones precisas en el mundo real y a medida que nueva data es constantemente agregada, se asegura que los modelos continúen rindiendo eficientemente y siendo capaces de adaptarse a los problemas del mundo real. 
+
+	El aprendizaje automático es una de las ramas de la Inteligencia Artificial (IA) que le permite a un sistema aprender de los datos que se le dan en lugar de programarle explícitamente la tarea que debe desempeñar. 
+	
+	El aprendizaje automático usa una variedad de algoritmos que interactivamente aprenden de los datos, para mejorar, describir datos e incluso, predecir resultados. Como estos algoritmos constantemente ingieren datos de entrenamiento, es entonces posible producir modelos más precisos basados con esta data. El aprendizaje automático engloba tantos algoritmos que es necesario agruparlos por categorías o paradigmas de aprendizaje, estos se dividen en función de la salida de los mismos.
+
 \subsection{Análisis de Componentes Principales (PCA).}
-	Los grandes conjuntos de datos están cada vez más extendidos en muchas disciplinas. Para interpretarlos, se necesitan métodos que reduzcan drásticamente su dimensionalidad de forma interpretable, de modo que se conserve la mayor parte de la información contenida en los datos. Se han desarrollado muchas técnicas con este fin, pero el análisis de componentes principales (PCA) es una de las más antiguas y utilizadas. Su idea es sencilla: reducir la dimensionalidad de un conjunto de datos conservando la mayor cantidad posible de «variabilidad» (es decir, de información estadística).
+	Los grandes conjuntos de datos están cada vez más extendidos en muchas disciplinas. Para interpretarlos, se necesitan métodos que reduzcan drásticamente su dimensionalidad de forma interpretable, de modo que se conserve la mayor parte de la información contenida en los datos. Se han desarrollado muchas técnicas con este fin, pero el análisis de componentes principales (PCA) es una de las más antiguas y utilizadas. Su idea es sencilla: reducir la dimensionalidad de un conjunto de datos conservando la mayor cantidad posible de «variabilidad», es decir, de información estadística.
 	
-	Esto significa que «preservar tanta variabilidad como sea posible» se traduce en encontrar nuevas variables que sean funciones lineales de las del conjunto de datos original, que maximicen sucesivamente la varianza y que no estén correlacionadas entre sí. Encontrar esas nuevas variables, los componentes principales (PC), se reduce a resolver un problema de auto-valores y auto-vectores. \\
+	Esto significa que «preservar tanta variabilidad como sea posible» se traduce en encontrar nuevas variables que sean funciones lineales de las del conjunto de datos original, que maximicen sucesivamente la varianza y que no estén correlacionadas entre sí. PCA usa álgebra lineal para transformar datos a unas variables llamadas componentes principales (PC). Estas se encuentras calculando los autovectores (direcciones) y autovalores (importancia) de una matriz de covarianza. PCA selecciona los componentes principales con los autovalores más altos y proyecta los datos sobre ellos, para simplificar el conjunto de datos. Para esto se debe: \\
+	\begin{enumerate}
+		\item \textbf{Estandarizar los datos.} \\
+		Las diferentes caracteristicas que están presentes en el conjunto de datos pueden tener diferentes unidades y escalas. Para comparar estas equitativamente, primero se debe estandarizar los datos haciendo que cada característica tenga: 
+		\begin{itemize}
+			\item Una media de $0$.
+			\item Una desviación estándar de $1$.
+		\end{itemize}
+		\begin{equation}
+			\label{eq:standard}
+			Z = \frac{\textit{X}-\mu}{\sigma}
+		\end{equation}
+		donde:
+		\begin{itemize}
+			\item $\mu$ es la media de las caracteristicas independientes $\mu = \{\mu_1, \mu_2,\dotsb,\mu_m\}$
+			\item $\sigma$ es la desviación estándar de las caracteristicas independientes $\sigma = \{\sigma_1, \sigma_2,\dotsb,\sigma_m\}$
+		\end{itemize}
+		\item \textbf{Calcular la matriz de covarianza.}\\
+		Es necesario calcular la matriz de covarianza para ver como las caracteristicas se relacionan entre sí, si estas aumentan o disminuyen juntas. La matriz de covarianza entre dos caracteristicas $x_1$ y $x_2$ es:
+		\begin{equation}
+			\label{eq:covarianza}
+			\operatorname{cov}(x 1, x 2)=\frac{\sum_{i=1}^n\left(x 1_i-\bar{x} 1\right)\left(x 2_i-\bar{x} 2\right)}{n-1}
+		\end{equation}
+		donde: 
+		\begin{itemize}
+			\item $\bar{x}_1$ y $\bar{x}_2$ son los valores medios de las caracteristicas $x_1$ y $x_2$.
+			\item $n$ es el numero total de datos.
+		\end{itemize}
+		El valor de la covarianza puede ser positivo, negativo o cero.
+		\item \textbf{Encontrar las componentes principales.}
+		PCA identifica los \textit{nuevos ejes} donde la varianza de los datos es mayor:
+		\begin{itemize}
+			\item \textbf{1er Componente Principal (PC1):} La dirección donde está la mayor dispersión de los datos.
+			\item \textbf{2da Componente Principal (PC2):} La siguiente mejor dirección, \textit{perpendicular a PC1} y así sucesivamente.
+		\end{itemize}
+		Estas direcciones vienen de los autovectores de la matriz de covarianza y su importancia es medida por los autovalores. Para una matriz $A$, un autovector $X$ (un vector no nulo) y su correspondiente autovalor $\lambda$ satisface:
+		\begin{equation}
+			\label{eq:autovalores}
+			AX = \lambda X
+		\end{equation}
+		Esto significa:
+		\begin{itemize}
+			\item Cuando $A$ actuá sobre $X$ sólo estira o encoge $X$ por el escalar $\lambda$.
+			\item La dirección de $X$ no cambia, por lo que los autovectores definen \guillemetleft direcciones estables\guillemetright \ de $A$.
+		\end{itemize}
+		\item \textbf{Selecciona las mejores direcciones y transforma los datos.}
+		Después de calcular los autovalores y autovectores, PCA clasifica estos por la cantidad de información que ellos capturan. Entonces: 
+		\begin{itemize}
+			\item Selecciona los k componentes principales que capturan la mayor parte de la varianza, como el 95\%.
+			\item Transforma el conjunto de datos original proyectándolo sobre los mejores componentes principales. 
+		\end{itemize}
+		Esto significa que se reduce el numero de caracteristicas (dimensiones) mientras se mantienen los patrones importantes que están implícitos de los datos.
+	\end{enumerate}
 	
-	Hasta que no se generalizó el uso de ordenadores electrónicos, que fue posible utilizarlo con conjuntos de datos que no fueran trivialmente pequeños. Desde entonces, su uso se ha multiplicado y se han desarrollado numerosas variantes en muchas disciplinas diferentes. Desde entonces, su uso se ha multiplicado y se han desarrollado numerosas variantes en muchas disciplinas diferentes. 
+	Hasta que no se generalizó el uso de ordenadores electrónicos, que fue posible utilizarlo con conjuntos de datos que no fueran trivialmente pequeños. Desde entonces, su uso se ha multiplicado y se han desarrollado numerosas variantes en muchas disciplinas diferentes.
 	
-	La definición formal de PCA, en un contexto estándar, junto con una derivación que muestra que puede obtenerse como la solución a un problema de auto-valores y auto-vectores o, alternativamente, a partir de la descomposición del valor singular (SVD) de la matriz (centrada) de datos. El PCA puede basarse en la matriz de covarianzas o en la matriz de correlaciones. Se discutirá la elección entre estos análisis. En ambos casos, las nuevas variables (las PC) dependen del conjunto de datos, en lugar de ser funciones de base predefinidas, por lo que son adaptativas en sentido amplio. Los principales usos del PCA son descriptivos y no inferenciales.\cite{Joliiffe16}\\
+%	La definición formal de PCA, en un contexto estándar, junto con una derivación que muestra que puede obtenerse como la solución a un problema de auto-valores y auto-vectores o, alternativamente, a partir de la descomposición del valor singular (SVD) de la matriz (centrada) de datos. El PCA puede basarse en la matriz de covarianzas o en la matriz de correlaciones. Se discutirá la elección entre estos análisis. En ambos casos, las nuevas variables (las PC) dependen del conjunto de datos, en lugar de ser funciones de base predefinidas, por lo que son adaptativas en sentido amplio. Los principales usos del PCA son descriptivos y no inferenciales.\cite{Joliiffe16}\\
+
+\subsection{Incrustación de vecinos estocásticos distribuidos en t (t-SNE)}
+	 La incrustación de vecinos estocásticos comienza convirtiendo las distancias Euclidianas altas dimensionales entre los puntos de datos en probabilidades condicionales que representan similaridades. Según van der Maaten y Hinton: "La similaridad entre el punto $x_i$ $x_j$ es proporcional a la probabilidad condicional $p_{i\mid j}$ de que $x_i$ escoja a $x_j$ como su vecino si los vecinos se eligieran en proporción a su densidad de probabilidad bajo una gaussiana centrada en $x_i$". Para puntos de datos cercanos, $p_{i\mid j}$ es relativamente alta, mientras que para puntos de datos muy separados, $p_{i\mid j}$ será casi infinitesimal (para valores razonables de la varianza en la gaussiana, $\sigma_i$). Matemáticamente, la probabilidad condicional $p_{i\mid j}$ es dada por: 
+	 \begin{equation}
+	 	\label{eq:prob_cond}
+	 	p_{j \mid i}=\frac{\exp \left(-\left\|x_i-x_j\right\|^2 / 2 \sigma_i^2\right)}{\sum_{k \neq i} \exp \left(-\left\|x_i-x_k\right\|^2 / 2 \sigma_i^2\right)},
+	 \end{equation}
+	donde $\sigma_i$ es la varianza de la Gaussiana que está centrada en el punto $x_i$. Debido a que estamos interesados en modelar las similaridades entre pares, se establece $p_{i\mid j} = 0$. Observe que el denominador anterior garantiza $\sum_j p_{j \mid i}=1$ para todas las $i$. Para las contrapartes de baja dimensionalidad $y_i$ y $y_j$ de los puntos altos dimensionales $x_i$ y $x_j$, es posible calcular una probabilidad condicional similar, la cual se denotará por $q_{j \mid i}$. De ahí que, se modela la similaridad de un punto cartográfico $y_j$ con el punto cartográfico $y_i$ por:
+	\begin{equation}
+		\label{eq:prob_cond_q}
+		q_{j \mid i}=\frac{\exp \left(-\left\|y_i-y_j\right\|^2\right)}{\sum_{k \neq i} \exp \left(-\left\|y_i-y_k\right\|^2\right)}
+	\end{equation}
+	Al igual que en el caso anterior, como sólo se está interesado en el modelado de las similaridades en cada par de puntos, se establece $q_{i \mid i}=0$.
+	Las probabilidades condicionales $q_{i \mid i}$ y $p_{i \mid i}$ serán iguales siempre y cuando los puntos cartográficos $y_i$ y $y_j$ modelen correctamente la similaridad entre los puntos alto dimensiones $x_i$ y $x_j$.\\ En este caso, se utiliza una distribución t de Student de colas gruesas para medir las similitudes entre puntos cartográficos de baja dimensión, con el fin de permitir que los objetos se modelen muy separados entre si. 
+	Se busca una representación bajo dimensional de los datos que minimice la disparidad entre $q_{i \mid i}$ y $p_{i \mid i}$, para lograr esto, se usa como medida de fidelidad entre $q_{i \mid i}$ y $p_{i \mid i}$, la divergencia de Kullback-Leibler. Haciendo uso del método de gradiente descendiente t-SNE, minimiza la suma de las divergencias de Kullback-Leibler sobre todos los puntos, teniendo una función de costo dada por: 
+	\begin{equation}
+		\label{eq:func_costo}
+		C = \sum_i KL(P_i\|Q_i)=\sum_i\sum_j p_{j\mid i}\log\frac{p_{j\mid i}}{q_{j\mid i}},
+	\end{equation}
+	en la cual $P_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $x_i$, y $Q_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $y_i$ y es el resultado de esta optimización, un mapa que refleja las similitudes entre las entradas de alta dimensión.
+%	Aca estoy dudoso si tambien hablar sobre el perplexity y todo lo que viene despues de eso
+	
+\subsection{K-medios (K-means)}
+
+	Los problemas de agrupamiento aparecen en diferentes aplicaciones, como reconocimiento y clasificación de patrones, de acá surge en la búsqueda de algoritmos que permitan visualizar los datos en forma de grupos o \textit{clusters}\footnote{cúmulo, grupo o racimo}. La noción de lo que constituye un buen clúster depende de su aplicación y de la aproximación con la que se llega a este. La mayoría de las formulaciones de los métodos de agrupamiento, están basadas en minimizar una función objetiva y quizás el algoritmo más usado y estudiado es \textit{k-means}.
 
 \subsection{Redes Neuronales}
 	Una red neuronal artificial es un grupo de neuronas artificiales interconectadas que interactúan entre sí de forma concertada. Se trata de hecho un procesador distribuido masivamente paralelo que tiene una propensión natural a almacenar el conocimiento experiencial y ponerlo disponible para su uso. Se parece al cerebro humano en dos aspectos: La red adquiere los conocimientos mediante un proceso de aprendizaje.	
@@ -475,7 +561,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	 mas tema
 	
 
-\subsection{K-means}
+
 %\part{Segundo seminario}
 \chapter{Marco experimental}
 
