@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{amsmath}
+\usepackage[spanish,onelanguage,ruled,vlined]{algorithm2e}
 \usepackage{csquotes}
 % Configuración de las citas bibliográficas (puedes cambiarlo según tu preferencia)
 %\usepackage[backend=biber,style=ieee]{biblatex}
@@ -103,6 +104,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Autores:} Pan, Jiapu; Tompkins, Willis J. 
 
 \textbf{Publicación:} IEEE Transactions on Biomedical Engineering
+
 \textbf{DOI:} 10.1109/TBME.1985.325532
 
 \textbf{Resumen:} Pan y Tompkins presentan el primer algoritmo para detectar en tiempo real el complejo QRS de las señales de ECG. Este algoritmo es capaz de reconocer con fiabilidad los complejos QRS basándose en análisis digitales de la pendiente, la amplitud y la anchura. Además, se plantan las bases de filtrado que se le debe hacer a una señal de ECG para reducir las falsas detecciones causadas por los distintos tipos de interferencias presentes en las señales de ECG, aumentando así la sensibilidad de la detección.
@@ -551,14 +553,76 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	en la cual $P_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $x_i$, y $Q_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $y_i$ y es el resultado de esta optimización, un mapa que refleja las similitudes entre las entradas de alta dimensión.
 %	Aca estoy dudoso si tambien hablar sobre el perplexity y todo lo que viene despues de eso
 	
-\subsection{K-medios (K-means)}
+\subsection{K-medios (k-means)}
 
-	Los problemas de agrupamiento aparecen en diferentes aplicaciones, como reconocimiento y clasificación de patrones, de acá surge en la búsqueda de algoritmos que permitan visualizar los datos en forma de grupos o \textit{clusters}\footnote{cúmulo, grupo o racimo}. La noción de lo que constituye un buen clúster depende de su aplicación y de la aproximación con la que se llega a este. La mayoría de las formulaciones de los métodos de agrupamiento, están basadas en minimizar una función objetiva y quizás el algoritmo más usado y estudiado es \textit{k-means}.
-
+	Los problemas de agrupamiento aparecen en diferentes aplicaciones, como reconocimiento y clasificación de patrones, de acá surge en la búsqueda de algoritmos que permitan visualizar los datos en forma de grupos o \textit{clusters}\footnote{Cúmulo, grupo o racimo}. La noción de lo que constituye un buen clúster depende de su aplicación y de la aproximación con la que se llega a este. La mayoría de las formulaciones de los métodos de agrupamiento, están basadas en minimizar una función objetiva y quizás el algoritmo más usado y estudiado es \textit{k-means}. Dado un conjunto de puntos $\mathbf{x}=\{x_1,x_2,\dotsb,x_n\}$ en un espacio real \textit{d}-dimensional, $\mathbf{R}^d$, y un entero \textit{k} ($k \leq n$), el problema es entonces, determinar un conjunto de \textit{k} puntos en $\mathbf{R}^d$, llamados \textit{centroides} $S_k$, que minimicen la \textit{inercia} o la suma de cuadrados de cada grupo (WCSS, por sus siglas en inglés) desde para punto de los datos a su centroide más cercano, esto es: 
+	\begin{equation}
+		\label{eq:min_k_means}
+		\underset{\mathbf{S}}{\arg \min } \sum_{i=1}^k \sum_{\mathbf{x}_j \in S_i}\left\|\mathbf{x}_j-\boldsymbol{\mu}_i\right\|^2
+	\end{equation}
+	Se puede decir que la \textit{inercia} es una medida de que tal coherentes son los clusters internamente, esto lleva a que se sufran de algunos inconvenientes:
+	\begin{itemize}
+		\item La \textit{inercia} no es una métrica normalizada, por lo que en espacios muy alto dimensionales, las distancias Euclidianas tienden a volverse infladas (a esto se le llama "maldición de la dimensionalidad"). Es por esto que aplicar algoritmos de reducción de dimensionalidad como PCA previo a k-means, puede agilizar y aliviar el consumo computacional.
+		\item k-means responde ineficientemente a clusters alargados o grupos con formas irregulares, debido a que la \textit{inercia} presume que los clusters son convexos e isotrópicos.
+	\end{itemize}
+	El algoritmo estándar de k-means, fue propuesto inicialmente por Stuart Lloyd en 1957, quien lo propuso como una técnica para modulación por impulsos codificados, sin embargo este no fue publicado hasta 1982, es por esto que a este algoritmo también se le conoce como algoritmo de Lloyd, sobre todo en la comunidad informática. \\
+	
+	\textbf{Algoritmo k-means (basado en MacKay, 2003 \cite{mackay03}):}
+	\begin{enumerate}
+		\item \textbf{Inicialización:} 
+		Se eligen los $k$ centroides $\left\{\mathbf{m}^{(k)}\right\}$ aleatoriamente.
+		\item \textbf{Paso de asignación:}
+		Cada punto $\mathbf{x}^{(n)}$ se asigna al centroide más cercano. La asignación se denota como $\hat{k}^{(n)}$:
+		\begin{equation}
+			\label{eq:k_mean_asig}
+			\hat{k}^{(n)}=\underset{k}{\operatorname{argmin}}\left\{d\left(\mathbf{m}^{(k)}, \mathbf{x}^{(n)}\right)\right\}
+		\end{equation}
+		Una representación alternativa y equivalente de esta asignación de puntos a los conglomerados viene dada por las \textit{responsabilidades}, que son variables indicadoras $r_k^{(n)}$. En el paso de asignación, establecemos $r_k^{(n)}$ en uno si la media $k$ es la media más cercana al punto de datos $\mathbf{x^{(n)}}$; de lo contrario $r_k^{(n)}$ es cero.
+		\begin{equation}
+			\label{eq:cond_rk}
+			r_k^{(n)}=\left\{\begin{array}{lll}
+				1 & \text { si } & \hat{k}^{(n)}=k \\
+				0 & \text { si } & \hat{k}^{(n)} \neq k
+			\end{array}\right.
+		\end{equation}
+		\item \textbf{Paso de actualización:}
+		Los parámetros del modelo, las medias, se ajustan para que coincidan con las medias muestrales de los puntos de datos de los que son responsables.
+		\begin{equation}
+			\label{eq:media_muestral}
+			\mathbf{m}^{(k)}=\frac{\sum_n r_k^{(n)} \mathbf{x}^{(n)}}{R^{(k)}}
+		\end{equation}
+		donde $R^{(k)}$ es la \textit{responsabilidad} total de la media $k$.
+		\begin{equation}
+			\label{eq:rk}
+			R^{(k)}=\sum_n r_k^{(n)}
+		\end{equation}
+		\item \textbf{Se repiten los pasos de asignación y actualización} hasta que no hayan cambios en la asignación.
+	\end{enumerate}
+	
 \subsection{Redes Neuronales}
-	Una red neuronal artificial es un grupo de neuronas artificiales interconectadas que interactúan entre sí de forma concertada. Se trata de hecho un procesador distribuido masivamente paralelo que tiene una propensión natural a almacenar el conocimiento experiencial y ponerlo disponible para su uso. Se parece al cerebro humano en dos aspectos: La red adquiere los conocimientos mediante un proceso de aprendizaje.	
-	El conocimiento lo adquiere la red mediante un proceso de aprendizaje, y para almacenarlo se utilizan las intensidades de conexión interneuronal, denominadas pesos. Los modelos de redes neuronales artificiales pueden utilizarse como método alternativo en análisis y predicciones. Funcionan como un modelo de «caja negra», que no requiere información detallada sobre el sistema. Imitan en cierto modo el proceso de aprendizaje de un cerebro humano porque aprenden la relación entre los parámetros de entrada, las variables controladas y no controladas estudiando datos registrados previamente. En este sentido, funcionan de forma similar a la regresión no lineal, pero son mucho más potentes que el análisis de regresión. Las redes neuronales son capaces de manejar sistemas grandes y complejos con muchos parámetros interrelacionados. Parece que simplemente ignoran el exceso de parámetros de entrada que tienen una importancia mínima y se concentran en los más importantes. \\
-	 mas tema
+	Una red neuronal artificial es un programa que intenta imitar la manera en que un cerebro humano es capaz de abordar ciertos problemas, esta usa capas interconectadas de unidades, llamadas perceptrones, siendo capaces de aprender e inferir reglas o relaciones basados en la data observada, dicha red adquiere los conocimientos mediante un proceso de entrenamiento y aprendizaje, donde almacena \textit{conocimiento} este utilizando intensidades de conexión interperceptrónica. 
+	
+	Estos métodos pueden utilizarse como método alternativo en análisis y predicciones. Al estudio de estas redes se le conoce como Aprendizaje Profundo y su uso esta siendo elevado hoy en día en numerosas aplicaciones, desde manejo autónomo de vehículos hasta en aplicaciones de imágenes medicas.\\ Su funcionamiento es del tipo «caja negra», es decir, estos modelos no requieren información detallada del sistema ya que aprenden de la relación entre los parámetros de entrada, similar a una regresión no lineal, pero con mucha más potencia que una de estas, manejando sistemas grandes y complejos con muchos parámetros interrelacionados.
+	
+	La red neuronal más simple es aquella compuesta por una sola neuronal, es decir, que el modelo matemático más sencillo es un perceptrón, este, según Frank Rosenblatt \cite{perceptron} es "la unidad básica de inferencia en forma de discriminador lineal, a partir de lo cual se desarrolla un algoritmo capaz de generar un criterio para seleccionar un subgrupo a partir de un grupo de componentes más grande."
+	
+	Este toma un vector de valores reales como entrada, calcula una combinación lineal de estas, después da una salida de 1 si el resultado es mayor que algún umbral, de lo contrario y de acuerdo a la función de activación que se use, la salida tendrá como resultado 0 o cualquier otro valor diferente de 1. Más precisamente, dadas las entradas $x_1$ hasta $x_n$, la salida $o(x_1,\dotsb,x_n)$ calculada por el perceptrón es: 
+	\begin{equation}
+		\label{eq:percept}
+		o(x_1,\dotsb,x_n) = \left\{\begin{array}{lll}
+			1 & \text { si } w_0 + w_1x_1 + w_2x_2 + \dotsb + w_nx_n > 0 \\
+			0 & \text { en otro caso } 
+		\end{array}\right.
+	\end{equation}
+	donde cada $w_i$ es una constante real conocida como «pesos», estos determinan la contribución de la entrada $x_i$ en la salida del perceptrón.
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{Sem_1/figuras/Perceptron}
+		\caption{Diagrama de un perceptrón con cinco señales de entrada \cite{imaPercep}.}
+%		\label{fig:}
+	\end{figure}
+	
+	
 	
 
 

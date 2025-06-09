@@ -31,10 +31,10 @@
 \contentsline {subsection}{Aprendizaje Automático}{26}{}%
 \contentsline {subsection}{Análisis de Componentes Principales (PCA).}{27}{}%
 \contentsline {subsection}{Incrustación de vecinos estocásticos distribuidos en t (t-SNE)}{29}{}%
-\contentsline {subsection}{K-means}{30}{}%
-\contentsline {subsection}{Redes Neuronales}{30}{}%
-\contentsline {chapter}{\chapternumberline {3}Marco experimental}{32}{}%
-\contentsline {chapter}{\chapternumberline {4}Resultados}{33}{}%
-\contentsline {part}{\partnumberline {I}Conclusiones}{34}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusiones}{35}{}%
-\contentsline {chapter}{Bibliograf\'{\i }a}{36}{}%
+\contentsline {subsection}{K-medios (k-means)}{30}{}%
+\contentsline {subsection}{Redes Neuronales}{32}{}%
+\contentsline {chapter}{\chapternumberline {3}Marco experimental}{34}{}%
+\contentsline {chapter}{\chapternumberline {4}Resultados}{35}{}%
+\contentsline {part}{\partnumberline {I}Conclusiones}{36}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusiones}{37}{}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{38}{}%

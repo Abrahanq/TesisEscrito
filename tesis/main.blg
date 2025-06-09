@@ -9,63 +9,51 @@ Warning--entry type for "Who" isn't style-file defined
 --line 24 of file bibliografia.bib
 Warning--entry type for "cardiosoft" isn't style-file defined
 --line 32 of file bibliografia.bib
-Warning--entry type for "qtdb" isn't style-file defined
---line 39 of file bibliografia.bib
-You're missing a field name---line 40 of file bibliografia.bib
- : 
- : % author = {},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 59 of file bibliografia.bib
- : @inproceedings{qtdb
- :                    ,
-I'm skipping whatever remains of this entry
-Warning--all relevant fields are empty in qtdb
+Warning--entry type for "perceptron" isn't style-file defined
+--line 324 of file bibliografia.bib
 Name 2 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
 Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
-Name 1 in "Jolliffe, I. T., and Cadima, J." has a comma at the end for entry Joliiffe16
-while executing---line 969 of file ieeetr.bst
-You've used 20 entries,
+You've used 22 entries,
             1876 wiz_defined-function locations,
-            616 strings with 7047 characters,
-and the built_in function-call counts, 5693 in all, are:
-= -- 553
-> -- 197
+            629 strings with 7432 characters,
+and the built_in function-call counts, 6234 in all, are:
+= -- 609
+> -- 214
 < -- 0
-+ -- 74
-- -- 54
-* -- 400
-:= -- 772
-add.period$ -- 19
-call.type$ -- 20
-change.case$ -- 19
++ -- 81
+- -- 59
+* -- 427
+:= -- 847
+add.period$ -- 23
+call.type$ -- 22
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 281
-empty$ -- 558
-format.name$ -- 54
-if$ -- 1422
+cite$ -- 22
+duplicate$ -- 306
+empty$ -- 619
+format.name$ -- 59
+if$ -- 1564
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 16
-newline$ -- 63
-num.names$ -- 21
-pop$ -- 60
+int.to.str$ -- 22
+missing$ -- 18
+newline$ -- 71
+num.names$ -- 24
+pop$ -- 79
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 244
+skip$ -- 257
 stack$ -- 0
-substring$ -- 433
-swap$ -- 132
+substring$ -- 461
+swap$ -- 141
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 49
-width$ -- 22
-write$ -- 187
-(There were 5 error messages)
+warning$ -- 0
+while$ -- 54
+width$ -- 24
+write$ -- 209
+(There were 2 error messages)
