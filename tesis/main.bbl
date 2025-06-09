@@ -29,7 +29,9 @@ G.~Moody and R.~Mark, ``The impact of the mit-bih arrhythmia database,'' {\em
   pp.~45--50, 2001.
 
 \bibitem{qtdb}
-
+P.~Laguna, R.~Mark, A.~Goldberg, and G.~Moody, ``A database for evaluation of
+  algorithms for measurement of qt and other waveform intervals in the ecg,''
+  in {\em Computers in Cardiology 1997}, pp.~673--676, 1997.
 
 \bibitem{st-tdb}
 A.~TADDEI, G.~DISTANTE, M.~EMDIN, P.~PISANI, G.~B. MOODY, C.~ZEELENBERG, and
@@ -93,9 +95,17 @@ F.~M. Correa, M. P.;~Arbeláez, ``Fisiología cardiovascular,'' in {\em Texto
   de cardiología}, pp.~72--74, Sociedad Colombiana de Cardiología y Cirugía
   Cardiovascular, 2007.
 
-\bibitem{Joliiffe16}
-I.~T. Jolliffe and J.~Cadima, ``Principal component analysis: a review and
-  recent developments.,'' {\em Philosophical transaction. Series A,
-  Mathematical, physical, and engineering sciences}, 2016.
+\bibitem{mackay03}
+D.~J.~C. MacKay, {\em Information Theory, Inference, and Learning Algorithms}.
+\newblock Cambridge University Press, 2003.
+
+\bibitem{perceptron}
+F.~Ramírez, ``Historia de la ia: Frank rosenblatt y el mark i perceptrón, el
+  primer ordenador fabricado específicamente para crear redes neuronales en
+  1957,'' 2018.
+
+\bibitem{imaPercep}
+A.~Cartas, ``Diagrama de un perceptron con cinco señales de entrada,'' 2015.
+\newblock Accedido el: 09-06-2025.
 
 \end{thebibliography}

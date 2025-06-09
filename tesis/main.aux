@@ -6,6 +6,7 @@
 \catcode `<\active 
 \catcode `>\active 
 \@nameuse{es@quoting}
+\providecommand \oddpage@label [2]{}
 \babel@aux{spanish}{}
 \citation{ZHANG2021113}
 \citation{MedlineECG}
@@ -13,6 +14,7 @@
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{toc}{\contentsline {chapter}{\chapternumberline {1}El problema}{2}{}\protected@file@percent }
+\@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Justificación}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Objetivos}{3}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{Objetivo General}{3}{}\protected@file@percent }
@@ -21,6 +23,7 @@
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{toc}{\contentsline {chapter}{\chapternumberline {2}Marco Teórico}{5}{}\protected@file@percent }
+\@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Antecedentes}{5}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{A Real-Time QRS Detection Algorithm \cite  {PanTompkins85}}{5}{}\protected@file@percent }
 \citation{Martinez04}
@@ -93,20 +96,34 @@
 \newlabel{eq:prob_cond}{{\M@TitleReference {2.4}{Incrustación de vecinos estocásticos distribuidos en t (t-SNE)}}{29}}
 \newlabel{eq:prob_cond_q}{{\M@TitleReference {2.5}{Incrustación de vecinos estocásticos distribuidos en t (t-SNE)}}{29}}
 \newlabel{eq:func_costo}{{\M@TitleReference {2.6}{Incrustación de vecinos estocásticos distribuidos en t (t-SNE)}}{30}}
-\@writefile{toc}{\contentsline {subsection}{K-means}{30}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Redes Neuronales}{30}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{K-medios (k-means)}{30}{}\protected@file@percent }
+\newlabel{eq:min_k_means}{{\M@TitleReference {2.7}{K-medios (k-means)}}{30}}
+\citation{mackay03}
+\newlabel{eq:k_mean_asig}{{\M@TitleReference {2.8}{K-medios (k-means)}}{31}}
+\newlabel{eq:cond_rk}{{\M@TitleReference {2.9}{K-medios (k-means)}}{31}}
+\newlabel{eq:media_muestral}{{\M@TitleReference {2.10}{K-medios (k-means)}}{31}}
+\citation{perceptron}
+\citation{imaPercep}
+\citation{imaPercep}
+\newlabel{eq:rk}{{\M@TitleReference {2.11}{K-medios (k-means)}}{32}}
+\@writefile{toc}{\contentsline {subsection}{Redes Neuronales}{32}{}\protected@file@percent }
+\newlabel{eq:percept}{{\M@TitleReference {2.12}{Redes Neuronales}}{32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Diagrama de un perceptrón con cinco señales de entrada \cite  {imaPercep}.}}{33}{}\protected@file@percent }
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {chapter}{\chapternumberline {3}Marco experimental}{32}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {3}Marco experimental}{34}{}\protected@file@percent }
+\@writefile{loa}{\addvspace {10\p@ }}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {chapter}{\chapternumberline {4}Resultados}{33}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {part}{\partnumberline {I}Conclusiones}{34}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {4}Resultados}{35}{}\protected@file@percent }
+\@writefile{loa}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {part}{\partnumberline {I}Conclusiones}{36}{}\protected@file@percent }
 \bibstyle{ieeetr}
 \bibdata{bibliografia.bib}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
-\@writefile{toc}{\contentsline {chapter}{\chapternumberline {5}Conclusiones}{35}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\chapternumberline {5}Conclusiones}{37}{}\protected@file@percent }
+\@writefile{loa}{\addvspace {10\p@ }}
 \bibcite{ZHANG2021113}{1}
 \bibcite{MedlineECG}{2}
 \bibcite{Who}{3}
@@ -116,7 +133,7 @@
 \bibcite{qtdb}{7}
 \bibcite{st-tdb}{8}
 \bibcite{Herrero05}{9}
-\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{36}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliograf\'{\i }a}{38}{}\protected@file@percent }
 \bibcite{Dugarte11}{10}
 \bibcite{cardiosoft}{11}
 \bibcite{Khorrami10}{12}
@@ -127,7 +144,9 @@
 \bibcite{fbbva}{17}
 \bibcite{vincent2022}{18}
 \bibcite{textCardi}{19}
-\bibcite{Joliiffe16}{20}
-\memsetcounter{lastsheet}{41}
-\memsetcounter{lastpage}{38}
-\gdef \@abspage@last{41}
+\bibcite{mackay03}{20}
+\bibcite{perceptron}{21}
+\bibcite{imaPercep}{22}
+\memsetcounter{lastsheet}{43}
+\memsetcounter{lastpage}{40}
+\gdef \@abspage@last{43}
