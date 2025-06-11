@@ -34,7 +34,10 @@
 \contentsline {subsection}{\numberline {2.3.4}K-medios (k-means)}{22}{}%
 \contentsline {subsection}{\numberline {2.3.5}Redes Neuronales}{24}{}%
 \contentsline {subsection}{\numberline {2.3.6}Redes neuronales biológicas}{24}{}%
-\contentsline {subsection}{\numberline {2.3.7}El perceptrón}{24}{}%
-\contentsline {chapter}{\numberline {3}Marco experimental}{26}{}%
-\contentsline {chapter}{\numberline {4}Resultados}{27}{}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{28}{}%
+\contentsline {subsection}{\numberline {2.3.7}El perceptrón}{25}{}%
+\contentsline {subsection}{\numberline {2.3.8}Función de activación de las neuronas}{26}{}%
+\contentsline {subsection}{\numberline {2.3.9}El perceptrón multicapa.}{26}{}%
+\contentsline {subsection}{\numberline {2.3.10}Arquitectura.}{27}{}%
+\contentsline {chapter}{\numberline {3}Marco experimental}{29}{}%
+\contentsline {chapter}{\numberline {4}Resultados}{30}{}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{31}{}%

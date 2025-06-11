@@ -646,9 +646,21 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\label{fig:neurona}
 	\end{figure}
 	
-	La clave para procesado de información viene de la conexión entre las neuronas (sinapsis), 
+	Una neurona consta de tres partes:
+	\begin{enumerate}
+		\item El cuerpo de la neurona.
+		\item Las dendritas, que reciben las entradas.
+		\item El axón, que llave la salida de la neurona a las dendritas de otras neuronas.
+	\end{enumerate} 
+	Las dendritas poseen una estructura de árbol, estas reciben las señales de entrada procedentes de otras neuronas a través de la sinapsis, esta sinapsis constituye la clave para el procesado de la información. Este proceso se modela como una regla de propagación representada por una función $u(\cdot)$, encargada de recoger las señales por su sinapsis sumando todas las influencias excitadoras e inhibidoras, dependiendo de que influencia domina, la neurona produce o no produce una señal positiva, en caso de ser positiva, esta manda a las demás neuronas el mensaje (la señal) por sus sinapsis de salida. En este sentido, la neurona actúa como una simple función escalón $f(\cdot)$ \cite{nnApli}.
 	
-	Estos modelos pueden utilizarse como método alternativo en análisis y predicciones. Al estudio de estas redes se le conoce como Aprendizaje Profundo y su uso esta siendo elevado hoy en día en numerosas aplicaciones, desde manejo autónomo de vehículos hasta en aplicaciones de imágenes medicas. Su funcionamiento es del tipo «caja negra», es decir, estos modelos no requieren información detallada del sistema ya que aprenden de la relación entre los parámetros de entrada, similar a una regresión no lineal, pero con mucha más potencia que una de estas, manejando sistemas grandes y complejos con muchos parámetros interrelacionados.
+	Aunque las redes neuronales biológicas poseen funcionalidades y estructuras de conexión distintas a las redes neuronales artificiales (NN, por sus siglas en inglés), estas últimas están inspiradas en las redes neuronales biológicas. Las principales características de las NN son:
+	\begin{enumerate}
+		\item \textit{Auto-Organización y Adaptabilidad:} poseen un procesado robusto y adaptativo ya que utilizan algoritmos de aprendizaje adaptativo y auto-organizados.
+		\item \textit{Procesado no Lineal:} esto aumenta la capacidad de la red para aproximar funciones, clasificar patrones y aumenta su inmunidad frente al \textit{ruido}.
+		\item \textit{Procesado Paralelo:} normalmente se usa un gran número de nodos de procesado, con alto nivel de interconectividad.
+	\end{enumerate}
+%	Estos modelos pueden utilizarse como método alternativo en análisis y predicciones. Al estudio de estas redes se le conoce como Aprendizaje Profundo y su uso esta siendo elevado hoy en día en numerosas aplicaciones, desde manejo autónomo de vehículos hasta en aplicaciones de imágenes medicas. Su funcionamiento es del tipo «caja negra», es decir, estos modelos no requieren información detallada del sistema ya que aprenden de la relación entre los parámetros de entrada, similar a una regresión no lineal, pero con mucha más potencia que una de estas, manejando sistemas grandes y complejos con muchos parámetros interrelacionados.
 	\subsection{El perceptrón}
 	La red neuronal más simple es aquella compuesta por una sola neuronal, es decir, que el modelo matemático más sencillo es un perceptrón, este, según Frank Rosenblatt \cite{perceptron} es "la unidad básica de inferencia en forma de discriminador lineal, a partir de lo cual se desarrolla un algoritmo capaz de generar un criterio para seleccionar un subgrupo a partir de un grupo de componentes más grande."
 
@@ -656,7 +668,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	\begin{equation}
 		\label{eq:percept}
 		o(x_1,\dotsb,x_n) = \left\{\begin{array}{lll}
-			1 & \text { si } w_0 + w_1x_1 + w_2x_2 + \dotsb + w_nx_n > 0 \\
+			1 & \text { si } w_0 + w_1x_1 + w_2x_2 + \dotsb + w_nx_n + b > 0 \\
 			0 & \text { en otro caso } 
 		\end{array}\right.
 	\end{equation}
@@ -667,8 +679,66 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\caption{Diagrama de un perceptrón con cinco señales de entrada \cite{imaPercep}.}
 		\label{fig:diagrama_perceptron}
 	\end{figure}
-	
+	En todo modelo de red neuronal artificial intervienen los siguientes elementos que conforman su estructura \cite{monsSistem}: 
+	\begin{itemize}
+		\item \textbf{Señales de entrada $(x_1, x_2,\dotsb,x_n)$:} pueden ser datos originales o provenientes de otras neuronas.
+		\item \textbf{Señales de salida $(y_1,y_2,\dotsb,y_m)$:} que corresponde con los resultados de la red (clasificación o predicción en esta investigación).
+		\item \textbf{Los pesos sinápticos $w_{1k},w_{2y},\dotsb,w_{nk}$:} A las entradas que provienen de otras neuronas se les asigna un peso, es decir, una determinada importancia. El peso es el numero que se modifica durante el entrenamiento de la red neuronal y que permite a la red adaptarse para conseguir la respuesta correcta.
+		\item \textbf{Regla de propagación:} Se realizan diferentes operaciones con las entradas y los pesos. Con esto se busca obtener el valor del potencial que posteriormente se utilizara para realizar el procesamiento. Una de las operaciones más comunes es la suma ponderada. Otra regla puede ser la distancia euclidiana, que es utilizada por los mapas auto-organizados y las redes de función de base radial. 
+		\item \textbf{La función de activación}: El valor obtenido en la regla de propagación se envía a través de la función de activación y esta define el nuevo estado o la salida de la capa. Según el entrenamiento de la red neuronal se elige la función de activación que pueden ser: lineal, escalón, sigmoidea, gaussiana o ReLU \cite{stephani}.
+	\end{itemize}
 
+	\subsection{Función de activación de las neuronas}
+	
+	La función $o$ de la ecuación \ref{eq:percept} es la llamada función de activación. Para este tipo de redes, las funciones de activación más utilizadas son la la función tangente hiperbólica, función sigmoidal, y la función ReLU. Dichas funciones poseen como imagen un intervalo continuo de valores dentro de los intervalos $[-1,1]$ para la primera función antes mencionada y $[0,1]$ para las ultimas funciones antes mencionadas, estas vienen dadas por las siguientes ecuaciones: \\ \\
+	\textbf{Función tangente hiperbólica:}
+	\begin{equation}
+		\label{eq:tangente_hiper}
+		f(x) = \frac{1}{1 + e^{-x}}
+	\end{equation}
+	\textbf{Función sigmoidal:}
+	\begin{equation}
+		\label{eq:sigmoidal}
+		f(x) = \frac{1-e^{-x}}{1 + e^{-x}}
+	\end{equation}
+	\textbf{Función ReLU:}
+	\begin{equation}
+		\label{eq:ReLU}
+		\mathrm{ReLU}(x) = x^{+} = \mathrm{max}(0,x) = \frac{x + |x|}{2} = \left\{\begin{array}{lll}
+			x & \text{si } x > 0, \\
+			0 & \text{si } x \leq 0
+		\end{array}\right.
+	\end{equation}
+%	Quede aqui
+	
+	\subsection{El perceptrón multicapa.}
+	Al combinar varios perceptrones dispuestos en forma de capas, se puede generalizar al perceptrón simple, este surgió como consecuencia de las limitaciones del perceptrón simple en lo referente al problema de separabilidad no lineal. Minsky y Papert mostraron en 1969 que la combinación de varios perceptrones simples podía resultar en una solución adecuada para tratar ciertos problemas no lineales. Sin embargo, los autores no presentaron una solución al problema de como adaptar los pesos de la capa de entrada a la capa oculta, pues la regla de aprendizaje del perceptrón simple no puede aplicarse a este escenario. No obstante, la idea de combinar varios perceptrones sirvió de base para estudios posteriores realizados por Rumelhart, Hinton y Williams en 1986 \cite{percepMulti}. Estos autores mostraron una retropropagación de los errores medidos en la salida de la red hacia los perceptrones de las capas ocultas, dando lugar a la llamada regla delta generalizada. Diferentes autores han demostrado independientemente que el perceptrón multicapa es un aproximador universal, en el sentido de que cualquier función continua en un espacio $R^n$ puede aproximarse con un perceptrón multicapa, con al menos una capa oculta de neuronas \cite{stephani}.
+ 
+ 	Las características de las NN juegan un importante papel, por ejemplo, en el procesado de señales o imágenes. Se usan arquitecturas que comprenden elementos de procesado adaptativo paralelo, combinados con estructuras de interconexiones jerárquicas \cite{percepMulti}. Existen dos fases en la modelización con redes neuronales:
+ 	\begin{itemize}
+ 		\item \textbf{Fase de entrenamiento:} se usa un conjunto de datos o patrones de entrenamiento para determinar los pesos que definen el modelo de red neuronal. Se calculan de manera iterativa, de acuerdo con los valores de entrenamiento, con el objeto de minimizar el error cometido entre la salida obtenida por la NN y la salida esperada.
+ 		\item \textbf{Fase de prueba:} en la fase anterior, el modelo puede que se ajuste demasiado a las particularidades presentes en los patrones de entrenamiento, perdiendo su habilidad de generalizar su aprendizaje a casos nuevos.
+ 	\end{itemize}
+ 	
+ 	Las NN se pueden clasificar en diferentes formas dependiendo de los elementos básicos: según el número de capas pueden ser monocapa o multicapa. Según el tipo de retropropagación son recurrentes o no recurrentes. Según el mecanismo de aprendizaje supervisadas o híbridas. Según el tipo de conexión, totalmente conectadas o parcialmente conectadas.
+ 	
+ 	\subsection{Arquitectura.}
+ 	Existen 3 tipos de capas en un perceptrón multicapa, una capa de entrada, una capa de salida y una o mas capas ocultas.
+ 	\begin{enumerate}
+ 		\item \textbf{Capa de entrada:} son las encargadas de recibir la información de fuentes externas a la red, de aquí su nombre. En algunos casos, esta capa esta conectada a otras redes, las unidades de entrada reciben los datos de las salidas de las otras redes; en otros casos, simplemente reciben los datos que el usuario de la red introduce manualmente en el computador.
+ 		\item \textbf{Capas ocultas:} toda red mínimamente complicada, incluye este tipo de capa, estas no tiene relación directa con la información de entrada ni con la de salida, por lo que no son \guillemetleft visibles\guillemetright al ambiente exterior de la red, de ahí su nombre, su función es procesar la información en niveles más complejos para de esta forma hacer los cómputos más eficientes.
+ 		\item \textbf{Capa de salida:} Estas son las encargadas de dar la información al exterior, ofrecen la respuesta del sistema al usuario para su posterior tratamiento.
+ 	\end{enumerate}
+ 	\begin{figure}[h]
+ 		\centering
+ 		\includegraphics[width=0.7\linewidth]{Sem_1/figuras/RedNeuronalArtificial.png}
+ 		\caption{Arquitectura de un perceptrón multicapa con sus tres tipos de capas \cite{percMulti}.}
+ 		\label{fig:perceptron_multicapa}
+ 	\end{figure}
+ 	
+ 	En las NN las conexiones entre perceptrones siempre son hacia adelante, no existen conexiones laterales ni conexiones hacia atrás. Por tanto, la información siempre se transmite desde la capa de entrada hacia la capa de salida. Se considera $w_{ji}$ como el peso de conexión entre el perceptrón de entrada $i$ y el perceptrón de la capa oculta $j$, y $v_{kj}$ como el peso de conexión entre el perceptrón oculto $j$ y el perceptrón de salida $k$ \cite{percepMulti}. Los pesos óptimos se obtienen optimizando alguna función de energía. Por ejemplo, un criterio muy utilizado en el llamado entrenamiento supervisado, es minimizar el error cuadrático medio entre el valor de salida y el valor real esperado.
+ 	
+ 	%	Cambiar perceptrones por neuronas de aqui para arriba, hacerlo manana
 %\part{Segundo seminario}
 \chapter{Marco experimental}
 

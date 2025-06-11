@@ -91,7 +91,7 @@ R.~Vincent, ``From a laboratory to the wearables: a review on history and
   vol.~4, no.~4, pp.~248--255, 2022.
 
 \bibitem{textCardi}
-F.~M. Correa, M. P.;~Arbeláez, ``Fisiología cardiovascular,'' in {\em Texto
+M.~P. Correa and F.~M. Arbeláez, ``Fisiología cardiovascular,'' in {\em Texto
   de cardiología}, pp.~72--74, Sociedad Colombiana de Cardiología y Cirugía
   Cardiovascular, 2007.
 
@@ -103,6 +103,9 @@ D.~J.~C. MacKay, {\em Information Theory, Inference, and Learning Algorithms}.
 R.~Bernabeu, ``Partes de la neurona en cerebro humano,'' 2016.
 \newblock Accedido el 10-06-2025.
 
+\bibitem{nnApli}
+J.~Marín, ``Introducción a las redes neuronales aplicadas.,'' 2019.
+
 \bibitem{perceptron}
 F.~Ramírez, ``Historia de la ia: Frank rosenblatt y el mark i perceptrón, el
   primer ordenador fabricado específicamente para crear redes neuronales en
@@ -111,5 +114,20 @@ F.~Ramírez, ``Historia de la ia: Frank rosenblatt y el mark i perceptrón, el
 \bibitem{imaPercep}
 A.~Cartas, ``Diagrama de un perceptron con cinco señales de entrada,'' 2015.
 \newblock Accedido el: 09-06-2025.
+
+\bibitem{monsSistem}
+A.~Monsalve, ``Sistemas de ayuda a la decision clinica en enfermedades de
+  diagnostico complejo.''
+
+\bibitem{stephani}
+S.~Carrillo and M.~Rosales, ``Hacia una detección temprana de la enfermedad de
+  parkinson a través del análisis de componentes principales (pca) y redes
+  neuronales artificiales (rna). [una propuesta experimental].''
+
+\bibitem{percepMulti}
+C.~Medina, ``Perceptrón multicapa,'' 2017.
+
+\bibitem{percMulti}
+Gengiskanhg, ``Red neuronal artificial,'' 2004.
 
 \end{thebibliography}
