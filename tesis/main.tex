@@ -1,29 +1,56 @@
-\documentclass[spanish,11pt,letterpaper,oneside]{memoir}
+\documentclass[12pt,letterpaper,oneside,openright]{book}
 % Configuración del idioma español
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage{amsmath}
+%\usepackage[hidelinks]{hyperref}
+%\usepackage{wrapfig}
+\usepackage{amsmath, amssymb}
 \usepackage[spanish,onelanguage,ruled,vlined]{algorithm2e}
-\usepackage{csquotes}
-% Configuración de las citas bibliográficas (puedes cambiarlo según tu preferencia)
+\usepackage{fancyhdr}
+\usepackage{geometry}
+%\usepackage{csquotes}
+% Configuración de las citas bibliográficas 
 %\usepackage[backend=biber,style=ieee]{biblatex}
+\geometry{left=2.5cm, right=1.5cm, top=1.5cm, bottom=2cm}
 
+
+%Configuración de márgenes para memoir
+%\setlrmarginsandblock{2.5cm}{1.5cm}{*}
+%\setulmarginsandblock{1.5cm}{1.5cm}{*}
+%\checkandfixthelayout
+%\setcounter{secnumdepth}{4}
+%\renewcommand{\thesubsection}{\thesubsection.\arabic{subsection}}
+%\renewcommand{\thesubsubsection}{\thesubsubsection.\arabic{subsubsection}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt} % Sin línea en el encabezado
+%\renewcommand{\footrulewidth}{0pt} % Sin línea en el pie
+%
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot[R]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+%	\renewcommand{\footrulewidth}{0pt}
+}
+%\setlength{\headheight}{14.5pt}
 
 % Personalización de los nombres de los capítulos y otros elementos
-\renewcommand{\partname}{Parte}
-\renewcommand{\chaptername}{Capítulo}
-\renewcommand{\bibname}{Bibliografía}
-\renewcommand{\contentsname}{Tabla de contenidos}
-\renewcommand{\listfigurename}{Lista de figuras}
-\renewcommand{\listtablename}{Lista de tablas}
+%\renewcommand{\partname}{Parte}
+%\renewcommand{\chaptername}{Capítulo}
+%\renewcommand{\bibname}{Bibliografía}
+%\renewcommand{\contentsname}{Tabla de contenidos}
+%\renewcommand{\listfigurename}{Lista de figuras}
+%\renewcommand{\listtablename}{Lista de tablas}
 
 \begin{document}
+%	\thispagestyle{fancy}
 \frontmatter
 % Portada
-\begin{titlingpage}
+\begin{titlepage}
   \begin{center}
   	{\includegraphics[width=0.35\linewidth]{Sem_1/figuras/ulaLogo}\par}
   	\vspace{1cm}
@@ -50,12 +77,12 @@
     {\large\textbf{Mérida -- Venezuela}} \par
     {\large 2024} % Deja esto vacío para eliminar la fecha de la portada
   \end{center}
-\end{titlingpage}
+\end{titlepage}
 
 % Abstract en español
-\begin{abstract}
-  Este es el resumen de mi tesis.
-\end{abstract}
+%\begin{abstract}
+%  Este es el resumen de mi tesis.
+%\end{abstract}
 
 
 \newpage
@@ -71,8 +98,9 @@
 
 
 %\part{Primer Seminario}
-\pagestyle{empty}{\huge\textbf{Introducción}}
-\chapter{El problema}
+%\pagestyle{empty}
+{\huge\textbf{Introducción}}
+\chapter{Planteamiento del problema}
 	El electrocardiograma (ECG) es una técnica no invasiva que permite registrar y medir las señales eléctricas generadas por el corazón. Consiste en la captación de la variación temporal del potencial bioeléctrico durante cada ciclo cardíaco, utilizando electrodos colocados en la superficie cutánea del paciente que registran dicha actividad eléctrica y producen un gráfico que muestra el ritmo y la fuerza de los latidos del corazón, este produce un patrón muy específico, y cualquier anomalía puede indicar un problema cardíaco \cite{ZHANG2021113}. El análisis del ECG proporciona datos sobre el sistema cardiovascular, en particular, el corazón, lo que permite detectar diversas enfermedades que pueden afectar su funcionamiento óptimo. Estas enfermedades incluyen arritmias cardíacas, obstrucción de arterias, insuficiencia cardíaca y ataques al corazón \cite{MedlineECG}. \\ Según la organización mundial de la salud \cite{Who}, las enfermedades cardiovasculares (ECV) son las principal causa de muerte en hombres y mujeres en el mundo, con alrededor de 17,9 millones de personas que mueren al año a causa de estas. Entre los numerosos factores que llevan a esta consecuencia, se encuentran los errores provenientes de la interpretación manual de los electrocardiogramas (ECGs), por lo general, los médicos emplean características heurísticas diseñadas manualmente o utilizan arquitecturas de aprendizaje de características superficiales, esto puede generar como consecuencia, variabilidad entre los diagnósticos de los observadores e identificación de anomalías incorrectas que pueden llevar a ocasionar diagnósticos imprecisos y en consecuencia, tratamientos inadecuados. Además estos métodos manuales que utilizan arquitecturas de aprendizaje de características superficiales, descartan información relevante del ECG inmersa dentro de características que no son superficiales, lo que provee una baja exactitud en el diagnostico a partir de las señales por lo que siempre será necesario de la supervisión de un experto con el fin de corregir estos errores, además algunas enfermedades cardíacas, como la enfermedad de las arterias coronarias en etapa temprana, pueden no ser detectables en un ECG, también se debe resaltar, que el ECG se puede ver afectado por factores externos, como el movimiento del paciente, las interferencias electromagnéticas, la incorrecta colocación de los electrodos, estados ansiosos de los pacientes al momento de aplicarles el examen o el uso de medicamentos.
 
 \section{Justificación}
@@ -82,9 +110,10 @@
  
 
 \section{Objetivos}
-\subsection{Objetivo General}
-Analizar los datos provenientes de electrocardiogramas mediante la aplicación de análisis de componentes principales (PCA) y redes neuronales, con el objetivo de identificar agrupaciones en dicha data.
-\subsection{Objetivos específicos}
+
+	\subsection{Objetivo General}
+		Analizar los datos provenientes de electrocardiogramas mediante la aplicación de análisis de componentes principales (PCA) y redes neuronales, con el objetivo de identificar agrupaciones en dicha data.
+	\subsection{Objetivos específicos}
 \begin{enumerate}
 	\item Implementar técnicas avanzadas de filtrado y eliminación de artefactos para obtener señales de electrocardiogramas más limpias.
 	\item Desarrollar un marco metodológico solido que combine el análisis de componentes principales (PCA) y redes neuronales perceptrónicas para la identificación de grupos de datos.
@@ -139,6 +168,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Autores:} Martínez, J. P.; Almeida, R.; Olmos, S.; Rocha, A. P., Laguna, P.
 
 \textbf{Publicación:} IEEE Transactions on Biomedical Engineering
+
 \textbf{DOI:} 10.1109/TBME.2003.821031
 
 \textbf{Resumen:} En este artículo, desarrollan y evalúan un robusto sistema de delineación de ECG de una sola derivación basado en las transformada de ondícula (WT, por sus siglas en inglés). Primeramente, detectan los complejos QRS para luego delimitar cada QRS, detectando e identificando los picos de las ondas individuales, así como también, los inicios y finales de cada complejo QRS. Finalmente, se realiza la determinación de los picos, inicios y finales de las ondas P y T. Posteriormente, se evalúa este algoritmo en varias bases de datos anotadas manualmente, como MIT-BIH Arritmia \cite{arritmiadb}, QT \cite{qtdb}, ST-T Europea \cite{st-tdb} y otras bases de datos, desarrolladas para propósitos de validación.
@@ -161,7 +191,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 
 \textbf{Autores:}Herrero, G.G.; Gotchev, A.; Christov, I.; Egiazarian, K.
 
-\textbf{Publicación:} IEEE
+\textbf{Publicación:} IEEE.
 \textbf{DOI:} 10.1109/ICASSP.2005.1416111
 
 \textbf{Resumen:} En esta investigación, se presenta un método basado en el algoritmo de búsqueda de coincidencias para la extracción de caracteristicas de tiempo-frecuencia que pueden ser usadas para la clasificación de varios tipos de latidos anormales. Luego de esto, investigan sobre la usabilidad del análisis de componentes independientes (ICA, por sus siglas en inglés) para extraer caracteristicas espaciales de grabaciones de electrocardiogramas de varias derivaciones. El rendimiento de estos diferentes conjuntos de caracteristicas es evaluado usando las grabaciones de la base de datos MIT-BIH Arritmia \cite{arritmiadb}.
@@ -206,7 +236,8 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \subsection{A comparative study of DWT, CWT and DCT transformations in ECG arrhythmias classification \cite{Khorrami10}.}
 \textbf{Autores:} Khorrami, H.; Moavenian M.
  
-\textbf{Publicación:} Expert Systems with Applications
+\textbf{Publicación:} Expert Systems with Applications.
+
 \textbf{DOI:} 10.1016/j.eswa.2010.02.033
 
 \textbf{Resumen:} En este estudio, se sugiere y comparan el uso de transformadas ondículas discretas (CWT, por sus siglas en inglés), transformadas ondículas discretas (DWT) y transformada discreta del coseno (DCT, por sus siglas en inglés), que ya están en uso, con el fin de mejorar la capacidad de dos clasificadores de patrones en clasificación de arritmias en señales de ECG. Se utilizan como clasificadores, redes neuronales perceptrónicas y máquinas de soporte vectorial. Las señales de ECG usadas son tomadas de la base de datos Arritmia del MIT-BIH que son usadas para clasificar cuatro diferentes tipos de arritmias. 
@@ -230,6 +261,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Autores:} Ceylan, R.; Özbay, Y.
 
 \textbf{Publicación:} Expert Systems with Applications.
+
 \textbf{DOI:} 10.1016/j.eswa.2006.05.014
 
 \textbf{Resumen:} Este articulo presenta un estudio comparativo de la eficacia en la clasificación de señales ECG usando 4 tipos de estructuras que incluyen poderosas técnicas de reducción de dimensionalidad, como lo son PCA, WT y agrupamiento c-medios difuso (FCM, por sus siglas en inglés); también usan redes neuronales perceptrónicas (NN) para clasificar tipos de arritmias, usando MIT-BIH Arritmia \cite{arritmiadb}, estas son entrenadas para clasificar 10 diferentes tipos de arritmias. 
@@ -274,6 +306,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Autores:} Zhang, C.; Yuan, Lu.; Tang, F.; Cai, H.; Qian, Y.; Wang, C.
 
 \textbf{Publicación:} BMC Medical Informatics and Decision Making.
+
 \textbf{DOI:} 10.1186/s12911-024-02415-4
 
 \textbf{Resumen:} La insuficiencia cardíaca es un síndrome con complejas manifestaciones clínicas. Debido al creciente envejecimiento de la población, la insuficiencia cardíaca se ha convertido en uno de los mayores problemas alrededor del mundo. Este estudio, se usa la base de datos pública MIMIC-III para extraer las caracteristicas temporales y espaciales de las señales ECG de paciencias con insuficiencias cardíacas.
@@ -372,9 +405,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
     \end{figure}
     \\
     
-    Como se observa en la figura \ref{fig:ECGSinusal} el ECG consta de varias ondas representativas de cada etapa de un latido cardíaco, estas son: \\
-
-	
+    Como se observa en la figura \ref{fig:ECGSinusal} el ECG consta de varias ondas representativas de cada etapa de un latido cardíaco, estas son: \\	
 	\begin{itemize}
 		\item \textbf{Onda P}: registra la despolarización auricular.
 		\item \textbf{Complejo QRS}: Es la despolarización ventricular.
@@ -414,7 +445,6 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 		\caption{Potencial de acción-relaciones de componentes \cite{textCardi}.}
 		\label{fig:fonocardio}
 	\end{figure}
-	
 	Este potencial de acción conducido en forma adecuada es el estímulo para obtener una contracción cardíaca sincronizada. En reposo, el sodio está en el espacio extracelular en mayor concentración, al igual que el calcio, mientras que el potasio predomina en el espacio intracelular. Esto significa que la membrana tendrá una carga positiva por fuera y negativa por dentro. Al iniciarse la despolarización, ocurren cambios de la permeabilidad al sodio, lo cual permite su entrada al espacio intracelular, se invierte la carga interna, que se vuelve positiva ($+20$ mV) y la forma la fase 0 del potencial de acción. La pendiente de su ascenso regula la velocidad de conducción del tejido. Posteriormente, el cloro entra en persecución del sodio y disminuye levemente la positividad interior (fase 1). Luego baja drásticamente la permeabilidad al sodio y calcio y estos iones comienzan a disminuir su velocidad de entrada, la cual se hace básicamente a través de los canales lentos, que son voltaje dependientes y de tipo receptor de membrana que consume energía, y que inscriben una fase en meseta en el potencial de acción (Fase 2). Los canales lentos de calcio son altamente selectivos para este ion, aunque permiten la entrada también de sodio. Este mecanismo en la membrana del retículo sarcoplásmico asegura, además, que la concentración intracelular de calcio sea suficiente para los procesos contráctiles. Inmediatamente sale potasio de la célula para lograr el equilibrio de cargas eléctricas, al parecer por un súbito aumento de la permeabilidad de la membrana para este ion, disminuye la positividad y logra un potencial negativo intenso intracelular, saliendo calcio al retículo sarcoplásmico nuevamente (Fase 3). Esto repolariza la célula. Pero luego entran en acción las bombas de sodio y calcio, dependientes de ATP, que sacan Na y CA y lo intercambian por potasio, lo cual incrementa levemente el potencial intracelular (Fase 4).
 	
 	La velocidad de ascenso de la fase 4 es lo que regula la excitabilidad y es más pronunciado en los tejidos de excitación automática. El calcio que entra en la fase 2 es aclarado de la célula por varios mecanismos como son: las bombas de calcio dependientes de ATP, el fosfolamban, y la captación de calcio hacia el interior de la mitocondria, en un proceso que también es dependiente de energía. El potencial de acción tiene una duración variable (entre 200 y 400 ms) y durante ese período, la célula se hace total o parcialmente refractaria a una excitación adicional, al parecer por la presencia de sodio dentro de la célula. El periodo refractario absoluto ocupa las fases 0, 1, 2 y 3, es decir, mientras el sodio es aún intracelular. Una vez que el sodio comienza a salir de la célula, está parcialmente disponible para volver a entrar rápidamente, por lo que la fase 4 y la parte final de la fase 3 son el período refractario relativo. El potencial más negativo que se alcanza durante la fase 4 se atenúa en presencia de Ácidosis, hipocalemia isquemia y fibrosis y se aumenta con los medicamentos antiarrítmicos en su mayoría. Existen diferencias en la configuración del potencial de acción según el tejido analizado dentro del corazón: en las células automáticas, las fases 1 y 2 son cortas y la fase 4 es plana y en las células de conducción, la fase 0 es rápida, y la fase 2 es de mayor duración. Las fases 0 y 1 corresponden a la onda P y el complejo QRS. La fase 2 corresponde al segmento ST y la fase 3 a la onda T. La fase 4 corresponde a la diástole eléctrica. La deflexión descendente de la onda T corresponde al período refractario relativo, que tiene 2 subfases: la vulnerable que es durante la cual un estímulo de suficiente intensidad es capaz de desencadenar arritmias severas, y la subfase súper-normal, que corresponde a una hiperpolarización "muy refractaria", pues no hay potasio intracelular en cantidad abundante. La velocidad a la cual se transmite el impulso varía de acuerdo con la pendiente de la fase 0, con la altura del potencial de acción, con la duración de las fases 2 y 4. Dicha velocidad en el nodo sinusal es de $5 cm/s$, en las aurículas es de $80-100 cm/s$, en el nodo AV es de $5 cm/s$, en el haz de His es de $100 cm/s$, en las fibras de Purkinje es de $400 cm/s$ y en el músculo de $90 cm/s$
@@ -425,8 +455,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 
 El ECG presenta como línea guía la denominada \textit{línea isoeléctrica o línea basal}, que puede identificarse fácilmente como la línea horizontal existente entre cada latido. Los latidos cardíacos quedan representados en el ECG \textit{normal} por las diferentes oscilaciones de la línea basal en forma de ángulos, segmentos, ondas e intervalos, constituyendo una imagen característica que se repite con una frecuencia regular a lo largo de la tira de papel del ECG. Como se ha comentado, entre latido y latido va discurriendo la línea base. \\
 El recorrido en sentido horizontal hace referencia al \textit{tiempo} transcurrido, y la distancia en sentido vertical (amplitud) al \textit{voltaje} que se está produciendo. El papel por el que discurre el registro de la línea se encuentra milimetrado. Cada cuadrado pequeño del papel mide $1 mm$ y al observarlo con detenimiento puede comprobarse que cinco cuadrados pequeños forman un cuadrado grande, remarcado por un grosor mayor en la tira de papel de ECG. Para conocer cómo transcurren los tiempos durante la actividad del corazón, basta con recordar que cinco cuadrados grandes en sentido horizontal equivalen exactamente a un segundo. \\
-En un ECG \textit{normal}, cada complejo consta de un a serie de deflexiones (ondas del ECG) que alternan con la línea basal. Realizando la lectura de izquierda a derecha, se distinguen la onda P, sel segmento P-R, el complejo QRS, el segmento ST y finalmente la onda T, véase la figura \ref{fig:ECGSinusal}. \\
-
+En un ECG \textit{normal}, cada complejo consta de un a serie de deflexiones (ondas del ECG) que alternan con la línea basal. Realizando la lectura de izquierda a derecha, se distinguen la onda P, sel segmento P-R, el complejo QRS, el segmento ST y finalmente la onda T, véase la figura \ref{fig:ECGSinusal}.
 \subsubsection{Onda P}
 
 Es la primera deflexión hacia arriba que aparece en el ECG. Su forma recuerda a una mezcla entre una U y una V invertidas. Suele durar entre $80-100 ms$ y esta representa el momento en que las aurículas se están contrayendo y enviando sangre hacia los ventrículos. 
@@ -452,8 +481,12 @@ Se inscribe a continuación del segmento ST. Consiste en una deflexión normalme
 
 Realizar un ECG es un procedimiento sencillo. Se necesitan un electrocardiógrafo, parches de ECG que actúan como sensores sobre la piel, comportándose como si fueran electrodos, y un sistema de cables que transmiten las microcorrientes recogidas por los parches al electrocardiógrafo, el cual se encargará de amplificarlas. El paciente se coloca boca arriba sobre una camilla. La postura ideal es completamente horizontal; en caso de no tolerar bien esta posición, la camilla podría elevarse unos treinta grados. \\
 Un enfermero, un técnico o un médico le colocarán un total de 10 parches (electrodos). Se coloca uno en cada extremidad, formando así las seis derivaciones llamadas \textit{de los miembros}. Los restantes seis parches se colocan en seis puntos específicos del pecho en la denominada \textit{región precordial}, y hacen referencia a las seis derivaciones precordiales. Una derivación electrocardiográfica está constituida por la unión de dos electrodos. De esta forma, es posible conseguir un total de 12 derivaciones. Cada una permite obtener una visión electrocardiográfica diferente, representando 12 \textit{ventanas} o puntos de observación distintos. Así, una anomalía que afecta a una parte concreta del corazón puede no ser advertida desde una derivación (ventana) y sí desde otra. Esta característica confiere valor al ECG para localizar la zona del corazón que puede encontrarse dañada. Cada derivación presenta un patrón del ECG característico con el que el médico está familiarizado, pero los principios expuestos en la descripción del ECG son aplicables a todas las derivaciones. \\
-Una vez que el paciente se encuentra tumbado y con los 10 cables que conectan el ECG con su parche (electrodo) correspondiente, se puede comenzar el registro del ECG, cuya duración aproximada es de 10 segundos. El registro obtenido ---gracias a la impresora que lleva incorporado el propio ECG--- constituye el ECG del paciente. \\
-Es importante tener en cuenta que desde el momento en que el operador indica que va a comenzar el registro, el paciente debe moverse lo menos posible, ya que incluso el temblor muscular fino (por ejemplo, por frío o intranquilidad) puede interferir con la señal del registro, y en el caso de resultar excesivamente distorsionada será preciso repetir el ECG. Asimismo, el contacto entre los parches y la piel del enfermo debe ser lo más estrecho posible y, en este sentido, al realizar un ECG hay que evitar la utilización previa de cremas o lociones que interfieran en dicho contacto. Es frecuente que el operador tenga que emplear una gasa suavemente impregnada en alcohol, ya que la propia grasa de la piel puede interferir con la nitidez del registro, y aplicarla sobre los puntos donde serán situados los parches.\\ Éstos llevan un gel autoadhesivo cuya composición favorece la transmisión de las pequeñas corrientes eléctricas desde la piel al electrocardiógrafo. Este gel conductor tiene una caducidad relativamente temprana y ocasionalmente puede ocurrir que la señal eléctrica no pueda ser recogida por el electrocardiógrafo debido a anomalías o defectos del parche. En este caso, en el papel del ECG no aparecerá ningún tipo de señal, ninguna línea. Naturalmente, la situación queda subsanada en cuanto se desprendan los parches defectuosos y se repita el ECG utilizando los adecuados. \\
+Una vez que el paciente se encuentra tumbado y con los 10 cables que conectan el ECG con su parche (electrodo) correspondiente, se puede comenzar el registro del ECG, cuya duración aproximada es de 10 segundos. El registro obtenido ---gracias a la impresora que lleva incorporado el propio ECG--- constituye el ECG del paciente. 
+
+Es importante tener en cuenta que desde el momento en que el operador indica que va a comenzar el registro, el paciente debe moverse lo menos posible, ya que incluso el temblor muscular fino (por ejemplo, por frío o intranquilidad) puede interferir con la señal del registro, y en el caso de resultar excesivamente distorsionada será preciso repetir el ECG. Asimismo, el contacto entre los parches y la piel del enfermo debe ser lo más estrecho posible y, en este sentido, al realizar un ECG hay que evitar la utilización previa de cremas o lociones que interfieran en dicho contacto. Es frecuente que el operador tenga que emplear una gasa suavemente impregnada en alcohol, ya que la propia grasa de la piel puede interferir con la nitidez del registro, y aplicarla sobre los puntos donde serán situados los parches.
+
+Éstos llevan un gel autoadhesivo cuya composición favorece la transmisión de las pequeñas corrientes eléctricas desde la piel al electrocardiógrafo. Este gel conductor tiene una caducidad relativamente temprana y ocasionalmente puede ocurrir que la señal eléctrica no pueda ser recogida por el electrocardiógrafo debido a anomalías o defectos del parche. En este caso, en el papel del ECG no aparecerá ningún tipo de señal, ninguna línea. Naturalmente, la situación queda subsanada en cuanto se desprendan los parches defectuosos y se repita el ECG utilizando los adecuados. 
+
 Hoy en día, un ECG puede ser realizado en cualquier sitio debido tanto a la reducción en el tamaño de los equipos como, sobre todo, a la posibilidad de disponer el electrocardiógrafos portátiles. De esta forma, el ECG llega al domicilio de pacientes que no se pueden desplazar o al lugar donde se ha producido un accidente y, naturalmente, se puede disponer de monitorización con ECG continua durante el transporte sanitario. Pese a todo, lo más frecuente es que el ECG se realice dentro del medio hospitalario o bien a nivel ambulatorio en centros de salud o consultorios médicos.
 
 Existen otras formas de realizar un ECG aparte de la convencional en reposo. Fundamentalmente son dos: el ECG de esfuerzo que consiste en caminar en una cinta sin fin o pedalear en una bicicleta especialmente adaptada, mientas un médico valore el ECG realizado durante el ejercicio, y el Holter-ECG, en el que se registra el ECG del paciente mediante un sistema de grabación especialmente diseñado, durante un tiempo aproximado de 24 horas; posteriormente, es analizado por un \textit{software} específico y este, se utiliza principalmente para el estudio de arritmias \cite{textCardi}. 
@@ -543,8 +576,11 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\label{eq:prob_cond_q}
 		q_{j \mid i}=\frac{\exp \left(-\left\|y_i-y_j\right\|^2\right)}{\sum_{k \neq i} \exp \left(-\left\|y_i-y_k\right\|^2\right)}
 	\end{equation}
+	
 	Al igual que en el caso anterior, como sólo se está interesado en el modelado de las similaridades en cada par de puntos, se establece $q_{i \mid i}=0$.
-	Las probabilidades condicionales $q_{i \mid i}$ y $p_{i \mid i}$ serán iguales siempre y cuando los puntos cartográficos $y_i$ y $y_j$ modelen correctamente la similaridad entre los puntos alto dimensiones $x_i$ y $x_j$.\\ En este caso, se utiliza una distribución t de Student de colas gruesas para medir las similitudes entre puntos cartográficos de baja dimensión, con el fin de permitir que los objetos se modelen muy separados entre si. 
+	Las probabilidades condicionales $q_{i \mid i}$ y $p_{i \mid i}$ serán iguales siempre y cuando los puntos cartográficos $y_i$ y $y_j$ modelen correctamente la similaridad entre los puntos alto dimensiones $x_i$ y $x_j$.
+	
+	En este caso, se utiliza una distribución t de Student de colas gruesas para medir las similitudes entre puntos cartográficos de baja dimensión, con el fin de permitir que los objetos se modelen muy separados entre si. 
 	Se busca una representación bajo dimensional de los datos que minimice la disparidad entre $q_{i \mid i}$ y $p_{i \mid i}$, para lograr esto, se usa como medida de fidelidad entre $q_{i \mid i}$ y $p_{i \mid i}$, la divergencia de Kullback-Leibler. Haciendo uso del método de gradiente descendiente t-SNE, minimiza la suma de las divergencias de Kullback-Leibler sobre todos los puntos, teniendo una función de costo dada por: 
 	\begin{equation}
 		\label{eq:func_costo}
@@ -600,12 +636,22 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	\end{enumerate}
 	
 \subsection{Redes Neuronales}
-	Una red neuronal artificial es un programa que intenta imitar la manera en que un cerebro humano es capaz de abordar ciertos problemas, esta usa capas interconectadas de unidades, llamadas perceptrones, siendo capaces de aprender e inferir reglas o relaciones basados en la data observada, dicha red adquiere los conocimientos mediante un proceso de entrenamiento y aprendizaje, donde almacena \textit{conocimiento} este utilizando intensidades de conexión interperceptrónica. 
+	Una red neuronal artificial es un programa que intenta imitar la manera en que un cerebro humano es capaz de abordar ciertos problemas, esta usa capas interconectadas de unidades, llamadas perceptrones, siendo capaces de aprender e inferir reglas o relaciones basados en la data observada, dicha red adquiere los conocimientos mediante un proceso de entrenamiento y aprendizaje, donde este almacena \textit{conocimiento} utilizando intensidades de conexión interperceptrónica. 
+	\subsection{Redes neuronales biológicas}
+	Es necesario entender el concepto de una red neuronal del tipo biológico para poder entender que es lo imitan las redes neuronales artificiales, estas se definen como la unión de neuronas a otras generando así, un conjunto de conexiones sinápticas ordenadas. Las neuronas, no son más que células con características únicas que le permiten diferenciarse del resto de las células biológicas al poder comunicarse entre ellas. En la figura \ref{fig:neurona} se observan las partes de una neurona biológica. 
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.6\linewidth]{Sem_1/figuras/neurona}
+		\caption{Estructura de una neurona.\cite{imaNeu}.}
+		\label{fig:neurona}
+	\end{figure}
 	
-	Estos métodos pueden utilizarse como método alternativo en análisis y predicciones. Al estudio de estas redes se le conoce como Aprendizaje Profundo y su uso esta siendo elevado hoy en día en numerosas aplicaciones, desde manejo autónomo de vehículos hasta en aplicaciones de imágenes medicas.\\ Su funcionamiento es del tipo «caja negra», es decir, estos modelos no requieren información detallada del sistema ya que aprenden de la relación entre los parámetros de entrada, similar a una regresión no lineal, pero con mucha más potencia que una de estas, manejando sistemas grandes y complejos con muchos parámetros interrelacionados.
+	La clave para procesado de información viene de la conexión entre las neuronas (sinapsis), 
 	
+	Estos modelos pueden utilizarse como método alternativo en análisis y predicciones. Al estudio de estas redes se le conoce como Aprendizaje Profundo y su uso esta siendo elevado hoy en día en numerosas aplicaciones, desde manejo autónomo de vehículos hasta en aplicaciones de imágenes medicas. Su funcionamiento es del tipo «caja negra», es decir, estos modelos no requieren información detallada del sistema ya que aprenden de la relación entre los parámetros de entrada, similar a una regresión no lineal, pero con mucha más potencia que una de estas, manejando sistemas grandes y complejos con muchos parámetros interrelacionados.
+	\subsection{El perceptrón}
 	La red neuronal más simple es aquella compuesta por una sola neuronal, es decir, que el modelo matemático más sencillo es un perceptrón, este, según Frank Rosenblatt \cite{perceptron} es "la unidad básica de inferencia en forma de discriminador lineal, a partir de lo cual se desarrolla un algoritmo capaz de generar un criterio para seleccionar un subgrupo a partir de un grupo de componentes más grande."
-	
+
 	Este toma un vector de valores reales como entrada, calcula una combinación lineal de estas, después da una salida de 1 si el resultado es mayor que algún umbral, de lo contrario y de acuerdo a la función de activación que se use, la salida tendrá como resultado 0 o cualquier otro valor diferente de 1. Más precisamente, dadas las entradas $x_1$ hasta $x_n$, la salida $o(x_1,\dotsb,x_n)$ calculada por el perceptrón es: 
 	\begin{equation}
 		\label{eq:percept}
@@ -619,12 +665,9 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\centering
 		\includegraphics[width=0.8\linewidth]{Sem_1/figuras/Perceptron}
 		\caption{Diagrama de un perceptrón con cinco señales de entrada \cite{imaPercep}.}
-%		\label{fig:}
+		\label{fig:diagrama_perceptron}
 	\end{figure}
 	
-	
-	
-
 
 %\part{Segundo seminario}
 \chapter{Marco experimental}
@@ -635,7 +678,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 
 ...
 
-\part{Conclusiones}
+%\part{Conclusiones}
 \chapter{Conclusiones}
 
 ...

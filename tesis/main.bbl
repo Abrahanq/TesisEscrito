@@ -1,18 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{ZHANG2021113}
-L.~Zhang, M.~Karimzadeh, M.~Welch, C.~McIntosh, and B.~Wang, ``Chapter 7 -
-  analytics methods and tools for integration of biomedical data in medicine,''
-  in {\em Artificial Intelligence in Medicine} (L.~Xing, M.~L. Giger, and J.~K.
-  Min, eds.), pp.~113--129, Academic Press, 2021.
-
-\bibitem{MedlineECG}
-M.~National Library~of Medicine, ``Electrocardiogram,'' 2020.
-
-\bibitem{Who}
-O.~Organizacion Mundial de~la Salud, ``Enfermedades cardiovasculares (cvds),''
-  2021.
-
 \bibitem{PanTompkins85}
 J.~Pan and W.~J. Tompkins, ``A real-time qrs detection algorithm,'' {\em IEEE
   Transactions on Biomedical Engineering}, vol.~BME-32, no.~3, pp.~230--236,
@@ -22,22 +9,6 @@ J.~Pan and W.~J. Tompkins, ``A real-time qrs detection algorithm,'' {\em IEEE
 J.~P. Martínez, R.~Almeida, S.~Olmos, A.~P. Rocha, and P.~Laguna, ``A
   wavelet-based ecg delineator: Evaluation on standard databases,'' {\em IEEE
   transactions on bio-medical engineering}, vol.~51, pp.~570--81, 05 2004.
-
-\bibitem{arritmiadb}
-G.~Moody and R.~Mark, ``The impact of the mit-bih arrhythmia database,'' {\em
-  IEEE Engineering in Medicine and Biology Magazine}, vol.~20, no.~3,
-  pp.~45--50, 2001.
-
-\bibitem{qtdb}
-P.~Laguna, R.~Mark, A.~Goldberg, and G.~Moody, ``A database for evaluation of
-  algorithms for measurement of qt and other waveform intervals in the ecg,''
-  in {\em Computers in Cardiology 1997}, pp.~673--676, 1997.
-
-\bibitem{st-tdb}
-A.~TADDEI, G.~DISTANTE, M.~EMDIN, P.~PISANI, G.~B. MOODY, C.~ZEELENBERG, and
-  C.~MARCHESI, ``The european st-t database: standard for evaluating systems
-  for the analysis of st-t changes in ambulatory electrocardiography,'' {\em
-  European Heart Journal}, vol.~13, pp.~1164--1172, 09 1992.
 
 \bibitem{Herrero05}
 G.~Herrero, A.~Gotchev, I.~Christov, and K.~Egiazarian, ``Feature extraction
@@ -50,9 +21,6 @@ G.~Herrero, A.~Gotchev, I.~Christov, and K.~Egiazarian, ``Feature extraction
 N.~Dugarte~Jerez, R.~Medina~Molina, and R.~Rojas~Sulbarán, ``Sistema para la
   adquisición de la señal electrocardiógrafica de alta resolución,'' {\em
   {Universidad, Ciencia y Tecnolog\~A\-a}}, vol.~15, pp.~206 -- 215, 12 2011.
-
-\bibitem{cardiosoft}
-Cardiosoft, ``hfqrs-ecg - high frequency qrs electrocardiograph.''
 
 \bibitem{Khorrami10}
 H.~Khorrami and M.~Moavenian, ``A comparative study of dwt, cwt and dct
@@ -80,6 +48,38 @@ V.~Astudillo, D.~Luna, and J.~Muñoz~Chaves, ``Clasificación de arritmias
   cardiacas usando redes neuronales convolucionales en muestras de ecg,'' {\em
   Revista EIA}, vol.~21, pp.~1 -- 22, 01 2024.
 
+\bibitem{ZHANG2021113}
+L.~Zhang, M.~Karimzadeh, M.~Welch, C.~McIntosh, and B.~Wang, ``Chapter 7 -
+  analytics methods and tools for integration of biomedical data in medicine,''
+  in {\em Artificial Intelligence in Medicine} (L.~Xing, M.~L. Giger, and J.~K.
+  Min, eds.), pp.~113--129, Academic Press, 2021.
+
+\bibitem{MedlineECG}
+M.~National Library~of Medicine, ``Electrocardiogram,'' 2020.
+
+\bibitem{Who}
+O.~Organizacion Mundial de~la Salud, ``Enfermedades cardiovasculares (cvds),''
+  2021.
+
+\bibitem{arritmiadb}
+G.~Moody and R.~Mark, ``The impact of the mit-bih arrhythmia database,'' {\em
+  IEEE Engineering in Medicine and Biology Magazine}, vol.~20, no.~3,
+  pp.~45--50, 2001.
+
+\bibitem{qtdb}
+P.~Laguna, R.~Mark, A.~Goldberg, and G.~Moody, ``A database for evaluation of
+  algorithms for measurement of qt and other waveform intervals in the ecg,''
+  in {\em Computers in Cardiology 1997}, pp.~673--676, 1997.
+
+\bibitem{st-tdb}
+A.~TADDEI, G.~DISTANTE, M.~EMDIN, P.~PISANI, G.~B. MOODY, C.~ZEELENBERG, and
+  C.~MARCHESI, ``The european st-t database: standard for evaluating systems
+  for the analysis of st-t changes in ambulatory electrocardiography,'' {\em
+  European Heart Journal}, vol.~13, pp.~1164--1172, 09 1992.
+
+\bibitem{cardiosoft}
+Cardiosoft, ``hfqrs-ecg - high frequency qrs electrocardiograph.''
+
 \bibitem{fbbva}
 A.~Luis, ``El electrocardiograma,'' in {\em Libro de la salud del hospital
   clínico San Carlos y la Fundación BBVA}, pp.~49--56, Editorial Nerea, S.A.,
@@ -98,6 +98,10 @@ F.~M. Correa, M. P.;~Arbeláez, ``Fisiología cardiovascular,'' in {\em Texto
 \bibitem{mackay03}
 D.~J.~C. MacKay, {\em Information Theory, Inference, and Learning Algorithms}.
 \newblock Cambridge University Press, 2003.
+
+\bibitem{imaNeu}
+R.~Bernabeu, ``Partes de la neurona en cerebro humano,'' 2016.
+\newblock Accedido el 10-06-2025.
 
 \bibitem{perceptron}
 F.~Ramírez, ``Historia de la ia: Frank rosenblatt y el mark i perceptrón, el
