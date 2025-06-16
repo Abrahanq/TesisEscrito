@@ -11,40 +11,48 @@ Warning--entry type for "cardiosoft" isn't style-file defined
 --line 32 of file bibliografia.bib
 Warning--entry type for "perceptron" isn't style-file defined
 --line 324 of file bibliografia.bib
+Warning--entry type for "nnApli" isn't style-file defined
+--line 348 of file bibliografia.bib
+Warning--entry type for "percepMulti" isn't style-file defined
+--line 355 of file bibliografia.bib
+Warning--entry type for "stephani" isn't style-file defined
+--line 362 of file bibliografia.bib
+Warning--entry type for "monsSistem" isn't style-file defined
+--line 370 of file bibliografia.bib
 Name 2 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
 Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
-You've used 22 entries,
+You've used 28 entries,
             1876 wiz_defined-function locations,
-            629 strings with 7432 characters,
-and the built_in function-call counts, 6234 in all, are:
-= -- 609
-> -- 214
+            657 strings with 8061 characters,
+and the built_in function-call counts, 6993 in all, are:
+= -- 670
+> -- 246
 < -- 0
-+ -- 81
-- -- 59
-* -- 427
-:= -- 847
-add.period$ -- 23
-call.type$ -- 22
-change.case$ -- 21
++ -- 95
+- -- 67
+* -- 453
+:= -- 953
+add.period$ -- 28
+call.type$ -- 28
+change.case$ -- 27
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 306
-empty$ -- 619
-format.name$ -- 59
-if$ -- 1564
+cite$ -- 28
+duplicate$ -- 330
+empty$ -- 727
+format.name$ -- 67
+if$ -- 1757
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 28
 missing$ -- 18
-newline$ -- 71
-num.names$ -- 24
-pop$ -- 79
+newline$ -- 90
+num.names$ -- 30
+pop$ -- 117
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 257
+skip$ -- 290
 stack$ -- 0
 substring$ -- 461
 swap$ -- 141
@@ -53,7 +61,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 54
-width$ -- 24
-write$ -- 209
+while$ -- 60
+width$ -- 30
+write$ -- 251
 (There were 2 error messages)
