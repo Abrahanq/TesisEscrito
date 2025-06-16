@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  11 JUN 2025 18:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  16 JUN 2025 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,40 +482,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 693--695
 
  []
 
-[26]
-<Sem_1/figuras/RedNeuronalArtificial.png, id=129, 178.86826pt x 99.7326pt>
-File: Sem_1/figuras/RedNeuronalArtificial.png Graphic file (type png)
-<use Sem_1/figuras/RedNeuronalArtificial.png>
-Package pdftex.def Info: Sem_1/figuras/RedNeuronalArtificial.png  used on input
- line 733.
-(pdftex.def)             Requested size: 350.33727pt x 195.36497pt.
-
+<Sem_1/figuras/funciones_de_activacion.png, id=126, 939.51pt x 216.81pt>
+File: Sem_1/figuras/funciones_de_activacion.png Graphic file (type png)
+<use Sem_1/figuras/funciones_de_activacion.png>
+Package pdftex.def Info: Sem_1/figuras/funciones_de_activacion.png  used on inp
+ut line 715.
+(pdftex.def)             Requested size: 450.43253pt x 103.9452pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27] [28 <./Sem_1/figuras/RedNeuronalArtificial.png>]
+[26] [27 <./Sem_1/figuras/funciones_de_activacion.png>]
+<Sem_1/figuras/RedNeuronalArtificial.png, id=134, 178.86826pt x 99.7326pt>
+File: Sem_1/figuras/RedNeuronalArtificial.png Graphic file (type png)
+<use Sem_1/figuras/RedNeuronalArtificial.png>
+Package pdftex.def Info: Sem_1/figuras/RedNeuronalArtificial.png  used on input
+ line 743.
+(pdftex.def)             Requested size: 350.33727pt x 195.36497pt.
+ [28 <./Sem_1/figuras/RedNeuronalArtificial.png>] [29] [30]
+Underfull \hbox (badness 10000) in paragraph at lines 854--859
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--859
+
+ []
+
+[31]
 Cap\'{\i }tulo 3.
-[29
+[32
 
 ]
 Cap\'{\i }tulo 4.
-[30
+[33
 
 ]
 Cap\'{\i }tulo 5.
-(./main.bbl [31
+(./main.bbl [34
 
-] [32
+] [35
 
-]) [33] (./main.aux
+]) [36] (./main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
- 6353 strings out of 480247
- 98822 string characters out of 5896106
- 424244 words of memory out of 5000000
- 24202 multiletter control sequences out of 15000+600000
+ 6377 strings out of 480247
+ 99647 string characters out of 5896106
+ 424399 words of memory out of 5000000
+ 24225 multiletter control sequences out of 15000+600000
  491026 words of font info for 80 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,12n,62p,2574b,630s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -529,21 +544,22 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist
 ts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/shar
-e/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/
-public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx
-1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/p
-ublic/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0
-800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/
-texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/pu
-blic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm17
-28.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sfti1440.pfb>
-Output written on main.pdf (36 pages, 1410206 bytes).
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pf
+b></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/c
+m-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm
+-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
+</usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfti1440.pfb>
+Output written on main.pdf (39 pages, 1459725 bytes).
 PDF statistics:
- 254 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
+ 273 PDF objects out of 1000 (max. 8388607)
+ 166 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

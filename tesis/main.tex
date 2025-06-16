@@ -497,7 +497,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 
 \section{Conceptos específicos}
 
-\subsection{Aprendizaje Automático}
+\subsection{Aprendizaje Automátic.}
 	El aprendizaje automático se ha vuelto uno de los más importantes temas hoy en día, constantemente se busca la manera de sacar el mayor provecho de los datos que se tengan recopilados con el fin de desarrollar estrategias que ayuden a tener un nivel superior de entendimiento de estos. Con los modelos de aprendizaje automático apropiados, se tiene la habilidad de hacer predicciones precisas en el mundo real y a medida que nueva data es constantemente agregada, se asegura que los modelos continúen rindiendo eficientemente y siendo capaces de adaptarse a los problemas del mundo real. 
 
 	El aprendizaje automático es una de las ramas de la Inteligencia Artificial (IA) que le permite a un sistema aprender de los datos que se le dan en lugar de programarle explícitamente la tarea que debe desempeñar. 
@@ -565,7 +565,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	
 %	La definición formal de PCA, en un contexto estándar, junto con una derivación que muestra que puede obtenerse como la solución a un problema de auto-valores y auto-vectores o, alternativamente, a partir de la descomposición del valor singular (SVD) de la matriz (centrada) de datos. El PCA puede basarse en la matriz de covarianzas o en la matriz de correlaciones. Se discutirá la elección entre estos análisis. En ambos casos, las nuevas variables (las PC) dependen del conjunto de datos, en lugar de ser funciones de base predefinidas, por lo que son adaptativas en sentido amplio. Los principales usos del PCA son descriptivos y no inferenciales.\cite{Joliiffe16}\\
 
-\subsection{Incrustación de vecinos estocásticos distribuidos en t (t-SNE)}
+\subsection{Incrustación de vecinos estocásticos distribuidos en t (t-SNE).}
 	 La incrustación de vecinos estocásticos comienza convirtiendo las distancias Euclidianas altas dimensionales entre los puntos de datos en probabilidades condicionales que representan similaridades. Según van der Maaten y Hinton: "La similaridad entre el punto $x_i$ $x_j$ es proporcional a la probabilidad condicional $p_{i\mid j}$ de que $x_i$ escoja a $x_j$ como su vecino si los vecinos se eligieran en proporción a su densidad de probabilidad bajo una gaussiana centrada en $x_i$". Para puntos de datos cercanos, $p_{i\mid j}$ es relativamente alta, mientras que para puntos de datos muy separados, $p_{i\mid j}$ será casi infinitesimal (para valores razonables de la varianza en la gaussiana, $\sigma_i$). Matemáticamente, la probabilidad condicional $p_{i\mid j}$ es dada por: 
 	 \begin{equation}
 	 	\label{eq:prob_cond}
@@ -589,7 +589,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	en la cual $P_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $x_i$, y $Q_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $y_i$ y es el resultado de esta optimización, un mapa que refleja las similitudes entre las entradas de alta dimensión.
 %	Aca estoy dudoso si tambien hablar sobre el perplexity y todo lo que viene despues de eso
 	
-\subsection{K-medios (k-means)}
+\subsection{K-medios (k-means).}
 
 	Los problemas de agrupamiento aparecen en diferentes aplicaciones, como reconocimiento y clasificación de patrones, de acá surge en la búsqueda de algoritmos que permitan visualizar los datos en forma de grupos o \textit{clusters}\footnote{Cúmulo, grupo o racimo}. La noción de lo que constituye un buen clúster depende de su aplicación y de la aproximación con la que se llega a este. La mayoría de las formulaciones de los métodos de agrupamiento, están basadas en minimizar una función objetiva y quizás el algoritmo más usado y estudiado es \textit{k-means}. Dado un conjunto de puntos $\mathbf{x}=\{x_1,x_2,\dotsb,x_n\}$ en un espacio real \textit{d}-dimensional, $\mathbf{R}^d$, y un entero \textit{k} ($k \leq n$), el problema es entonces, determinar un conjunto de \textit{k} puntos en $\mathbf{R}^d$, llamados \textit{centroides} $S_k$, que minimicen la \textit{inercia} o la suma de cuadrados de cada grupo (WCSS, por sus siglas en inglés) desde para punto de los datos a su centroide más cercano, esto es: 
 	\begin{equation}
@@ -635,10 +635,10 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\item \textbf{Se repiten los pasos de asignación y actualización} hasta que no hayan cambios en la asignación.
 	\end{enumerate}
 	
-\subsection{Redes Neuronales}
-	Una red neuronal artificial es un programa que intenta imitar la manera en que un cerebro humano es capaz de abordar ciertos problemas, esta usa capas interconectadas de unidades, llamadas perceptrones, siendo capaces de aprender e inferir reglas o relaciones basados en la data observada, dicha red adquiere los conocimientos mediante un proceso de entrenamiento y aprendizaje, donde este almacena \textit{conocimiento} utilizando intensidades de conexión interperceptrónica. 
-	\subsection{Redes neuronales biológicas}
-	Es necesario entender el concepto de una red neuronal del tipo biológico para poder entender que es lo imitan las redes neuronales artificiales, estas se definen como la unión de neuronas a otras generando así, un conjunto de conexiones sinápticas ordenadas. Las neuronas, no son más que células con características únicas que le permiten diferenciarse del resto de las células biológicas al poder comunicarse entre ellas. En la figura \ref{fig:neurona} se observan las partes de una neurona biológica. 
+\subsection{Redes Neuronales.}
+	Una red neuronal artificial es un programa que intenta imitar la manera en que un cerebro humano es capaz de abordar ciertos problemas, esta usa capas interconectadas de unidades, llamadas perceptrones (también se les llama neuronas), siendo capaces de aprender e inferir reglas o relaciones basados en la data observada, dicha red adquiere los conocimientos mediante un proceso de entrenamiento y aprendizaje, donde este almacena \textit{conocimiento} utilizando intensidades de conexión interperceptrónica. 
+	\subsection{Redes neuronales biológicas.}
+	Es necesario entender el concepto de una red neuronal del tipo biológico para poder comprender que es lo imitan las redes neuronales artificiales, estas se definen como la unión de neuronas a otras generando así, un conjunto de conexiones sinápticas ordenadas. Las neuronas, no son más que células con características únicas que le permiten diferenciarse del resto de las células biológicas al poder comunicarse entre ellas. En la figura \ref{fig:neurona} se observan las partes de una neurona biológica. 
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.6\linewidth]{Sem_1/figuras/neurona}
@@ -661,8 +661,8 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\item \textit{Procesado Paralelo:} normalmente se usa un gran número de nodos de procesado, con alto nivel de interconectividad.
 	\end{enumerate}
 %	Estos modelos pueden utilizarse como método alternativo en análisis y predicciones. Al estudio de estas redes se le conoce como Aprendizaje Profundo y su uso esta siendo elevado hoy en día en numerosas aplicaciones, desde manejo autónomo de vehículos hasta en aplicaciones de imágenes medicas. Su funcionamiento es del tipo «caja negra», es decir, estos modelos no requieren información detallada del sistema ya que aprenden de la relación entre los parámetros de entrada, similar a una regresión no lineal, pero con mucha más potencia que una de estas, manejando sistemas grandes y complejos con muchos parámetros interrelacionados.
-	\subsection{El perceptrón}
-	La red neuronal más simple es aquella compuesta por una sola neuronal, es decir, que el modelo matemático más sencillo es un perceptrón, este, según Frank Rosenblatt \cite{perceptron} es "la unidad básica de inferencia en forma de discriminador lineal, a partir de lo cual se desarrolla un algoritmo capaz de generar un criterio para seleccionar un subgrupo a partir de un grupo de componentes más grande."
+	\subsection{El perceptrón.}
+	La red neuronal más simple es aquella compuesta por una sola neurona, es decir, que el modelo matemático más sencillo es un perceptrón, este, según Frank Rosenblatt \cite{perceptron} es "la unidad básica de inferencia en forma de discriminador lineal, a partir de lo cual se desarrolla un algoritmo capaz de generar un criterio para seleccionar un subgrupo a partir de un grupo de componentes más grande."
 
 	Este toma un vector de valores reales como entrada, calcula una combinación lineal de estas, después da una salida de 1 si el resultado es mayor que algún umbral, de lo contrario y de acuerdo a la función de activación que se use, la salida tendrá como resultado 0 o cualquier otro valor diferente de 1. Más precisamente, dadas las entradas $x_1$ hasta $x_n$, la salida $o(x_1,\dotsb,x_n)$ calculada por el perceptrón es: 
 	\begin{equation}
@@ -688,15 +688,15 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\item \textbf{La función de activación}: El valor obtenido en la regla de propagación se envía a través de la función de activación y esta define el nuevo estado o la salida de la capa. Según el entrenamiento de la red neuronal se elige la función de activación que pueden ser: lineal, escalón, sigmoidea, gaussiana o ReLU \cite{stephani}.
 	\end{itemize}
 
-	\subsection{Función de activación de las neuronas}
+	\subsection{Función de activación de las neuronas.}
 	
 	La función $o$ de la ecuación \ref{eq:percept} es la llamada función de activación. Para este tipo de redes, las funciones de activación más utilizadas son la la función tangente hiperbólica, función sigmoidal, y la función ReLU. Dichas funciones poseen como imagen un intervalo continuo de valores dentro de los intervalos $[-1,1]$ para la primera función antes mencionada y $[0,1]$ para las ultimas funciones antes mencionadas, estas vienen dadas por las siguientes ecuaciones: \\ \\
-	\textbf{Función tangente hiperbólica:}
+	\textbf{Función sigmoidal:}
 	\begin{equation}
 		\label{eq:tangente_hiper}
 		f(x) = \frac{1}{1 + e^{-x}}
 	\end{equation}
-	\textbf{Función sigmoidal:}
+	\textbf{Función tangente hiperbólica:}
 	\begin{equation}
 		\label{eq:sigmoidal}
 		f(x) = \frac{1-e^{-x}}{1 + e^{-x}}
@@ -709,10 +709,19 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 			0 & \text{si } x \leq 0
 		\end{array}\right.
 	\end{equation}
-%	Quede aqui
+	
+		\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Sem_1/figuras/funciones_de_activacion}
+		\caption{Función tangente hiperbólica, función sigmoidal y función ReLU respectivamente.}
+		\label{fig:funciones_activacion}
+	\end{figure}
+	
+	En algunas ocasiones, la función de activación en el perceptrón multicapa es común a todas las neuronas de la red y es elegida por el diseñador, elección que se realiza unicamente basándose en los valores de activación que se desee que alcancen las neuronas. En otras ocasiones, y dependiendo de la naturaleza del problema, las neuronas de salida se distinguen del resto de neuronas de la red, utilizando otro tipo de función de activación \cite{percepMulti}.
+	
 	
 	\subsection{El perceptrón multicapa.}
-	Al combinar varios perceptrones dispuestos en forma de capas, se puede generalizar al perceptrón simple, este surgió como consecuencia de las limitaciones del perceptrón simple en lo referente al problema de separabilidad no lineal. Minsky y Papert mostraron en 1969 que la combinación de varios perceptrones simples podía resultar en una solución adecuada para tratar ciertos problemas no lineales. Sin embargo, los autores no presentaron una solución al problema de como adaptar los pesos de la capa de entrada a la capa oculta, pues la regla de aprendizaje del perceptrón simple no puede aplicarse a este escenario. No obstante, la idea de combinar varios perceptrones sirvió de base para estudios posteriores realizados por Rumelhart, Hinton y Williams en 1986 \cite{percepMulti}. Estos autores mostraron una retropropagación de los errores medidos en la salida de la red hacia los perceptrones de las capas ocultas, dando lugar a la llamada regla delta generalizada. Diferentes autores han demostrado independientemente que el perceptrón multicapa es un aproximador universal, en el sentido de que cualquier función continua en un espacio $R^n$ puede aproximarse con un perceptrón multicapa, con al menos una capa oculta de neuronas \cite{stephani}.
+	Al combinar varios perceptrones dispuestos en forma de capas, se puede generalizar al perceptrón simple, este surgió como consecuencia de las limitaciones del mismo en lo referente al problema de separabilidad no lineal. Minsky y Papert mostraron en 1969 que la combinación de varios perceptrones simples podía resultar en una solución adecuada para tratar ciertos problemas no lineales. Sin embargo, los autores no presentaron una solución al problema de como adaptar los pesos de la capa de entrada a la capa oculta, pues la regla de aprendizaje del perceptrón simple no puede aplicarse a este escenario. No obstante, la idea de combinar varios perceptrones sirvió de base para estudios posteriores realizados por Rumelhart, Hinton y Williams en 1986 \cite{percepMulti}. Estos autores mostraron que una retropropagación de los errores medidos en la salida de la red hacia los perceptrones de las capas ocultas, dando lugar a la llamada regla delta generalizada. Diferentes autores han demostrado independientemente que el perceptrón multicapa es un aproximador universal, en el sentido de que cualquier función continua en un espacio $R^n$ puede aproximarse con un perceptrón multicapa, con al menos una capa oculta de neuronas \cite{stephani}.
  
  	Las características de las NN juegan un importante papel, por ejemplo, en el procesado de señales o imágenes. Se usan arquitecturas que comprenden elementos de procesado adaptativo paralelo, combinados con estructuras de interconexiones jerárquicas \cite{percepMulti}. Existen dos fases en la modelización con redes neuronales:
  	\begin{itemize}
@@ -736,11 +745,119 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
  		\label{fig:perceptron_multicapa}
  	\end{figure}
  	
- 	En las NN las conexiones entre perceptrones siempre son hacia adelante, no existen conexiones laterales ni conexiones hacia atrás. Por tanto, la información siempre se transmite desde la capa de entrada hacia la capa de salida. Se considera $w_{ji}$ como el peso de conexión entre el perceptrón de entrada $i$ y el perceptrón de la capa oculta $j$, y $v_{kj}$ como el peso de conexión entre el perceptrón oculto $j$ y el perceptrón de salida $k$ \cite{percepMulti}. Los pesos óptimos se obtienen optimizando alguna función de energía. Por ejemplo, un criterio muy utilizado en el llamado entrenamiento supervisado, es minimizar el error cuadrático medio entre el valor de salida y el valor real esperado.
+ 	En las NN las conexiones entre perceptrones siempre son hacia adelante, no existen conexiones laterales ni conexiones hacia atrás. Por tanto, la información siempre se transmite desde la capa de entrada hacia la capa de salida. Se considera $w_{ji}$ como el peso de conexión entre la neurona de entrada $i$ y la neurona de la capa oculta $j$, y $v_{kj}$ como el peso de conexión entre la neurona oculta $j$ y la neurona de salida $k$ \cite{percepMulti}. Los pesos óptimos se obtienen optimizando alguna función de energía. Por ejemplo, un criterio muy utilizado en el llamado entrenamiento supervisado, es minimizar el error cuadrático medio entre el valor de salida y el valor real esperado.
  	
- 	%	Cambiar perceptrones por neuronas de aqui para arriba, hacerlo manana
+ 	\subsection{Algoritmo de retropropagación.}
+ 	Cuando se presenta un patrón $p$ de entrada $X_p : x_{p1},\dotsb,x_{pi},\dotsb,x_{pn}$, este se transmite a través de los pesos $w_{ji}$ desde la capa de entrada hacia la capa oculta. Las neuronas de la capa intermedia transforman las señales recibidas mediante la aplicación de una función de activación proporcionando, de este modo, un valor de salida. Este se transmite a través de los pesos $v_{kj}$ hacia la capa de salida, donde aplicando la misma operación que en el caso anterior, las neuronas de esta ultima capa proporcionan la salida de la red \cite{percepMulti,perceptron}.
+ 	
+ 	La regla de propagación más simple consiste en realizar la suma de las entradas ponderadas con sus pesos sinápticos correspondientes. Este proceso se resume en lo siguiente:
+ 	\begin{equation}
+ 		\label{eq:pesosxentrada}
+ 		h_{i(t)} = \sum_j w_{ij} \ast x_{j(t)}
+ 	\end{equation}
+ 	
+ 	\subsubsection{Etapa de aprendizaje.}
+ 	En esta etapa el objetivo es hacer lo mínimo el error entre la salida obtenida por la red y la salida deseada por el usuario ante la presentación de un conjunto de patrones denominado grupo de entrenamiento. Así, el aprendizaje en las redes de retropropagación es de tipo supervisado. La función de error que se pretende minimizar para cada patrón $p$ viene dada por:
+ 	\begin{equation}
+ 		\label{eq:error_a_minimizar}
+ 		e_p = \frac{1}{2}\sum_{k=1}^{M} (D_{pk} - Y_{pk})^2
+ 	\end{equation}
+ 	Se compara la salida obtenida $Y_p$ con la salida deseada $D_p$, donde $k$ en el índice de la neurona para las neuronas de la ultima capa, y $M$ el total de neuronas de la misma.
+ 	
+ 	A partir de esta expresión se puede obtener una medida general de error mediante: 
+ 	\begin{equation}
+ 		\label{eq:error_general}
+ 		e = \frac{1}{P} \sum_{p=1}^{P}e_p
+ 	\end{equation}
+ 	Siendo $p$ el índice de ejemplo, y $P$ el número total de ejemplos.
+ 	
+ 	La base del algoritmo de retropropagación para la modificación de los pesos es la técnica conocida como gradiente decreciente.
+ 	Como $e_p$ es función de todos los pesos de la red, el gradiente de $e_p$ es un vector igual a la derivada parcial de $e_p$ respecto a cada uno de los pesos. El gradiente toma la dirección que determina el incremento más rápido en el error, mientras que la dirección opuesta, es decir, la dirección negativa, determina el decremento más rápido en el error.
+ 	\begin{equation}
+ 		\label{eq:gradiente_error}
+ 		\Delta w_{ij} = -\alpha\frac{\partial e_p}{\partial w_{ji}}
+ 	\end{equation}
+ 	Si aplicamos la regla de la cadena a la ecuación \ref{eq:gradiente_error} obtenemos que:
+ 	\begin{equation}
+ 		\label{eq:gradiente_error_derivado}
+ 		\frac{\partial e_p}{\partial w_{ji}} = \frac{\partial e_p}{\partial h_j}\frac{\partial h_j}{\partial w_{ji}}
+ 	\end{equation}
+ 	La ecuación \ref{eq:gradiente_error_derivado} expresa la derivada del error en función de dos derivadas. La derivada del error respecto al potencial resultante $h_j$ indica como varia el error al variar la entrada de la neurona $j$, mientras que la derivada con respecto al peso sináptico $w_{ji}$ indica como varia la entrada de la neurona $j$ al variar el peso de la conexión que va desde la neurona $i$ hasta la neurona $j$.
+ 	
+ 	El segundo termino de la ecuación \ref{eq:gradiente_error_derivado} lo podemos expresar a partir de la ecuación \ref{eq:pesosxentrada} de la siguiente manera:
+ 	\begin{equation}
+ 		\label{eq:2dotermino_gradi_derivado}
+ 		\frac{\partial h_j}{\partial w_{ji}} = \frac{\partial \sum_i w_{ji} Y_{pi}}{\partial w_{ji}} = Y_{pi}
+ 	\end{equation}
+ 	Si escribimos el primer termino de la ecuación \ref{eq:gradiente_error_derivado} como:
+ 	\begin{equation}
+ 		\label{eq:1ertermido_gradi_derivado_reescrito}
+ 		\frac{\partial e_p}{\partial h_j} = -\delta_{pj}
+ 	\end{equation}
+ 	tenemos que
+ 	\begin{equation}
+ 		\label{eq:gradi_error_sustituido}
+ 		\frac{\partial e_p}{\partial w_{ji}} = -\delta_{pj}Y_{pi}
+ 	\end{equation}
+ 	y por lo tanto, la ecuación \ref{eq:gradiente_error} queda expresada de la siguiente manera
+ 	\begin{equation}
+ 		\label{eq:gradiente_error_reescrito}
+ 		\Delta w_{ji} = -\alpha\delta_{pj}Y_{pj}
+ 	\end{equation}
+ 	Para calcular el valor de $\delta$ se vuelve a aplicar la regla de la cadena
+ 	\begin{equation}
+ 		\label{eq:delta_pj_derivado}
+ 		\delta_{pj} = -\frac{\partial e_p}{\partial h_j} = - \left[\frac{\partial e_p}{\partial Y_{pj}} \frac{Y_{pj}}{\partial h_j}\right]
+ 	\end{equation}
+ 	El calculo del segundo termino de la ecuación \ref{eq:delta_pj_derivado} se hace por definición:
+ 	\begin{equation}
+ 		\label{eq:2dotermino_calculo_definicion}
+ 		\frac{\partial Y_{pj}}{\partial h_j} = \frac{f_j (h_j)}{\partial h_j} = f_j^{'}(h_j)
+ 	\end{equation}
+ 	Sin embargo, para el calculo del primer termino de la ecuación \ref{eq:delta_pj_derivado} es necesario distinguir entre dos casos diferentes. 
+ 	\begin{itemize}
+ 		\item \textbf{La neurona $j$ es una neurona de salida:} En este caso podemos obtener el segundo termino a partir de la ecuación \ref{eq:error_a_minimizar} ya que el subíndice $j$ es igual al subíndice $k$
+ 		\begin{equation}
+ 			\frac{\partial e_p}{\partial Y_{pj}} = \frac{\partial \frac{1}{2} \sum_{j=1}^{M} (D_{pj} - Y_{pj})^2}{\partial Y_{pj}} = -(D_{pj} - Y_{pj})
+ 		\end{equation}
+ 		Así, la variación de los pesos de una conexión que va hacia la capa externa de la red se calcula como:
+ 		\begin{equation}
+ 			\delta w_{ji} = \alpha(D_{pj} - Y_{pj}f_{j}^{'}(h_j)Y_{pi})
+ 		\end{equation}
+ 		\item \textbf{La neurona $j$ es una neurona oculta:} En este caso es necesario aplicar nuevamente la regla de la cadena 
+ 		\begin{equation}
+ 			\label{eq:error_neurona_oculta}
+ 			\frac{\partial e_p}{\partial Y_{pj}} = \sum_k \left[\frac{\partial e_p}{\partial h_k}\frac{\partial h_k}{\partial Y_{pj}}\right]
+ 		\end{equation}
+ 		Donde $k$ es el subíndice de las neuronas que pertenecen a la próxima capa. La ecuación \ref{eq:error_neurona_oculta} la podemos reescribir utilizando la ecuación \ref{eq:pesosxentrada}
+ 		\begin{equation}
+ 			\frac{\partial e_p}{\partial Y_{pj}} = \sum_k \left[\frac{\partial e_p}{\partial h_k} \frac{\partial\left[\sum_j w_{kj} Y_{pj}\right]}{\partial Y_{pj}}\right] = \sum_k \left[\frac{\partial e_p}{\partial h_k} w_{kj}\right]
+ 		\end{equation}
+ 		y por la ecuación \ref{eq:gradi_error_sustituido} tenemos que
+ 		\begin{equation}
+ 			\frac{\partial e_p}{\partial Y_{pj}} = \sum_k -\delta_{pk}w_{kj} = -\sum_k \delta_{pk}w_{kj}
+ 		\end{equation}
+ 		Así, la variación de los pesos de una conexión que va desde una capa hacia otra capa de la red que no sea la externa se calcula como:
+ 		\begin{equation}
+ 			\Delta w_{ji} = \alpha \sum_k (\delta_{pk}w_{kj}) f_j^{'}(h_j)Y_{pi}
+ 		\end{equation}
+ 	\end{itemize}
+ 	En la implementación del algoritmo, se toma una amplitud de paso que viene dado por la tasa de aprendizaje $\alpha$. A mayor tasa de aprendizaje el proceso será más rápido. Sin embargo, si la tasa de aprendizaje es muy alta puede dar lugar a oscilaciones en torno a un mínimo local. Es posible disminuir el impacto de dichas oscilaciones mediante la adición de un momento $\beta$ quedado la expresión \ref{eq:gradiente_error} de la siguiente manera:
+ 	\begin{equation}
+ 		\Delta w_{ji(t+1)} = \alpha \delta_{pj} Y_{pj} + \beta \Delta w_{ji(t)}
+ 	\end{equation}
+ 	De esta manera el momento $\beta$ determina el efecto en el instante $t+1$ del cambio de los pesos realizado en el instante $t$. Con este momento se consigue la convergencia de la red en menor número de iteraciones, ya que si la modificación de los pesos en los instantes $t$ y $t+1$ es en la misma dirección, entonces el descenso por la superficie de error en $t+1$ es mayor. En cambio, si la modificación en los pesos en los instantes $t$ y $t+1$ es más pequeño, lo que es adecuado, ya que esto significa que se ha pasado por un mínimo \cite{stephani}.
+ 	
+ 	\subsection{Dimensiones de la red.}
+ 	Una de las principales dificultades que surge a la hora de trabajar con redes neuronales, es la de seleccionar el número de capas y nodos por cada capa para que ésta funcione satisfactoriamente. El número de nodos en la capa de entrada suele venir determinado por la naturaleza del problema, el tamaño de la capa de salida es posible determinarlo decidiendo si se desean valores analógicos o binarios en las unidades de salida \cite{stephani}.
+ 	
+ 	En general, es suficiente que la red tenga tres capas, aunque a veces parece que un problema es más fácil de resolver con más de una capa oculta. Existen resultados experimentales que sugieren utilizar el menor número posible de unidades en las capas ocultas, y en caso de no lograr la convergencia de la red durante su entrenamiento, se debe aumentar el número de nodos hasta que se llegue a un tamaño final que logre el rendimiento global del sistema. Si al incrementar el número de nodos en una capa no se observan mejores en la convergencia de la red, es conveniente dividir esta capa en dos capas sucesivas \cite{perceptron}.
+	\\ \\
+	\textbf{Pesos de la red:} Los pesos de la red deberían recibir unos valores iniciales pequeños y aleatorios, generalmente entre $\pm$.\\ \\
+	\textbf{Tasa de aprendizaje:} Controla el tamaño del cambio de los pesos en cada iteración. Se deben evitar dos extremos: un ritmo de aprendizaje demasiado pequeño puede ocasionar una disminución importante en la velocidad de convergencia y la posibilidad de acaba atrapado en un mínimo local; en cambio, un ritmo de aprendizaje demasiado grande puede conducir a inestabilidades en la función de error, lo cual evitara que se produzca la convergencia debido a que se darán saltos en torno al mínimo sin alcanzarlo \cite{nnApli,stephani}. Por tanto, se recomienda elegir un ritmo de aprendizaje lo más grande posible sin que provoque grandes oscilaciones. En general, el valor de la tasa de aprendizaje suele estar comprendida entre $0.01$ y $0.25$.
 %\part{Segundo seminario}
-\chapter{Marco experimental}
+\chapter{Marco Metodológico.}
+
 
 ...
 
