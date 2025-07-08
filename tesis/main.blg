@@ -19,49 +19,73 @@ Warning--entry type for "stephani" isn't style-file defined
 --line 362 of file bibliografia.bib
 Warning--entry type for "monsSistem" isn't style-file defined
 --line 370 of file bibliografia.bib
+You're missing a field name---line 393 of file bibliografia.bib
+ :  urldate      = {30-06-2025}, 
+ :                               % Actualiza con la fecha de tu consulta
+I'm skipping whatever remains of this entry
+Warning--entry type for "autonomicAgingDB" isn't style-file defined
+--line 409 of file bibliografia.bib
+You're missing a field name---line 415 of file bibliografia.bib
+ :  urldate = {30-06-2025},  
+ :                           % Opcional: fecha de acceso
+I'm skipping whatever remains of this entry
+You're missing a field name---line 439 of file bibliografia.bib
+ :  note = {Part 2},  
+ :                    % Optional field to clarify the special issue/part
+I'm skipping whatever remains of this entry
+Warning--entry type for "longtermdb" isn't style-file defined
+--line 442 of file bibliografia.bib
+Warning--entry type for "normalsinusrhythmdb" isn't style-file defined
+--line 451 of file bibliografia.bib
+You're missing a field name---line 481 of file bibliografia.bib
+ :  note = {Number: 1},  
+ :                       % Opcional si quieres especificar el número de artículo
+I'm skipping whatever remains of this entry
 Name 2 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
 Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
-You've used 28 entries,
+Warning--empty journal in physionet2000
+Warning--empty year in physionet2000
+You've used 37 entries,
             1876 wiz_defined-function locations,
-            657 strings with 8061 characters,
-and the built_in function-call counts, 6993 in all, are:
-= -- 670
-> -- 246
+            714 strings with 9933 characters,
+and the built_in function-call counts, 9889 in all, are:
+= -- 930
+> -- 420
 < -- 0
-+ -- 95
-- -- 67
-* -- 453
-:= -- 953
-add.period$ -- 28
-call.type$ -- 28
-change.case$ -- 27
++ -- 156
+- -- 119
+* -- 676
+:= -- 1370
+add.period$ -- 39
+call.type$ -- 37
+change.case$ -- 36
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 330
-empty$ -- 727
-format.name$ -- 67
-if$ -- 1757
+cite$ -- 39
+duplicate$ -- 454
+empty$ -- 969
+format.name$ -- 119
+if$ -- 2449
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 18
-newline$ -- 90
-num.names$ -- 30
-pop$ -- 117
+int.to.str$ -- 37
+missing$ -- 24
+newline$ -- 119
+num.names$ -- 39
+pop$ -- 153
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 290
+skip$ -- 397
 stack$ -- 0
-substring$ -- 461
-swap$ -- 141
+substring$ -- 645
+swap$ -- 200
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 60
-width$ -- 30
-write$ -- 251
-(There were 2 error messages)
+warning$ -- 2
+while$ -- 83
+width$ -- 39
+write$ -- 337
+(There were 6 error messages)
