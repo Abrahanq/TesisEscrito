@@ -54,33 +54,32 @@
 \contentsline {section}{\numberline {3.4}Preprocesamiento de la señal}{37}{}%
 \contentsline {subsection}{\numberline {3.4.1}Estandarización}{38}{}%
 \contentsline {subsection}{\numberline {3.4.2}Filtrado de ruido}{38}{}%
-\contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{38}{}%
-\contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{39}{}%
+\contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{39}{}%
+\contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{40}{}%
 \contentsline {subsection}{\numberline {3.4.5}Detección de eventos cardíacos}{40}{}%
-\contentsline {subsection}{\numberline {3.4.6}refinamiento/análisis de forma}{40}{}%
-\contentsline {section}{\numberline {3.5}Extraccion de caracteristicas}{40}{}%
-\contentsline {subsection}{\numberline {3.5.1}Alineamiento}{40}{}%
-\contentsline {subsection}{\numberline {3.5.2}Vector de caracteristicas}{40}{}%
-\contentsline {section}{\numberline {3.6}Reduccion de dimensionalidad}{40}{}%
-\contentsline {subsection}{\numberline {3.6.1}tecnica}{41}{}%
-\contentsline {subsection}{\numberline {3.6.2}Seleccion de componentes}{41}{}%
-\contentsline {subsection}{\numberline {3.6.3}transformacion}{41}{}%
-\contentsline {section}{\numberline {3.7}Modelado predictivo}{41}{}%
-\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{41}{}%
-\contentsline {subsection}{\numberline {3.7.2}Arquitectura y entrenamiento}{41}{}%
-\contentsline {subsection}{\numberline {3.7.3}Tareas de modelado propuestas}{41}{}%
-\contentsline {subsection}{\numberline {3.7.4}Preparacion de datos}{41}{}%
-\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{41}{}%
-\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{41}{}%
-\contentsline {subsection}{\numberline {3.8.1}t-SNE}{41}{}%
-\contentsline {subsection}{\numberline {3.8.2}K-means}{41}{}%
-\contentsline {subsection}{\numberline {3.8.3}analisis}{41}{}%
-\contentsline {section}{\numberline {3.9}validez y confiabilidad}{42}{}%
-\contentsline {subsection}{\numberline {3.9.1}validacion de modelos}{42}{}%
-\contentsline {subsection}{\numberline {3.9.2}clasificacion}{42}{}%
-\contentsline {subsection}{\numberline {3.9.3}identificacion}{42}{}%
-\contentsline {subsection}{\numberline {3.9.4}repetibilidad}{42}{}%
-\contentsline {subsection}{\numberline {3.9.5}analisis de robustez}{42}{}%
-\contentsline {subsection}{\numberline {3.9.6}consideraciones éticas}{42}{}%
-\contentsline {chapter}{\numberline {4}Resultados}{43}{}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{44}{}%
+\contentsline {section}{\numberline {3.5}Extracción de caracteristicas}{41}{}%
+\contentsline {subsection}{\numberline {3.5.1}Alineamiento}{41}{}%
+\contentsline {subsection}{\numberline {3.5.2}Vector de caracteristicas}{41}{}%
+\contentsline {section}{\numberline {3.6}Reduccion de dimensionalidad}{41}{}%
+\contentsline {subsection}{\numberline {3.6.1}tecnica}{42}{}%
+\contentsline {subsection}{\numberline {3.6.2}Seleccion de componentes}{42}{}%
+\contentsline {subsection}{\numberline {3.6.3}transformacion}{42}{}%
+\contentsline {section}{\numberline {3.7}Modelado predictivo}{42}{}%
+\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{42}{}%
+\contentsline {subsection}{\numberline {3.7.2}Arquitectura y entrenamiento}{42}{}%
+\contentsline {subsection}{\numberline {3.7.3}Tareas de modelado propuestas}{42}{}%
+\contentsline {subsection}{\numberline {3.7.4}Preparacion de datos}{42}{}%
+\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{42}{}%
+\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{42}{}%
+\contentsline {subsection}{\numberline {3.8.1}t-SNE}{42}{}%
+\contentsline {subsection}{\numberline {3.8.2}K-means}{42}{}%
+\contentsline {subsection}{\numberline {3.8.3}analisis}{42}{}%
+\contentsline {section}{\numberline {3.9}validez y confiabilidad}{43}{}%
+\contentsline {subsection}{\numberline {3.9.1}validacion de modelos}{43}{}%
+\contentsline {subsection}{\numberline {3.9.2}clasificacion}{43}{}%
+\contentsline {subsection}{\numberline {3.9.3}identificacion}{43}{}%
+\contentsline {subsection}{\numberline {3.9.4}repetibilidad}{43}{}%
+\contentsline {subsection}{\numberline {3.9.5}analisis de robustez}{43}{}%
+\contentsline {subsection}{\numberline {3.9.6}consideraciones éticas}{43}{}%
+\contentsline {chapter}{\numberline {4}Resultados}{44}{}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{45}{}%
