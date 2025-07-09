@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  8 JUL 2025 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  9 JUL 2025 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,27 +546,27 @@ Package pdftex.def Info: Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg  used
 (pdftex.def)             Requested size: 500.484pt x 604.43105pt.
  [33] [34 <./Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>] [35]
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 941--941
+Underfull \hbox (badness 10000) in paragraph at lines 942--942
 []\T1/cmr/m/n/12 Adultos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--941
+Underfull \hbox (badness 10000) in paragraph at lines 942--942
 \T1/cmr/m/n/12 Me-di-ana
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 941--941
+Underfull \hbox (badness 10000) in paragraph at lines 942--942
 []\T1/cmr/m/n/12 Adultos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 943--943
+Underfull \hbox (badness 10000) in paragraph at lines 944--944
 []\T1/cmr/m/n/12 Cantidad
  []
 
 
-Overfull \hbox (9.64528pt too wide) in paragraph at lines 939--946
+Overfull \hbox (9.64528pt too wide) in paragraph at lines 940--947
  [] 
  []
 
@@ -575,30 +575,30 @@ Overfull \hbox (9.64528pt too wide) in paragraph at lines 939--946
 File: Sem_1/figuras/Baseline Wander Sharma.png Graphic file (type png)
 <use Sem_1/figuras/Baseline Wander Sharma.png>
 Package pdftex.def Info: Sem_1/figuras/Baseline Wander Sharma.png  used on inpu
-t line 1007.
+t line 1008.
 (pdftex.def)             Requested size: 425.41444pt x 294.93324pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[39] [40 <./Sem_1/figuras/Baseline Wander Sharma.png>] [41] [42]
+[39] [40 <./Sem_1/figuras/Baseline Wander Sharma.png>] [41] [42] [43]
 Cap\'{\i }tulo 4.
-[43
+[44
 
 ]
 Cap\'{\i }tulo 5.
-(./main.bbl [44
+(./main.bbl [45
 
-] [45
+] [46
 
-] [46]) [47] (./main.aux
+] [47]) [48] (./main.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 ) ) 
 Here is how much of TeX's memory you used:
  6940 strings out of 480247
- 110042 string characters out of 5896106
- 435784 words of memory out of 5000000
+ 110027 string characters out of 5896106
+ 435799 words of memory out of 5000000
  24765 multiletter control sequences out of 15000+600000
  491953 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -625,10 +625,10 @@ onts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm
 -super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfti1440.pfb>
-Output written on main.pdf (51 pages, 3193846 bytes).
+Output written on main.pdf (52 pages, 3200003 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 192 compressed objects within 2 object streams
+ 317 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -400,11 +400,11 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
     \\
     Durante las tres primeras décadas del siglo 20, el ECG de tres derivaciones periféricas fue largamente usado, especialmente luego de mejoras que lo hicieron más portable. A pesar de que el ECG de tres derivaciones era una manera fiable de evaluar arritmias, pronto se reconoció que el corazón incluía «zonas silenciosas» en las que un infarto de miocardio podría no ser detectado. En 1942, Emanuel Goldberger construyó las derivaciones precordiales (unipolares) usando el promedio de las diferencias de potencial de las tres derivaciones periféricas como terminal de referencia, que inicialmente fue creado por Frank N. Wilson, al cual se le conoce como terminal central de Wilson, que ahora se denominan como derivaciones precordiales (V1-V6), donde en 1938, la Asociación Americana del Corazón (AHA) y la Sociedad Cardiaca de Gran Bretaña recomendaron la estandarización del posicionamiento de los electrodos en el pecho para dichas derivaciones. También Goldberger propuso una manera de obtener lo que ahora se llaman derivaciones aumentadas, conocidas por las siglas a-VL, a-VR, y a-VF. 8 años después la AHA recomendó la estandarización del ECG de 12 derivaciones. \cite{vincent2022}\\
     \\
-    En la era digital, la tecnología del silicio y los circuitos impresos han hecho posible la miniaturización de electrónicos. Desde hace algún tiempo, la tecnología ha ganado popularidad en el campo de la medicina y la necesidad de los clientes de controlar su salud ha sido el principal motor. La influencia de los "vestibles" (wearables) ha hecho inevitable la continua investigación y desarrollo de nuevas funciones que pueden evaluar y transmitir datos biométricos en tiempo real. \\ 
+    En la era digital, la tecnología del silicio y los circuitos impresos han hecho posible la miniaturización de electrónicos. Desde hace algún tiempo, la tecnología ha ganado popularidad en el campo de la medicina y la necesidad de los clientes de controlar su salud ha sido el principal motor. La influencia de los \guillemetleft vestibles\guillemetright \ (wearables) ha hecho inevitable la continua investigación y desarrollo de nuevas funciones que pueden evaluar y transmitir datos biométricos en tiempo real. \\ 
     \begin{figure}[h]
     	\centering
     	\includegraphics[width=0.5\linewidth]{Sem_1/figuras/1038px-SinusRhythmLabels-es.svg}
-    	\caption{ECG con ritmo sinusal normal y las partes de este debidamente identificadas}
+    	\caption{ECG con ritmo sinusal normal y las partes, segmentos e intervalos de este, debidamente identificadas}
     	\label{fig:ECGSinusal}
     \end{figure}
     \\
@@ -934,6 +934,7 @@ Se usaran señales provenientes de las siguientes bases de datos públicas prese
 	
 \end{itemize}
 Los ECG provenientes de las bases de datos antes mencionadas, están distribuidos como se muestra en el cuadro \ref{tab:distriECGs}, según las variables objetivo tomadas de los criterios antes mencionados. 
+Es de destacar también que todas las señales fisiológicas disponibles en Physionet han sido guardadas en un formato estandarizado por ellos mismos, además ponen a disposición una librería en Python, llamada \emph{Waveform Database Software Package (WFDB) for Python} \cite{wfdb}, la cual permite transformar las señales a formatos más universales como, archivos separados por comas (csv, por sus siglas en inglés). 
 \begin{table}[t]
 	\begin{center}
 		\begin{tabular}{p{1.7cm}|c|c|c|c|p{1.7cm}|p{2cm}|p{1.7cm}|c}
@@ -951,7 +952,7 @@ Los ECG provenientes de las bases de datos antes mencionadas, están distribuido
 
 \section{Preprocesamiento de la señal}
 	
-Para garantizar la confiabilidad de los posteriores análisis es critico el preprocesamiento de las señales electrocardiográficas. Las señales adquiridas de las bases de datos antes mencionadas no están exentas de los ruidos inherentes a la adquisición de la misma y suelen contener artefactos y demás tipos de ruidos que es necesario eliminar, es por esto que se implementa un flujo de preprocesamiento estructurado en cinco etapas principales:
+Para garantizar la confiabilidad de los posteriores análisis es critico el preprocesamiento de las señales electrocardiográficas. Debido a la naturaleza digital de los ECG que se tienen, se aprovecha el lenguaje de programación \emph{Python} que cuenta con ventajas tales como una gran comunidad que apoya constantemente en la resolución de problemas y el desarrollo de librerías entre las que destacan las diseñadas para el análisis de datos y algunas más específicas como las que permiten analizar datos fisiológicos, de acá radica parte de la importancia de elegir a \emph{Python} como lenguaje base en esta investigación. Las señales adquiridas de las bases de datos antes mencionadas no están exentas de los ruidos inherentes a la adquisición de la misma estas suelen contener artefactos y demás tipos de ruidos que es necesario eliminar, es por esto que se implementa un flujo de preprocesamiento estructurado en cinco etapas principales:
 \begin{enumerate}
 	\item \textbf{Estandarización de la señal:} En el análisis de datos, la estandarización es una de las herramientas básicas y comúnmente utilizadas, existen varios tipos y dependerá de los datos cual usar.
 	\item \textbf{Filtrado de ruido:} Es necesario reducir o eliminar el ruido provocado por la actividad muscular y la interferencia de la red eléctrica, para esto se usan filtros digitales (Butterworth, por ejemplo) con frecuencias de corte ajustadas a las bandas típicas del ECG.
@@ -1013,19 +1014,26 @@ Esta técnica se desempeña mejor conforma la señal sea más prolongada, es por
  	
 \subsection{Extracción de segmentos}
 
-Debido a que las señales ECG que se tienen, provienen de ECGs de Holter con duraciones mayores a 20 minutos, se pensó en aumentar la cantidad de datos segmentando cada uno de estos en intervalos de 3 minutos con la finalidad de tener más registros del mismo paciente. Así que luego que cada señal haya sido filtrada y tenga la linea base corregida, se segmentó y separó la señal en intervalos de 3 minutos.
-
+Debido a que las señales ECG que se tienen, son ECGs con duraciones mayores a 20 minutos, se pensó en aumentar la cantidad de señales segmentando cada una de estas en intervalos de 3 minutos con la finalidad de tener más registros del mismo paciente. Así que luego que cada señal haya sido filtrada y tenga la linea base corregida, se segmentó y separó la señal en intervalos de 3 minutos, hasta tener como máximo 10 señales de 3 minutos de duración de cada paciente.
 
 \subsection{Detección de eventos cardíacos}
 
+Es importante recordar que cada latido visto en el ECG está compuesto por ondas individuales, de las cuales se puede extrapolar el funcionamiento de cada parte del corazón mientras este se contrae y se relaja, es por esto que resulta clave poder detectar los eventos relevantes del latido, tales como el pico R, el inicio de la onda P o el final de la onda T. Para detectar dichos eventos se ha hecho uso de distintas técnicas, donde cada una de estas se desempeña mejor dependiendo del tipo de evento a localizar. Por ejemplo, el algoritmo Pan-Tompkins \cite{PanTompkins85} fue el primero y uno de los mejores computacionalmente hablando para detectar los picos R, sin embargo, hoy en día se han mejorado estos algoritmos aumentando su eficiencia y reduciendo el costo computacional al mismo tiempo, aunque estos están basados en la aproximación hecha por Pan-Tompkins. 
 
-\subsection{refinamiento/análisis de forma}'
+Con el fin de aprovechar las herramientas hechas por la comunidad científica, en la presente investigación se hace uso de la librería \emph{Neurokit2} \cite{neurokit21}, este paquete provee rutinas de procesamiento avanzado de bioseñales que permiten a investigadores y médicos, analizar datos fisiológicos de manera sencilla y sin necesidad de poseer conocimientos extensivos en procesamiento de señales biomédicas y programación. Esta librería, está enfocada en todo lo que involucra el análisis de señales fisiológicas siendo una de estas, las señales ECG y entre las muchas funcionalidades presentes en esta librería, se hace uso de detector de picos R propuesto y usado en esta, este a su vez, esta basado en el algoritmo llamado \emph{Biopeaks} \cite{biopeaks_software20} propuesto por Jan C. Brammer en 2020, este algoritmo presentó una precisión del $99.95\%$ en la detección de picos R \cite{Biopeaks20} siendo este, uno de los algoritmos más eficientes hoy en día, para la localización de eventos cardíacos como los picos R, de aquí que haya sido empleado en este trabajo. 
 
 
-\section{Extraccion de caracteristicas}
-*objetivos y procedimientos
-\subsection{Alineamiento} alinear los latidos individuales detectados en el segmento de 3min usando el pico r como referencia
-\subsection{Vector de caracteristicas} se utiliza el latido promediado completo como vector de caracteristicas primario para cada paciente
+\section{Extracción de caracteristicas}
+
+Es relevante recordar que PCA necesita como entrada un vector con las caracteristicas claves de conjunto de datos a analizar. En el caso de las señales ECG, extraer caracteristicas recae fundamentalmente en la habilidad de detectar correctamente los inicios, picos y finales de las ondas individuales de cada latido, teniendo estos puntos debidamente localizados se podrían calcular los intervalos PR y QT; y los segmentos PR y ST como se observan en la figura \ref{fig:ECGSinusal}, y teniendo los promedios de estos valores, se podría construir un vector de caracteristicas de cada paciente, sin embargo, los métodos usados para detectar los inicios, picos y finales de cada onda no son lo suficientemente precisos lo que genera que los valores de los intervalos posteriormente calculados no sean lo suficientemente confiables. Es por esto que se eligió tomar como vector de caracteristicas el latido promedio de cada intervalo segmentado de la señal ECG preprocesada de cada paciente.
+
+\subsection{Alineamiento} 
+
+La importancia de la precisa localización de los picos R en cada ECG radica en la posterior delimitación de los latidos individuales, para esto se utiliza la función \emph{ecg\_segment()} de la librería \emph{Neurokit2} \cite{neurokit21}, teniendo la posición de cada pico R, esta función es capaz de separar cada latido, primero centrando en $0$ el pico R de cada latido y calculando $300 ms$ del pico R y $600 ms$ después del pico R, esta función también es capaz de corregir estos tiempos de acuerdo a la frecuencia cardíaca. Teniendo los latidos individuales debidamente localizados y alineados, se procede a calcular el promedio de los latidos detectados de cada intervalo segmentado de cada ECG por paciente.
+
+\subsection{Vector de caracteristicas} 
+
+Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, genera que cada latido promedio tenga un numero distinto de muestras, es decir,que cada latido promedio tenga un largo distinto, por esto es importante estandarizar el largo de estos latidos promedios a un valor fijo de 250 muestras. Ya teniendo estandarizados a un numero fijo de muestras se guardan estos latidos en un archivo csv debidamente identificado y este será el vector de caracteristicas de señal ECG que se tenga. Este encapsula la morfología completa del ECG en un sólo ciclo cardíaco, lo que podría permitir que PCA pueda capturar correlaciones entre los segmentos antes mencionados y como estos varían paciente a paciente, además que la estructura de la señal en forma numérica es algo que PCA procesa eficientemente. Este vector de caracteristicas es la base del análisis de la señal electrocardiográfica. 
 
 
 \section{Reduccion de dimensionalidad}

@@ -41,51 +41,55 @@ You're missing a field name---line 481 of file bibliografia.bib
  :  note = {Number: 1},  
  :                       % Opcional si quieres especificar el número de artículo
 I'm skipping whatever remains of this entry
+Warning--entry type for "wfdb" isn't style-file defined
+--line 484 of file bibliografia.bib
+Warning--entry type for "biopeaks_software20" isn't style-file defined
+--line 493 of file bibliografia.bib
 Name 2 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
 Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
 Warning--empty journal in physionet2000
 Warning--empty year in physionet2000
-You've used 37 entries,
+You've used 40 entries,
             1876 wiz_defined-function locations,
-            714 strings with 9933 characters,
-and the built_in function-call counts, 9889 in all, are:
-= -- 930
-> -- 420
+            728 strings with 10512 characters,
+and the built_in function-call counts, 10594 in all, are:
+= -- 990
+> -- 460
 < -- 0
-+ -- 156
-- -- 119
-* -- 676
-:= -- 1370
-add.period$ -- 39
-call.type$ -- 37
-change.case$ -- 36
++ -- 171
+- -- 131
+* -- 731
+:= -- 1472
+add.period$ -- 41
+call.type$ -- 40
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 454
-empty$ -- 969
-format.name$ -- 119
-if$ -- 2449
+cite$ -- 42
+duplicate$ -- 480
+empty$ -- 1036
+format.name$ -- 131
+if$ -- 2615
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 24
-newline$ -- 119
-num.names$ -- 39
-pop$ -- 153
+int.to.str$ -- 40
+missing$ -- 25
+newline$ -- 127
+num.names$ -- 42
+pop$ -- 168
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 397
+skip$ -- 423
 stack$ -- 0
-substring$ -- 645
-swap$ -- 200
+substring$ -- 685
+swap$ -- 211
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 83
-width$ -- 39
-write$ -- 337
+while$ -- 89
+width$ -- 42
+write$ -- 360
 (There were 6 error messages)
