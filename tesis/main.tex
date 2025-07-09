@@ -4,12 +4,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{romannum}
 %\usepackage[hidelinks]{hyperref}
 %\usepackage{wrapfig}
 \usepackage{amsmath, amssymb}
 \usepackage[spanish,onelanguage,ruled,vlined]{algorithm2e}
 \usepackage{fancyhdr}
 \usepackage{geometry}
+
 %\usepackage{csquotes}
 % Configuración de las citas bibliográficas 
 %\usepackage[backend=biber,style=ieee]{biblatex}
@@ -252,7 +256,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Hallazgos clave:}
 \begin{itemize}
 	\item Los resultados muestran que el mejor método de extracción de caracteristicas dependerá del valor sustancial que se considere para el tiempo de entrenamiento y rendimiento en el entrenamiento y las pruebas.
-	\item El rendimiento de las pruebas, usando sólo la derivación II de la señal de ECG usada muestra superioridad sobre las SVM.
+	\item El rendimiento de las pruebas, usando sólo la derivación \Romannum{2} de la señal de ECG usada muestra superioridad sobre las SVM.
 	\item El modelo que utiliza como extractor de caracteristicas las DWT y una NN como clasificador es el que tiene mejor rendimiento tanto en entrenamiento y pruebas, como en tiempo de entrenamiento.
 \end{itemize}
 
@@ -309,7 +313,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 
 \textbf{DOI:} 10.1186/s12911-024-02415-4
 
-\textbf{Resumen:} La insuficiencia cardíaca es un síndrome con complejas manifestaciones clínicas. Debido al creciente envejecimiento de la población, la insuficiencia cardíaca se ha convertido en uno de los mayores problemas alrededor del mundo. Este estudio, se usa la base de datos pública MIMIC-III para extraer las caracteristicas temporales y espaciales de las señales ECG de paciencias con insuficiencias cardíacas.
+\textbf{Resumen:} La insuficiencia cardíaca es un síndrome con complejas manifestaciones clínicas. Debido al creciente envejecimiento de la población, la insuficiencia cardíaca se ha convertido en uno de los mayores problemas alrededor del mundo. Este estudio, se usa la base de datos pública MIMIC-\romannum{3} para extraer las caracteristicas temporales y espaciales de las señales ECG de paciencias con insuficiencias cardíacas.
 
 \textbf{Metodología:}
 \begin{itemize}
@@ -390,7 +394,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
     \\
     Einthoven empezó a experimentar con el potencial del capilar para captar corrientes eléctricas diminutas. En 1895 demostró cinco deflexiones que denominó \textit{ABCDE} en 1895. Creó un ajuste matemático para tener en cuenta la inercia del sistema capilar, lo que produjo las curvas de corriente que vemos hoy en día. Siguiendo la tradición matemática establecida por Descartes, utilizó la parte terminal de la serie parte alfabética (PQRST) para denominar estas ondas. \\
     \\
-    El pionero de la electrocardiografía, Waller dijo a finales de 1911: «No creo que la electrocardiografía vaya a tener un uso extensivo en los hospitales. A lo sumo puede tener un uso raro y ocasional para proporcionar un registro de alguna anomalía de la actividad cardíaca». Sin embargo, diez años de los estudios clínicos de Einthoven con los galvanómetros de cuerda transformaron este curioso fenómeno fisiológico en un dispositivo de registro clínico indispensable. Las asociaciones de la inversión de la onda T con la angina de pecho y la arteriosclerosis, en 1910, junto con otras arritmias, como el bigeminismo, bloqueo cardíaco completo, hipertrofia ventricular derecha e izquierda, fibrilación y aleteo auricular y demás ejemplos de diversas cardiopatías. Con su nueva técnica, estandarizó los trazados y formuló el concepto de «triángulo de Einthoven» relacionando matemáticamente las 3 derivaciones (Derivación III = Derivación II - Derivación I). En 1924, el «Padre de la electrocardiografía» recibió el Premio Nobel de Medicina \cite{vincent2022}.\\
+    El pionero de la electrocardiografía, Waller dijo a finales de 1911: «No creo que la electrocardiografía vaya a tener un uso extensivo en los hospitales. A lo sumo puede tener un uso raro y ocasional para proporcionar un registro de alguna anomalía de la actividad cardíaca». Sin embargo, diez años de los estudios clínicos de Einthoven con los galvanómetros de cuerda transformaron este curioso fenómeno fisiológico en un dispositivo de registro clínico indispensable. Las asociaciones de la inversión de la onda T con la angina de pecho y la arteriosclerosis, en 1910, junto con otras arritmias, como el bigeminismo, bloqueo cardíaco completo, hipertrofia ventricular derecha e izquierda, fibrilación y aleteo auricular y demás ejemplos de diversas cardiopatías. Con su nueva técnica, estandarizó los trazados y formuló el concepto de «triángulo de Einthoven» relacionando matemáticamente las 3 derivaciones (Derivación \romannum{3} = Derivación \romannum{2} - Derivación \romannum{1}). En 1924, el «Padre de la electrocardiografía» recibió el Premio Nobel de Medicina \cite{vincent2022}.\\
     \\
     En 1957, el médico estadounidense Norman Jefferis Holter inventó el ECG dinámico (DCG), a menudo conocido como Holter, en uno de los primeros intentos de combinar monitorización clínica y movilidad. Creó una mochila que pesaba unos 38 kg y tenía un dispositivo que podía registrar la actividad cardíaca del participante. Este portátil permite la monitorización continua de actividad eléctrica del sistema cardiovascular durante 24 horas, lo que ayuda a estudiar las arritmias y a localizar el lugar de la isquemia miocárdica. Reconociendo los beneficios potenciales de un dispositivo de monitorización de este tipo, Holter consiguió convertir su idea en una valiosa herramienta de diagnóstico reduciendo el tamaño y el peso a 1 kg con ayuda de Del Mar Avionics, un conocido fabricante de equipos aeronáuticos \cite{vincent2022}.\\
     \\
@@ -497,7 +501,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 
 \section{Conceptos específicos}
 
-\subsection{Aprendizaje Automátic.}
+\subsection{Aprendizaje Automático.}
 	El aprendizaje automático se ha vuelto uno de los más importantes temas hoy en día, constantemente se busca la manera de sacar el mayor provecho de los datos que se tengan recopilados con el fin de desarrollar estrategias que ayuden a tener un nivel superior de entendimiento de estos. Con los modelos de aprendizaje automático apropiados, se tiene la habilidad de hacer predicciones precisas en el mundo real y a medida que nueva data es constantemente agregada, se asegura que los modelos continúen rindiendo eficientemente y siendo capaces de adaptarse a los problemas del mundo real. 
 
 	El aprendizaje automático es una de las ramas de la Inteligencia Artificial (IA) que le permite a un sistema aprender de los datos que se le dan en lugar de programarle explícitamente la tarea que debe desempeñar. 
@@ -588,6 +592,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	\end{equation}
 	en la cual $P_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $x_i$, y $Q_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $y_i$ y es el resultado de esta optimización, un mapa que refleja las similitudes entre las entradas de alta dimensión.
 %	Aca estoy dudoso si tambien hablar sobre el perplexity y todo lo que viene despues de eso
+%	Al final no lo puse
 	
 \subsection{K-medios (k-means).}
 
@@ -858,8 +863,202 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 %\part{Segundo seminario}
 \chapter{Marco Metodológico.}
 
+\section{Enfoque general}
+\subsection{Tipo de investigación.}
 
-...
+Esta tesis acoge un enfoque de investigación cuantitativa y experimental, donde se recopilan y procesan señales de electrocardiograma (ECG) de pacientes con diversas condiciones clínicas. Mediante técnicas avanzadas de aprendizaje automático no supervisado ---como el análisis de componentes principales (PCA), incrustación de vecinos estocásticos distribuidos en t (t-SNE) y K-medios (K-means)---, que junto con las redes neuronales perceptrónicas (que serán los modelos predictivos) se busca identificar y clasificar patrones biomédicos específicos, a los que se denomina \emph{variables objetivo}.
+
+\subsection{Diseño de la investigación.}
+Esta investigación adopta un diseño predictivo longitudinal mediante el procesamiento de señales biomédicas provenientes de electrocardiogramas (ECG). En la primera etapa de este proyecto, se extraen atributos morfológicos y temporales, tales como los intervalos RR, complejos QRS, ondas P y T, entre otros, para esquematizar lo que será un vector de caracteristicas multidimensional. Este canal habilita la aplicación de modelos de aprendizaje automático que, mediante algoritmos de reducción de dimensionalidad, clasificación y clustering \footnote{Agrupamiento de datos basados en la similitud}, identifican patrones no lineales y tendencias latentes en los datos. Los modelos se entrenan para dos objetivos, la clasificación de variables objetivo (grupos etarios, sexo y estado de salud) y la identificación de integraciones biométricas basados en rasgos cardíacos únicos. Aunque los métodos como las redes neuronales perceptrónicas operan como \guillemetleft cajas negras\guillemetright debido a su limitada interpretabilidad intrínseca, su robustez se garantiza mediante métricas de evaluación clínicamente relevantes, lo que permite asegurar generalización en datos no vistos por los modelos y sin que esto comprometa la confiabilidad predictiva.
+
+
+\section{Diseño especifico}
+\subsection{Flujo de procesamiento}
+
+En la figura \ref{fig:diagrama_de_flujo_metodologico} se presenta un diagrama de flujo donde se especifican las 6 etapas para la adquisición y análisis de datos, las cuales son las siguientes:
+\begin{enumerate}[label=\textbf{\Roman*.}]
+	\item \textbf{Recopilación de los datos:} Se describe la fuente de las señales ECG, explicando brevemente el funcionamiento del banco de datos de Physionet y las bases de datos que se tomaron de ahí para este proyecto, a partir de ahí se eligen los criterios de selección de las señales electrocardiográficas y posteriormente, se aclara el formato en el que se guardaran las señales ECG para finalmente seleccionar la derivación \Romannum{2}.
+	\item \textbf{Preprocesamiento de la señal ECG:} Se muestra la preparación previa de la data, ya homogenizadas las señales ECG a un mismo formato, se normaliza cada ECG de cada paciente para posteriormente filtrarlos y eliminar el desplazamiento de la linea base, teniendo cada señal limpia, se segmentan en intervalos de 3mín por cada señal ECG de cada paciente, luego con cada segmento se detectan los picos R para delimitar cada latido individual, teniendo estos latidos individuales alineados, teniendo los latidos alineados, se calcula un latido promedio por cada intervalo de cada paciente, este latido promedio será el vector de características que se usará más adelante.
+	\item \textbf{Reducción de dimensionalidad:} Se inicia el calculo de la matriz de covarianza de los datos recogidos y la posterior obtención de los autovalores y autovectores, se procede a hacer el gráfico de suma de la varianza acumulada para determinar el numero optimo de componentes principales y se proyectan las señales ECG en el nuevo espacio creando un vector único de identificación, ya con esto se crea la base de conocimiento.
+	\item \textbf{Modelado predictivo:} Se identifican las \guillemetleft variables objetivo\guillemetright las cuales fungirán como etiquetas \guillemetleft meta \guillemetright para las redes neuronales que se diseñarán y entrenarán en esta fase. Para cada una de las variables antes mencionadas, se diseña y entrena una red neuronal que sea capaz de clasificar e identificar a cada ECG dimensionalmente reducido que se usa como entrada en la red neuronal. Se entrena cada red, se obtienen las funciones de las redes que contienen los parámetros del entrenamiento, para su posterior guardado.
+	\item \textbf{Validación:} Se grafican las matrices de confusión y se calculan ciertas métricas de desempeño que expresen el rendimiento de cada red neuronal entrenada. \textbf{Aca falta poner lo de los dendogramas y las distancias de malahanobis cuando se hagan mas adelante. Falta esos sinonimos por anotar}
+	\item \textbf{Análisis exploratorio:} Como etapa exploratoria, se aplicó t-SNE seguido de k-means a las componentes principales para identificar agrupaciones supervisadas o no supervisadas en los ECG. Esto permitió validar que la reducción de dimensionalidad mediante PCA preserva información relevante y explorar la posible existencia de subpoblaciones de pacientes. Los resultados aportan evidencia sobre la viabilidad del uso de métodos no supervisados para descubrir dichas subpoblaciones ocultas.
+\end{enumerate}
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg}
+		\caption{Diagrama de flujo.}
+		\label{fig:diagrama_de_flujo_metodologico}
+	\end{figure}
+
+
+
+\section{Población y muestra}
+
+\subsection{Fuente de datos.}
+Bajo los auspicios de los Institutos Nacionales de Salud (NIH, por sus siglas en inglés), que es la agencia principal del gobierno de los Estados Unidos responsable de la biomedicina y la salud publica de investigación, se creó en 1999, Physionet, bajo el apodo \emph{Recursos de Investigación de Señales Fisiológicas Complejas}, siendo sus misiones originales y actuales, realizar y catalizar la investigación y la educación biomédica, en parte ofreciendo acceso gratuito a grandes colecciones de datos fisiológicos y clínicos y al software de código abierto relacionado. La plataforma Physionet es ahora administrada por miembros del Laboratorio de Fisiología Computacional del MIT. 
+
+El recurso Physionet tiene tres componentes interdependientes:
+\begin{itemize}
+	\item Un extenso archivo (\guillemetleft PhysioBank\guillemetright) de grabaciones digitales bien caracterizadas y cuidadosamente revisadas de señales fisiológicas, series temporales y datos relacionados para uso de la comunidad de investigación biomédica. Physionet incluye colecciones de señales electrocardiográficas, cardiopulmonares, neuronales y otras señales biomédicas de sujetos sanos y pacientes con diversas afecciones con importantes implicaciones para la salud pública, como la muerte súbita cardíaca, la insuficiencia cardíaca congestiva, la epilepsia, los trastornos de la marcha, la apnea del sueño y el envejecimiento. Estas colecciones incluyen datos de una amplia gama de estudios, desarrollados y aportados por miembros de la comunidad investigadora. Physionet también incluye datos clínicos y de imagen relacionados con los cuidados críticos.
+	\item Una amplia y creciente biblioteca de software (\guillemetleft PhysioToolkit\guillemetright) para el procesamiento y análisis de señales fisiológicas, la detección de eventos fisiológicamente significativos utilizando tanto técnicas clásicas como métodos novedosos basados en la física estadística y dinámica no lineal, la visualización interactiva y la caracterización de señales, la creación de nuevas bases de datos, la simulación de señales fisiológicas y de otro tipo, la evaluación cuantitativa y la comparación de métodos de análisis, y el análisis de procesos no estacionarios y de no equilibrio. 
+	\item Una colección de tutoriales y materiales educativos populares, que ofrece orientación experta en enfoques para explorar y analizar datos sanitarios y señales fisiológicas. Un tema unificador de estos recursos es la extracción de información \guillemetleft oculta\guillemetright a partir de datos biomédicos, información que puede tener valor diagnostico o pronostico en medicina, o poder explicativo o predictivo en investigación básica.
+\end{itemize}
+
+Physionet no es solo el nombre los Recursos de Investigación de Señales Fisiológicas Complejas, es también un sitio web. Este sitio web fue creado como mecanismo de difusión y el intercambio gratuito y abierto de señales biomédicas grabadas y el software de código abierto para analizarlas, proporcionando instalaciones para el análisis cooperativo de datos y la evaluación de nuevos algoritmos. Además de proporcionar acceso electrónico gratuito a datos y programas informáticos, el sitio web de Physionet ofrece servicios y formación a través de tutoriales en linea para ayudar a los usuarios principiantes y avanzados. En colaboración con la conferencia anual \guillemetleft Computación en Cardiología\guillemetright, Physionet organiza una serie anual de desafíos, en los que investigadores y estudiantes abordan problemas no resueltos de interés clínico o científico básico utilizando datos y software proporcionados por Physionet \cite{physionet2000}.
+
+
+\subsection{Criterios de selección.}
+
+Physionet ofrece un amplio banco de señales fisiológicas, en este proyecto estamos interesados en las bases de datos con señales electrocardiográficas, estas fueron seleccionadas considerando únicamente a aquellos que cumplían con:
+\begin{itemize}
+	\item Anotaciones de edad, sexo y estado de salud o diagnostico clínico de cada paciente al que se le registró el electrocardiograma, en el caso de pacientes sanos (controles), estos deben estar explícitamente etiquetados como tales en la base de datos.
+	\item Tener al menos en unos de los canales de grabación, el registro de la derivación \Romannum{2} con una duración de al menos 15 minutos continuos.
+\end{itemize}
+Se excluyeron registros que no cumplían con los criterios antes mencionados. Además todas las señales usadas vienen del banco de señales fisiológicas de Physionet, ya que son señales provenientes de bases de datos públicas validadas, donde los registros cumplen con protocolos de adquisición y anotación médica impuestos por Physionet.
+ 
+\subsection{Muestra}
+Se usaran señales provenientes de las siguientes bases de datos públicas presentes en Physionet: 
+\begin{itemize}
+	\item Apnea-ECG: La data consiste en 70 grabaciones que pueden variar en duración entre 7 y 10 horas cada uno, cada grabación tiene una señal ECG digitalizada, todos los pacientes tienen apnea del sueño \cite{apneaDB}. 
+	\item Envejecimiento autonómico: Las funciones autonómicas del corazón como regular la presión arterial y el ritmo cardíaco disminuye conforme aumenta la edad, el estudio que produjo esta base de datos provee señales biológicas de alta resolución para describir el efecto del envejecimiento sano en la regulación cardiovascular. Señales electrocardiográficas y de presión arterial continua no invasiva fueron grabadas simultáneamente a 1120 voluntarios sanos en reposo \cite{autonomicAgingDB}.
+	\item BIDMC Insuficiencia cardíaca congestiva: Esta base de datos incluye grabaciones de larga duración de 15 pacientes con insuficiencia cardíaca congestiva severa (NYHA\footnote{Clasificación del grado de insuficiencia cardíaca según la Asociación del Corazón de Nueva York} clase 3 o 4) \cite{InsuficienciaCardiacaDB}
+	\item Fantasía: Es una base de datos de señales electrocardiográficas de 120 minutos cada una de 40 pacientes sanos rigurosamente seleccionados, estos sujetos permanecieron en estado de reposo y ritmo sinusal normal mientras veían la película Fantasía (Disney, 1940) con el fin de mantenerse en vigilia \cite{fantasiaDB}.
+	\item Arritmia (MIT-BIH Arritmia DB): Es un conjunto de 48 grabaciones de señales electrocardiográficas de dos canales, siendo una de estas la derivación \Romannum{2} de media hora de duración cada una, fue una de las primeras bases de datos disponibles en Physionet y es una de las bases de datos más usadas como material de prueba para detectores de arritmia \cite{arritmiadb}. 
+	\item ECGs de larga duración: Esta es una colección de 7 grabaciones electrocardiográficas de larga duración (entre 14 y 22 horas cada uno), con anotaciones manuales de los tipos de latidos extraños presentes en cada grabación. Esta base de datos fue desarrollada para apoyar la investigación en el campo de la detección de las arritmias cardíacas y sus análisis, los pacientes de los registros no son pacientes sanos \cite{longtermdb}.
+	\item Ritmo sinusal normal: Esta base de datos incluye 18 grabaciones de larga duración de electrocardiograma de pacientes referidos del Laboratorio de arritmias del Beth Israel Hospital (BIH) de Boston. Se comprobó que los sujetos incluidos en esta base de datos no presentaban arritmias significativas, es de destacar, que estos pacientes están considerados como pacientes sanos \cite{normalsinusrhythmdb}. 
+	\item La base de datos polisomnográficos (MIT-BIH Polysomnographic Database) es una colección de grabaciones de múltiples señales fisiológicas durante el sueño, entre ellas, se tiene la derivación \Romannum{2} de cada grabación de cada paciente. Cada uno de estos pacientes fueron monitorizados en el Laboratorio de Sueño del BIH de Boston para evaluar el síndrome de apnea obstructiva crónica del sueño y comprobar los efectos de la presión positiva constante en las vías respiratorias, una intervención terapéutica estándar que suele prevenir o reducir sustancialmente la obstrucción de las vías respiratorias en estos sujetos \cite{polysomnogradb}.
+%	\item Base de datos de electrocardiogramas de 12 derivaciones a gran escala para el estudio de arritmias: Esta colección fue creada bajo los auspicios de la Universidad de Chapman, el hospital de la gente de Shaoxing y el primer hospital de Ningbo. Posee mas de cuarenta y cinco mil grabaciones de 10 segundos de duración de las 12 derivaciones de un electrocardiograma, este paquete de señales puede utilizarse para diseñar y comparar y poner a punto técnicas estadísticas clásicas y de aprendizaje automático nuevas y clásicas en estudios centrados en la arritmia y otras afecciones cardiovasculares \cite{largeescale12leaddb}. PONER ESTO SI Y SOLO SI SE USA ESTA BASE DE DATOS
+	
+\end{itemize}
+Los ECG provenientes de las bases de datos antes mencionadas, están distribuidos como se muestra en el cuadro \ref{tab:distriECGs}, según las variables objetivo tomadas de los criterios antes mencionados. 
+\begin{table}[t]
+	\begin{center}
+		\begin{tabular}{p{1.7cm}|c|c|c|c|p{1.7cm}|p{2cm}|p{1.7cm}|c}
+			
+			& Hombres & Mujeres & Sanos & Patológicos & Adultos Jóvenes & Adultos de Mediana Edad & Adultos Mayores & Total \\
+			\hline
+			Cantidad de ECGs & 559 & 749 & 1154 & 154 & 856 & 370 & 82 & 1308 \\
+			
+		\end{tabular}
+		\caption{Distribución de ECGs}
+		\label{tab:distriECGs}
+	\end{center}
+\end{table}
+
+
+\section{Preprocesamiento de la señal}
+	
+Para garantizar la confiabilidad de los posteriores análisis es critico el preprocesamiento de las señales electrocardiográficas. Las señales adquiridas de las bases de datos antes mencionadas no están exentas de los ruidos inherentes a la adquisición de la misma y suelen contener artefactos y demás tipos de ruidos que es necesario eliminar, es por esto que se implementa un flujo de preprocesamiento estructurado en cinco etapas principales:
+\begin{enumerate}
+	\item \textbf{Estandarización de la señal:} En el análisis de datos, la estandarización es una de las herramientas básicas y comúnmente utilizadas, existen varios tipos y dependerá de los datos cual usar.
+	\item \textbf{Filtrado de ruido:} Es necesario reducir o eliminar el ruido provocado por la actividad muscular y la interferencia de la red eléctrica, para esto se usan filtros digitales (Butterworth, por ejemplo) con frecuencias de corte ajustadas a las bandas típicas del ECG.
+	\item \textbf{Eliminación del desplazamiento de la linea base:} también conocido como \emph{baseline wander}, este ruido de baja frecuencia ($<0.5\ Hz$) que distorsiona la morfología del ECG llegando a afectar la detección de las ondas P y T. Para esto se aplica el algoritmo de Sharma \& Sharma \cite{Sharma15} para preservar la morfología real del ECG.
+	\item \textbf{Extracción de segmentos ECG:} Debido a que el algoritmo de Sharma \& Sharma \cite{Sharma15} se desempeña mejor conforme más largo es el segmento a ser tratado por el algoritmo, es por esto que se extraen los segmentos de los ECG luego de haber sido filtrados y el desplazamiento de la linea base sea removido. Para homogenizar el análisis, se selecciona una duración fija (3 minutos) que permitan equilibrar la captura de la variabilidad de los latidos cardíacos. 
+	\item \textbf{Detección de eventos cardíacos:} Seleccionando algoritmos basados en el robusto algoritmo de Pan-Tompkins \cite{PanTompkins85} se busca la identificación precisa de los complejos QRS (picos R) como referencia temporal de cada latido.
+\end{enumerate}
+
+\subsection{Estandarización}
+
+La estandarización de los datos se suele hacer por dos razones:
+\begin{enumerate}
+	\item Ya que cada electrocardiógrafo digitaliza la señal ECG a diferente factor de conversión analógico-digital (ADC) ---lo que resulta en señales con escalas dinámicas diferentes, es decir, valores en mV representados con rangos numéricos distintos--- se requiere regularizar las escalas dinámicas de los datos.
+	\item La linea base de la señal ECG suele no estar situada en el centro común del papel milimetrado donde queda grabada la señal, es por esto que se debe eliminar el \emph{offset} del instrumento y así centrar la linea base del ECG.
+\end{enumerate}
+Entre los distintos tipos de regularización de datos existentes, es importante señalar que el uso de cada tipo dependerá de los datos y del problema a solucionar, en esta investigación se usará la siguiente transformación lineal:
+\begin{equation}
+	\label{eq:normalizacion}
+	\mathrm{X}=\frac{\mathrm{x}-\overline{\mathrm{x}}}{\sigma}
+\end{equation}
+siendo $\mathrm{X}$ el nuevo vector de datos estandarizado, $\mathrm{x}$ la variable de entrada, $\overline{\mathrm{x}}$ su valor medio y $\sigma$ la desviación estándar. Este tipo de regularización tendrá valor medio cero y la desviación estándar uno, con lo que se evitaran tendencias de las entradas fuera de los rangos considerados como normales, debido a los desplazamientos de la linea base de la señal. Por otra parte su uso preserva la estructura original de los datos lo que permite que las correlaciones se mantengan siendo esto lo apropiado para posteriores algoritmos como PCA y NN.
+\subsection{Filtrado de ruido}
+
+Para la etapa de filtrado, es necesario identificar la banda que maximice la energía del QRS, siendo esta ($0.5 - 15 \ Hz$) \cite{PanTompkins85}, posteriormente se diseña un filtro digital tipo Butterworth de orden 10 y tipo pasabanda usando el corte de bandas antes mencionado. La rapidez de este tipo de filtrado permite que pueda ser implementado en tiempo real dejando suficientes recursos computacionales para posteriores tareas. 
+
+\subsection{Remoción del desplazamiento de la línea base}
+
+El desplazamiento de la línea base (BW, por sus siglas en inglés) del electrocardiograma es causado principalmente por el movimiento y el proceso respiratorio del paciente lo que hace que aparezcan artefactos de baja frecuencia de las señales ECG. Para una mejor visualización e interpretación es necesario remover el BW, esto permite que posteriores procesos de detección de eventos cardíacos y subsecuentes procesos de automatización sean eficaces. Si bien el BW es una señal de baja frecuencia, el uso de un filtrado paso alto no es recomendable ya que puede distorsionar la morfología del ECG ya que causa variaciones en el espectro de frecuencias de la señal ECG, es por esto que se sugiere emplear técnicas que puedan remover el BW sin deformar la señal ECG. La descomposición vibracional de Hilbert (HVD, por sus siglas en inglés) propuesta por Sharma \& Sharma en 2015 \cite{Sharma15} es una método que extrae las mono-componentes de una señal usando su forma analítica donde las primeras componentes corresponden a las más altas amplitudes instantáneas. Las componentes con las amplitudes instantáneas más altas hacen referencia a la componente dominante de la señal. La HVD estima esta mayor componente de energía como una función media de las frecuencias instantáneas (IF) de la composición, es decir, esta técnica es un método iterativo en el que cada iteración incluye los tres pasos siguientes: 
+\begin{enumerate}
+	\item Estimación de la IF de la componente mayor (la más baja frecuencia encontrada).
+	\item Extracción de la envolvente correspondiente de la componente mayor. 
+	\item Sustracción de la componente mayor de la señal compuesta.
+\end{enumerate}
+Por lo tanto, la señal original $x(t)$ puede representarse como una suma de diferentes mono-componentes con amplitudes y frecuencias instantáneas que varían lentamente. Así, utilizando la técnica HVD, la señal $x(t)$ puede expresarse como: 
+\begin{equation}
+	x(t) = \sum_k a_k(t)\cos\left( \int \omega_k(t)dt\right)
+	\label{eq:senal_HVD}
+\end{equation}
+donde $a_k(t)$ y $w_k(t)$ son las amplitudes instantáneas y la IF del k-ésimo componente respectivamente \cite{Sharma15}. 
+En esta investigación, usando la técnica de la descomposición vibracional de Hilbert, se sustrae la primera componente de la señal ECG original que es:
+\begin{equation}
+	x_1(t) = a_1(t)\cos \left(\int \omega_1(t)dt \right)
+	\label{eq:baseline_wander}
+\end{equation}
+esta corresponde con el desplazamiento de la linea base. Por consiguiente, la señal residual $x^{\prime}(t)$ es la combinación de las demás componentes de más bajas amplitudes que resultan ser la señal original sin los artefactos introducidos por el desplazamiento de la linea base y sin cambios en la morfología original de la misma, dicho de otra manera, la señal ECG con la linea base corregida es obtenida sustrayendo el BW de la señal ECG original, esto es:
+\begin{equation}
+	x^{\prime}(t)=x(t)-x_1(t)
+	\label{eq:senal_sin_bw}
+\end{equation}
+Esta técnica se desempeña mejor conforma la señal sea más prolongada, es por esto que esta remoción de la linea base se hace previo a la segmentación de la señal ECG en intervalos de tiempo más cortos. Como se puede observar en la figura \ref{fig:remocion_bw}, la HVD es capaz de mantener la morfología real del ECG mientras elimina cualquier artefacto de baja frecuencia que haga variar la linea base.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Baseline Wander Sharma.png}
+	\caption{Remoción del desplazamiento de la línea base usando la técnica HVD \cite{Sharma15}.
+		A) Señal ECG con BW artificial de 900 de amplitud. 
+		B) Señal ECG $x^{\prime}(t)$ con la línea base corregida.}
+	\label{fig:remocion_bw}
+\end{figure}
+ 	
+\subsection{Extracción de segmentos}
+
+Debido a que las señales ECG que se tienen, provienen de ECGs de Holter con duraciones mayores a 20 minutos, se pensó en aumentar la cantidad de datos segmentando cada uno de estos en intervalos de 3 minutos con la finalidad de tener más registros del mismo paciente. Así que luego que cada señal haya sido filtrada y tenga la linea base corregida, se segmentó y separó la señal en intervalos de 3 minutos.
+
+
+\subsection{Detección de eventos cardíacos}
+
+
+\subsection{refinamiento/análisis de forma}'
+
+
+\section{Extraccion de caracteristicas}
+*objetivos y procedimientos
+\subsection{Alineamiento} alinear los latidos individuales detectados en el segmento de 3min usando el pico r como referencia
+\subsection{Vector de caracteristicas} se utiliza el latido promediado completo como vector de caracteristicas primario para cada paciente
+
+
+\section{Reduccion de dimensionalidad}
+*objetivo
+\subsection{tecnica}
+\subsection{Seleccion de componentes} determinar el numero optimo de PCs y justificar el criterio con el porcentaje de la varianza acumulada > 95\%
+\subsection{transformacion}
+
+
+\section{Modelado predictivo}
+*objetivo
+\subsection{Algoritmo}
+\subsection{Arquitectura y entrenamiento}
+\subsection{Tareas de modelado propuestas}
+*clasificacion de estado de salud, grupos etarios, sexo e identificacion del paciente
+\subsection{Preparacion de datos}
+\subsection{Entrenamiento} entrenar una RNA independiente para cada una de las tareas anteriores, utilizando los scores de pca como entrada y la variable objetivo como salida (sexo, edad, estado de salud, ID-paciente).
+
+
+\section{analisis exploratorio de grupos tsne kmeans}
+*objetivo y tecnicas
+\subsection{t-SNE}
+\subsection{K-means}
+\subsection{analisis} interpretar los grupos resultantes visualmente y correlacionarlos con las variables clinicas
+
+
+\section{validez y confiabilidad}
+\subsection{validacion de modelos}
+\subsection{clasificacion}
+\subsection{identificacion}
+\subsection{repetibilidad}
+\subsection{analisis de robustez}
+\subsection{consideraciones éticas}
 
 \chapter{Resultados}
 

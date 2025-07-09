@@ -130,4 +130,53 @@ C.~Medina, ``Perceptrón multicapa,'' 2017.
 \bibitem{percMulti}
 Gengiskanhg, ``Red neuronal artificial,'' 2004.
 
+\bibitem{physionet2000}
+A.~L. Goldberger, L.~A.~N. Amaral, L.~Glass, J.~M. Hausdorff, P.~C. Ivanov,
+  R.~G. Mark, J.~E. Mietus, G.~B. Moody, C.-K. Peng, and H.~E. Stanley,
+  ``Physio{B}ank, {P}hysio{T}oolkit, and {P}hysio{N}et: {C}omponents of a new
+  research resource for complex physiologic signals,'' vol.~101, no.~23,
+  pp.~e215--e220.
+
+\bibitem{apneaDB}
+T.~Penzel, G.~Moody, R.~Mark, A.~Goldberger, and J.~Peter, ``The apnea-ecg
+  database,'' in {\em Computers in Cardiology 2000. Vol.27 (Cat. 00CH37163)},
+  pp.~255--258, 2000.
+
+\bibitem{autonomicAgingDB}
+A.~Schumann and K.~Bär, ``Autonomic aging: A dataset to quantify changes of
+  cardiovascular autonomic function during healthy aging (version 1.0.0),''
+  2021.
+
+\bibitem{InsuficienciaCardiacaDB}
+D.~S. Baim, W.~S. Colucci, E.~S. Monrad, H.~S. Smith, R.~F. Wright, A.~Lanoue,
+  D.~F. Gauthier, B.~J. Ransil, W.~Grossman, and E.~Braunwald, ``Survival of
+  patients with severe congestive heart failure treated with oral milrinone,''
+  {\em Journal of the American College of Cardiology}, vol.~7, no.~3,
+  pp.~661--670, 1986.
+
+\bibitem{fantasiaDB}
+N.~Iyengar, C.~K. Peng, R.~Morin, A.~L. Goldberger, and L.~A. Lipsitz,
+  ``Age-related alterations in the fractal scaling of cardiac interbeat
+  interval dynamics,'' {\em The American Journal of Physiology}, vol.~271,
+  no.~4 Pt 2, pp.~R1078--R1084, 1996.
+\newblock Part 2.
+
+\bibitem{longtermdb}
+A.~Goldberger, L.~Amaral, L.~Glass, J.~Hausdorff, P.~C. Ivanov, R.~Mark, and
+  S.~H. E., ``Mit-bih long-term ecg database,'' 2000.
+
+\bibitem{normalsinusrhythmdb}
+A.~Goldberger, L.~Amaral, L.~Glass, J.~Hausdorff, P.~C. Ivanov, R.~Mark, and
+  S.~H. E., ``Mit-bih normal sinus rhythm database,'' 2000.
+
+\bibitem{polysomnogradb}
+Y.~Ichimaru and G.~B. Moody, ``Development of the polysomnographic database on
+  cd-rom,'' {\em Psychiatry and clinical neurosciences}, vol.~53, no.~2,
+  pp.~175--177, 1999.
+
+\bibitem{largeescale12leaddb}
+J.~Zheng, H.~Chu, D.~Struppa, {\em et~al.}, ``Optimal multi-stage arrhythmia
+  classification approach,'' {\em Scientific Reports}, vol.~10, p.~2898, 2020.
+\newblock Number: 1.
+
 \end{thebibliography}
