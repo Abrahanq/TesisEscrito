@@ -7,6 +7,8 @@
 \usepackage{float}
 \usepackage{enumitem}
 \usepackage{romannum}
+\usepackage{dsfont}
+\usepackage[hidelinks]{hyperref}
 %\usepackage[hidelinks]{hyperref}
 %\usepackage{wrapfig}
 \usepackage{amsmath, amssymb}
@@ -508,7 +510,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	
 	El aprendizaje automático usa una variedad de algoritmos que interactivamente aprenden de los datos, para mejorar, describir datos e incluso, predecir resultados. Como estos algoritmos constantemente ingieren datos de entrenamiento, es entonces posible producir modelos más precisos basados con esta data. El aprendizaje automático engloba tantos algoritmos que es necesario agruparlos por categorías o paradigmas de aprendizaje, estos se dividen en función de la salida de los mismos.
 
-\subsection{Análisis de Componentes Principales (PCA).}
+\subsection{Análisis de Componentes Principales (PCA).} \label{subsec:PCA}
 	Los grandes conjuntos de datos están cada vez más extendidos en muchas disciplinas. Para interpretarlos, se necesitan métodos que reduzcan drásticamente su dimensionalidad de forma interpretable, de modo que se conserve la mayor parte de la información contenida en los datos. Se han desarrollado muchas técnicas con este fin, pero el análisis de componentes principales (PCA) es una de las más antiguas y utilizadas. Su idea es sencilla: reducir la dimensionalidad de un conjunto de datos conservando la mayor cantidad posible de «variabilidad», es decir, de información estadística.
 	
 	Esto significa que «preservar tanta variabilidad como sea posible» se traduce en encontrar nuevas variables que sean funciones lineales de las del conjunto de datos original, que maximicen sucesivamente la varianza y que no estén correlacionadas entre sí. PCA usa álgebra lineal para transformar datos a unas variables llamadas componentes principales (PC). Estas se encuentras calculando los autovectores (direcciones) y autovalores (importancia) de una matriz de covarianza. PCA selecciona los componentes principales con los autovalores más altos y proyecta los datos sobre ellos, para simplificar el conjunto de datos. Para esto se debe: \\
@@ -556,6 +558,9 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 			\item Cuando $A$ actuá sobre $X$ sólo estira o encoge $X$ por el escalar $\lambda$.
 			\item La dirección de $X$ no cambia, por lo que los autovectores definen \guillemetleft direcciones estables\guillemetright \ de $A$.
 		\end{itemize}
+		\item \textbf{¿Cuantas dimensiones se deberían calcular?}
+		Una de las preguntas claves en este punto es cuantas PCs conservar. Entre todas las maneras de responder esta interrogante, uno de los métodos más populares es la \emph{suma de la varianza acumulada}, este método ha sido usado en muchas librerías y paquetes de algunos lenguajes como Python y MATLAB. \\
+		En PCA, cada componente principal representa una dirección de máxima varianza de los datos a esta se le conoce como la \emph{varianza explicada}, esta mide cuanta información (o dispersión) de los datos originales captura dicha PC. La \emph{varianza explicada acumulada} es la suma de las varianzas explicadas por los componentes principales seleccionados hasta cierto punto, expresada como un porcentaje del total. Este valor permite determinar qué proporción de la información total del conjunto de datos que se conserva al incluir un número específico de componentes. Para esto basta con calcular el acumulativo de las varianzas de las componentes principales para luego definir un umbral deseado que será el porcentaje de retención de información preferido según los requerimientos del problema, por ultimo basta con identificar el menor numero de componentes necesarios para superar el umbral deseado. En la figura \ref{fig:varianza_acumulada} se observa un ejemplo grafico de lo anteriormente dicho.
 		\item \textbf{Selecciona las mejores direcciones y transforma los datos.}
 		Después de calcular los autovalores y autovectores, PCA clasifica estos por la cantidad de información que ellos capturan. Entonces: 
 		\begin{itemize}
@@ -566,6 +571,13 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	\end{enumerate}
 	
 	Hasta que no se generalizó el uso de ordenadores electrónicos, que fue posible utilizarlo con conjuntos de datos que no fueran trivialmente pequeños. Desde entonces, su uso se ha multiplicado y se han desarrollado numerosas variantes en muchas disciplinas diferentes.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\linewidth]{Sem_1/figuras/suma_acumulada_varianza.png}
+		\caption{Varianza acumulada frente al número de componentes principales en un conjunto de datos de ejemplo.}
+		\label{fig:varianza_acumulada}
+	\end{figure}
 	
 %	La definición formal de PCA, en un contexto estándar, junto con una derivación que muestra que puede obtenerse como la solución a un problema de auto-valores y auto-vectores o, alternativamente, a partir de la descomposición del valor singular (SVD) de la matriz (centrada) de datos. El PCA puede basarse en la matriz de covarianzas o en la matriz de correlaciones. Se discutirá la elección entre estos análisis. En ambos casos, las nuevas variables (las PC) dependen del conjunto de datos, en lugar de ser funciones de base predefinidas, por lo que son adaptativas en sentido amplio. Los principales usos del PCA son descriptivos y no inferenciales.\cite{Joliiffe16}\\
 
@@ -934,7 +946,7 @@ Se usaran señales provenientes de las siguientes bases de datos públicas prese
 	
 \end{itemize}
 Los ECG provenientes de las bases de datos antes mencionadas, están distribuidos como se muestra en el cuadro \ref{tab:distriECGs}, según las variables objetivo tomadas de los criterios antes mencionados. 
-Es de destacar también que todas las señales fisiológicas disponibles en Physionet han sido guardadas en un formato estandarizado por ellos mismos, además ponen a disposición una librería en Python, llamada \emph{Waveform Database Software Package (WFDB) for Python} \cite{wfdb}, la cual permite transformar las señales a formatos más universales como, archivos separados por comas (csv, por sus siglas en inglés). 
+Es de destacar también que todas las señales fisiológicas disponibles en Physionet han sido guardadas en un formato estandarizado por ellos mismos, además ponen a disposición una librería en Python, llamada \emph{Waveform Database Software Package (WFDB) for Python} \cite{wfdb}, la cual permite transformar las señales a formatos más universales como, archivos separados por comas (CSV, por sus siglas en inglés). 
 \begin{table}[t]
 	\begin{center}
 		\begin{tabular}{p{1.7cm}|c|c|c|c|p{1.7cm}|p{2cm}|p{1.7cm}|c}
@@ -1020,8 +1032,14 @@ Debido a que las señales ECG que se tienen, son ECGs con duraciones mayores a 2
 
 Es importante recordar que cada latido visto en el ECG está compuesto por ondas individuales, de las cuales se puede extrapolar el funcionamiento de cada parte del corazón mientras este se contrae y se relaja, es por esto que resulta clave poder detectar los eventos relevantes del latido, tales como el pico R, el inicio de la onda P o el final de la onda T. Para detectar dichos eventos se ha hecho uso de distintas técnicas, donde cada una de estas se desempeña mejor dependiendo del tipo de evento a localizar. Por ejemplo, el algoritmo Pan-Tompkins \cite{PanTompkins85} fue el primero y uno de los mejores computacionalmente hablando para detectar los picos R, sin embargo, hoy en día se han mejorado estos algoritmos aumentando su eficiencia y reduciendo el costo computacional al mismo tiempo, aunque estos están basados en la aproximación hecha por Pan-Tompkins. 
 
-Con el fin de aprovechar las herramientas hechas por la comunidad científica, en la presente investigación se hace uso de la librería \emph{Neurokit2} \cite{neurokit21}, este paquete provee rutinas de procesamiento avanzado de bioseñales que permiten a investigadores y médicos, analizar datos fisiológicos de manera sencilla y sin necesidad de poseer conocimientos extensivos en procesamiento de señales biomédicas y programación. Esta librería, está enfocada en todo lo que involucra el análisis de señales fisiológicas siendo una de estas, las señales ECG y entre las muchas funcionalidades presentes en esta librería, se hace uso de detector de picos R propuesto y usado en esta, este a su vez, esta basado en el algoritmo llamado \emph{Biopeaks} \cite{biopeaks_software20} propuesto por Jan C. Brammer en 2020, este algoritmo presentó una precisión del $99.95\%$ en la detección de picos R \cite{Biopeaks20} siendo este, uno de los algoritmos más eficientes hoy en día, para la localización de eventos cardíacos como los picos R, de aquí que haya sido empleado en este trabajo. 
+Con el fin de aprovechar las herramientas hechas por la comunidad científica, en la presente investigación se hace uso de la librería \emph{Neurokit2} \cite{neurokit21}, este paquete provee rutinas de procesamiento avanzado de bioseñales que permiten a investigadores y médicos, analizar datos fisiológicos de manera sencilla y sin necesidad de poseer conocimientos extensivos en procesamiento de señales biomédicas y programación. Esta librería, está enfocada en todo lo que involucra el análisis de señales fisiológicas siendo una de estas, las señales ECG y entre las muchas funcionalidades presentes en esta librería, se hace uso de detector de picos R propuesto y usado en esta, este a su vez, esta basado en el algoritmo llamado \emph{Biopeaks} \cite{biopeaks_software20} propuesto por Jan C. Brammer en 2020, este algoritmo presentó una precisión del $99.95\%$ en la detección de picos R \cite{Biopeaks20} siendo este, uno de los algoritmos más eficientes hoy en día, para la localización de eventos cardíacos como los picos R, de aquí que haya sido empleado en este trabajo. En la figura \ref{fig:ecg_delimitado} se observa un ejemplo de ECG con los latidos individuales delimitados y los picos R debidamente localizados.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/ECG_procesado_10s_delimitado.png}
+	\caption{ECG procesado con latidos individuales delimitados y picos R localizados.}
+	\label{fig:ecg_delimitado}
+\end{figure}
 
 \section{Extracción de caracteristicas}
 
@@ -1029,18 +1047,32 @@ Es relevante recordar que PCA necesita como entrada un vector con las caracteris
 
 \subsection{Alineamiento} 
 
-La importancia de la precisa localización de los picos R en cada ECG radica en la posterior delimitación de los latidos individuales, para esto se utiliza la función \emph{ecg\_segment()} de la librería \emph{Neurokit2} \cite{neurokit21}, teniendo la posición de cada pico R, esta función es capaz de separar cada latido, primero centrando en $0$ el pico R de cada latido y calculando $300 ms$ del pico R y $600 ms$ después del pico R, esta función también es capaz de corregir estos tiempos de acuerdo a la frecuencia cardíaca. Teniendo los latidos individuales debidamente localizados y alineados, se procede a calcular el promedio de los latidos detectados de cada intervalo segmentado de cada ECG por paciente.
+La importancia de la precisa localización de los picos R en cada ECG radica en la posterior delimitación de los latidos individuales, para esto se utiliza la función \emph{ecg\_segment()} de la librería \emph{Neurokit2} \cite{neurokit21}, teniendo la posición de cada pico R, esta función es capaz de separar cada latido, primero centrando en $0$ el pico R y cortando el registro $300 ms$ antes del pico R y $600 ms$ después del pico R, esta función también es capaz de corregir estos tiempos de acuerdo a la frecuencia cardíaca. Teniendo los latidos individuales debidamente localizados y alineados, se procede a calcular el promedio de los latidos detectados de cada intervalo segmentado de cada ECG por paciente. En la figura \ref{fig:latidos_alineados} se observan como se ven los latidos individuales apilados uno sobre otro y sobre ellos se observa el promedio de estos.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/ecg_latidos_alineados.png}
+	\caption{ECG con latidos individuales alineados.}
+	\label{fig:latidos_alineados}
+\end{figure}
 
 \subsection{Vector de caracteristicas} 
 
-Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, genera que cada latido promedio tenga un numero distinto de muestras, es decir,que cada latido promedio tenga un largo distinto, por esto es importante estandarizar el largo de estos latidos promedios a un valor fijo de 250 muestras. Ya teniendo estandarizados a un numero fijo de muestras se guardan estos latidos en un archivo csv debidamente identificado y este será el vector de caracteristicas de señal ECG que se tenga. Este encapsula la morfología completa del ECG en un sólo ciclo cardíaco, lo que podría permitir que PCA pueda capturar correlaciones entre los segmentos antes mencionados y como estos varían paciente a paciente, además que la estructura de la señal en forma numérica es algo que PCA procesa eficientemente. Este vector de caracteristicas es la base del análisis de la señal electrocardiográfica. 
+Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, lo que resulta en latidos promedios con longitudes muéstrales inconsistentes. Para garantizar la comparabilidad morfológica y la viabilidad computacional en etapas posteriores, se implementa una estandarización de longitud fija mediante remuestreo digital. Cada latido se interpola a 250 muestras, este valor preserva la resolución temporal de los eventos cardíacos clave, incluso en ECG de pacientes con trastornos del ritmo cardíaco. Estas señales estandarizadas se almacenan en un arreglo en formato (CSV), este arreglo guarda los valores que al ser graficados, representan la figura del latido promedio de cada paciente, similar a como se observa en la figura \ref{fig:latidos_alineados} (línea roja). 
+Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de caracteristicas que será la base del análisis de la señal electrocardiográfica. 
 
+\section{Reducción de dimensionalidad}
 
-\section{Reduccion de dimensionalidad}
-*objetivo
-\subsection{tecnica}
-\subsection{Seleccion de componentes} determinar el numero optimo de PCs y justificar el criterio con el porcentaje de la varianza acumulada > 95\%
-\subsection{transformacion}
+La reducción de la dimensionalidad es el proceso de encontrar un espacio dimensionalmente reducido adecuado para representar los datos originales, con la esperanza de que la representación alternativa de los datos permita:
+\begin{itemize}
+	\item Explorar datos de alta dimensión con el objetivo de descubrir una estructura o patrones que conducen a la formación de hipótesis estadísticas.
+	\item Visualización de los datos utilizando diagramas de dispersión cuando la dimensionalidad es reducida a 2D o 3D.
+	\item Analizar los datos utilizando métodos estadísticos, como la agrupación, suavizado, estimación de densidad de probabilidad o clasificación.
+\end{itemize}
+
+Un posible método para la reducción de dimensionalidad seria crear nuevas variables que sean funciones o combinaciones lineales de los segmentos e intervalos que se observan en la figura \ref{fig:ECGSinusal}, pero un método que permite hacer esto internamente, es el conocido como análisis de componentes principales (PCA) \cite{martinez05}. Habiendo culminado la etapa de preprocesamiento de los datos y la extracción de caracteristicas de los ECG, se procede a la implementación del análisis de componentes principales. Es de destacar que debido al aumento en el uso de las herramientas de aprendizaje automático, la optimización de estas ha magnificado también. Para este trabajo, se utiliza la función \emph{PCA()} de la librería \textbf{scikit-learn (v1.4.2)} \cite{scikit-learn, sklearn_api}, esta función efectúa eficientemente los cálculos subyacentes, como la descomposición de la matriz de covarianza y la solución al posterior problema de autovalores y autovectores. Entre los diversos parámetros que necesita esta función para ser ejecutada, esta el numero final de componentes principales $(k)$, para determinar el numero final de estas se utiliza el criterio de varianza acumulada explicado en la subsección \ref{subsec:PCA}.
+
+\subsection{Transformación}
 
 
 \section{Modelado predictivo}
