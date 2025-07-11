@@ -192,4 +192,25 @@ J.~C. Brammer, ``biopeaks: a graphical user interface for feature extraction
   from heart- and breathing biosignals,'' {\em Journal of Open Source
   Software}, vol.~5, no.~54, p.~2621, 2020.
 
+\bibitem{martinez05}
+W.~Mart\'{\i}nez and A.~Mart\'{\i}nez, {\em Exploratory Data Analysis with
+  {MATLAB}}.
+\newblock Computer Science and Data Analysis Series, Boca Raton, FL: Chapman \&
+  Hall/CRC, 2005.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay, ``Scikit-learn:
+  Machine learning in {P}ython,'' {\em Journal of Machine Learning Research},
+  vol.~12, pp.~2825--2830, 2011.
+
+\bibitem{sklearn_api}
+L.~Buitinck, G.~Louppe, M.~Blondel, F.~Pedregosa, A.~Mueller, O.~Grisel,
+  V.~Niculae, P.~Prettenhofer, A.~Gramfort, J.~Grobler, R.~Layton,
+  J.~VanderPlas, A.~Joly, B.~Holt, and G.~Varoquaux, ``{API} design for machine
+  learning software: experiences from the scikit-learn project,'' in {\em ECML
+  PKDD Workshop: Languages for Data Mining and Machine Learning}, pp.~108--122,
+  2013.
+
 \end{thebibliography}
