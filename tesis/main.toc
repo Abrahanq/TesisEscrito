@@ -61,23 +61,23 @@
 \contentsline {subsection}{\numberline {3.5.1}Alineamiento}{42}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Vector de caracteristicas}{43}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Reducción de dimensionalidad}{43}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}transformacion}{44}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Modelado predictivo}{44}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{44}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Arquitectura y entrenamiento}{44}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Tareas de modelado propuestas}{44}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Preparacion de datos}{44}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{44}{subsection.3.7.5}%
-\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{44}{section.3.8}%
+\contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{44}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Modelado predictivo}{45}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{45}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Arquitectura y entrenamiento}{45}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Tareas de modelado propuestas}{45}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Preparacion de datos}{45}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{45}{subsection.3.7.5}%
+\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{45}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}t-SNE}{45}{subsection.3.8.1}%
 \contentsline {subsection}{\numberline {3.8.2}K-means}{45}{subsection.3.8.2}%
 \contentsline {subsection}{\numberline {3.8.3}analisis}{45}{subsection.3.8.3}%
-\contentsline {section}{\numberline {3.9}validez y confiabilidad}{45}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}validacion de modelos}{45}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}clasificacion}{45}{subsection.3.9.2}%
-\contentsline {subsection}{\numberline {3.9.3}identificacion}{45}{subsection.3.9.3}%
-\contentsline {subsection}{\numberline {3.9.4}repetibilidad}{45}{subsection.3.9.4}%
-\contentsline {subsection}{\numberline {3.9.5}analisis de robustez}{45}{subsection.3.9.5}%
-\contentsline {subsection}{\numberline {3.9.6}consideraciones éticas}{45}{subsection.3.9.6}%
-\contentsline {chapter}{\numberline {4}Resultados}{46}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{47}{chapter.5}%
+\contentsline {section}{\numberline {3.9}validez y confiabilidad}{46}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}validacion de modelos}{46}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}clasificacion}{46}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}identificacion}{46}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.9.4}repetibilidad}{46}{subsection.3.9.4}%
+\contentsline {subsection}{\numberline {3.9.5}analisis de robustez}{46}{subsection.3.9.5}%
+\contentsline {subsection}{\numberline {3.9.6}consideraciones éticas}{46}{subsection.3.9.6}%
+\contentsline {chapter}{\numberline {4}Resultados}{47}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{48}{chapter.5}%

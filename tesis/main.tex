@@ -2,12 +2,13 @@
 % Configuración del idioma español
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
+\usepackage[spanish, es-tabla]{babel}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{enumitem}
 \usepackage{romannum}
 \usepackage{dsfont}
+\usepackage{array}
 \usepackage[hidelinks]{hyperref}
 %\usepackage[hidelinks]{hyperref}
 %\usepackage{wrapfig}
@@ -652,7 +653,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\item \textbf{Se repiten los pasos de asignación y actualización} hasta que no hayan cambios en la asignación.
 	\end{enumerate}
 	
-\subsection{Redes Neuronales.}
+\subsection{Redes Neuronales.} \label{subsec:NN}
 	Una red neuronal artificial es un programa que intenta imitar la manera en que un cerebro humano es capaz de abordar ciertos problemas, esta usa capas interconectadas de unidades, llamadas perceptrones (también se les llama neuronas), siendo capaces de aprender e inferir reglas o relaciones basados en la data observada, dicha red adquiere los conocimientos mediante un proceso de entrenamiento y aprendizaje, donde este almacena \textit{conocimiento} utilizando intensidades de conexión interperceptrónica. 
 	\subsection{Redes neuronales biológicas.}
 	Es necesario entender el concepto de una red neuronal del tipo biológico para poder comprender que es lo imitan las redes neuronales artificiales, estas se definen como la unión de neuronas a otras generando así, un conjunto de conexiones sinápticas ordenadas. Las neuronas, no son más que células con características únicas que le permiten diferenciarse del resto de las células biológicas al poder comunicarse entre ellas. En la figura \ref{fig:neurona} se observan las partes de una neurona biológica. 
@@ -880,8 +881,8 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 
 Esta tesis acoge un enfoque de investigación cuantitativa y experimental, donde se recopilan y procesan señales de electrocardiograma (ECG) de pacientes con diversas condiciones clínicas. Mediante técnicas avanzadas de aprendizaje automático no supervisado ---como el análisis de componentes principales (PCA), incrustación de vecinos estocásticos distribuidos en t (t-SNE) y K-medios (K-means)---, que junto con las redes neuronales perceptrónicas (que serán los modelos predictivos) se busca identificar y clasificar patrones biomédicos específicos, a los que se denomina \emph{variables objetivo}.
 
-\subsection{Diseño de la investigación.}
-Esta investigación adopta un diseño predictivo longitudinal mediante el procesamiento de señales biomédicas provenientes de electrocardiogramas (ECG). En la primera etapa de este proyecto, se extraen atributos morfológicos y temporales, tales como los intervalos RR, complejos QRS, ondas P y T, entre otros, para esquematizar lo que será un vector de caracteristicas multidimensional. Este canal habilita la aplicación de modelos de aprendizaje automático que, mediante algoritmos de reducción de dimensionalidad, clasificación y clustering \footnote{Agrupamiento de datos basados en la similitud}, identifican patrones no lineales y tendencias latentes en los datos. Los modelos se entrenan para dos objetivos, la clasificación de variables objetivo (grupos etarios, sexo y estado de salud) y la identificación de integraciones biométricas basados en rasgos cardíacos únicos. Aunque los métodos como las redes neuronales perceptrónicas operan como \guillemetleft cajas negras\guillemetright debido a su limitada interpretabilidad intrínseca, su robustez se garantiza mediante métricas de evaluación clínicamente relevantes, lo que permite asegurar generalización en datos no vistos por los modelos y sin que esto comprometa la confiabilidad predictiva.
+\subsection{Diseño de la investigación.} \label{subsec:diseno_investigacion}
+Esta investigación adopta un diseño predictivo longitudinal mediante el procesamiento de señales biomédicas provenientes de electrocardiogramas (ECG). En la primera etapa de este proyecto, se extraen atributos morfológicos y temporales, tales como los intervalos RR, complejos QRS, ondas P y T, entre otros, para esquematizar lo que será un vector de caracteristicas multidimensional. Este canal habilita la aplicación de modelos de aprendizaje automático que, mediante algoritmos de reducción de dimensionalidad, clasificación y clustering \footnote{Agrupamiento de datos basados en la similitud}, identifican patrones no lineales y tendencias latentes en los datos. Los modelos se entrenan para dos objetivos, la clasificación de variables objetivo (grupos etarios, sexo y estado de salud) y la identificación de integraciones biométricas basadas en rasgos cardíacos únicos. Aunque los métodos como las redes neuronales perceptrónicas operan como \guillemetleft cajas negras\guillemetright \ debido a su limitada interpretabilidad intrínseca, su robustez se garantiza mediante métricas de evaluación clínicamente relevantes, lo que permite asegurar generalización en datos no vistos por los modelos y sin que esto comprometa la confiabilidad predictiva.
 
 
 \section{Diseño especifico}
@@ -892,7 +893,7 @@ En la figura \ref{fig:diagrama_de_flujo_metodologico} se presenta un diagrama de
 	\item \textbf{Recopilación de los datos:} Se describe la fuente de las señales ECG, explicando brevemente el funcionamiento del banco de datos de Physionet y las bases de datos que se tomaron de ahí para este proyecto, a partir de ahí se eligen los criterios de selección de las señales electrocardiográficas y posteriormente, se aclara el formato en el que se guardaran las señales ECG para finalmente seleccionar la derivación \Romannum{2}.
 	\item \textbf{Preprocesamiento de la señal ECG:} Se muestra la preparación previa de la data, ya homogenizadas las señales ECG a un mismo formato, se normaliza cada ECG de cada paciente para posteriormente filtrarlos y eliminar el desplazamiento de la linea base, teniendo cada señal limpia, se segmentan en intervalos de 3mín por cada señal ECG de cada paciente, luego con cada segmento se detectan los picos R para delimitar cada latido individual, teniendo estos latidos individuales alineados, teniendo los latidos alineados, se calcula un latido promedio por cada intervalo de cada paciente, este latido promedio será el vector de características que se usará más adelante.
 	\item \textbf{Reducción de dimensionalidad:} Se inicia el calculo de la matriz de covarianza de los datos recogidos y la posterior obtención de los autovalores y autovectores, se procede a hacer el gráfico de suma de la varianza acumulada para determinar el numero optimo de componentes principales y se proyectan las señales ECG en el nuevo espacio creando un vector único de identificación, ya con esto se crea la base de conocimiento.
-	\item \textbf{Modelado predictivo:} Se identifican las \guillemetleft variables objetivo\guillemetright las cuales fungirán como etiquetas \guillemetleft meta \guillemetright para las redes neuronales que se diseñarán y entrenarán en esta fase. Para cada una de las variables antes mencionadas, se diseña y entrena una red neuronal que sea capaz de clasificar e identificar a cada ECG dimensionalmente reducido que se usa como entrada en la red neuronal. Se entrena cada red, se obtienen las funciones de las redes que contienen los parámetros del entrenamiento, para su posterior guardado.
+	\item \textbf{Modelado predictivo:} Se identifican las \guillemetleft variables objetivo\guillemetright \ las cuales fungirán como etiquetas \guillemetleft meta\guillemetright \ para las redes neuronales que se diseñarán y entrenarán en esta fase. Para cada una de las variables antes mencionadas, se diseña y entrena una red neuronal que sea capaz de clasificar e identificar a cada ECG dimensionalmente reducido que se usa como entrada en la red neuronal. Se entrena cada red, se obtienen las funciones de las redes que contienen los parámetros del entrenamiento, para su posterior guardado.
 	\item \textbf{Validación:} Se grafican las matrices de confusión y se calculan ciertas métricas de desempeño que expresen el rendimiento de cada red neuronal entrenada. \textbf{Aca falta poner lo de los dendogramas y las distancias de malahanobis cuando se hagan mas adelante. Falta esos sinonimos por anotar}
 	\item \textbf{Análisis exploratorio:} Como etapa exploratoria, se aplicó t-SNE seguido de k-means a las componentes principales para identificar agrupaciones supervisadas o no supervisadas en los ECG. Esto permitió validar que la reducción de dimensionalidad mediante PCA preserva información relevante y explorar la posible existencia de subpoblaciones de pacientes. Los resultados aportan evidencia sobre la viabilidad del uso de métodos no supervisados para descubrir dichas subpoblaciones ocultas.
 \end{enumerate}
@@ -922,7 +923,7 @@ El recurso Physionet tiene tres componentes interdependientes:
 Physionet no es solo el nombre los Recursos de Investigación de Señales Fisiológicas Complejas, es también un sitio web. Este sitio web fue creado como mecanismo de difusión y el intercambio gratuito y abierto de señales biomédicas grabadas y el software de código abierto para analizarlas, proporcionando instalaciones para el análisis cooperativo de datos y la evaluación de nuevos algoritmos. Además de proporcionar acceso electrónico gratuito a datos y programas informáticos, el sitio web de Physionet ofrece servicios y formación a través de tutoriales en linea para ayudar a los usuarios principiantes y avanzados. En colaboración con la conferencia anual \guillemetleft Computación en Cardiología\guillemetright, Physionet organiza una serie anual de desafíos, en los que investigadores y estudiantes abordan problemas no resueltos de interés clínico o científico básico utilizando datos y software proporcionados por Physionet \cite{physionet2000}.
 
 
-\subsection{Criterios de selección.}
+\subsection{Criterios de selección.} 
 
 Physionet ofrece un amplio banco de señales fisiológicas, en este proyecto estamos interesados en las bases de datos con señales electrocardiográficas, estas fueron seleccionadas considerando únicamente a aquellos que cumplían con:
 \begin{itemize}
@@ -931,7 +932,7 @@ Physionet ofrece un amplio banco de señales fisiológicas, en este proyecto est
 \end{itemize}
 Se excluyeron registros que no cumplían con los criterios antes mencionados. Además todas las señales usadas vienen del banco de señales fisiológicas de Physionet, ya que son señales provenientes de bases de datos públicas validadas, donde los registros cumplen con protocolos de adquisición y anotación médica impuestos por Physionet.
  
-\subsection{Muestra}
+\subsection{Muestra} 
 Se usaran señales provenientes de las siguientes bases de datos públicas presentes en Physionet: 
 \begin{itemize}
 	\item Apnea-ECG: La data consiste en 70 grabaciones que pueden variar en duración entre 7 y 10 horas cada uno, cada grabación tiene una señal ECG digitalizada, todos los pacientes tienen apnea del sueño \cite{apneaDB}. 
@@ -945,7 +946,7 @@ Se usaran señales provenientes de las siguientes bases de datos públicas prese
 %	\item Base de datos de electrocardiogramas de 12 derivaciones a gran escala para el estudio de arritmias: Esta colección fue creada bajo los auspicios de la Universidad de Chapman, el hospital de la gente de Shaoxing y el primer hospital de Ningbo. Posee mas de cuarenta y cinco mil grabaciones de 10 segundos de duración de las 12 derivaciones de un electrocardiograma, este paquete de señales puede utilizarse para diseñar y comparar y poner a punto técnicas estadísticas clásicas y de aprendizaje automático nuevas y clásicas en estudios centrados en la arritmia y otras afecciones cardiovasculares \cite{largeescale12leaddb}. PONER ESTO SI Y SOLO SI SE USA ESTA BASE DE DATOS
 	
 \end{itemize}
-Los ECG provenientes de las bases de datos antes mencionadas, están distribuidos como se muestra en el cuadro \ref{tab:distriECGs}, según las variables objetivo tomadas de los criterios antes mencionados. 
+Los ECG provenientes de las bases de datos antes mencionadas, están distribuidos como se muestra en la tabla \ref{tab:distriECGs}, según las variables objetivo tomadas de los criterios antes mencionados. 
 Es de destacar también que todas las señales fisiológicas disponibles en Physionet han sido guardadas en un formato estandarizado por ellos mismos, además ponen a disposición una librería en Python, llamada \emph{Waveform Database Software Package (WFDB) for Python} \cite{wfdb}, la cual permite transformar las señales a formatos más universales como, archivos separados por comas (CSV, por sus siglas en inglés). 
 \begin{table}[t]
 	\begin{center}
@@ -1070,14 +1071,46 @@ La reducción de la dimensionalidad es el proceso de encontrar un espacio dimens
 	\item Analizar los datos utilizando métodos estadísticos, como la agrupación, suavizado, estimación de densidad de probabilidad o clasificación.
 \end{itemize}
 
-Un posible método para la reducción de dimensionalidad seria crear nuevas variables que sean funciones o combinaciones lineales de los segmentos e intervalos que se observan en la figura \ref{fig:ECGSinusal}, pero un método que permite hacer esto internamente, es el conocido como análisis de componentes principales (PCA) \cite{martinez05}. Habiendo culminado la etapa de preprocesamiento de los datos y la extracción de caracteristicas de los ECG, se procede a la implementación del análisis de componentes principales. Es de destacar que debido al aumento en el uso de las herramientas de aprendizaje automático, la optimización de estas ha magnificado también. Para este trabajo, se utiliza la función \emph{PCA()} de la librería \textbf{scikit-learn (v1.4.2)} \cite{scikit-learn, sklearn_api}, esta función efectúa eficientemente los cálculos subyacentes, como la descomposición de la matriz de covarianza y la solución al posterior problema de autovalores y autovectores. Entre los diversos parámetros que necesita esta función para ser ejecutada, esta el numero final de componentes principales $(k)$, para determinar el numero final de estas se utiliza el criterio de varianza acumulada explicado en la subsección \ref{subsec:PCA}.
+Un posible método para la reducción de dimensionalidad seria crear nuevas variables que sean funciones o combinaciones lineales de los segmentos e intervalos que se observan en la figura \ref{fig:ECGSinusal}, pero un método que permite hacer esto internamente, es el conocido como análisis de componentes principales (PCA) \cite{martinez05}. Habiendo culminado la etapa de preprocesamiento de los datos y la extracción de caracteristicas de los ECG, se procede a la implementación del análisis de componentes principales. Es de destacar que debido al aumento en el uso de las herramientas de aprendizaje automático, la optimización de estas ha magnificado también. Para este trabajo, se utiliza la función \emph{PCA()} de la librería \textbf{scikit-learn (v1.4.2)} \cite{scikit-learn,sklearn_api}, esta función efectúa eficientemente los cálculos subyacentes, como la descomposición de la matriz de covarianza y la solución al posterior problema de autovalores y autovectores. Entre los diversos parámetros que necesita esta función para ser ejecutada, esta el numero final de componentes principales $(k)$, para determinar el numero final de estas se utiliza el criterio de varianza acumulada explicado en la subsección \ref{subsec:PCA}.
+El gráfico de la varianza acumulada 
 
-\subsection{Transformación}
+\subsection{Proyección de los vectores de características al nuevo espacio}
+
+Una vez determinadas las componentes principales, se proyectan los vectores de caracteristicas $I$ al nuevo espacio dimensional reducido $V$ (conjunto de autovectores), esto es: 
+\begin{equation}
+	P = I \ast V
+	\label{eq:proyeccion_pca}
+\end{equation}
+Este proceso no es una simple comprensión, sino una reestructuración de la información morfológica de cada latido. 
+Estos vectores de caracteristicas, que graficados se ven como la linea roja de la figura \ref{fig:latidos_alineados} se convierten en un vector único para cada latido promedio de cada paciente, con ahora menos dimensiones, como se observa en la tabla \ref{tab:vector_caracteristicas_proyectado}. A El conjunto de todas las proyecciones hechas se le conoce cómo la base de conocimiento de la red neuronal, estás serán usadas en las fases de entrenamiento y prueba de las redes neuronales.
+\begin{table}[h]
+	\begin{center}
+		\begin{tabular}{|>{\centering} p{2.2cm} | c |}
+			\cline{1-2}
+			\hline
+			Componente principal & Valor \\ \hline
+			1 & 9.40004 \\ \hline
+			2 & -3.47597 \\ \hline
+			3 & -1.42403 \\ \hline
+			4 & 4.60353 \\ \hline
+			5 & -2.69767 \\ \hline
+			6 & -0.75595 \\ \hline
+		\end{tabular}
+	\caption{Ejemplo de vector de caracteristicas proyectado en el espacio $V$}
+	\label{tab:vector_caracteristicas_proyectado}
+	\end{center}
+\end{table}
 
 
 \section{Modelado predictivo}
-*objetivo
+
+Con el fin de probar que la representación compacta del latido promedio obtenida mediante PCA contiene información suficiente para clasificar e identificar las variables objetivos de las que se nombraron en la subsección \ref{subsec:diseno_investigacion}. Para ello se diseñan algunas redes neuronales, cada una de estas, con una arquitectura que se elige según el tipo de tarea que se desea resolver. Recordemos que el núcleo de esta investigación yace en la búsqueda de agrupaciones en data de señales ECG aprovechando la reducción de dimensionalidad del análisis de componente principales y las habilidades intrínsecas de las redes neuronales perceptrónicas en encontrar correlaciones en la data que se usa como entrada en estas.
+
 \subsection{Algoritmo}
+
+En la subsección \ref{subsec:NN} se explicó detalladamente lo que es una red neuronal, cómo se asemejan estas a una red de tipo biológica, se habló de la unidad básica que se equipara con una neurona y de las dos fases de modelización de una red neuronal. Hoy en día, el diseño a detalle de uno de estos programas se suele hacer sobre interfaces que facilitan la implementación de estos. A estas interfaces se les conoce como frameworks \footnote{Marco de trabajo}, uno de los más conocidos y usados es \emph{TensorFlow} \cite{tensorflow15} este es un ecosistema completo que ayuda a resolver problemas complejos con aprendizaje automático ofreciendo varios niveles de abstracción con el fin de adecuarse a las necesidad del usuario, con la API (interfaz de programación de aplicación, por sus siglas en inglés) de alto nivel de Keras \cite{keras15}, que ayuda a que los primeros pasos con TensorFlow y el aprendizaje automático sean sencillos. 
+%Aca deberia comentar que a pesar que tensorflow ayuda a el dise;o de la red, detras sigue sucediendo lo mismo, dise;ar la red seteando el numero de capaz y perceptrones por capa, ajustar aleatoriamente los primeros pesos y bias de cada capa, para luego calcular la SSE de cada salida, comparandola con la entrada, usando la SSE se calcula el gradiente descendiente en retropropagacion para cada capa y asi poder modificar los pesos y sesgos en la direccion del gradiente minimo y la taza de aprendizaje, se reasignan tanto los pesos como los sesgos y estos ultimos pasos se repiten hasta obtener el error de entrenamiento minimo, 
+
 \subsection{Arquitectura y entrenamiento}
 \subsection{Tareas de modelado propuestas}
 *clasificacion de estado de salud, grupos etarios, sexo e identificacion del paciente

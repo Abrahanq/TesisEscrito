@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  11 JUL 2025 17:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  14 JUL 2025 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,6 +110,16 @@ Package: stdclsdv 2009/09/04 v1.1a Sectional divisions
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen143
+\ar@mcellbox=\box53
+\extrarowheight=\dimen144
+\NC@list=\toks23
+\extratabsurround=\skip50
+\backup@length=\skip51
+\ar@cellbox=\box54
+)
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 
@@ -151,7 +161,7 @@ Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 )
-\@linkdim=\dimen143
+\@linkdim=\dimen145
 \Hy@linkcounter=\count266
 \Hy@pagecounter=\count267
 
@@ -191,7 +201,7 @@ Package hyperref Info: Bookmarks ON on input line 4445.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4804.
-\XeTeXLinkMargin=\dimen144
+\XeTeXLinkMargin=\dimen146
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -201,8 +211,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count270
-\Field@Width=\dimen145
-\Fld@charsize=\dimen146
+\Field@Width=\dimen147
+\Fld@charsize=\dimen148
 Package hyperref Info: Hyper figures OFF on input line 6076.
 Package hyperref Info: Link nesting OFF on input line 6081.
 Package hyperref Info: Hyper index ON on input line 6084.
@@ -243,11 +253,11 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip50
+\Hy@SectionHShift=\skip52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
-\@mathmargin=\skip51
+\@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -255,12 +265,12 @@ Package: amstext 2021/08/26 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks23
-\ex@=\dimen147
+\@emptytoks=\toks24
+\ex@=\dimen149
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen148
+\pmbraise@=\dimen150
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2021/08/26 v2.02 operator names
@@ -275,9 +285,9 @@ LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box53
-\strutbox@=\box54
-\big@size=\dimen149
+\Mathstrutbox@=\box55
+\strutbox@=\box56
+\big@size=\dimen151
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \macc@depth=\count281
@@ -285,21 +295,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 \dotsspace@=\muskip17
 \c@parentequation=\count283
 \dspbrk@lvl=\count284
-\tag@help=\toks24
+\tag@help=\toks25
 \row@=\count285
 \column@=\count286
 \maxfields@=\count287
-\andhelp@=\toks25
-\eqnshift@=\dimen150
-\alignsep@=\dimen151
-\tagshift@=\dimen152
-\tagwidth@=\dimen153
-\totwidth@=\dimen154
-\lineht@=\dimen155
-\@envbody=\toks26
-\multlinegap=\skip52
-\multlinetaggap=\skip53
-\mathdisplay@stack=\toks27
+\andhelp@=\toks26
+\eqnshift@=\dimen152
+\alignsep@=\dimen153
+\tagshift@=\dimen154
+\tagwidth@=\dimen155
+\totwidth@=\dimen156
+\lineht@=\dimen157
+\@envbody=\toks27
+\multlinegap=\skip54
+\multlinetaggap=\skip55
+\mathdisplay@stack=\toks28
 LaTeX Info: Redefining \[ on input line 2938.
 LaTeX Info: Redefining \] on input line 2939.
 )
@@ -321,7 +331,7 @@ Package: algorithm2e 2017/07/18 v5.2 algorithms environments
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\algocf@hangindent=\skip54
+\algocf@hangindent=\skip56
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
@@ -333,54 +343,54 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\skiptotal=\skip55
-\skiplinenumber=\skip56
-\skiprule=\skip57
-\skiphlne=\skip58
-\skiptext=\skip59
-\skiplength=\skip60
-\algomargin=\skip61
-\skipalgocfslide=\skip62
-\algowidth=\dimen156
-\inoutsize=\dimen157
-\inoutindent=\dimen158
-\interspacetitleruled=\dimen159
-\interspacealgoruled=\dimen160
-\interspacetitleboxruled=\dimen161
-\algocf@ruledwidth=\skip63
-\algocf@inoutbox=\box55
-\algocf@inputbox=\box56
-\AlCapSkip=\skip64
-\AlCapHSkip=\skip65
-\algoskipindent=\skip66
-\algocf@nlbox=\box57
-\algocf@hangingbox=\box58
-\algocf@untilbox=\box59
-\algocf@skipuntil=\skip67
-\algocf@capbox=\box60
-\algocf@lcaptionbox=\skip68
-\algoheightruledefault=\skip69
-\algoheightrule=\skip70
-\algotitleheightruledefault=\skip71
-\algotitleheightrule=\skip72
+\skiptotal=\skip57
+\skiplinenumber=\skip58
+\skiprule=\skip59
+\skiphlne=\skip60
+\skiptext=\skip61
+\skiplength=\skip62
+\algomargin=\skip63
+\skipalgocfslide=\skip64
+\algowidth=\dimen158
+\inoutsize=\dimen159
+\inoutindent=\dimen160
+\interspacetitleruled=\dimen161
+\interspacealgoruled=\dimen162
+\interspacetitleboxruled=\dimen163
+\algocf@ruledwidth=\skip65
+\algocf@inoutbox=\box57
+\algocf@inputbox=\box58
+\AlCapSkip=\skip66
+\AlCapHSkip=\skip67
+\algoskipindent=\skip68
+\algocf@nlbox=\box59
+\algocf@hangingbox=\box60
+\algocf@untilbox=\box61
+\algocf@skipuntil=\skip69
+\algocf@capbox=\box62
+\algocf@lcaptionbox=\skip70
+\algoheightruledefault=\skip71
+\algoheightrule=\skip72
+\algotitleheightruledefault=\skip73
+\algotitleheightrule=\skip74
 \c@algocfline=\count290
 \c@algocfproc=\count291
 \c@algocf=\count292
-\algocf@algoframe=\box61
-\algocf@algobox=\box62
+\algocf@algoframe=\box63
+\algocf@algobox=\box64
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip73
-\f@nch@O@elh=\skip74
-\f@nch@O@erh=\skip75
-\f@nch@O@olh=\skip76
-\f@nch@O@orh=\skip77
-\f@nch@O@elf=\skip78
-\f@nch@O@erf=\skip79
-\f@nch@O@olf=\skip80
-\f@nch@O@orf=\skip81
+\f@nch@headwidth=\skip75
+\f@nch@O@elh=\skip76
+\f@nch@O@erh=\skip77
+\f@nch@O@olh=\skip78
+\f@nch@O@orh=\skip79
+\f@nch@O@elf=\skip80
+\f@nch@O@erf=\skip81
+\f@nch@O@olf=\skip82
+\f@nch@O@orf=\skip83
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -391,20 +401,20 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@cnth=\count293
 \Gm@cntv=\count294
 \c@Gm@tempcnt=\count295
-\Gm@bindingoffset=\dimen162
-\Gm@wd@mp=\dimen163
-\Gm@odd@mp=\dimen164
-\Gm@even@mp=\dimen165
-\Gm@layoutwidth=\dimen166
-\Gm@layoutheight=\dimen167
-\Gm@layouthoffset=\dimen168
-\Gm@layoutvoffset=\dimen169
-\Gm@dimlist=\toks28
+\Gm@bindingoffset=\dimen164
+\Gm@wd@mp=\dimen165
+\Gm@odd@mp=\dimen166
+\Gm@even@mp=\dimen167
+\Gm@layoutwidth=\dimen168
+\Gm@layoutheight=\dimen169
+\Gm@layouthoffset=\dimen170
+\Gm@layoutvoffset=\dimen171
+\Gm@dimlist=\toks29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count296
-\l__pdf_internal_box=\box63
+\l__pdf_internal_box=\box65
 )
 (./main.aux
 LaTeX Info: Redefining \. on input line 26.
@@ -412,39 +422,39 @@ LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Info: Redefining \. on input line 55.
-LaTeX Info: Redefining \% on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count297
-\scratchdimen=\dimen170
-\scratchbox=\box64
+\scratchdimen=\dimen172
+\scratchbox=\box66
 \nofMPsegments=\count298
 \nofMParguments=\count299
-\everyMPshowfont=\toks29
+\everyMPshowfont=\toks30
 \MPscratchCnt=\count300
-\MPscratchDim=\dimen171
+\MPscratchDim=\dimen173
 \MPnumerator=\count301
 \makeMPintoPDFobject=\count302
-\everyMPtoPDFconversion=\toks30
+\everyMPtoPDFconversion=\toks31
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -454,7 +464,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 55.
+Package hyperref Info: Link coloring OFF on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -467,9 +477,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 
 (./main.out) (./main.out)
 \@outlinefile=\write3
@@ -513,7 +523,7 @@ LaTeX Info: Redefining \nameref on input line 55.
 <Sem_1/figuras/ulaLogo.png, id=305, 199.74625pt x 216.81pt>
 File: Sem_1/figuras/ulaLogo.png Graphic file (type png)
 <use Sem_1/figuras/ulaLogo.png>
-Package pdftex.def Info: Sem_1/figuras/ulaLogo.png  used on input line 61.
+Package pdftex.def Info: Sem_1/figuras/ulaLogo.png  used on input line 62.
 (pdftex.def)             Requested size: 175.17244pt x 190.14496pt.
 [1
 
@@ -551,60 +561,60 @@ Cap\'{\i }tulo 1.
 ] [3]
 Cap\'{\i }tulo 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 138.
+(hyperref)                removing `\@ifnextchar' on input line 139.
 
 [4
 
 ]
-Overfull \hbox (19.08714pt too wide) in paragraph at lines 173--173
+Overfull \hbox (19.08714pt too wide) in paragraph at lines 174--174
 []\T1/cmr/bx/n/14.4 A Wavelet-Based ECG De-lin-eator: Eval-u-a-tion on Stan-dar
 d Databas-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 173.
+(hyperref)                removing `\@ifnextchar' on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 196.
+(hyperref)                removing `\@ifnextchar' on input line 197.
 
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 220.
+(hyperref)                removing `\@ifnextchar' on input line 221.
 
 [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 242.
+(hyperref)                removing `\@ifnextchar' on input line 243.
 
 [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 265.
+(hyperref)                removing `\@ifnextchar' on input line 266.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 288.
+(hyperref)                removing `\@ifnextchar' on input line 289.
 
 [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 311.
+(hyperref)                removing `\@ifnextchar' on input line 312.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 333.
+(hyperref)                removing `\@ifnextchar' on input line 334.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 388--391
+Underfull \hbox (badness 10000) in paragraph at lines 389--392
 
  []
 
@@ -615,50 +625,50 @@ File: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png Graphic file (type png)
 
 <use Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>
 Package pdftex.def Info: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png  use
-d on input line 408.
+d on input line 409.
 (pdftex.def)             Requested size: 250.24199pt x 246.85916pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--413
+Underfull \hbox (badness 10000) in paragraph at lines 394--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--413
+Underfull \hbox (badness 10000) in paragraph at lines 394--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--413
+Underfull \hbox (badness 10000) in paragraph at lines 394--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--413
+Underfull \hbox (badness 10000) in paragraph at lines 394--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--413
+Underfull \hbox (badness 10000) in paragraph at lines 394--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--413
+Underfull \hbox (badness 10000) in paragraph at lines 394--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--413
+Underfull \hbox (badness 10000) in paragraph at lines 394--414
 
  []
 
 [11] [12 <./Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
+Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--424
+Underfull \hbox (badness 10000) in paragraph at lines 422--425
 
  []
 
@@ -668,7 +678,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 421--424
 File: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg Graphic file (type jpg)
 <use Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>
 Package pdftex.def Info: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg  used
- on input line 442.
+ on input line 443.
 (pdftex.def)             Requested size: 475.45825pt x 278.12003pt.
 
 
@@ -678,14 +688,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Sem_1/figuras/fonocardiograma.jpeg Graphic file (type jpg)
 <use Sem_1/figuras/fonocardiograma.jpeg>
 Package pdftex.def Info: Sem_1/figuras/fonocardiograma.jpeg  used on input line
- 450.
+ 451.
 (pdftex.def)             Requested size: 400.38872pt x 361.36887pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14] [15 <./Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>] [16 <./Sem_1/fig
 uras/fonocardiograma.jpeg>] [17] [18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 516--518
+Underfull \hbox (badness 10000) in paragraph at lines 517--519
 
  []
 
@@ -694,10 +704,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 516--518
 File: Sem_1/figuras/suma_acumulada_varianza.png Graphic file (type png)
 <use Sem_1/figuras/suma_acumulada_varianza.png>
 Package pdftex.def Info: Sem_1/figuras/suma_acumulada_varianza.png  used on inp
-ut line 577.
+ut line 578.
 (pdftex.def)             Requested size: 400.38872pt x 333.65906pt.
  [22 <./Sem_1/figuras/suma_acumulada_varianza.png>] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 621--622
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
 
  []
 
@@ -705,16 +715,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 621--622
 <Sem_1/figuras/neurona.png, id=652, 927.465pt x 499.8675pt>
 File: Sem_1/figuras/neurona.png Graphic file (type png)
 <use Sem_1/figuras/neurona.png>
-Package pdftex.def Info: Sem_1/figuras/neurona.png  used on input line 661.
+Package pdftex.def Info: Sem_1/figuras/neurona.png  used on input line 662.
 (pdftex.def)             Requested size: 300.29344pt x 161.84482pt.
  [25 <./Sem_1/figuras/neurona.png>]
 <Sem_1/figuras/Perceptron.png, id=667, 2569.6pt x 1682.285pt>
 File: Sem_1/figuras/Perceptron.png Graphic file (type png)
 <use Sem_1/figuras/Perceptron.png>
-Package pdftex.def Info: Sem_1/figuras/Perceptron.png  used on input line 695.
+Package pdftex.def Info: Sem_1/figuras/Perceptron.png  used on input line 696.
 (pdftex.def)             Requested size: 400.38872pt x 262.11197pt.
  [26 <./Sem_1/figuras/Perceptron.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 710--712
+Underfull \hbox (badness 10000) in paragraph at lines 711--713
 
  []
 
@@ -722,7 +732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 710--712
 File: Sem_1/figuras/funciones_de_activacion.png Graphic file (type png)
 <use Sem_1/figuras/funciones_de_activacion.png>
 Package pdftex.def Info: Sem_1/figuras/funciones_de_activacion.png  used on inp
-ut line 732.
+ut line 733.
 (pdftex.def)             Requested size: 450.43253pt x 103.9452pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -732,15 +742,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Sem_1/figuras/RedNeuronalArtificial.png Graphic file (type png)
 <use Sem_1/figuras/RedNeuronalArtificial.png>
 Package pdftex.def Info: Sem_1/figuras/RedNeuronalArtificial.png  used on input
- line 760.
+ line 761.
 (pdftex.def)             Requested size: 350.33727pt x 195.36497pt.
  [29 <./Sem_1/figuras/RedNeuronalArtificial.png>] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 871--876
+Underfull \hbox (badness 10000) in paragraph at lines 872--877
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 871--876
+Underfull \hbox (badness 10000) in paragraph at lines 872--877
 
  []
 
@@ -754,31 +764,31 @@ Cap\'{\i }tulo 3.
 File: Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg Graphic file (type jpg)
 <use Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>
 Package pdftex.def Info: Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg  used
- on input line 903.
+ on input line 904.
 (pdftex.def)             Requested size: 500.484pt x 604.43105pt.
  [34] [35 <./Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>] [36]
 [37]
-Underfull \hbox (badness 10000) in paragraph at lines 954--954
-[]\T1/cmr/m/n/12 Adultos
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
+[]|\T1/cmr/m/n/12 Adultos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 954--954
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
 \T1/cmr/m/n/12 Me-di-ana
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 954--954
-[]\T1/cmr/m/n/12 Adultos
+Underfull \hbox (badness 10000) in paragraph at lines 955--955
+[]|\T1/cmr/m/n/12 Adultos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 956--956
-[]\T1/cmr/m/n/12 Cantidad
+Underfull \hbox (badness 10000) in paragraph at lines 957--957
+[]|\T1/cmr/m/n/12 Cantidad
  []
 
 
-Overfull \hbox (9.64528pt too wide) in paragraph at lines 952--959
+Overfull \hbox (12.84523pt too wide) in paragraph at lines 953--960
  [] 
  []
 
@@ -787,7 +797,7 @@ Overfull \hbox (9.64528pt too wide) in paragraph at lines 952--959
 File: Sem_1/figuras/Baseline Wander Sharma.png Graphic file (type png)
 <use Sem_1/figuras/Baseline Wander Sharma.png>
 Package pdftex.def Info: Sem_1/figuras/Baseline Wander Sharma.png  used on inpu
-t line 1020.
+t line 1021.
 (pdftex.def)             Requested size: 425.41444pt x 294.93324pt.
 
 
@@ -799,37 +809,42 @@ t>
 File: Sem_1/figuras/ECG_procesado_10s_delimitado.png Graphic file (type png)
 <use Sem_1/figuras/ECG_procesado_10s_delimitado.png>
 Package pdftex.def Info: Sem_1/figuras/ECG_procesado_10s_delimitado.png  used o
-n input line 1039.
+n input line 1040.
 (pdftex.def)             Requested size: 425.41444pt x 222.67235pt.
  [42 <./Sem_1/figuras/ECG_procesado_10s_delimitado.png>]
 <Sem_1/figuras/ecg_latidos_alineados.png, id=889, 1387.584pt x 726.3135pt>
 File: Sem_1/figuras/ecg_latidos_alineados.png Graphic file (type png)
 <use Sem_1/figuras/ecg_latidos_alineados.png>
 Package pdftex.def Info: Sem_1/figuras/ecg_latidos_alineados.png  used on input
- line 1054.
+ line 1055.
 (pdftex.def)             Requested size: 425.41444pt x 222.67235pt.
- [43 <./Sem_1/figuras/ecg_latidos_alineados.png>] [44] [45]
+ [43 <./Sem_1/figuras/ecg_latidos_alineados.png>]
+Overfull \hbox (2.01328pt too wide) in paragraph at lines 1091--1091
+ []|\T1/cmr/m/n/12 Componente 
+ []
+
+[44] [45] [46]
 Cap\'{\i }tulo 4.
-[46
+[47
 
 ]
 Cap\'{\i }tulo 5.
-(./main.bbl [47
+(./main.bbl [48
 
-] [48
+] [49
 
-] [49]) [50] (./main.aux
+] [50]) [51] (./main.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 33FF8C42A811445116681E2AA13C35CE;16748.
+(rerunfilecheck)             Checksum: 78B23607BD002CF3A5DED6435F516E14;17018.
  ) 
 Here is how much of TeX's memory you used:
- 14037 strings out of 480247
- 221663 string characters out of 5896106
- 542630 words of memory out of 5000000
- 31475 multiletter control sequences out of 15000+600000
+ 14109 strings out of 480247
+ 222800 string characters out of 5896106
+ 543882 words of memory out of 5000000
+ 31542 multiletter control sequences out of 15000+600000
  491953 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  60i,12n,63p,2574b,685s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -855,10 +870,10 @@ nts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sfti1440.pfb>
-Output written on main.pdf (54 pages, 3702858 bytes).
+Output written on main.pdf (55 pages, 3705747 bytes).
 PDF statistics:
- 1104 PDF objects out of 1200 (max. 8388607)
- 964 compressed objects within 10 object streams
- 277 named destinations out of 1000 (max. 500000)
+ 1115 PDF objects out of 1200 (max. 8388607)
+ 974 compressed objects within 10 object streams
+ 280 named destinations out of 1000 (max. 500000)
  666 words of extra memory for PDF output out of 10000 (max. 10000000)
 
