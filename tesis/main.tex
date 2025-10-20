@@ -7,6 +7,7 @@
 \usepackage{float}
 \usepackage{enumitem}
 \usepackage{romannum}
+\usepackage{coffeestains}
 \usepackage{dsfont}
 \usepackage{array}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
@@ -933,7 +934,7 @@ Physionet ofrece un amplio banco de señales fisiológicas, en este proyecto est
 	\item Tener al menos en unos de los canales de grabación, el registro de la derivación \Romannum{2} con una duración de al menos 15 minutos continuos.
 \end{itemize}
 Se excluyeron registros que no cumplían con los criterios antes mencionados. Además todas las señales usadas vienen del banco de señales fisiológicas de Physionet, ya que son señales provenientes de bases de datos públicas validadas, donde los registros cumplen con protocolos de adquisición y anotación médica impuestos por Physionet.
- 
+
 \subsection{Muestra} \label{subsec:muestra}
 Se usaran señales provenientes de las siguientes bases de datos públicas presentes en Physionet: 
 \begin{itemize}
@@ -956,7 +957,7 @@ Es de destacar también que todas las señales fisiológicas disponibles en Phys
 			\hline
 			& \textbf{Hombres} & \textbf{Mujeres} & \textbf{Sanos} & \textbf{Patológicos} & \textbf{Adultos Jóvenes} & \textbf{Adultos de Mediana Edad} & \textbf{Adultos Mayores} & \textbf{Total} \\
 			\hline
-			\textbf{Cantidad de ECGs} & 559 & 749 & 1154 & 154 & 856 & 370 & 82 & 1308 \\
+			\textbf{Cantidad de ECGs} & 559 & 749 & 612 & 151 & 856 & 370 & 82 & 1308 \\
 			\hline
 		\end{tabular}
 		\caption{Distribución de ECGs}
@@ -1124,7 +1125,7 @@ Si bien TensorFlow permite construir una red neuronal apilando capas como bloque
 
 El diseño de las tareas de modelado en esta investigación se fundamente en el principio de aprovechar las anotaciones clínicas y demográficas disponibles de las bases de datos de Physionet. Estas etiquetas ---asentadas por expertos--- constituyen esas \textquote{verdades base} que permiten que las redes neuronales puedan identificar posibles patrones morfológicos presentes en el latido promedio, y que estos sean variables predictoras con relevancia en futuros pronósticos o clasificaciones. Las tareas que se implementaran son:
 \begin{enumerate}
-	\item \textbf{Clasificación por estado de salud:} si bien la mayoría de las bases de datos nombradas en la \ref{subsec:muestra} albergan el diagnostico clínico de los pacientes presentes, en muchos de los casos, estos no son lo suficientemente detallados como para usar estas anotaciones como \textquote{verdad base}, por ejemplo, en la base de datos BIDMC de pacientes con insuficiencia cardíaca congestiva severa \cite{InsuficienciaCardiacaDB}, no se detalla el tipo preciso de insuficiencia cardíaca, sólo se sabe que está entre las clases 3 y 4. También, en el conjunto de las 48 grabaciones presentes en la base de datos Arritmia \cite{arritmiadb} se conocen que son pacientes con trastornos en el ritmo cardíaco, sin embargo, algunos pacientes tienen presentes distintos tipos de latidos arrítmicos en su señal ECG. Esto hace complicado y extenso el numero de variables objetivo que se le pedirá a la red neuronal que identifique. Es por esto que se eligió sólo clasificar a los pacientes entre \textquote{sanos} y \textquote{patológicos}
+	\item \label{item:clasificacion_salud} \textbf{Clasificación por estado de salud:} si bien la mayoría de las bases de datos nombradas en la \ref{subsec:muestra} albergan el diagnostico clínico de los pacientes presentes, en muchos de los casos, estos no son lo suficientemente detallados como para usar estas anotaciones como \textquote{verdad base}. Por ejemplo, en la base de datos BIDMC de pacientes con insuficiencia cardíaca congestiva severa \cite{InsuficienciaCardiacaDB}, no se detalla el tipo preciso de insuficiencia cardíaca, sólo se sabe que los electrocardiogramas presentes en esta base de datos corresponden a pacientes con insuficiencia cardíaca clase 3 o clase 4. También, en el conjunto de las 48 grabaciones presentes en la base de datos Arritmia \cite{arritmiadb} se conocen que son pacientes con trastornos en el ritmo cardíaco, sin embargo, algunos pacientes tienen presentes distintos tipos de latidos arrítmicos en su señal ECG. Esto hace complicado y extenso el numero de variables objetivo que se le pedirá a la red neuronal que identifique. Es por esto que se eligió sólo clasificar a los pacientes entre \textquote{sanos} y \textquote{patológicos}
 	\item \textbf{Predicción por grupos etarios:} uno de los criterios de selección fue que cada registro tenga la edad del paciente al que se le realizó el ECG hacer, este dato se usó como variable objetivo y se encasillaron a todos los pacientes en 3 grupos etarios, los rangos de dichos grupos están tabulados en la tabla \ref{tab:grupos_etarios}.
 	\begin{table}[h]
 		\begin{center}
@@ -1140,48 +1141,77 @@ El diseño de las tareas de modelado en esta investigación se fundamente en el 
 		\end{center}
 	\end{table}
 	\item \textbf{Clasificación por sexo:} así como cada registro seleccionado posee la edad del paciente a quien se le realizo el ECG, también debe poseer el sexo biológico de dicha persona, ya que este dato también es una variable objetivo que será usada por la red para clasificar a cada ECG por su sexo.
+	\item \textbf{Clasificación por tipo de trastorno de salud:} Debido a lo mencionado en el literal \ref{item:clasificacion_salud} de esta subsección, se decidió por clasificar las cardiopatías similares como correspondientes a un único tipo de trastorno. De aquí surgen las categorías que se pueden observar en la tabla \ref{tab:tipos_trastornos}
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{| M{5cm} | M{8cm} |}
+				\hline
+				\textbf{Tipos de trastornos} & \textbf{Descripción} \\ \hline
+				Trastornos de la respiración durante el sueño & Pacientes con apnea de sueño \\ \hline
+				Trastornos del ritmo cardíaco & Pacientes con problemas arrítmicos \\ \hline
+				Trastornos de la función de bomba del corazón & Pacientes con insuficiencias cardíacas \\ \hline
+				Sanos & Pacientes catalogados como sanos. \\ \hline
+			\end{tabular}
+		\caption{Tipos de trastornos encontrados.}
+		\label{tab:tipos_trastornos}
+		\end{center}
+	\end{table}
 	\item \textbf{Identificación del paciente:} por último, se toma ahora como variable objetivo el nombre de identificación único por paciente (ID), esté será usado para explorar la posibilidad de la existencia de una \textquote{huella digital cardíaca}, ya que si una red neuronal es capaz de identificar a cada paciente usando el latido promedio de este dimensionalmente reducido, podría indicar que existen patrones internos dentro de la morfología del latido, que son únicos entre cada persona.
+%	\coffeestainA{0.8}{0.83}{45}{5cm}{1cm}
+	
+	
 \end{enumerate}
 
 \subsection{Arquitecturas empleadas}
 
 Debido a la naturaleza diferente de cada tarea que se propone en la subsección \ref{subsec:tareas_modelado}, es necesario diseñar redes neuronales con arquitecturas que se ajusten a los requerimientos de cada tarea de modelado, es por esto que se plantean los siguientes modelos de redes neuronales:
 \begin{enumerate}
-	\item \textbf{Clasificación por estado de salud:} recordemos que esta tarea es un problema de clasificación binaria (\textquote{sano} vs. \textquote{patológico}), por ende, se propone una red neuronal de capas densas con topología (10-10-1), como se observa en la tabla \ref{tab:summary NN estado de salud}. Estas neuronas emplean como función de activación en las capas ocultas la función ReLU y la función Sigmoide en la capa de salida, optimizada mediante el algoritmo Adam \cite{adamoptimization14}, para esta red se seleccionó la denominada entropía cruzada categórica, como función de perdida. 
+	\item \textbf{Clasificación por estado de salud:} recordemos que esta tarea es un problema de clasificación binaria (\textquote{sano} vs. \textquote{patológico}), por ende, se propone una red neuronal de capas densas con topología (10-1), como se observa en la tabla \ref{tab:summary NN estado de salud}. Estas neuronas emplean como función de activación en las capas ocultas la función ReLU y la función Sigmoide en la capa de salida, optimizada mediante el algoritmo Adam \cite{adamoptimization14}, para esta red se seleccionó la denominada entropía cruzada categórica, como función de perdida. 
 	
 	\begin{table}[h]
 		\begin{center}
 			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
 				\hline
-				\textbf{Capa (tipo)} & \textbf{Núm. neuronas} & \textbf{Función activación} \\ 
+				\textbf{Capa (tipo)} & \textbf{Núm. neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 10 & ReLU    \\ \hline
+				Densa & 1 & Sigmoide \\ 
 				\hline
 			\end{tabular}
 		\end{center}
-		\caption{Texto del cuadro estado de salud}
+		\caption{Arquitectura de la red neuronal para la clasificación por estado de salud.}
 		\label{tab:summary NN estado de salud}
 	\end{table}
-	\item \textbf{Predicción por grupos etarios:} el modelo multiclase para grupos etarios utiliza una arquitectura de \_ capas con (20-20-1) neuronas por cada capa; y funciones de activación ReLU y Sigmoide para las capas ocultas y la capa de salida respectivamente, como se observa en la tabla \ref{tab:summary NN grupos etarios}, en este caso la red fue entrenada usando la función de perdida denominada entropía cruzada binaria. 
+	\item \textbf{Predicción por grupos etarios:} el modelo multiclase para grupos etarios utiliza una arquitectura de 4 capas con (10-15-10-3) neuronas por cada capa; y funciones de activación ReLU y Sigmoide para las capas ocultas y la capa de salida respectivamente, como se observa en la tabla \ref{tab:summary NN grupos etarios}, en este caso la red fue entrenada usando la función de perdida denominada entropía cruzada binaria. 
 	\begin{table}[h]
 		\begin{center}
 			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
 				\hline
-				\textbf{Capa (tipo)} & \textbf{Núm. neuronas} & \textbf{Función activación} \\ 
+				\textbf{Capa (tipo)} & \textbf{Núm. neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 10 & ReLU    \\ \hline
+				Densa & 15 & ReLU    \\ \hline
+				Densa & 10 & ReLU    \\ \hline
+				Densa & 3 & Sigmoide \\
 				\hline
 			\end{tabular}
 		\end{center}
-		\caption{Texto del cuadro grupos etarios}
+		\caption{Arquitectura de la red neuronal para la predicción por grupos etarios.}
 		\label{tab:summary NN grupos etarios}
 	\end{table}
-	\item \textbf{Clasificación por sexo:} la red binaria para clasificación por sexo emplea la arquitectura menos liviana que las anteriores (20-20-20-1) con función de activación ReLU en capas ocultas y Sigmoide en la capa de salida como se aprecia en la tabla \ref{tab:summary NN clasificacion por sexo}.
+	\item \textbf{Clasificación por sexo:} la red binaria para clasificación por sexo emplea una arquitectura menos liviana que las anteriores (20-20-20-20-1) con función de activación ReLU en capas ocultas y Sigmoide en la capa de salida como se aprecia en la tabla \ref{tab:summary NN clasificacion por sexo}.
 	\begin{table}[h]
 		\begin{center}
 			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
 				\hline
-				\textbf{Capa (tipo)} & \textbf{Núm. neuronas} & \textbf{Función activación} \\ 
+				\textbf{Capa (tipo)} & \textbf{Núm. neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 1 & Sigmoide \\
 				\hline
 			\end{tabular}
 		\end{center}
-		\caption{Texto del cuadro clasificac por sexo}
+		\caption{Arquitectura de la red neuronal para la clasificación por sexo.}
 		\label{tab:summary NN clasificacion por sexo}
 	\end{table}
 	\item \textbf{Identificación por paciente:} Para la identificación de individuos (aca deberia ingresar el numero de individuos como para que se sepan el numero de clases), se diseñó una red con 2 capas densas, seguidas de la capa de salida con 6 neuronas, lo que corresponde a la longitud del identificador de cada paciente como se evidencia en la tabla \ref{tab:summary NN identificacion por paciente}
@@ -1200,9 +1230,24 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 
 \subsection{Preparación de datos}
 
-Para iniciar con el proceso de entrenamiento de las redes neuronales es necesario aplicar un proceso previo a los datos dimensionalmente reducidos que se tienes pos-PCA, recordemos que estos fueron previamente guardados en un archivo CSV donde en cada fila de este, se guardan las componentes principales que esten bajo el umbral de la varianza acumulada fijado, además este archivo contiene el ID de cada paciente. % Llego hasta aquí porque voy a comenzar a meterle a los datos, siento que ya no puedo avanzar si no tengo los datos listo, necesito tener eso para que el marco metodologico quede claro
+Para iniciar con el proceso de entrenamiento de las redes neuronales es necesario aplicar un proceso previo a los datos dimensionalmente reducidos que se tienes pos-PCA, recordemos que estos fueron previamente guardados en un archivo CSV donde en cada fila de este, se guardan las componentes principales que esten bajo el umbral de la varianza acumulada fijado, además este archivo contiene el ID de cada paciente.
+
+En la ecuacion \ref{eq:einstein} dice que la masa por la velocidad de la luz al cuadrado es igual a la energia
+ % Llego hasta aquí porque voy a comenzar a meterle a los datos, siento que ya no puedo avanzar si no tengo los datos listo, necesito tener eso para que el marco metodologico quede claro
 
 \subsection{Entrenamiento} entrenar una RNA independiente para cada una de las tareas anteriores, utilizando los scores de pca como entrada y la variable objetivo como salida (sexo, edad, estado de salud, ID-paciente).
+
+\begin{equation}
+	aglo = algo
+	\label{eq:algo}
+\end{equation}
+
+\begin{equation}
+	E = m \times c^2
+	\label{eq:einstein}
+\end{equation}
+
+$E = m \times c^2$
 
 
 \section{analisis exploratorio de grupos tsne kmeans}

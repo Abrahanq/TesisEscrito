@@ -66,12 +66,12 @@
 \contentsline {subsection}{\numberline {3.7.1}Algoritmo}{45}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Tareas de modelado propuestas}{46}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Arquitecturas empleadas}{47}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Preparacion de datos}{48}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{48}{subsection.3.7.5}%
-\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{48}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}t-SNE}{48}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}K-means}{48}{subsection.3.8.2}%
-\contentsline {subsection}{\numberline {3.8.3}analisis}{48}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.7.4}Preparación de datos}{48}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{49}{subsection.3.7.5}%
+\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{49}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}t-SNE}{49}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}K-means}{49}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}analisis}{49}{subsection.3.8.3}%
 \contentsline {section}{\numberline {3.9}validez y confiabilidad}{49}{section.3.9}%
 \contentsline {subsection}{\numberline {3.9.1}validacion de modelos}{49}{subsection.3.9.1}%
 \contentsline {subsection}{\numberline {3.9.2}clasificacion}{49}{subsection.3.9.2}%
