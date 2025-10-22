@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  20 OCT 2025 16:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  22 OCT 2025 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -739,26 +739,26 @@ LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 59.
-LaTeX Font Info:    ... okay on input line 59.
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
+LaTeX Font Info:    ... okay on input line 60.
+LaTeX Info: Redefining \. on input line 60.
+LaTeX Info: Redefining \% on input line 60.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count325
@@ -781,7 +781,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 59.
+Package hyperref Info: Link coloring OFF on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -794,9 +794,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count331
 )
-LaTeX Info: Redefining \ref on input line 59.
-LaTeX Info: Redefining \pageref on input line 59.
-LaTeX Info: Redefining \nameref on input line 59.
+LaTeX Info: Redefining \ref on input line 60.
+LaTeX Info: Redefining \pageref on input line 60.
+LaTeX Info: Redefining \nameref on input line 60.
 
 (./main.out) (./main.out)
 \@outlinefile=\write4
@@ -840,7 +840,7 @@ LaTeX Info: Redefining \nameref on input line 59.
 <Sem_1/figuras/ulaLogo.png, id=308, 199.74625pt x 216.81pt>
 File: Sem_1/figuras/ulaLogo.png Graphic file (type png)
 <use Sem_1/figuras/ulaLogo.png>
-Package pdftex.def Info: Sem_1/figuras/ulaLogo.png  used on input line 65.
+Package pdftex.def Info: Sem_1/figuras/ulaLogo.png  used on input line 66.
 (pdftex.def)             Requested size: 175.17244pt x 190.14496pt.
 [1
 
@@ -878,60 +878,60 @@ Cap\'{\i }tulo 1.
 ] [3]
 Cap\'{\i }tulo 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 142.
+(hyperref)                removing `\@ifnextchar' on input line 143.
 
 [4
 
 ]
-Overfull \hbox (19.08714pt too wide) in paragraph at lines 177--177
+Overfull \hbox (19.08714pt too wide) in paragraph at lines 178--178
 []\T1/cmr/bx/n/14.4 A Wavelet-Based ECG De-lin-eator: Eval-u-a-tion on Stan-dar
 d Databas-
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 177.
+(hyperref)                removing `\@ifnextchar' on input line 178.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 200.
+(hyperref)                removing `\@ifnextchar' on input line 201.
 
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 224.
+(hyperref)                removing `\@ifnextchar' on input line 225.
 
 [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 246.
+(hyperref)                removing `\@ifnextchar' on input line 247.
 
 [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 269.
+(hyperref)                removing `\@ifnextchar' on input line 270.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 292.
+(hyperref)                removing `\@ifnextchar' on input line 293.
 
 [8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 315.
+(hyperref)                removing `\@ifnextchar' on input line 316.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 337.
+(hyperref)                removing `\@ifnextchar' on input line 338.
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 392--395
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
 
  []
 
@@ -942,50 +942,50 @@ File: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png Graphic file (type png)
 
 <use Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>
 Package pdftex.def Info: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png  use
-d on input line 412.
+d on input line 413.
 (pdftex.def)             Requested size: 250.24199pt x 246.85916pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--417
+Underfull \hbox (badness 10000) in paragraph at lines 398--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--417
+Underfull \hbox (badness 10000) in paragraph at lines 398--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--417
+Underfull \hbox (badness 10000) in paragraph at lines 398--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--417
+Underfull \hbox (badness 10000) in paragraph at lines 398--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--417
+Underfull \hbox (badness 10000) in paragraph at lines 398--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--417
+Underfull \hbox (badness 10000) in paragraph at lines 398--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 397--417
+Underfull \hbox (badness 10000) in paragraph at lines 398--418
 
  []
 
 [11] [12 <./Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 418--420
+Underfull \hbox (badness 10000) in paragraph at lines 419--421
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--428
+Underfull \hbox (badness 10000) in paragraph at lines 426--429
 
  []
 
@@ -995,7 +995,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 425--428
 File: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg Graphic file (type jpg)
 <use Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>
 Package pdftex.def Info: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg  used
- on input line 446.
+ on input line 447.
 (pdftex.def)             Requested size: 475.45825pt x 278.12003pt.
 
 
@@ -1005,14 +1005,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Sem_1/figuras/fonocardiograma.jpeg Graphic file (type jpg)
 <use Sem_1/figuras/fonocardiograma.jpeg>
 Package pdftex.def Info: Sem_1/figuras/fonocardiograma.jpeg  used on input line
- 454.
+ 455.
 (pdftex.def)             Requested size: 400.38872pt x 361.36887pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14] [15 <./Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>] [16 <./Sem_1/fig
 uras/fonocardiograma.jpeg>] [17] [18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 520--522
+Underfull \hbox (badness 10000) in paragraph at lines 521--523
 
  []
 
@@ -1021,10 +1021,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 520--522
 File: Sem_1/figuras/suma_acumulada_varianza.png Graphic file (type png)
 <use Sem_1/figuras/suma_acumulada_varianza.png>
 Package pdftex.def Info: Sem_1/figuras/suma_acumulada_varianza.png  used on inp
-ut line 581.
+ut line 582.
 (pdftex.def)             Requested size: 400.38872pt x 333.65906pt.
  [22 <./Sem_1/figuras/suma_acumulada_varianza.png>] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 625--626
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
 
  []
 
@@ -1032,16 +1032,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 625--626
 <Sem_1/figuras/neurona.png, id=655, 927.465pt x 499.8675pt>
 File: Sem_1/figuras/neurona.png Graphic file (type png)
 <use Sem_1/figuras/neurona.png>
-Package pdftex.def Info: Sem_1/figuras/neurona.png  used on input line 665.
+Package pdftex.def Info: Sem_1/figuras/neurona.png  used on input line 666.
 (pdftex.def)             Requested size: 300.29344pt x 161.84482pt.
  [25 <./Sem_1/figuras/neurona.png>]
 <Sem_1/figuras/Perceptron.png, id=670, 2569.6pt x 1682.285pt>
 File: Sem_1/figuras/Perceptron.png Graphic file (type png)
 <use Sem_1/figuras/Perceptron.png>
-Package pdftex.def Info: Sem_1/figuras/Perceptron.png  used on input line 699.
+Package pdftex.def Info: Sem_1/figuras/Perceptron.png  used on input line 700.
 (pdftex.def)             Requested size: 400.38872pt x 262.11197pt.
  [26 <./Sem_1/figuras/Perceptron.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 714--716
+Underfull \hbox (badness 10000) in paragraph at lines 715--717
 
  []
 
@@ -1049,7 +1049,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 714--716
 File: Sem_1/figuras/funciones_de_activacion.png Graphic file (type png)
 <use Sem_1/figuras/funciones_de_activacion.png>
 Package pdftex.def Info: Sem_1/figuras/funciones_de_activacion.png  used on inp
-ut line 736.
+ut line 737.
 (pdftex.def)             Requested size: 450.43253pt x 103.9452pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1059,15 +1059,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Sem_1/figuras/RedNeuronalArtificial.png Graphic file (type png)
 <use Sem_1/figuras/RedNeuronalArtificial.png>
 Package pdftex.def Info: Sem_1/figuras/RedNeuronalArtificial.png  used on input
- line 764.
+ line 765.
 (pdftex.def)             Requested size: 350.33727pt x 195.36497pt.
  [29 <./Sem_1/figuras/RedNeuronalArtificial.png>] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 875--880
+Underfull \hbox (badness 10000) in paragraph at lines 876--881
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 875--880
+Underfull \hbox (badness 10000) in paragraph at lines 876--881
 
  []
 
@@ -1081,61 +1081,61 @@ Cap\'{\i }tulo 3.
 File: Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg Graphic file (type jpg)
 <use Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>
 Package pdftex.def Info: Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg  used
- on input line 907.
+ on input line 908.
 (pdftex.def)             Requested size: 500.484pt x 604.43105pt.
  [34] [35 <./Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>] [36]
 [37]
-Overfull \hbox (4.29668pt too wide) in paragraph at lines 958--958
+Overfull \hbox (4.29668pt too wide) in paragraph at lines 960--960
  []|\T1/cmr/bx/n/12 Hombres| 
  []
 
 
-Overfull \hbox (3.47536pt too wide) in paragraph at lines 958--958
+Overfull \hbox (3.47536pt too wide) in paragraph at lines 960--960
  []|\T1/cmr/bx/n/12 Mujeres| 
  []
 
 
-Overfull \hbox (0.9088pt too wide) in paragraph at lines 958--958
+Overfull \hbox (0.9088pt too wide) in paragraph at lines 960--960
  []|\T1/cmr/bx/n/12 Sanos| 
  []
 
 
-Overfull \hbox (3.87251pt too wide) in paragraph at lines 958--958
+Overfull \hbox (3.87251pt too wide) in paragraph at lines 960--960
  []|\T1/cmr/bx/n/12 Patológicos| 
  []
 
 
-Overfull \hbox (3.20412pt too wide) in paragraph at lines 958--958
+Overfull \hbox (3.20412pt too wide) in paragraph at lines 960--960
  []|\T1/cmr/bx/n/12 Adultos 
  []
 
 
-Overfull \hbox (2.55145pt too wide) in paragraph at lines 958--958
+Overfull \hbox (2.55145pt too wide) in paragraph at lines 960--960
  \T1/cmr/bx/n/12 Jóvenes| 
  []
 
 
-Overfull \hbox (3.20412pt too wide) in paragraph at lines 958--958
+Overfull \hbox (3.20412pt too wide) in paragraph at lines 960--960
  []|\T1/cmr/bx/n/12 Adultos 
  []
 
 
-Overfull \hbox (3.20412pt too wide) in paragraph at lines 958--958
+Overfull \hbox (3.20412pt too wide) in paragraph at lines 960--960
  []|\T1/cmr/bx/n/12 Adultos 
  []
 
 
-Overfull \hbox (2.11617pt too wide) in paragraph at lines 958--959
+Overfull \hbox (2.11617pt too wide) in paragraph at lines 960--961
  []|\T1/cmr/bx/n/12 Total| 
  []
 
 
-Overfull \hbox (1.34904pt too wide) in paragraph at lines 960--960
+Overfull \hbox (1.34904pt too wide) in paragraph at lines 962--962
 []|\T1/cmr/bx/n/12 Cantidad
  []
 
 
-Overfull \hbox (8.43172pt too wide) in paragraph at lines 956--963
+Overfull \hbox (8.43172pt too wide) in paragraph at lines 958--965
  [] 
  []
 
@@ -1144,7 +1144,7 @@ Overfull \hbox (8.43172pt too wide) in paragraph at lines 956--963
 File: Sem_1/figuras/Baseline Wander Sharma.png Graphic file (type png)
 <use Sem_1/figuras/Baseline Wander Sharma.png>
 Package pdftex.def Info: Sem_1/figuras/Baseline Wander Sharma.png  used on inpu
-t line 1024.
+t line 1026.
 (pdftex.def)             Requested size: 425.41444pt x 294.93324pt.
  [40] [41 <./Sem_1/figuras/Baseline Wander Sharma.png>]
 <Sem_1/figuras/ECG_procesado_10s_delimitado.png, id=879, 1387.584pt x 726.3135p
@@ -1152,63 +1152,48 @@ t>
 File: Sem_1/figuras/ECG_procesado_10s_delimitado.png Graphic file (type png)
 <use Sem_1/figuras/ECG_procesado_10s_delimitado.png>
 Package pdftex.def Info: Sem_1/figuras/ECG_procesado_10s_delimitado.png  used o
-n input line 1043.
+n input line 1045.
 (pdftex.def)             Requested size: 425.41444pt x 222.67235pt.
  [42 <./Sem_1/figuras/ECG_procesado_10s_delimitado.png>]
 <Sem_1/figuras/ecg_latidos_alineados.png, id=892, 1387.584pt x 726.3135pt>
 File: Sem_1/figuras/ecg_latidos_alineados.png Graphic file (type png)
 <use Sem_1/figuras/ecg_latidos_alineados.png>
 Package pdftex.def Info: Sem_1/figuras/ecg_latidos_alineados.png  used on input
- line 1058.
+ line 1060.
 (pdftex.def)             Requested size: 425.41444pt x 222.67235pt.
  [43 <./Sem_1/figuras/ecg_latidos_alineados.png>]
-Overfull \hbox (11.95525pt too wide) in paragraph at lines 1093--1093
+Overfull \hbox (0.57388pt too wide) in paragraph at lines 1096--1096
  []|\T1/cmr/bx/n/12 Componente 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[44] [45]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[46]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[47]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[48] [49]
+[44] [45] [46] [47] [48] [49] [50]
 Cap\'{\i }tulo 4.
-[50
+[51
 
 ]
 Cap\'{\i }tulo 5.
-(./main.bbl [51
+(./main.bbl [52
 
-] [52
+] [53
 
-] [53] [54]
+] [54] [55]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)) [55] (./main.aux
+)) [56] (./main.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D756B1FF9B9C45D4EE7D6EE25C55A359;16993.
+(rerunfilecheck)             Checksum: A7707D822D4191C33D40733A90A90A48;16993.
  ) 
 Here is how much of TeX's memory you used:
- 25566 strings out of 480247
- 463929 string characters out of 5896106
- 1415661 words of memory out of 5000000
- 42740 multiletter control sequences out of 15000+600000
+ 25568 strings out of 480247
+ 463967 string characters out of 5896106
+ 1419661 words of memory out of 5000000
+ 42741 multiletter control sequences out of 15000+600000
  492266 words of font info for 84 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,12n,103p,18256b,734s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1235,10 +1220,10 @@ super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb><
 /usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fon
 ts/type1/public/cm-super/sfti1440.pfb></usr/share/texmf/fonts/type1/public/cm-s
 uper/sftt1200.pfb>
-Output written on main.pdf (59 pages, 3771015 bytes).
+Output written on main.pdf (60 pages, 3773549 bytes).
 PDF statistics:
- 1189 PDF objects out of 1200 (max. 8388607)
- 1041 compressed objects within 11 object streams
- 307 named destinations out of 1000 (max. 500000)
+ 1194 PDF objects out of 1200 (max. 8388607)
+ 1045 compressed objects within 11 object streams
+ 308 named destinations out of 1000 (max. 500000)
  678 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -65,19 +65,19 @@
 \contentsline {section}{\numberline {3.7}Modelado predictivo}{45}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Algoritmo}{45}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Tareas de modelado propuestas}{46}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Arquitecturas empleadas}{47}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Preparación de datos}{48}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.3}Preparación de datos}{47}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Arquitecturas empleadas}{48}{subsection.3.7.4}%
 \contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{49}{subsection.3.7.5}%
-\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{49}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}t-SNE}{49}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}K-means}{49}{subsection.3.8.2}%
-\contentsline {subsection}{\numberline {3.8.3}analisis}{49}{subsection.3.8.3}%
-\contentsline {section}{\numberline {3.9}validez y confiabilidad}{49}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}validacion de modelos}{49}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}clasificacion}{49}{subsection.3.9.2}%
-\contentsline {subsection}{\numberline {3.9.3}identificacion}{49}{subsection.3.9.3}%
-\contentsline {subsection}{\numberline {3.9.4}repetibilidad}{49}{subsection.3.9.4}%
-\contentsline {subsection}{\numberline {3.9.5}analisis de robustez}{49}{subsection.3.9.5}%
-\contentsline {subsection}{\numberline {3.9.6}consideraciones éticas}{49}{subsection.3.9.6}%
-\contentsline {chapter}{\numberline {4}Resultados}{50}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{51}{chapter.5}%
+\contentsline {section}{\numberline {3.8}analisis exploratorio de grupos tsne kmeans}{50}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}t-SNE}{50}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}K-means}{50}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}analisis}{50}{subsection.3.8.3}%
+\contentsline {section}{\numberline {3.9}validez y confiabilidad}{50}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}validacion de modelos}{50}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}clasificacion}{50}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}identificacion}{50}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.9.4}repetibilidad}{50}{subsection.3.9.4}%
+\contentsline {subsection}{\numberline {3.9.5}analisis de robustez}{50}{subsection.3.9.5}%
+\contentsline {subsection}{\numberline {3.9.6}consideraciones éticas}{50}{subsection.3.9.6}%
+\contentsline {chapter}{\numberline {4}Resultados}{51}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{52}{chapter.5}%
