@@ -587,6 +587,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 %	La definición formal de PCA, en un contexto estándar, junto con una derivación que muestra que puede obtenerse como la solución a un problema de auto-valores y auto-vectores o, alternativamente, a partir de la descomposición del valor singular (SVD) de la matriz (centrada) de datos. El PCA puede basarse en la matriz de covarianzas o en la matriz de correlaciones. Se discutirá la elección entre estos análisis. En ambos casos, las nuevas variables (las PC) dependen del conjunto de datos, en lugar de ser funciones de base predefinidas, por lo que son adaptativas en sentido amplio. Los principales usos del PCA son descriptivos y no inferenciales.\cite{Joliiffe16}\\
 
 \subsection{Incrustación de vecinos estocásticos distribuidos en t (t-SNE).}
+	\label{subsec:tsne}
 	 La incrustación de vecinos estocásticos comienza convirtiendo las distancias Euclidianas altas dimensionales entre los puntos de datos en probabilidades condicionales que representan similaridades. Según van der Maaten y Hinton: "La similaridad entre el punto $x_i$ $x_j$ es proporcional a la probabilidad condicional $p_{i\mid j}$ de que $x_i$ escoja a $x_j$ como su vecino si los vecinos se eligieran en proporción a su densidad de probabilidad bajo una gaussiana centrada en $x_i$". Para puntos de datos cercanos, $p_{i\mid j}$ es relativamente alta, mientras que para puntos de datos muy separados, $p_{i\mid j}$ será casi infinitesimal (para valores razonables de la varianza en la gaussiana, $\sigma_i$). Matemáticamente, la probabilidad condicional $p_{i\mid j}$ es dada por: 
 	 \begin{equation}
 	 	\label{eq:prob_cond}
@@ -1172,7 +1173,7 @@ El diseño de las tareas de modelado en esta investigación se fundamente en el 
 
 Para iniciar con el proceso de entrenamiento de las redes neuronales es necesario aplicar un proceso previo a los datos dimensionalmente reducidos que se tienen luego del PCA, recordemos que estos fueron previamente guardados en un archivo CSV donde en cada fila de este, se guardan las componentes principales que estén bajo el umbral de la varianza acumulada fijado, además este archivo contiene el ID de cada paciente. Como datos de entrada en todas las redes se usaron las primeras 20 componentes principales de cada latido, además se dividió la data en un 60\% para entrenamiento y un 40\% para posteriores pruebas o validaciones. 
 
-\subsection{Arquitecturas empleadas}
+\subsection{Arquitecturas empleadas (casos con PCA)}
 
 Debido a la naturaleza diferente de cada tarea que se propone en la subsección \ref{subsec:tareas_modelado}, es necesario diseñar redes neuronales con arquitecturas que se ajusten a los requerimientos de cada tarea de modelado, es por esto que se plantean los siguientes modelos de redes neuronales:
 
@@ -1275,20 +1276,35 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 En esta etapa se busca ajustar los pesos sinápticos de la red para minimizar el error que existe entre las salidas predichas y las deseadas, ya que esto es lo que permite que cada red que ha sido previamente diseñada, aprenda los patrones relevantes de las señales electrocardiográficas dimensionalmente reducidas. Entrenar una red neuronal es un trabajo complejo, matemáticamente hablando, ya que los pesos de cada capa están conectados entre sí y son dependientes unos de otros, es por esto que la modificación de un sólo peso de la capa de entrada repercutirá no sólo en la neurona directamente conectada, sino que se propagará a todas las capas siguientes y por consiguiente a la capa final de la red. Existen bibliotecas computacionales dedicadas al aprendizaje automático, y más específicamente a redes neuronales, estas tienen implementadas funciones y métodos que automatizan el entrenamiento, pero resulta importante conocer dichos procesos para entender cómo las redes adquieren este aprendizaje pudiendo reconfigurar ciertos parámetros para mejorar este aprendizaje. En el área de las redes neuronales hablar de funciones de pérdida o de costo se suele usar como sinónimo y existe una amplia variedad de estas, se selecciona la apropiada para la red neuronal de acuerdo al tipo de problema que se desea solucionar, por ejemplo, para los problemas de clasificación binaria como la clasificación por estado de salud o sexo, se hace uso de la entropía cruzada binaria que no es más que un caso particular de la entropía cruzada categórica utilizada para problemas multiclase, esta función de perdida antes mencionada fue seleccionada para las redes de identificación de grupos etarios y para la red de clasificación por tipo de trastorno de salud. Es importante mencionar que para la red de identificación por paciente, se utilizó el error cuadrático medio como función de perdida. En estos modelos se usó una estrategia de aprendizaje supervisado, dada las caracteristicas previas de las etiquetas (grupos etarios, tipo de trastorno, sexo e ID de cada paciente) asociadas a los distintos problemas de identificación, se implementó el algoritmo de retropropagación de error, utilizando optimizadores adaptativos como \textit{Adam} y \textit{RMSprop}. La selección de estos optimizadores en cada caso se realizó mediante una evaluación comparativa de su desempeño, optándose por aquel que exhibió las mejores métricas de convergencia en el entrenamiento para la tarea específica bajo consideración. 
 
 
-\section{analisis exploratorio de grupos tsne kmeans}
-*objetivo y tecnicas
-\subsection{t-SNE}
-\subsection{K-means}
-\subsection{analisis} interpretar los grupos resultantes visualmente y correlacionarlos con las variables clinicas
+\section{Reducción no lineal de dimensionalidad (t-SNE)}
+
+A partir de los resultados obtenidos mediante el análisis de componentes principales (PCA), se procedió a realizar un análisis exploratorio adicional aplicando t-SNE, una técnica avanzada de reducción no lineal de dimensionalidad y visualización de agrupaciones en datos de alta dimensiones. Con este proceso, se busca principalmente evaluar la representación de las diferentes señales electrocardiográficas en un espacio de menor dimensión que facilite la identificación de patrones y posibles estructuras de agrupamiento, preservando las relaciones de similitud entre estas señales. Para ellos, se seleccionaron y ajustaron los hiperparámetros más adecuados del algoritmo t-SNE ---como la perplejidad y el número de iteraciones máximo--- en base a la experimentación y el análisis visual de los resultados, buscando configuraciones que optimicen la claridad de los agrupamientos en la proyección final.
+
+Seleccionar la configuración optima de t-SNE no es directa como en el caso de PCA, donde nos valemos de algún método de validación interna para determinar el número apropiado de componentes principales, con t-SNE es necesario realizar múltiples ejecuciones del algoritmo variando los hiperparámetros clave, mencionados anteriormente, para esto, se configura el número de componentes de salida a $2$, esto con el fin de agilizar el proceso y así poder facilitar la visualización bidimensional de los datos. El análisis visual de los resultados permitió evaluar la capacidad de separación de los grupos obtenidos bajo diferentes combinaciones de parámetros, identificando aquellos que maximicen la conservación de las estructuras de interés. Una vez se hayan definido los parámetros óptimos, se procede a ejecutar el algoritmo antes mencionado nuevamente, empleando las configuraciones definidas previamente, pero esta vez solicitando $3$ componentes como salida, conservando así una representación tridimensional resultante para su uso posterior en los análisis y modelos desarrollados.
+
+\subsection{Arquitecturas de redes neuronales para interpretación de t-SNE}
+
+Si bien t-SNE es una herramienta poderosa para la reducción de dimensionalidad y la visualización de datos complejos, su interpretación directa plantea dificultades debido a su naturaleza no lineal, la sensibilidad a los hiperparámetros y el hecho de que la estructura global puede distorsionarse o perder significado clínico relevante. Por esta razón, para traducir las representaciones obtenidas mediante t-SNE a variables clínicas conocidas y facilitar su interpretación desde una perspectiva biomédica, se hace necesario emplear modelos adicionales. En este caso, se diseñaron arquitecturas de redes neuronales específicamente orientadas a funcionar como traductores entre los componentes generadores por t-SNE y las variables clínicas de interés, permitiendo así analizar y aprovechar los patrones extraídos en el espacio reducido para tareas de identificación o clasificación antes mencionadas. A continuación se describen las arquitecturas propuestas y el procedimiento aplicado para establecer esta correspondencia entre las nuevas representaciones dimensionalmente reducida de los datos y las variables finales de interés.
+
+\begin{enumerate}
+	\item Aca va la arquitectrua de cada red neuronal y aspi sucesivamente 
+\end{enumerate}
+%\subsection{K-means}
 
 
 \section{validez y confiabilidad}
+
 \subsection{validacion de modelos}
+%En esta subsección, describo los procedimientos aplicados para asegurar que los modelos desarrollados (redes neuronales, t-SNE + redes, etc.) se evalúan de manera objetiva y sistemática. Normalmente esto incluye la división de conjuntos de datos en entrenamiento, validación y prueba, el uso de métricas como exactitud, sensibilidad, especificidad, o F1-score, y la aplicación de técnicas como validación cruzada para evaluar la generalización de los modelos.
 \subsection{clasificacion}
+%cómo se evaluó la capacidad de los modelos para clasificar correctamente las señales o patrones de ECG en sus respectivas categorías (por ejemplo, tipos de arritmia, latidos normales, etc.). Aquí discute los resultados obtenidos en términos de precisión, matriz de confusión y otras métricas relevantes, comparando si es pertinente los distintos métodos o representaciones de entrada (PCA vs t-SNE)
 \subsection{identificacion}
+%Explora el desempeño en tareas que impliquen identificar o distinguir instancias individuales, como pacientes, segmentos, o ritmos específicos. Puedes resaltar la importancia de la sensibilidad y la capacidad del modelo para discriminar entre subgrupos.
 \subsection{repetibilidad}
-\subsection{analisis de robustez}
+%Aquí detalla los mecanismos o experimentos que corroboran que los resultados del modelo sean consistentes cuando se repiten bajo las mismas condiciones. Esto puede implicar repetir corridas con diferentes semillas aleatorias, evaluar la variabilidad de los resultados y documentar la estabilidad de los procesos de entrenamiento y las salidas de t-SNE.
+%\subsection{analisis de robustez}Explica los análisis diseñados para probar el comportamiento de los modelos ante variaciones, ruido o datos atípicos. Esto puede incluir pruebas de sensibilidad a cambios en los parámetros, inclusión de ruido sintético en los datos, o comparación de desempeño en subconjuntos diversos.
 \subsection{consideraciones éticas}
+%Reconoce implicaciones éticas relacionadas con el manejo de datos de pacientes, la privacidad, el consentimiento y la correcta interpretación y uso de los resultados de modelos automáticos en contextos médicos.
 
 \chapter{Resultados}
 
