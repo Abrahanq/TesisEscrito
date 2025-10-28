@@ -10,6 +10,7 @@
 \usepackage{coffeestains}
 \usepackage{dsfont}
 \usepackage{array}
+\usepackage{verbatim}
 	\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 	\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \usepackage[hidelinks]{hyperref}
@@ -1265,7 +1266,7 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 				\hline
 			\end{tabular}
 		\end{center}
-		\caption{Texto del cuadro identificación por paciente}
+		\caption{Arquitectura de la red neuronal para la identificación por paciente.}
 		\label{tab:summary NN identificacion por paciente}
 	\end{table}
 \end{enumerate}
@@ -1273,8 +1274,15 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 
 \subsection{Entrenamiento} 
 
-En esta etapa se busca ajustar los pesos sinápticos de la red para minimizar el error que existe entre las salidas predichas y las deseadas, ya que esto es lo que permite que cada red que ha sido previamente diseñada, aprenda los patrones relevantes de las señales electrocardiográficas dimensionalmente reducidas. Entrenar una red neuronal es un trabajo complejo, matemáticamente hablando, ya que los pesos de cada capa están conectados entre sí y son dependientes unos de otros, es por esto que la modificación de un sólo peso de la capa de entrada repercutirá no sólo en la neurona directamente conectada, sino que se propagará a todas las capas siguientes y por consiguiente a la capa final de la red. Existen bibliotecas computacionales dedicadas al aprendizaje automático, y más específicamente a redes neuronales, estas tienen implementadas funciones y métodos que automatizan el entrenamiento, pero resulta importante conocer dichos procesos para entender cómo las redes adquieren este aprendizaje pudiendo reconfigurar ciertos parámetros para mejorar este aprendizaje. En el área de las redes neuronales hablar de funciones de pérdida o de costo se suele usar como sinónimo y existe una amplia variedad de estas, se selecciona la apropiada para la red neuronal de acuerdo al tipo de problema que se desea solucionar, por ejemplo, para los problemas de clasificación binaria como la clasificación por estado de salud o sexo, se hace uso de la entropía cruzada binaria que no es más que un caso particular de la entropía cruzada categórica utilizada para problemas multiclase, esta función de perdida antes mencionada fue seleccionada para las redes de identificación de grupos etarios y para la red de clasificación por tipo de trastorno de salud. Es importante mencionar que para la red de identificación por paciente, se utilizó el error cuadrático medio como función de perdida. En estos modelos se usó una estrategia de aprendizaje supervisado, dada las caracteristicas previas de las etiquetas (grupos etarios, tipo de trastorno, sexo e ID de cada paciente) asociadas a los distintos problemas de identificación, se implementó el algoritmo de retropropagación de error, utilizando optimizadores adaptativos como \textit{Adam} y \textit{RMSprop}. La selección de estos optimizadores en cada caso se realizó mediante una evaluación comparativa de su desempeño, optándose por aquel que exhibió las mejores métricas de convergencia en el entrenamiento para la tarea específica bajo consideración. 
+En esta etapa se busca ajustar los pesos sinápticos de la red para minimizar el error que existe entre las salidas predichas y las deseadas, ya que esto es lo que permite que cada red, que ha sido previamente diseñada, aprenda los patrones relevantes de las señales electrocardiográficas dimensionalmente reducidas. Entrenar una red neuronal es un trabajo complejo, matemáticamente hablando, ya que los pesos de cada capa están conectados entre sí y son dependientes unos de otros, es por esto que la modificación de un sólo peso de la capa de entrada repercutirá no sólo en la neurona directamente conectada, sino que se propagará a todas las capas siguientes y por consiguiente a la capa final de la red. Existen bibliotecas computacionales dedicadas al aprendizaje automático, y más específicamente a redes neuronales, estas tienen implementadas funciones y métodos que automatizan el entrenamiento, pero resulta importante conocer dichos procesos para entender cómo las redes adquieren este aprendizaje pudiendo reconfigurar ciertos parámetros para mejorar este aprendizaje. En el área de las redes neuronales hablar de funciones de pérdida o de costo se suele usar como sinónimo y existe una amplia variedad de estas, se selecciona la apropiada para la red neuronal de acuerdo al tipo de problema que se desea solucionar, por ejemplo, para los problemas de clasificación binaria como la clasificación por estado de salud o sexo, se hace uso de la entropía cruzada binaria que no es más que un caso particular de la entropía cruzada categórica utilizada para problemas multiclase, esta función de perdida antes mencionada fue seleccionada para las redes de identificación de grupos etarios y para la red de clasificación por tipo de trastorno de salud. Es importante mencionar que para la red de identificación por paciente, se utilizó el error cuadrático medio como función de perdida. En estos modelos se usó una estrategia de aprendizaje supervisado, dada las caracteristicas previas de las etiquetas (grupos etarios, tipo de trastorno, sexo e ID de cada paciente) asociadas a los distintos problemas de identificación, se implementó el algoritmo de retropropagación de error, utilizando optimizadores adaptativos como \textit{Adam} y \textit{RMSprop}. La selección de estos optimizadores en cada caso se realizó mediante una evaluación comparativa de su desempeño, optándose por aquel que exhibió las mejores métricas de convergencia en el entrenamiento para la tarea específica bajo consideración. Una vez que los modelos han sido entrenados y se ha obtenido el mejor desempeño, midiéndose este usando la \textit{precisión} (Accuracy, como se conoce en inglés) que no es más que la proporción de todas las clasificaciones que fueron correctas y que se define matemáticamente como se observa en la ecuación \ref{eq:precision}. Una vez se encuentran los parámetros de la red que maximizan la precisión, estos se guardan para la fase de Test.
+\begin{equation}
+	\label{eq:precision}
+	Precision = \frac{Clasificaciones \ correctas}{Clasificaciones \ totales}
+\end{equation}
 
+\subsection{Test}
+
+En esta fase, se procede a validar el funcionamiento de la red neuronal utilizando los parámetros optimizados y guardados durante la fase previa de entrenamiento. Para ello, se utilizan los datos reservados para validación, que corresponden a un 40\% del total del conjunto de datos original, garantizando así que el modelo sea evaluado con información que no ha sido vista durante el aprendizaje. Estos datos de validación se ingresan como entradas a la red, y las salidas predichas se comparan con las salidas reales conocidas para calcular métricas de desempeño, siendo la precisión como la principal medida cuantitativa empleada. Además, se utiliza una matriz de confusión para visualizar de manera detallada cómo se distribuyen las predicciones correctas e incorrectas entre las diferentes clases o categorías. Esta matriz permite identificar el número de verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos, lo que facilita la interpretación del rendimiento del modelo en cada clase específica. De esta forma, se logra cuantificar el nivel de exactitud del modelo entrenado.
 
 \section{Reducción no lineal de dimensionalidad (t-SNE)}
 
@@ -1284,125 +1292,78 @@ Seleccionar la configuración optima de t-SNE no es directa como en el caso de P
 
 \subsection{Arquitecturas de redes neuronales para interpretación de t-SNE}
 
-Si bien t-SNE es una herramienta poderosa para la reducción de dimensionalidad y la visualización de datos complejos, su interpretación directa plantea dificultades debido a su naturaleza no lineal, la sensibilidad a los hiperparámetros y el hecho de que la estructura global puede distorsionarse o perder significado clínico relevante. Por esta razón, para traducir las representaciones obtenidas mediante t-SNE a variables clínicas conocidas y facilitar su interpretación desde una perspectiva biomédica, se hace necesario emplear modelos adicionales. En este caso, se diseñaron arquitecturas de redes neuronales específicamente orientadas a funcionar como traductores entre los componentes generadores por t-SNE y las variables clínicas de interés, permitiendo así analizar y aprovechar los patrones extraídos en el espacio reducido para tareas de identificación o clasificación antes mencionadas. A continuación se describen las arquitecturas propuestas y el procedimiento aplicado para establecer esta correspondencia entre las nuevas representaciones dimensionalmente reducida de los datos y las variables finales de interés.
+Si bien t-SNE es una herramienta poderosa para la reducción de dimensionalidad y la visualización de datos complejos, su interpretación directa plantea dificultades debido a su naturaleza no lineal, la sensibilidad a los hiperparámetros y el hecho de que la estructura global puede distorsionarse o perder significado clínico relevante. Por esta razón, para traducir las representaciones obtenidas mediante t-SNE a variables clínicas conocidas y facilitar su interpretación desde una perspectiva biomédica, se hace necesario emplear modelos adicionales. En este caso, se diseñaron arquitecturas de redes neuronales específicamente orientadas a funcionar como traductores entre los componentes generados por t-SNE y las variables clínicas de interés, permitiendo así analizar y aprovechar los patrones extraídos en el espacio reducido para tareas de identificación o clasificación antes mencionadas. Todas las redes neuronales desarrolladas para traducir las representaciones generadas por t-SNE comparten una arquitectura homogénea, compuesta por el mismo número de capas y la misma cantidad de neuronas en cada una de ellas. La única diferencia radica en la configuración de la capa de salida, la cual se adapta específicamente a la naturaleza de la variable clínica que se busca predecir en cada caso, permitiendo así ajustar el modelo a las particularidades de cada problema. En la tabla 
+\ref{tab:summary NN comun a tsne} se detalla la estructura de las capas internas de las redes propuestas.
 
-Tal como se discutió previamente, la naturaleza y complejidad de cada problema de identificación clínica exige un enfoque particular en torno a la construcción de las redes neuronales empleadas. En esta subsección, se detalla exclusivamente la estructura y características técnicas de las redes configuradas para cada tarea, considerando los retos que plantea la predicción de las diferentes variables clínicas consideradas en este trabajo. De este modo, se busca mostrar cómo la adaptación de la arquitectura influye directamente en la capacidad de la red para traducir las representaciones obtenidas de t-SNE.
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
+			\hline
+			\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ 
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Arquitectura común de las redes neuronales propuestas para la interpretación de los datos t-SNE.}
+	\label{tab:summary NN comun a tsne}
+\end{table}
 
+En la tabla \ref{tab:summary NN salidas problemas tsne} se contemplan las caracteristicas de las capas de salida para cada modelo propuesto.% es de resaltar que no se desarrolló una red neuronal que pueda traducir los datos pos t-SNE
 
-\begin{enumerate}
-	\item \textbf{Clasificación por estado de salud:} 
-	\begin{table}[ht]
-		\renewcommand{\arraystretch}{1.2}
-		\begin{center}
-			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
-				\hline
-				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 1 & Sigmoide \\ 
-				\hline
-			\end{tabular}
-		\end{center}
-		\caption{Arquitectura de la red neuronal para la clasificación por estado de salud con los datos obtenidos con t-SNE.}
-		\label{tab:summary NN estado de salud_tsne}
-	\end{table}
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
+			\hline
+			\textbf{Tipo de clasificación} & \textbf{Número de neuronas} & \textbf{Función de activación} \\ \hline
+			Estado de salud   & 1 & Sigmoide \\ \hline
+			Grupos etarios    & 3 & Sigmoide \\ \hline
+			Sexo              & 1 & Sigmoide \\ \hline
+			Tipo de trastorno & 4 & Sigmoide \\ 
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Caracteristicas de las capas de salida para cada red propuesta según el tipo de clasificación}
+	\label{tab:summary NN salidas problemas tsne}
+\end{table}
 
-	\item \textbf{Clasificación por grupos etarios:}
-	\begin{table}[ht]
-		\renewcommand{\arraystretch}{1.2}
-		\begin{center}
-			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
-				\hline
-				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 3  & Sigmoide	 \\ 
-				\hline
-			\end{tabular} 
-		\end{center}
-		\caption{Arquitectura de la red neuronal para la clasificación por estado de salud con los datos obtenidos con t-SNE.}
-		\label{tab:summary NN grupos etarios_tsne}
-	\end{table}
-
-	\item \textbf{Clasificación por sexo:}
-		\begin{table}[ht]
-		\renewcommand{\arraystretch}{1.2}
-		\begin{center}
-			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
-				\hline
-				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 1  & Sigmoide    \\ \hline
-			\end{tabular}
-		\end{center}
-		\caption{Arquitectura de la red neuronal para la clasificación por sexo con los datos obtenidos con t-SNE.}
-		\label{tab:summary NN sex_tsne}
-	\end{table}
-
-	\item \textbf{Clasificación por tipo de trastorno de salud:}
-		\begin{table}[ht]
-		\renewcommand{\arraystretch}{1.2}
-		\begin{center}
-			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
-				\hline
-				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 20 & ReLU    \\ \hline
-				Densa & 4  & Sigmoide \\ 
-				\hline
-			\end{tabular}
-		\end{center}
-		\caption{Arquitectura de la red neuronal para la clasificación por tipo de trastorno de salud con los datos obtenidos con t-SNE.}
-		\label{tab:summary NN trastornos_tsne}
-	\end{table}
 %No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se logró usando tsne
-\end{enumerate}
 %\subsection{K-means}
 
 
 \section{Validez y confiabilidad}
 
 \subsection{Validación de modelos}
-Con el fin de validar los resultados salientes de las redes neuronales de manera objetiva y sistemática, durante el proceso de entrenamiento de las redes neuronales, se dividió el conjunto de datos para entrenamiento y validación, en 50\% para cada subconju%En esta subsección, describo los procedimientos aplicados para asegurar que los modelos desarrollados (redes neuronales, t-SNE + redes, etc.) se evalúan de manera objetiva y sistemática. Normalmente esto incluye la división de conjuntos de datos en entrenamiento, validación y prueba, el uso de métricas como exactitud, sensibilidad, especificidad, o F1-score, y la aplicación de técnicas como validación cruzada para evaluar la generalización de los modelos.
-\subsection{clasificacion}
-%cómo se evaluó la capacidad de los modelos para clasificar correctamente las señales o patrones de ECG en sus respectivas categorías (por ejemplo, tipos de arritmia, latidos normales, etc.). Aquí discute los resultados obtenidos en términos de precisión, matriz de confusión y otras métricas relevantes, comparando si es pertinente los distintos métodos o representaciones de entrada (PCA vs t-SNE)
-\subsection{identificacion}
-%Explora el desempeño en tareas que impliquen identificar o distinguir instancias individuales, como pacientes, segmentos, o ritmos específicos. Puedes resaltar la importancia de la sensibilidad y la capacidad del modelo para discriminar entre subgrupos.
-\subsection{repetibilidad}
-%Aquí detalla los mecanismos o experimentos que corroboran que los resultados del modelo sean consistentes cuando se repiten bajo las mismas condiciones. Esto puede implicar repetir corridas con diferentes semillas aleatorias, evaluar la variabilidad de los resultados y documentar la estabilidad de los procesos de entrenamiento y las salidas de t-SNE.
-%\subsection{analisis de robustez}Explica los análisis diseñados para probar el comportamiento de los modelos ante variaciones, ruido o datos atípicos. Esto puede incluir pruebas de sensibilidad a cambios en los parámetros, inclusión de ruido sintético en los datos, o comparación de desempeño en subconjuntos diversos.
-\subsection{consideraciones éticas}
-%Reconoce implicaciones éticas relacionadas con el manejo de datos de pacientes, la privacidad, el consentimiento y la correcta interpretación y uso de los resultados de modelos automáticos en contextos médicos.
+
+Con el fin de validar los resultados salientes de las redes neuronales de manera objetiva y sistemática, durante el proceso de entrenamiento de las redes neuronales, se dividió el conjunto de datos para entrenamiento y validación, en 60\% y 40\% para cada subconjunto respectivamente, lo que asegura que la evaluación de desempeño se realice sobre instancias no vistas durante la fase de entrenamiento. En este proceso, se emplean los parámetros óptimos obtenidos en el entrenamiento y se calculan métricas como la precisión, lo que permite determinar la capacidad de generalización de los modelos propuestos. Para dar mayor detalle a la distribución de las predicciones correctas e incorrectas por clase, se construyen matrices de confusión. Este marco de trabajo asegura que el rendimiento reportado sea representativo y confiable, lo que suporta la robustez de la solución planteada.
+
+\subsection{Clasificación}
+
+Para las tareas de clasificación, las redes neuronales fueron evaluadas en su capacidad para distinguir entre diferentes categorías, como estado de salud, sexo, grupo etario y tipo de trastorno cardíaco. La robustez del procedimiento se garantiza al emplear etiquetas clínicas definidas por expertos, permitiendo que los resultados de clasificación sean tanto cuantitativos como clínicamente relevantes. Las arquitecturas de las redes neuronales, funciones de activación y optimizadores, fueron adaptados en función del problema específico, logrando un balance adecuado entre interpretabilidad y rendimiento. 
+
+
+\subsection{Repetibilidad}
+
+Para garantizar la repetibilidad de los resultados, se realizaron múltiples ejecuciones independientes de los modelos, variando únicamente la semilla aleatoria %usada por las redes neuronales para inicializar los pesos sinapticos 
+y manteniendo constantes las condiciones de entrenamiento y validación. Este enfoque permite certificar que los modelos ofrecen resultados fiables independientemente de las condiciones iniciales, y que los patrones, que son identificados por las redes neuronales, son reproducibles y no producto del azar. 
+
+
+\subsection{Consideraciones éticas}
+
+El proceso metodológico implementado en esta investigación considera de forma estricta los principios éticos asociados al manejo de datos biomédicos. Los registros de ECG utilizados fueron anonimizados para preservar la confidencialidad de la información clínica de los participantes, cumpliendo con las normativas internacionales de protección de datos. 
+
 
 \chapter{Resultados}
 
-...
+
 
 %\part{Conclusiones}
 \chapter{Conclusiones}
