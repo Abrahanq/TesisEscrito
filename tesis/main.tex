@@ -1174,11 +1174,11 @@ El diseño de las tareas de modelado en esta investigación se fundamente en el 
 Para iniciar con el proceso de entrenamiento de las redes neuronales es necesario aplicar un proceso previo a los datos dimensionalmente reducidos que se tienen luego del PCA, recordemos que estos fueron previamente guardados en un archivo CSV donde en cada fila de este, se guardan las componentes principales que estén bajo el umbral de la varianza acumulada fijado, además este archivo contiene el ID de cada paciente. Como datos de entrada en todas las redes se usaron las primeras 20 componentes principales de cada latido, además se dividió la data en un 60\% para entrenamiento y un 40\% para posteriores pruebas o validaciones. 
 
 \subsection{Arquitecturas empleadas (casos con PCA)}
-
+\label{subsec:arquitecturas_pca}
 Debido a la naturaleza diferente de cada tarea que se propone en la subsección \ref{subsec:tareas_modelado}, es necesario diseñar redes neuronales con arquitecturas que se ajusten a los requerimientos de cada tarea de modelado, es por esto que se plantean los siguientes modelos de redes neuronales:
 
 \begin{enumerate}
-	\item \textbf{Clasificación por estado de salud:} recordemos que esta tarea es un problema de clasificación binaria (\textquote{sano} vs. \textquote{patológico}), por ende, se propone una red neuronal de capas densas con topología (10-1), como se observa en la tabla \ref{tab:summary NN estado de salud}. Estas neuronas emplean como función de activación en las capas ocultas la función ReLU y la función Sigmoide en la capa de salida, optimizada mediante el algoritmo Adam \cite{adamoptimization14}, para esta red se seleccionó la denominada entropía cruzada categórica, como función de perdida. 
+	\item \textbf{Clasificación por estado de salud:} recordemos que esta tarea es un problema de clasificación binaria (\textquote{sano} vs. \textquote{patológico}), por ende, se propone una red neuronal de capas densas con topología (10-1), como se observa en la tabla \ref{tab:csummary NN estado de salud}. Estas neuronas emplean como función de activación en las capas ocultas la función ReLU y la función Sigmoide en la capa de salida, optimizada mediante el algoritmo Adam \cite{adamoptimization14}, para esta red se seleccionó la denominada entropía cruzada categórica, como función de perdida. 
 	
 	\begin{table}[ht]
 		\renewcommand{\arraystretch}{1.2}
@@ -1286,16 +1286,110 @@ Seleccionar la configuración optima de t-SNE no es directa como en el caso de P
 
 Si bien t-SNE es una herramienta poderosa para la reducción de dimensionalidad y la visualización de datos complejos, su interpretación directa plantea dificultades debido a su naturaleza no lineal, la sensibilidad a los hiperparámetros y el hecho de que la estructura global puede distorsionarse o perder significado clínico relevante. Por esta razón, para traducir las representaciones obtenidas mediante t-SNE a variables clínicas conocidas y facilitar su interpretación desde una perspectiva biomédica, se hace necesario emplear modelos adicionales. En este caso, se diseñaron arquitecturas de redes neuronales específicamente orientadas a funcionar como traductores entre los componentes generadores por t-SNE y las variables clínicas de interés, permitiendo así analizar y aprovechar los patrones extraídos en el espacio reducido para tareas de identificación o clasificación antes mencionadas. A continuación se describen las arquitecturas propuestas y el procedimiento aplicado para establecer esta correspondencia entre las nuevas representaciones dimensionalmente reducida de los datos y las variables finales de interés.
 
+Tal como se discutió previamente, la naturaleza y complejidad de cada problema de identificación clínica exige un enfoque particular en torno a la construcción de las redes neuronales empleadas. En esta subsección, se detalla exclusivamente la estructura y características técnicas de las redes configuradas para cada tarea, considerando los retos que plantea la predicción de las diferentes variables clínicas consideradas en este trabajo. De este modo, se busca mostrar cómo la adaptación de la arquitectura influye directamente en la capacidad de la red para traducir las representaciones obtenidas de t-SNE.
+
+
 \begin{enumerate}
-	\item Aca va la arquitectrua de cada red neuronal y aspi sucesivamente 
+	\item \textbf{Clasificación por estado de salud:} 
+	\begin{table}[ht]
+		\renewcommand{\arraystretch}{1.2}
+		\begin{center}
+			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
+				\hline
+				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 1 & Sigmoide \\ 
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Arquitectura de la red neuronal para la clasificación por estado de salud con los datos obtenidos con t-SNE.}
+		\label{tab:summary NN estado de salud_tsne}
+	\end{table}
+
+	\item \textbf{Clasificación por grupos etarios:}
+	\begin{table}[ht]
+		\renewcommand{\arraystretch}{1.2}
+		\begin{center}
+			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
+				\hline
+				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 3  & Sigmoide	 \\ 
+				\hline
+			\end{tabular} 
+		\end{center}
+		\caption{Arquitectura de la red neuronal para la clasificación por estado de salud con los datos obtenidos con t-SNE.}
+		\label{tab:summary NN grupos etarios_tsne}
+	\end{table}
+
+	\item \textbf{Clasificación por sexo:}
+		\begin{table}[ht]
+		\renewcommand{\arraystretch}{1.2}
+		\begin{center}
+			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
+				\hline
+				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 1  & Sigmoide    \\ \hline
+			\end{tabular}
+		\end{center}
+		\caption{Arquitectura de la red neuronal para la clasificación por sexo con los datos obtenidos con t-SNE.}
+		\label{tab:summary NN sex_tsne}
+	\end{table}
+
+	\item \textbf{Clasificación por tipo de trastorno de salud:}
+		\begin{table}[ht]
+		\renewcommand{\arraystretch}{1.2}
+		\begin{center}
+			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
+				\hline
+				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 20 & ReLU    \\ \hline
+				Densa & 4  & Sigmoide \\ 
+				\hline
+			\end{tabular}
+		\end{center}
+		\caption{Arquitectura de la red neuronal para la clasificación por tipo de trastorno de salud con los datos obtenidos con t-SNE.}
+		\label{tab:summary NN trastornos_tsne}
+	\end{table}
+%No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se logró usando tsne
 \end{enumerate}
 %\subsection{K-means}
 
 
-\section{validez y confiabilidad}
+\section{Validez y confiabilidad}
 
-\subsection{validacion de modelos}
-%En esta subsección, describo los procedimientos aplicados para asegurar que los modelos desarrollados (redes neuronales, t-SNE + redes, etc.) se evalúan de manera objetiva y sistemática. Normalmente esto incluye la división de conjuntos de datos en entrenamiento, validación y prueba, el uso de métricas como exactitud, sensibilidad, especificidad, o F1-score, y la aplicación de técnicas como validación cruzada para evaluar la generalización de los modelos.
+\subsection{Validación de modelos}
+Con el fin de validar los resultados salientes de las redes neuronales de manera objetiva y sistemática, durante el proceso de entrenamiento de las redes neuronales, se dividió el conjunto de datos para entrenamiento y validación, en 50\% para cada subconju%En esta subsección, describo los procedimientos aplicados para asegurar que los modelos desarrollados (redes neuronales, t-SNE + redes, etc.) se evalúan de manera objetiva y sistemática. Normalmente esto incluye la división de conjuntos de datos en entrenamiento, validación y prueba, el uso de métricas como exactitud, sensibilidad, especificidad, o F1-score, y la aplicación de técnicas como validación cruzada para evaluar la generalización de los modelos.
 \subsection{clasificacion}
 %cómo se evaluó la capacidad de los modelos para clasificar correctamente las señales o patrones de ECG en sus respectivas categorías (por ejemplo, tipos de arritmia, latidos normales, etc.). Aquí discute los resultados obtenidos en términos de precisión, matriz de confusión y otras métricas relevantes, comparando si es pertinente los distintos métodos o representaciones de entrada (PCA vs t-SNE)
 \subsection{identificacion}
