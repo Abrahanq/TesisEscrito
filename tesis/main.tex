@@ -87,7 +87,7 @@
     	Prof. John Ferreira \par}
     \end{flushright}
     {\large\textbf{Mérida -- Venezuela}} \par
-    {\large 2024} % Deja esto vacío para eliminar la fecha de la portada
+    {\large 2025} % Deja esto vacío para eliminar la fecha de la portada
   \end{center}
 \end{titlepage}
 
@@ -1049,9 +1049,9 @@ Con el fin de aprovechar las herramientas hechas por la comunidad científica, e
 	\label{fig:ecg_delimitado}
 \end{figure}
 
-\section{Extracción de caracteristicas}
+\section{Extracción de características}
 
-Es relevante recordar que PCA necesita como entrada un vector con las caracteristicas claves de conjunto de datos a analizar. En el caso de las señales ECG, extraer caracteristicas recae fundamentalmente en la habilidad de detectar correctamente los inicios, picos y finales de las ondas individuales de cada latido, teniendo estos puntos debidamente localizados se podrían calcular los intervalos PR y QT; y los segmentos PR y ST como se observan en la figura \ref{fig:ECGSinusal}, y teniendo los promedios de estos valores, se podría construir un vector de caracteristicas de cada paciente, sin embargo, los métodos usados para detectar los inicios, picos y finales de cada onda no son lo suficientemente precisos lo que genera que los valores de los intervalos posteriormente calculados no sean lo suficientemente confiables. Es por esto que se eligió tomar como vector de caracteristicas el latido promedio de cada intervalo segmentado de la señal ECG preprocesada de cada paciente.
+Es relevante recordar que PCA necesita como entrada un vector con las características claves de conjunto de datos a analizar. En el caso de las señales ECG, extraer características recae fundamentalmente en la habilidad de detectar correctamente los inicios, picos y finales de las ondas individuales de cada latido, teniendo estos puntos debidamente localizados se podrían calcular los intervalos PR y QT; y los segmentos PR y ST como se observan en la figura \ref{fig:ECGSinusal}, y teniendo los promedios de estos valores, se podría construir un vector de características de cada paciente, sin embargo, los métodos usados para detectar los inicios, picos y finales de cada onda no son lo suficientemente precisos lo que genera que los valores de los intervalos posteriormente calculados no sean lo suficientemente confiables. Es por esto que se eligió tomar como vector de características el latido promedio de cada intervalo segmentado de la señal ECG preprocesada de cada paciente.
 
 \subsection{Alineamiento} 
 
@@ -1064,10 +1064,10 @@ La importancia de la precisa localización de los picos R en cada ECG radica en 
 	\label{fig:latidos_alineados}
 \end{figure}
 
-\subsection{Vector de caracteristicas} 
+\subsection{Vector de características} 
 
 Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, lo que resulta en latidos promedios con longitudes muéstrales inconsistentes. Para garantizar la comparabilidad morfológica y la viabilidad computacional en etapas posteriores, se implementa una estandarización de longitud fija mediante remuestreo digital. Cada latido se interpola a 250 muestras, este valor preserva la resolución temporal de los eventos cardíacos clave, incluso en ECG de pacientes con trastornos del ritmo cardíaco. Estas señales estandarizadas se almacenan en un arreglo en formato (CSV), este arreglo guarda los valores que al ser graficados, representan la figura del latido promedio de cada paciente, similar a como se observa en la figura \ref{fig:latidos_alineados} (línea roja). 
-Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de caracteristicas que será la base del análisis de la señal electrocardiográfica. 
+Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de características que será la base del análisis de la señal electrocardiográfica. 
 
 \section{Reducción de dimensionalidad}
 
@@ -1078,18 +1078,18 @@ La reducción de la dimensionalidad es el proceso de encontrar un espacio dimens
 	\item Analizar los datos utilizando métodos estadísticos, como la agrupación, suavizado, estimación de densidad de probabilidad o clasificación.
 \end{itemize}
 
-Un posible método para la reducción de dimensionalidad seria crear nuevas variables que sean funciones o combinaciones lineales de los segmentos e intervalos que se observan en la figura \ref{fig:ECGSinusal}, pero un método que permite hacer esto internamente, es el conocido como análisis de componentes principales (PCA) \cite{martinez05}. Habiendo culminado la etapa de preprocesamiento de los datos y la extracción de caracteristicas de los ECG, se procede a la implementación del análisis de componentes principales. Es de destacar que debido al aumento en el uso de las herramientas de aprendizaje automático, la optimización de estas ha magnificado también. Para este trabajo, se utiliza la función \emph{PCA()} de la librería \textbf{scikit-learn (v1.4.2)} \cite{scikit-learn,sklearn_api}, esta función efectúa eficientemente los cálculos subyacentes, como la descomposición de la matriz de covarianza y la solución al posterior problema de autovalores y autovectores. Entre los diversos parámetros que necesita esta función para ser ejecutada, esta el numero final de componentes principales $(k)$, para determinar el numero final de estas se utiliza el criterio de varianza acumulada explicado en la subsección \ref{subsec:PCA}.
+Un posible método para la reducción de dimensionalidad seria crear nuevas variables que sean funciones o combinaciones lineales de los segmentos e intervalos que se observan en la figura \ref{fig:ECGSinusal}, pero un método que permite hacer esto internamente, es el conocido como análisis de componentes principales (PCA) \cite{martinez05}. Habiendo culminado la etapa de preprocesamiento de los datos y la extracción de características de los ECG, se procede a la implementación del análisis de componentes principales. Es de destacar que debido al aumento en el uso de las herramientas de aprendizaje automático, la optimización de estas ha magnificado también. Para este trabajo, se utiliza la función \emph{PCA()} de la librería \textbf{scikit-learn (v1.4.2)} \cite{scikit-learn,sklearn_api}, esta función efectúa eficientemente los cálculos subyacentes, como la descomposición de la matriz de covarianza y la solución al posterior problema de autovalores y autovectores. Entre los diversos parámetros que necesita esta función para ser ejecutada, esta el numero final de componentes principales $(k)$, para determinar el numero final de estas se utiliza el criterio de varianza acumulada explicado en la subsección \ref{subsec:PCA}.
 El gráfico de la varianza acumulada 
 
 \subsection{Proyección de los vectores de características al nuevo espacio}
 
-Una vez determinadas las componentes principales, se proyectan los vectores de caracteristicas $I$ al nuevo espacio dimensional reducido $V$ (conjunto de autovectores), esto es: 
+Una vez determinadas las componentes principales, se proyectan los vectores de características $I$ al nuevo espacio dimensional reducido $V$ (conjunto de autovectores), esto es: 
 \begin{equation}
 	P = I \ast V
 	\label{eq:proyeccion_pca}
 \end{equation}
 Este proceso no es una simple comprensión, sino una reestructuración de la información morfológica de cada latido. 
-Estos vectores de caracteristicas, que graficados se ven como la linea roja de la figura \ref{fig:latidos_alineados} se convierten en un vector único para cada latido promedio de cada paciente, con ahora menos dimensiones, como se observa en la tabla \ref{tab:vector_caracteristicas_proyectado}. A El conjunto de todas las proyecciones hechas se le conoce cómo la base de conocimiento de la red neuronal, estás serán usadas en las fases de entrenamiento y prueba de las redes neuronales, esta base de conocimiento se guarda en forma matricial, con las columnas debidamente identificadas con el numero de cada componente y donde cada fila corresponde al latido promedio de un segmento de ECG de cierto paciente, posteriormente dicha base de conocimiento, se guarda en un archivo de formato CSV, que será usado más adelante.
+Estos vectores de características, que graficados se ven como la linea roja de la figura \ref{fig:latidos_alineados} se convierten en un vector único para cada latido promedio de cada paciente, con ahora menos dimensiones, como se observa en la tabla \ref{tab:vector_caracteristicas_proyectado}. A El conjunto de todas las proyecciones hechas se le conoce cómo la base de conocimiento de la red neuronal, estás serán usadas en las fases de entrenamiento y prueba de las redes neuronales, esta base de conocimiento se guarda en forma matricial, con las columnas debidamente identificadas con el numero de cada componente y donde cada fila corresponde al latido promedio de un segmento de ECG de cierto paciente, posteriormente dicha base de conocimiento, se guarda en un archivo de formato CSV, que será usado más adelante.
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
@@ -1103,7 +1103,7 @@ Estos vectores de caracteristicas, que graficados se ven como la linea roja de l
 			5 & -2.69767 \\ \hline
 			6 & -0.75595 \\ \hline
 		\end{tabular}
-	\caption{Ejemplo de vector de caracteristicas proyectado en el espacio $V$}
+	\caption{Ejemplo de vector de características proyectado en el espacio $V$}
 	\label{tab:vector_caracteristicas_proyectado}
 	\end{center}
 \end{table}
@@ -1117,7 +1117,7 @@ Con el fin de probar que la representación compacta del latido promedio obtenid
 
 En la subsección \ref{subsec:NN} se explicó detalladamente lo que es una red neuronal, cómo se asemejan estas a una red de tipo biológica, se habló de la unidad básica que se equipara con una neurona y de las dos fases de modelización de una red neuronal. Hoy en día, el diseño a detalle de uno de estos programas se suele hacer sobre interfaces que facilitan la implementación de estos. A estas interfaces se les conoce como frameworks\footnote{Marcos de trabajo}, uno de los más conocidos y usados es \textbf{TensorFlow} \cite{tensorflow15} este es un ecosistema completo que ayuda a resolver problemas complejos con aprendizaje automático ofreciendo varios niveles de abstracción con el fin de adecuarse a las necesidad del usuario, con la API (interfaz de programación de aplicación, por sus siglas en inglés) de alto nivel de Keras \cite{keras15}, que ayuda a que los primeros pasos con TensorFlow y el aprendizaje automático sean sencillos. 
 
-Si bien TensorFlow permite construir una red neuronal apilando capas como bloques Lego, es decir, este framework proporciona un esquema modular que simplifica el ensamble de las redes neuronales, además, elegir otros hiperparametros de la red, como las funciones de activación de cada capa, resulta intuitivo. Sin embargo, es crucial enfatizar que los principios matemáticos permanecen idénticos a una implementación manual que se hiciera desde cero, estos son: 
+Si bien TensorFlow permite construir una red neuronal apilando capas como bloques Lego, es decir, este framework proporciona un esquema modular que simplifica el ensamble de las redes neuronales, además, elegir otros hiperparámetros de la red, como las funciones de activación de cada capa, resulta intuitivo. Sin embargo, es crucial enfatizar que los principios matemáticos permanecen idénticos a una implementación manual que se hiciera desde cero, estos son: 
 \begin{enumerate}
 	\item \textbf{La propagación hacia adelante:} la salida de cada capa $y_l$ sigue siendo la ecuación \ref{eq:percept}, dicha salida será la entrada de la siguiente capa. 
 	\item \textbf{Algoritmo de retropropagación:} entre los métodos de optimización de la red en retropropagación existentes, TensorFlow permite seleccionar entre un amplio catalogo, en esta investigación se hizo uso del optimizador \emph{Adam}, que es un método estocástico de descenso de gradiente que se basa en la adaptación de momentos de primer y segundo orden \cite{keras15}. Según Kingma et al. \cite{adamoptimization14} el método es: \begin{quote}
@@ -1274,7 +1274,7 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 
 \subsection{Entrenamiento} 
 
-En esta etapa se busca ajustar los pesos sinápticos de la red para minimizar el error que existe entre las salidas predichas y las deseadas, ya que esto es lo que permite que cada red, que ha sido previamente diseñada, aprenda los patrones relevantes de las señales electrocardiográficas dimensionalmente reducidas. Entrenar una red neuronal es un trabajo complejo, matemáticamente hablando, ya que los pesos de cada capa están conectados entre sí y son dependientes unos de otros, es por esto que la modificación de un sólo peso de la capa de entrada repercutirá no sólo en la neurona directamente conectada, sino que se propagará a todas las capas siguientes y por consiguiente a la capa final de la red. Existen bibliotecas computacionales dedicadas al aprendizaje automático, y más específicamente a redes neuronales, estas tienen implementadas funciones y métodos que automatizan el entrenamiento, pero resulta importante conocer dichos procesos para entender cómo las redes adquieren este aprendizaje pudiendo reconfigurar ciertos parámetros para mejorar este aprendizaje. En el área de las redes neuronales hablar de funciones de pérdida o de costo se suele usar como sinónimo y existe una amplia variedad de estas, se selecciona la apropiada para la red neuronal de acuerdo al tipo de problema que se desea solucionar, por ejemplo, para los problemas de clasificación binaria como la clasificación por estado de salud o sexo, se hace uso de la entropía cruzada binaria que no es más que un caso particular de la entropía cruzada categórica utilizada para problemas multiclase, esta función de perdida antes mencionada fue seleccionada para las redes de identificación de grupos etarios y para la red de clasificación por tipo de trastorno de salud. Es importante mencionar que para la red de identificación por paciente, se utilizó el error cuadrático medio como función de perdida. En estos modelos se usó una estrategia de aprendizaje supervisado, dada las caracteristicas previas de las etiquetas (grupos etarios, tipo de trastorno, sexo e ID de cada paciente) asociadas a los distintos problemas de identificación, se implementó el algoritmo de retropropagación de error, utilizando optimizadores adaptativos como \textit{Adam} y \textit{RMSprop}. La selección de estos optimizadores en cada caso se realizó mediante una evaluación comparativa de su desempeño, optándose por aquel que exhibió las mejores métricas de convergencia en el entrenamiento para la tarea específica bajo consideración. Una vez que los modelos han sido entrenados y se ha obtenido el mejor desempeño, midiéndose este usando la \textit{precisión} (Accuracy, como se conoce en inglés) que no es más que la proporción de todas las clasificaciones que fueron correctas y que se define matemáticamente como se observa en la ecuación \ref{eq:precision}. Una vez se encuentran los parámetros de la red que maximizan la precisión, estos se guardan para la fase de Test.
+En esta etapa se busca ajustar los pesos sinápticos de la red para minimizar el error que existe entre las salidas predichas y las deseadas, ya que esto es lo que permite que cada red, que ha sido previamente diseñada, aprenda los patrones relevantes de las señales electrocardiográficas dimensionalmente reducidas. Entrenar una red neuronal es un trabajo complejo, matemáticamente hablando, ya que los pesos de cada capa están conectados entre sí y son dependientes unos de otros, es por esto que la modificación de un sólo peso de la capa de entrada repercutirá no sólo en la neurona directamente conectada, sino que se propagará a todas las capas siguientes y por consiguiente a la capa final de la red. Existen bibliotecas computacionales dedicadas al aprendizaje automático, y más específicamente a redes neuronales, estas tienen implementadas funciones y métodos que automatizan el entrenamiento, pero resulta importante conocer dichos procesos para entender cómo las redes adquieren este aprendizaje pudiendo reconfigurar ciertos parámetros para mejorar este aprendizaje. En el área de las redes neuronales hablar de funciones de pérdida o de costo se suele usar como sinónimo y existe una amplia variedad de estas, se selecciona la apropiada para la red neuronal de acuerdo al tipo de problema que se desea solucionar, por ejemplo, para los problemas de clasificación binaria como la clasificación por estado de salud o sexo, se hace uso de la entropía cruzada binaria que no es más que un caso particular de la entropía cruzada categórica utilizada para problemas multiclase, esta función de perdida antes mencionada fue seleccionada para las redes de identificación de grupos etarios y para la red de clasificación por tipo de trastorno de salud. Es importante mencionar que para la red de identificación por paciente, se utilizó el error cuadrático medio como función de perdida. En estos modelos se usó una estrategia de aprendizaje supervisado, dada las características previas de las etiquetas (grupos etarios, tipo de trastorno, sexo e ID de cada paciente) asociadas a los distintos problemas de identificación, se implementó el algoritmo de retropropagación de error, utilizando optimizadores adaptativos como \textit{Adam} y \textit{RMSprop}. La selección de estos optimizadores en cada caso se realizó mediante una evaluación comparativa de su desempeño, optándose por aquel que exhibió las mejores métricas de convergencia en el entrenamiento para la tarea específica bajo consideración. Una vez que los modelos han sido entrenados y se ha obtenido el mejor desempeño, midiéndose este usando la \textit{precisión} (Accuracy, como se conoce en inglés) que no es más que la proporción de todas las clasificaciones que fueron correctas y que se define matemáticamente como se observa en la ecuación \ref{eq:precision}. Una vez se encuentran los parámetros de la red que maximizan la precisión, estos se guardan para la fase de Test.
 \begin{equation}
 	\label{eq:precision}
 	Precision = \frac{Clasificaciones \ correctas}{Clasificaciones \ totales}
@@ -1316,7 +1316,7 @@ Si bien t-SNE es una herramienta poderosa para la reducción de dimensionalidad 
 	\label{tab:summary NN comun a tsne}
 \end{table}
 
-En la tabla \ref{tab:summary NN salidas problemas tsne} se contemplan las caracteristicas de las capas de salida para cada modelo propuesto.% es de resaltar que no se desarrolló una red neuronal que pueda traducir los datos pos t-SNE
+En la tabla \ref{tab:summary NN salidas problemas tsne} se contemplan las características de las capas de salida para cada modelo propuesto.% es de resaltar que no se desarrolló una red neuronal que pueda traducir los datos pos t-SNE
 
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
@@ -1331,12 +1331,13 @@ En la tabla \ref{tab:summary NN salidas problemas tsne} se contemplan las caract
 			\hline
 		\end{tabular}
 	\end{center}
-	\caption{Caracteristicas de las capas de salida para cada red propuesta según el tipo de clasificación}
+	\caption{Características de las capas de salida para cada red propuesta según el tipo de clasificación}
 	\label{tab:summary NN salidas problemas tsne}
 \end{table}
 
 %No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se logró usando tsne
 %\subsection{K-means}
+
 
 
 \section{Validez y confiabilidad}
@@ -1349,6 +1350,14 @@ Con el fin de validar los resultados salientes de las redes neuronales de manera
 
 Para las tareas de clasificación, las redes neuronales fueron evaluadas en su capacidad para distinguir entre diferentes categorías, como estado de salud, sexo, grupo etario y tipo de trastorno cardíaco. La robustez del procedimiento se garantiza al emplear etiquetas clínicas definidas por expertos, permitiendo que los resultados de clasificación sean tanto cuantitativos como clínicamente relevantes. Las arquitecturas de las redes neuronales, funciones de activación y optimizadores, fueron adaptados en función del problema específico, logrando un balance adecuado entre interpretabilidad y rendimiento. 
 
+\subsection{Dendrograma}
+
+Un dendrograma es un diagrama que muestra la relación jerárquica entre objetos. Por lo general, se crea como resultado de un agrupamiento jerárquico. El uso principal de un dendrograma es encontrar la mejor manera de asignar objetos a grupos. El dendrograma siguiente, figura \ref{fig:dendro} muestra la agrupación jerárquica de seis observaciones que se muestran en el diagrama de dispersión de la izquierda %poner cita necesaria.
+
+%Insertar imagen hecha ṕor mi, montar eso rapidito en cualquier tiempo libre 
+
+La clave para interpretar un dendrograma es centrarse en la altura a la que se unen dos objetos. En el ejemplo anterior, podemos ver que E y F son más similares, ya que la altura del enlace que los une es la más pequeña. Los siguientes dos objetos son más similares son A y B. 
+%Falta terminar esta parte
 
 \subsection{Repetibilidad}
 

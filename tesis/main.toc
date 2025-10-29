@@ -57,9 +57,9 @@
 \contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{40}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{41}{subsection.3.4.4}%
 \contentsline {subsection}{\numberline {3.4.5}Detección de eventos cardíacos}{41}{subsection.3.4.5}%
-\contentsline {section}{\numberline {3.5}Extracción de caracteristicas}{42}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Extracción de características}{42}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Alineamiento}{43}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Vector de caracteristicas}{43}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.2}Vector de características}{43}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Reducción de dimensionalidad}{44}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{44}{subsection.3.6.1}%
 \contentsline {section}{\numberline {3.7}Modelado predictivo}{45}{section.3.7}%
@@ -74,7 +74,8 @@
 \contentsline {section}{\numberline {3.9}Validez y confiabilidad}{52}{section.3.9}%
 \contentsline {subsection}{\numberline {3.9.1}Validación de modelos}{52}{subsection.3.9.1}%
 \contentsline {subsection}{\numberline {3.9.2}Clasificación}{53}{subsection.3.9.2}%
-\contentsline {subsection}{\numberline {3.9.3}Repetibilidad}{53}{subsection.3.9.3}%
-\contentsline {subsection}{\numberline {3.9.4}Consideraciones éticas}{53}{subsection.3.9.4}%
+\contentsline {subsection}{\numberline {3.9.3}Dendrograma}{53}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.9.4}Repetibilidad}{53}{subsection.3.9.4}%
+\contentsline {subsection}{\numberline {3.9.5}Consideraciones éticas}{53}{subsection.3.9.5}%
 \contentsline {chapter}{\numberline {4}Resultados}{54}{chapter.4}%
 \contentsline {chapter}{\numberline {5}Conclusiones}{55}{chapter.5}%
