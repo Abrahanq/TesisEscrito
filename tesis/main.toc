@@ -31,51 +31,69 @@
 \contentsline {subsection}{\numberline {2.3.1}Aprendizaje Automático.}{19}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Análisis de Componentes Principales (PCA).}{20}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Incrustación de vecinos estocásticos distribuidos en t (t-SNE).}{22}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}K-medios (k-means).}{23}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Redes Neuronales.}{25}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}Redes neuronales biológicas.}{25}{subsection.2.3.6}%
-\contentsline {subsection}{\numberline {2.3.7}El perceptrón.}{26}{subsection.2.3.7}%
-\contentsline {subsection}{\numberline {2.3.8}Función de activación de las neuronas.}{27}{subsection.2.3.8}%
-\contentsline {subsection}{\numberline {2.3.9}El perceptrón multicapa.}{28}{subsection.2.3.9}%
-\contentsline {subsection}{\numberline {2.3.10}Arquitectura.}{28}{subsection.2.3.10}%
-\contentsline {subsection}{\numberline {2.3.11}Algoritmo de retropropagación.}{29}{subsection.2.3.11}%
-\contentsline {subsubsection}{Etapa de aprendizaje.}{30}{section*.11}%
-\contentsline {subsection}{\numberline {2.3.12}Dimensiones de la red.}{32}{subsection.2.3.12}%
-\contentsline {chapter}{\numberline {3}Marco Metodológico.}{33}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Enfoque general}{33}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Tipo de investigación.}{33}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Diseño de la investigación.}{33}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Diseño especifico}{34}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Flujo de procesamiento}{34}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Población y muestra}{36}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Fuente de datos.}{36}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Criterios de selección.}{37}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Muestra}{37}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Preprocesamiento de la señal}{38}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Estandarización}{39}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Filtrado de ruido}{40}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{40}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{41}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {2.3.4}Redes Neuronales.}{23}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Redes neuronales biológicas.}{23}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}El perceptrón.}{24}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Función de activación de las neuronas.}{26}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}El perceptrón multicapa.}{27}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}Arquitectura.}{27}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.10}Algoritmo de retropropagación.}{28}{subsection.2.3.10}%
+\contentsline {subsubsection}{Etapa de aprendizaje.}{28}{section*.11}%
+\contentsline {subsection}{\numberline {2.3.11}Dimensiones de la red.}{31}{subsection.2.3.11}%
+\contentsline {chapter}{\numberline {3}Marco Metodológico.}{32}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Enfoque general}{32}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Tipo de investigación.}{32}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Diseño de la investigación.}{32}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Diseño especifico}{32}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Flujo de procesamiento}{32}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Población y muestra}{35}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Fuente de datos.}{35}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Criterios de selección.}{36}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Muestra}{36}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Preprocesamiento de la señal}{37}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Estandarización}{38}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Filtrado de ruido}{39}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{39}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{40}{subsection.3.4.4}%
 \contentsline {subsection}{\numberline {3.4.5}Detección de eventos cardíacos}{41}{subsection.3.4.5}%
 \contentsline {section}{\numberline {3.5}Extracción de características}{42}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Alineamiento}{43}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Vector de características}{43}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Reducción de dimensionalidad}{44}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{44}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Modelado predictivo}{45}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{45}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Tareas de modelado propuestas}{46}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.5.1}Alineamiento}{42}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Vector de características}{42}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Reducción de dimensionalidad}{43}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{43}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Modelado predictivo}{44}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{44}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Tareas de modelado propuestas}{45}{subsection.3.7.2}%
 \contentsline {subsection}{\numberline {3.7.3}Preparación de datos}{47}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Arquitecturas empleadas (casos con PCA)}{48}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{49}{subsection.3.7.5}%
-\contentsline {subsection}{\numberline {3.7.6}Test}{50}{subsection.3.7.6}%
-\contentsline {section}{\numberline {3.8}Reducción no lineal de dimensionalidad (t-SNE)}{51}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Arquitecturas de redes neuronales para interpretación de t-SNE}{51}{subsection.3.8.1}%
-\contentsline {section}{\numberline {3.9}Validez y confiabilidad}{52}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}Validación de modelos}{52}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}Clasificación}{53}{subsection.3.9.2}%
-\contentsline {subsection}{\numberline {3.9.3}Dendrograma}{53}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.7.4}Arquitecturas empleadas (casos con PCA)}{47}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{48}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Test}{49}{subsection.3.7.6}%
+\contentsline {section}{\numberline {3.8}Reducción no lineal de dimensionalidad (t-SNE)}{50}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Arquitecturas de redes neuronales para interpretación de t-SNE}{50}{subsection.3.8.1}%
+\contentsline {section}{\numberline {3.9}Validez y confiabilidad}{51}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Validación de modelos}{51}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Clasificación}{52}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}Dendrograma}{52}{subsection.3.9.3}%
+\contentsline {subsubsection}{Asignar observaciones a conglomerados}{53}{section*.12}%
 \contentsline {subsection}{\numberline {3.9.4}Repetibilidad}{53}{subsection.3.9.4}%
 \contentsline {subsection}{\numberline {3.9.5}Consideraciones éticas}{53}{subsection.3.9.5}%
 \contentsline {chapter}{\numberline {4}Resultados}{54}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{55}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Descripción general de los datos}{54}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Distribuciones de los sujetos sanos por sexo y grupos etarios}{54}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Distribuciones de los sujetos patológicos por sexo y grupos etarios}{54}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Descripción general de PCA}{54}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Método de la varianza acumulada}{54}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}{54}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{54}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Metricas de desempeño}{54}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{54}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Resultados de identificacion de pacientes}{55}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}metricas de desempeño}{55}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Matrices de confusión}{55}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Discusion sobre la viabilidad de la huella digital cardíaca}{55}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Analisis exploratorio tsne}{55}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Resultados de clasificacion usando los datos de tsne}{55}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{55}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{55}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{55}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{56}{chapter.5}%
