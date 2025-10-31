@@ -51,36 +51,36 @@ Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng an
 while executing---line 969 of file ieeetr.bst
 Warning--empty journal in physionet2000
 Warning--empty year in physionet2000
-You've used 46 entries,
+You've used 47 entries,
             1876 wiz_defined-function locations,
-            757 strings with 12506 characters,
-and the built_in function-call counts, 12750 in all, are:
-= -- 1121
-> -- 703
+            761 strings with 12584 characters,
+and the built_in function-call counts, 12875 in all, are:
+= -- 1132
+> -- 707
 < -- 0
-+ -- 254
-- -- 208
-* -- 934
-:= -- 1841
-add.period$ -- 49
-call.type$ -- 46
-change.case$ -- 44
++ -- 256
+- -- 209
+* -- 939
+:= -- 1859
+add.period$ -- 50
+call.type$ -- 47
+change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 541
-empty$ -- 1180
-format.name$ -- 208
-if$ -- 3077
+cite$ -- 49
+duplicate$ -- 545
+empty$ -- 1198
+format.name$ -- 209
+if$ -- 3109
 int.to.chr$ -- 0
-int.to.str$ -- 46
+int.to.str$ -- 47
 missing$ -- 29
-newline$ -- 147
-num.names$ -- 48
-pop$ -- 201
+newline$ -- 150
+num.names$ -- 49
+pop$ -- 207
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 471
+skip$ -- 475
 stack$ -- 0
 substring$ -- 757
 swap$ -- 232
@@ -89,7 +89,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 101
-width$ -- 48
-write$ -- 413
+while$ -- 102
+width$ -- 49
+write$ -- 421
 (There were 6 error messages)

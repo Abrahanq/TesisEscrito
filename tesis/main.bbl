@@ -230,4 +230,8 @@ F.~Chollet {\em et~al.}, ``Keras.'' \url{https://keras.io}, 2015.
 \bibitem{adamoptimization14}
 D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,'' 2014.
 
+\bibitem{whatsdendro}
+T.~Bock, ``What is a dendrogram?.'' \url{displayr.com/what-is-dendrogram/},
+  2018.
+
 \end{thebibliography}

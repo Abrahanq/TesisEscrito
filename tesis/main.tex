@@ -613,51 +613,51 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 %	Aca estoy dudoso si tambien hablar sobre el perplexity y todo lo que viene despues de eso
 %	Al final no lo puse
 	
-\subsection{K-medios (k-means).}
+%\subsection{K-medios (k-means).}
 
-	Los problemas de agrupamiento aparecen en diferentes aplicaciones, como reconocimiento y clasificación de patrones, de acá surge en la búsqueda de algoritmos que permitan visualizar los datos en forma de grupos o \textit{clusters}\footnote{Cúmulo, grupo o racimo}. La noción de lo que constituye un buen clúster depende de su aplicación y de la aproximación con la que se llega a este. La mayoría de las formulaciones de los métodos de agrupamiento, están basadas en minimizar una función objetiva y quizás el algoritmo más usado y estudiado es \textit{k-means}. Dado un conjunto de puntos $\mathbf{x}=\{x_1,x_2,\dotsb,x_n\}$ en un espacio real \textit{d}-dimensional, $\mathbf{R}^d$, y un entero \textit{k} ($k \leq n$), el problema es entonces, determinar un conjunto de \textit{k} puntos en $\mathbf{R}^d$, llamados \textit{centroides} $S_k$, que minimicen la \textit{inercia} o la suma de cuadrados de cada grupo (WCSS, por sus siglas en inglés) desde para punto de los datos a su centroide más cercano, esto es: 
-	\begin{equation}
-		\label{eq:min_k_means}
-		\underset{\mathbf{S}}{\arg \min } \sum_{i=1}^k \sum_{\mathbf{x}_j \in S_i}\left\|\mathbf{x}_j-\boldsymbol{\mu}_i\right\|^2
-	\end{equation}
-	Se puede decir que la \textit{inercia} es una medida de que tal coherentes son los clusters internamente, esto lleva a que se sufran de algunos inconvenientes:
-	\begin{itemize}
-		\item La \textit{inercia} no es una métrica normalizada, por lo que en espacios muy alto dimensionales, las distancias Euclidianas tienden a volverse infladas (a esto se le llama "maldición de la dimensionalidad"). Es por esto que aplicar algoritmos de reducción de dimensionalidad como PCA previo a k-means, puede agilizar y aliviar el consumo computacional.
-		\item k-means responde ineficientemente a clusters alargados o grupos con formas irregulares, debido a que la \textit{inercia} presume que los clusters son convexos e isotrópicos.
-	\end{itemize}
-	El algoritmo estándar de k-means, fue propuesto inicialmente por Stuart Lloyd en 1957, quien lo propuso como una técnica para modulación por impulsos codificados, sin embargo este no fue publicado hasta 1982, es por esto que a este algoritmo también se le conoce como algoritmo de Lloyd, sobre todo en la comunidad informática. \\
-	
-	\textbf{Algoritmo k-means (basado en MacKay, 2003 \cite{mackay03}):}
-	\begin{enumerate}
-		\item \textbf{Inicialización:} 
-		Se eligen los $k$ centroides $\left\{\mathbf{m}^{(k)}\right\}$ aleatoriamente.
-		\item \textbf{Paso de asignación:}
-		Cada punto $\mathbf{x}^{(n)}$ se asigna al centroide más cercano. La asignación se denota como $\hat{k}^{(n)}$:
-		\begin{equation}
-			\label{eq:k_mean_asig}
-			\hat{k}^{(n)}=\underset{k}{\operatorname{argmin}}\left\{d\left(\mathbf{m}^{(k)}, \mathbf{x}^{(n)}\right)\right\}
-		\end{equation}
-		Una representación alternativa y equivalente de esta asignación de puntos a los conglomerados viene dada por las \textit{responsabilidades}, que son variables indicadoras $r_k^{(n)}$. En el paso de asignación, establecemos $r_k^{(n)}$ en uno si la media $k$ es la media más cercana al punto de datos $\mathbf{x^{(n)}}$; de lo contrario $r_k^{(n)}$ es cero.
-		\begin{equation}
-			\label{eq:cond_rk}
-			r_k^{(n)}=\left\{\begin{array}{lll}
-				1 & \text { si } & \hat{k}^{(n)}=k \\
-				0 & \text { si } & \hat{k}^{(n)} \neq k
-			\end{array}\right.
-		\end{equation}
-		\item \textbf{Paso de actualización:}
-		Los parámetros del modelo, las medias, se ajustan para que coincidan con las medias muestrales de los puntos de datos de los que son responsables.
-		\begin{equation}
-			\label{eq:media_muestral}
-			\mathbf{m}^{(k)}=\frac{\sum_n r_k^{(n)} \mathbf{x}^{(n)}}{R^{(k)}}
-		\end{equation}
-		donde $R^{(k)}$ es la \textit{responsabilidad} total de la media $k$.
-		\begin{equation}
-			\label{eq:rk}
-			R^{(k)}=\sum_n r_k^{(n)}
-		\end{equation}
-		\item \textbf{Se repiten los pasos de asignación y actualización} hasta que no hayan cambios en la asignación.
-	\end{enumerate}
+%	Los problemas de agrupamiento aparecen en diferentes aplicaciones, como reconocimiento y clasificación de patrones, de acá surge en la búsqueda de algoritmos que permitan visualizar los datos en forma de grupos o \textit{clusters}\footnote{Cúmulo, grupo o racimo}. La noción de lo que constituye un buen clúster depende de su aplicación y de la aproximación con la que se llega a este. La mayoría de las formulaciones de los métodos de agrupamiento, están basadas en minimizar una función objetiva y quizás el algoritmo más usado y estudiado es \textit{k-means}. Dado un conjunto de puntos $\mathbf{x}=\{x_1,x_2,\dotsb,x_n\}$ en un espacio real \textit{d}-dimensional, $\mathbf{R}^d$, y un entero \textit{k} ($k \leq n$), el problema es entonces, determinar un conjunto de \textit{k} puntos en $\mathbf{R}^d$, llamados \textit{centroides} $S_k$, que minimicen la \textit{inercia} o la suma de cuadrados de cada grupo (WCSS, por sus siglas en inglés) desde para punto de los datos a su centroide más cercano, esto es: 
+%	\begin{equation}
+%		\label{eq:min_k_means}
+%		\underset{\mathbf{S}}{\arg \min } \sum_{i=1}^k \sum_{\mathbf{x}_j \in S_i}\left\|\mathbf{x}_j-\boldsymbol{\mu}_i\right\|^2
+%	\end{equation}
+%	Se puede decir que la \textit{inercia} es una medida de que tal coherentes son los clusters internamente, esto lleva a que se sufran de algunos inconvenientes:
+%	\begin{itemize}
+%		\item La \textit{inercia} no es una métrica normalizada, por lo que en espacios muy alto dimensionales, las distancias Euclidianas tienden a volverse infladas (a esto se le llama "maldición de la dimensionalidad"). Es por esto que aplicar algoritmos de reducción de dimensionalidad como PCA previo a k-means, puede agilizar y aliviar el consumo computacional.
+%		\item k-means responde ineficientemente a clusters alargados o grupos con formas irregulares, debido a que la \textit{inercia} presume que los clusters son convexos e isotrópicos.
+%	\end{itemize}
+%	El algoritmo estándar de k-means, fue propuesto inicialmente por Stuart Lloyd en 1957, quien lo propuso como una técnica para modulación por impulsos codificados, sin embargo este no fue publicado hasta 1982, es por esto que a este algoritmo también se le conoce como algoritmo de Lloyd, sobre todo en la comunidad informática. \\
+%	
+%	\textbf{Algoritmo k-means (basado en MacKay, 2003 \cite{mackay03}):}
+%	\begin{enumerate}
+%		\item \textbf{Inicialización:} 
+%		Se eligen los $k$ centroides $\left\{\mathbf{m}^{(k)}\right\}$ aleatoriamente.
+%		\item \textbf{Paso de asignación:}
+%		Cada punto $\mathbf{x}^{(n)}$ se asigna al centroide más cercano. La asignación se denota como $\hat{k}^{(n)}$:
+%		\begin{equation}
+%			\label{eq:k_mean_asig}
+%			\hat{k}^{(n)}=\underset{k}{\operatorname{argmin}}\left\{d\left(\mathbf{m}^{(k)}, \mathbf{x}^{(n)}\right)\right\}
+%		\end{equation}
+%		Una representación alternativa y equivalente de esta asignación de puntos a los conglomerados viene dada por las \textit{responsabilidades}, que son variables indicadoras $r_k^{(n)}$. En el paso de asignación, establecemos $r_k^{(n)}$ en uno si la media $k$ es la media más cercana al punto de datos $\mathbf{x^{(n)}}$; de lo contrario $r_k^{(n)}$ es cero.
+%		\begin{equation}
+%			\label{eq:cond_rk}
+%			r_k^{(n)}=\left\{\begin{array}{lll}
+%				1 & \text { si } & \hat{k}^{(n)}=k \\
+%				0 & \text { si } & \hat{k}^{(n)} \neq k
+%			\end{array}\right.
+%		\end{equation}
+%		\item \textbf{Paso de actualización:}
+%		Los parámetros del modelo, las medias, se ajustan para que coincidan con las medias muestrales de los puntos de datos de los que son responsables.
+%		\begin{equation}
+%			\label{eq:media_muestral}
+%			\mathbf{m}^{(k)}=\frac{\sum_n r_k^{(n)} \mathbf{x}^{(n)}}{R^{(k)}}
+%		\end{equation}
+%		donde $R^{(k)}$ es la \textit{responsabilidad} total de la media $k$.
+%		\begin{equation}
+%			\label{eq:rk}
+%			R^{(k)}=\sum_n r_k^{(n)}
+%		\end{equation}
+%		\item \textbf{Se repiten los pasos de asignación y actualización} hasta que no hayan cambios en la asignación.
+%	\end{enumerate}
 	
 \subsection{Redes Neuronales.} \label{subsec:NN}
 	Una red neuronal artificial es un programa que intenta imitar la manera en que un cerebro humano es capaz de abordar ciertos problemas, esta usa capas interconectadas de unidades, llamadas perceptrones (también se les llama neuronas), siendo capaces de aprender e inferir reglas o relaciones basados en la data observada, dicha red adquiere los conocimientos mediante un proceso de entrenamiento y aprendizaje, donde este almacena \textit{conocimiento} utilizando intensidades de conexión interperceptrónica. 
@@ -885,10 +885,11 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 \section{Enfoque general}
 \subsection{Tipo de investigación.}
 
-Esta tesis acoge un enfoque de investigación cuantitativa y experimental, donde se recopilan y procesan señales de electrocardiograma (ECG) de pacientes con diversas condiciones clínicas. Mediante técnicas avanzadas de aprendizaje automático no supervisado ---como el análisis de componentes principales (PCA), incrustación de vecinos estocásticos distribuidos en t (t-SNE) y K-medios (K-means)---, que junto con las redes neuronales perceptrónicas (que serán los modelos predictivos) se busca identificar y clasificar patrones biomédicos específicos, a los que se denomina \emph{variables objetivo}.
+Esta tesis acoge un enfoque de investigación cuantitativa y experimental, donde se recopilan y procesan señales de electrocardiograma (ECG) de pacientes con diversas condiciones clínicas. Mediante técnicas avanzadas de aprendizaje automático no supervisado ---como el análisis de componentes principales (PCA), incrustación de vecinos estocásticos distribuidos en t (t-SNE)---, %y K-medios (K-means) 
+que junto con las redes neuronales perceptrónicas (que serán los modelos predictivos) se busca identificar y clasificar patrones biomédicos específicos, a los que se denomina \emph{variables objetivo}.
 
 \subsection{Diseño de la investigación.} \label{subsec:diseno_investigacion}
-Esta investigación adopta un diseño predictivo longitudinal mediante el procesamiento de señales biomédicas provenientes de electrocardiogramas (ECG). En la primera etapa de este proyecto, se extraen atributos morfológicos y temporales, tales como los intervalos RR, complejos QRS, ondas P y T, entre otros, para esquematizar lo que será un vector de caracteristicas multidimensional. Este canal habilita la aplicación de modelos de aprendizaje automático que, mediante algoritmos de reducción de dimensionalidad, clasificación y clustering \footnote{Agrupamiento de datos basados en la similitud}, identifican patrones no lineales y tendencias latentes en los datos. Los modelos se entrenan para dos objetivos, la clasificación de variables objetivo (grupos etarios, sexo y estado de salud) y la identificación de integraciones biométricas basadas en rasgos cardíacos únicos. Aunque los métodos como las redes neuronales perceptrónicas operan como \guillemetleft cajas negras\guillemetright \ debido a su limitada interpretabilidad intrínseca, su robustez se garantiza mediante métricas de evaluación clínicamente relevantes, lo que permite asegurar generalización en datos no vistos por los modelos y sin que esto comprometa la confiabilidad predictiva.
+Esta investigación adopta un diseño predictivo longitudinal mediante el procesamiento de señales biomédicas provenientes de electrocardiogramas (ECG). En la primera etapa de este proyecto, se extraen atributos morfológicos y temporales, tales como los intervalos RR, complejos QRS, ondas P y T, entre otros, para esquematizar lo que será un vector de caracteristicas multidimensional. Este canal habilita la aplicación de modelos de aprendizaje automático que, mediante algoritmos de reducción de dimensionalidad, clasificación y clustering\footnote{Agrupamiento de datos basados en la similitud}, identifican patrones no lineales y tendencias latentes en los datos. Los modelos se entrenan para dos objetivos, la clasificación de variables objetivo (grupos etarios, sexo y estado de salud, estas tambien denominadas \guillemetleft variables clínicas\guillemetright) y la identificación de integraciones biométricas basadas en rasgos cardíacos únicos. Aunque los métodos como las redes neuronales perceptrónicas operan como \guillemetleft cajas negras\guillemetright \ debido a su limitada interpretabilidad intrínseca, su robustez se garantiza mediante métricas de evaluación clínicamente relevantes, lo que permite asegurar generalización en datos no vistos por los modelos y sin que esto comprometa la confiabilidad predictiva.
 
 
 \section{Diseño especifico}
@@ -897,18 +898,23 @@ Esta investigación adopta un diseño predictivo longitudinal mediante el proces
 En la figura \ref{fig:diagrama_de_flujo_metodologico} se presenta un diagrama de flujo donde se especifican las 6 etapas para la adquisición y análisis de datos, las cuales son las siguientes:
 \begin{enumerate}[label=\textbf{\Roman*.}]
 	\item \textbf{Recopilación de los datos:} Se describe la fuente de las señales ECG, explicando brevemente el funcionamiento del banco de datos de Physionet y las bases de datos que se tomaron de ahí para este proyecto, a partir de ahí se eligen los criterios de selección de las señales electrocardiográficas y posteriormente, se aclara el formato en el que se guardaran las señales ECG para finalmente seleccionar la derivación \Romannum{2}.
+	
 	\item \textbf{Preprocesamiento de la señal ECG:} Se muestra la preparación previa de la data, ya homogenizadas las señales ECG a un mismo formato, se normaliza cada ECG de cada paciente para posteriormente filtrarlos y eliminar el desplazamiento de la linea base, teniendo cada señal limpia, se segmentan en intervalos de 3mín por cada señal ECG de cada paciente, luego con cada segmento se detectan los picos R para delimitar cada latido individual, teniendo estos latidos individuales alineados, teniendo los latidos alineados, se calcula un latido promedio por cada intervalo de cada paciente, este latido promedio será el vector de características que se usará más adelante.
+	
 	\item \textbf{Reducción de dimensionalidad:} Se inicia el calculo de la matriz de covarianza de los datos recogidos y la posterior obtención de los autovalores y autovectores, se procede a hacer el gráfico de suma de la varianza acumulada para determinar el numero optimo de componentes principales y se proyectan las señales ECG en el nuevo espacio creando un vector único de identificación, ya con esto se crea la base de conocimiento.
+	
 	\item \textbf{Modelado predictivo:} Se identifican las \guillemetleft variables objetivo\guillemetright \ las cuales fungirán como etiquetas \guillemetleft meta\guillemetright \ para las redes neuronales que se diseñarán y entrenarán en esta fase. Para cada una de las variables antes mencionadas, se diseña y entrena una red neuronal que sea capaz de clasificar e identificar a cada ECG dimensionalmente reducido que se usa como entrada en la red neuronal. Se entrena cada red, se obtienen las funciones de las redes que contienen los parámetros del entrenamiento, para su posterior guardado.
-	\item \textbf{Validación:} Se grafican las matrices de confusión y se calculan ciertas métricas de desempeño que expresen el rendimiento de cada red neuronal entrenada. \textbf{Aca falta poner lo de los dendogramas y las distancias de malahanobis cuando se hagan mas adelante. Falta esos sinonimos por anotar}
-	\item \textbf{Análisis exploratorio:} Como etapa exploratoria, se aplicó t-SNE seguido de k-means a las componentes principales para identificar agrupaciones supervisadas o no supervisadas en los ECG. Esto permitió validar que la reducción de dimensionalidad mediante PCA preserva información relevante y explorar la posible existencia de subpoblaciones de pacientes. Los resultados aportan evidencia sobre la viabilidad del uso de métodos no supervisados para descubrir dichas subpoblaciones ocultas.
+	
+	\item \textbf{Análisis exploratorio:} Como etapa exploratoria, se aplicó t-SNE a las componentes principales para identificar agrupaciones supervisadas o no supervisadas en los ECG. Esto permitió validar que la reducción de dimensionalidad mediante PCA preserva información relevante y explorar la posible existencia de subpoblaciones de pacientes. Los resultados aportan evidencia sobre la viabilidad del uso de métodos no supervisados para descubrir dichas subpoblaciones ocultas.
+	
+	\item \textbf{Validación:} Se grafican las matrices de confusión y se calculan ciertas métricas de desempeño que expresen el rendimiento de cada red neuronal entrenada. Adicionalmente, con el fin de validar la capacidad de agrupamiento y discriminación de las representaciones obtenidas por las redes neuronales, se calculan las distancias de Mahalanobis entre las proyecciones dimensionalmente reducidas de las señales de ECG. Estos valores permiten analizar el grado de similitud y separación entre las distintas observaciones teniendo en cuenta la correlación existente en los datos. Posteriormente, se emplean estas distancias para la construcción de dendrogramas, ofreciendo una herramienta visual robusta que facilita la detección de posibles agrupaciones naturales dentro de la población estudiada. 
 \end{enumerate}
 
 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1\linewidth]{Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg}
-		\caption{Diagrama de flujo.}
+		\caption{Diagrama de flujo que muestra un resumen desde la recopilación de los datos hasta la clasificación.}
 		\label{fig:diagrama_de_flujo_metodologico}
 	\end{figure}
 
@@ -917,7 +923,7 @@ En la figura \ref{fig:diagrama_de_flujo_metodologico} se presenta un diagrama de
 \section{Población y muestra}
 
 \subsection{Fuente de datos.}
-Bajo los auspicios de los Institutos Nacionales de Salud (NIH, por sus siglas en inglés), que es la agencia principal del gobierno de los Estados Unidos responsable de la biomedicina y la salud publica de investigación, se creó en 1999, Physionet, bajo el apodo \emph{Recursos de Investigación de Señales Fisiológicas Complejas}, siendo sus misiones originales y actuales, realizar y catalizar la investigación y la educación biomédica, en parte ofreciendo acceso gratuito a grandes colecciones de datos fisiológicos y clínicos y al software de código abierto relacionado. La plataforma Physionet es ahora administrada por miembros del Laboratorio de Fisiología Computacional del MIT. 
+Bajo los auspicios de los Institutos Nacionales de Salud (NIH, por sus siglas en inglés), que es la agencia principal del gobierno de los Estados Unidos responsable de la biomedicina y la salud publica de investigación, se creó en 1999, Physionet, bajo el apodo de \emph{Recursos de Investigación de Señales Fisiológicas Complejas}, siendo sus misiones originales y actuales, realizar y catalizar la investigación y la educación biomédica, en parte ofreciendo acceso gratuito a grandes colecciones de datos fisiológicos y clínicos y al software de código abierto relacionado. La plataforma Physionet es ahora administrada por miembros del Laboratorio de Fisiología Computacional del MIT. 
 
 El recurso Physionet tiene tres componentes interdependientes:
 \begin{itemize}
@@ -933,8 +939,8 @@ Physionet no es solo el nombre los Recursos de Investigación de Señales Fisiol
 
 Physionet ofrece un amplio banco de señales fisiológicas, en este proyecto estamos interesados en las bases de datos con señales electrocardiográficas, estas fueron seleccionadas considerando únicamente a aquellos que cumplían con:
 \begin{itemize}
-	\item Anotaciones de edad, sexo y estado de salud o diagnostico clínico de cada paciente al que se le registró el electrocardiograma, en el caso de pacientes sanos (controles), estos deben estar explícitamente etiquetados como tales en la base de datos.
-	\item Tener al menos en unos de los canales de grabación, el registro de la derivación \Romannum{2} con una duración de al menos 15 minutos continuos.
+	\item Anotaciones de edad, sexo y estado de salud o diagnostico clínico de cada paciente al que se le registró el electrocardiograma, en el caso de pacientes sanos (pacientes de control), estos deben estar explícitamente etiquetados como tales en la base de datos.
+	\item Tener al menos en unos de los canales de grabación, el registro de la derivación \Romannum{2} con una duración de al menos 15 minutos continuos, ya que esta será la señal que se usará de ahora en adelante.
 \end{itemize}
 Se excluyeron registros que no cumplían con los criterios antes mencionados. Además todas las señales usadas vienen del banco de señales fisiológicas de Physionet, ya que son señales provenientes de bases de datos públicas validadas, donde los registros cumplen con protocolos de adquisición y anotación médica impuestos por Physionet.
 
@@ -942,18 +948,19 @@ Se excluyeron registros que no cumplían con los criterios antes mencionados. Ad
 Se usaran señales provenientes de las siguientes bases de datos públicas presentes en Physionet: 
 \begin{itemize}
 	\item Apnea-ECG: La data consiste en 70 grabaciones que pueden variar en duración entre 7 y 10 horas cada uno, cada grabación tiene una señal ECG digitalizada, todos los pacientes tienen apnea del sueño \cite{apneaDB}. 
-	\item Envejecimiento autonómico: Las funciones autonómicas del corazón como regular la presión arterial y el ritmo cardíaco disminuyen conforme aumenta la edad, el estudio que produjo esta base de datos provee señales biológicas de alta resolución para describir el efecto del envejecimiento sano en la regulación cardiovascular. Señales electrocardiográficas y de presión arterial continua no invasiva fueron grabadas en reposo a 1120 voluntarios, a los cuales se les practicaron pruebas rutinarias de laboratorio y cuyos resultados no arrojaran hallazgos patológicos, excluyendo a aquellos que tuvieran condiciones medicas, consumo de drogas ilegales o medicamentos que potencialmente pudieran influir en el funcionamiento cardiovascular, \cite{autonomicAgingDB}.
+	\item Envejecimiento autonómico: Las funciones autonómicas del corazón como regular la presión arterial y el ritmo cardíaco disminuyen conforme aumenta la edad, el estudio que produjo esta base de datos provee señales biológicas de alta resolución para describir el efecto del envejecimiento sano en la regulación cardiovascular. Señales electrocardiográficas y de presión arterial continua no invasiva fueron grabadas en reposo a 1120 voluntarios sanos, a los cuales se les practicaron pruebas rutinarias de laboratorio y cuyos resultados no arrojaran hallazgos patológicos, excluyendo a aquellos pacientes que tuvieran condiciones medicas, consumo de drogas ilegales o medicamentos que potencialmente pudieran influir en el funcionamiento cardiovascular \cite{autonomicAgingDB}.
 	\item BIDMC Insuficiencia cardíaca congestiva: Esta base de datos incluye grabaciones de larga duración de 15 pacientes con insuficiencia cardíaca congestiva severa (NYHA\footnote{Clasificación del grado de insuficiencia cardíaca según la Asociación del Corazón de Nueva York} clase 3 o 4) \cite{InsuficienciaCardiacaDB}
-	\item Fantasía: Es una base de datos de señales electrocardiográficas de 120 minutos cada una de 40 pacientes sanos rigurosamente seleccionados, estos sujetos permanecieron en estado de reposo y ritmo sinusal normal mientras veían la película Fantasía (Disney, 1940) con el fin de mantenerse en vigilia \cite{fantasiaDB}.
-	\item Arritmia (MIT-BIH Arritmia DB): Es un conjunto de 48 grabaciones de señales electrocardiográficas de dos canales, siendo una de estas la derivación \Romannum{2} de media hora de duración cada una, fue una de las primeras bases de datos disponibles en Physionet y es una de las bases de datos más usadas como material de prueba para detectores de arritmia \cite{arritmiadb}. 
+	\item Fantasía: Es una base de datos de señales electrocardiográficas de 120 minutos cada una de 40 pacientes sanos rigurosamente seleccionados y calificados como pacientes sanos, estos sujetos permanecieron en estado de reposo y ritmo sinusal normal mientras veían la película Fantasía (Disney, 1940) con el fin de mantenerse en vigilia \cite{fantasiaDB}.
+	\item Arritmia (MIT-BIH Arritmia DB): Es un conjunto de 48 grabaciones de señales electrocardiográficas de dos canales, siendo una de estas siempre la derivación \Romannum{2}, de media hora de duración cada una, fue una de las primeras bases de datos disponibles en Physionet y es una de las bases de datos más usadas como material de prueba para detectores de arritmia \cite{arritmiadb}. 
 	\item ECGs de larga duración: Esta es una colección de 7 grabaciones electrocardiográficas de larga duración (entre 14 y 22 horas cada uno), con anotaciones manuales de los tipos de latidos extraños presentes en cada grabación. Esta base de datos fue desarrollada para apoyar la investigación en el campo de la detección de las arritmias cardíacas y sus análisis, los pacientes de los registros no son pacientes sanos \cite{longtermdb}.
-	\item Ritmo sinusal normal: Esta base de datos incluye 18 grabaciones de larga duración de electrocardiograma de pacientes referidos del Laboratorio de arritmias del Beth Israel Hospital (BIH) de Boston. Se comprobó que los sujetos incluidos en esta base de datos no presentaban arritmias significativas, es de destacar, que estos pacientes están considerados como pacientes sanos \cite{normalsinusrhythmdb}. 
+	\item Ritmo sinusal normal: Esta base de datos incluye 18 grabaciones de larga duración de electrocardiograma de pacientes referidos del Laboratorio de arritmias del Beth Israel Hospital (BIH) de Boston. Se comprobó que los sujetos incluidos en esta base de datos no presentaban arritmias significativas, por lo que es de destacar, que estos pacientes están considerados como pacientes sanos por al menos 2 cardiólogos \cite{normalsinusrhythmdb}. 
 	\item La base de datos polisomnográficos (MIT-BIH Polysomnographic Database) es una colección de grabaciones de múltiples señales fisiológicas durante el sueño, entre ellas, se tiene la derivación \Romannum{2} de cada grabación de cada paciente. Cada uno de estos pacientes fueron monitorizados en el Laboratorio de Sueño del BIH de Boston para evaluar el síndrome de apnea obstructiva crónica del sueño y comprobar los efectos de la presión positiva constante en las vías respiratorias, una intervención terapéutica estándar que suele prevenir o reducir sustancialmente la obstrucción de las vías respiratorias en estos sujetos \cite{polysomnogradb}.
 %	\item Base de datos de electrocardiogramas de 12 derivaciones a gran escala para el estudio de arritmias: Esta colección fue creada bajo los auspicios de la Universidad de Chapman, el hospital de la gente de Shaoxing y el primer hospital de Ningbo. Posee mas de cuarenta y cinco mil grabaciones de 10 segundos de duración de las 12 derivaciones de un electrocardiograma, este paquete de señales puede utilizarse para diseñar y comparar y poner a punto técnicas estadísticas clásicas y de aprendizaje automático nuevas y clásicas en estudios centrados en la arritmia y otras afecciones cardiovasculares \cite{largeescale12leaddb}. PONER ESTO SI Y SOLO SI SE USA ESTA BASE DE DATOS
 	
 \end{itemize}
 Los ECG provenientes de las bases de datos antes mencionadas, están distribuidos como se muestra en la tabla \ref{tab:distriECGs}, según las variables objetivo tomadas de los criterios antes mencionados. 
-Es de destacar también que todas las señales fisiológicas disponibles en Physionet han sido guardadas en un formato estandarizado por ellos mismos, además ponen a disposición una librería en Python, llamada \emph{Waveform Database Software Package (WFDB) for Python} \cite{wfdb}, la cual permite transformar las señales a formatos más universales como, archivos separados por comas (CSV, por sus siglas en inglés). 
+Es de destacar también que todas las señales fisiológicas disponibles en Physionet han sido guardadas en un formato estandarizado por ellos mismos, además ponen a disposición una librería en Python, llamada \emph{Waveform Database Software Package (WFDB) for Python} \cite{wfdb}, la cual permite transformar las señales a formatos más universales como, archivos separados por comas (CSV, por sus siglas en inglés). Cabe señalar que, aunque las bases de datos utilizadas están disponibles a través de Physionet, estas no provienen todas del mismo instituto de investigación o universidad. Como consecuencia, los profesionales de la salud encargados de catalogar y diagnosticar a los pacientes, varían entre una base de datos y otra, lo que pudiera introducir cierto grado de subjetividad en las anotaciones clínicas asociadas de la muestra a estudiar.
+
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{2}
 	\begin{center}
@@ -964,7 +971,7 @@ Es de destacar también que todas las señales fisiológicas disponibles en Phys
 			\textbf{Cantidad de ECGs} & \centering352 & 410 & 611 & 151 & 435 & 222 & 106 & 762 \\
 			\hline
 		\end{tabular}
-		\caption{Distribución de ECGs}
+		\caption{Distribución de ECGs con los pacientes seleccionados para el estudio.}
 		\label{tab:distriECGs}
 	\end{center}
 \end{table}
@@ -976,8 +983,8 @@ Para garantizar la confiabilidad de los posteriores análisis es critico el prep
 \begin{enumerate}
 	\item \textbf{Estandarización de la señal:} En el análisis de datos, la estandarización es una de las herramientas básicas y comúnmente utilizadas, existen varios tipos y dependerá de los datos cual usar.
 	\item \textbf{Filtrado de ruido:} Es necesario reducir o eliminar el ruido provocado por la actividad muscular y la interferencia de la red eléctrica, para esto se usan filtros digitales (Butterworth, por ejemplo) con frecuencias de corte ajustadas a las bandas típicas del ECG.
-	\item \textbf{Eliminación del desplazamiento de la linea base:} también conocido como \emph{baseline wander}, este ruido de baja frecuencia ($<0.5\ Hz$) que distorsiona la morfología del ECG llegando a afectar la detección de las ondas P y T. Para esto se aplica el algoritmo de Sharma \& Sharma \cite{Sharma15} para preservar la morfología real del ECG.
-	\item \textbf{Extracción de segmentos ECG:} Debido a que el algoritmo de Sharma \& Sharma \cite{Sharma15} se desempeña mejor conforme más largo es el segmento a ser tratado por el algoritmo, es por esto que se extraen los segmentos de los ECG luego de haber sido filtrados y el desplazamiento de la linea base sea removido. Para homogenizar el análisis, se selecciona una duración fija (3 minutos) que permitan equilibrar la captura de la variabilidad de los latidos cardíacos. 
+	\item \textbf{Eliminación del desplazamiento de la linea base:} también conocido como \emph{baseline wander}, es un ruido de baja frecuencia ($<0.5\ Hz$) que distorsiona la morfología del ECG llegando a afectar la detección de las ondas P y T. Para esto se aplica el algoritmo de Sharma \& Sharma \cite{Sharma15} para preservar la morfología real del ECG.
+	\item \textbf{Extracción de segmentos ECG:} Debido a que el algoritmo propuesto por Sharma \& Sharma \cite{Sharma15} se desempeña mejor conforme más largo es el segmento a ser tratado por el mismo, se extraen los segmentos de los ECG (de duración fija) luego de haber sido filtrados y que haya sido eliminado el desplazamiento de la linea base. Para homogenizar el análisis, se selecciona una duración fija de 3 minutos, que permitan equilibrar la captura de la variabilidad de los latidos cardíacos. 
 	\item \textbf{Detección de eventos cardíacos:} Seleccionando algoritmos basados en el robusto algoritmo de Pan-Tompkins \cite{PanTompkins85} se busca la identificación precisa de los complejos QRS (picos R) como referencia temporal de cada latido.
 \end{enumerate}
 
@@ -985,15 +992,15 @@ Para garantizar la confiabilidad de los posteriores análisis es critico el prep
 
 La estandarización de los datos se suele hacer por dos razones:
 \begin{enumerate}
-	\item Ya que cada electrocardiógrafo digitaliza la señal ECG a diferente factor de conversión analógico-digital (ADC) ---lo que resulta en señales con escalas dinámicas diferentes, es decir, valores en mV representados con rangos numéricos distintos--- se requiere regularizar las escalas dinámicas de los datos.
-	\item La linea base de la señal ECG suele no estar situada en el centro común del papel milimetrado donde queda grabada la señal, es por esto que se debe eliminar el \emph{offset} del instrumento y así centrar la linea base del ECG.
+	\item Cada electrocardiógrafo digitaliza la señal ECG a diferente factor de conversión analógico-digital (ADC) ---lo que resulta en señales con escalas dinámicas diferentes, es decir, valores en mV representados con rangos numéricos distintos--- por lo que se requiere regularizar las escalas dinámicas de los datos.
+	\item La linea base de la señal ECG suele no estar situada en el centro común del papel milimetrado donde queda grabada la señal, es por esto que se debe eliminar el \emph{offset}\footnote{Se refiere al desplazamiento en la señal producto de un voltaje constante propio del instrumento que se suma a la señal que se busca medir} del instrumento y así centrar la linea base del ECG.
 \end{enumerate}
-Entre los distintos tipos de regularización de datos existentes, es importante señalar que el uso de cada tipo dependerá de los datos y del problema a solucionar, en esta investigación se usará la siguiente transformación lineal:
+Entre los distintos tipos de regularización de datos existentes, es importante señalar que el uso de cada tipo de regularización dependerá de los datos y del problema a solucionar, en esta investigación se usará la siguiente transformación lineal:
 \begin{equation}
 	\label{eq:normalizacion}
 	\mathrm{X}=\frac{\mathrm{x}-\overline{\mathrm{x}}}{\sigma}
 \end{equation}
-siendo $\mathrm{X}$ el nuevo vector de datos estandarizado, $\mathrm{x}$ la variable de entrada, $\overline{\mathrm{x}}$ su valor medio y $\sigma$ la desviación estándar. Este tipo de regularización tendrá valor medio cero y la desviación estándar uno, con lo que se evitaran tendencias de las entradas fuera de los rangos considerados como normales, debido a los desplazamientos de la linea base de la señal. Por otra parte su uso preserva la estructura original de los datos lo que permite que las correlaciones se mantengan siendo esto lo apropiado para posteriores algoritmos como PCA y NN.
+siendo $\mathrm{X}$ el nuevo vector de datos estandarizado, $\mathrm{x}$ la variable de entrada, $\overline{\mathrm{x}}$ su valor medio y $\sigma$ la desviación estándar. Este tipo de regularización tendrá valor medio cero y la desviación estándar igual a uno, con lo que se evitaran tendencias de las entradas fuera de los rangos considerados como normales, debido a los desplazamientos de la linea base de la señal. Por otra parte su uso preserva la estructura original de los datos lo que permite que las correlaciones se mantengan, siendo esto lo apropiado para posteriores algoritmos como PCA y redes neuronales.
 \subsection{Filtrado de ruido}
 
 Para la etapa de filtrado, es necesario identificar la banda que maximice la energía del QRS, siendo esta ($0.5 - 15 \ Hz$) \cite{PanTompkins85}, posteriormente se diseña un filtro digital tipo Butterworth de orden 10 y tipo pasabanda usando el corte de bandas antes mencionado. La rapidez de este tipo de filtrado permite que pueda ser implementado en tiempo real dejando suficientes recursos computacionales para posteriores tareas. 
@@ -1034,7 +1041,7 @@ Esta técnica se desempeña mejor conforma la señal sea más prolongada, es por
  	
 \subsection{Extracción de segmentos}
 
-Debido a que las señales ECG que se tienen, son ECGs con duraciones mayores a 20 minutos, se pensó en aumentar la cantidad de señales segmentando cada una de estas en intervalos de 3 minutos con la finalidad de tener más registros del mismo paciente. Así que luego que cada señal haya sido filtrada y tenga la linea base corregida, se segmentó y separó la señal en intervalos de 3 minutos, hasta tener como máximo 10 señales de 3 minutos de duración de cada paciente.
+Debido a que las señales ECG que se tienen, son señales con duraciones mayores a 20 minutos, se pensó en aumentar la cantidad de señales segmentando cada una de estas en intervalos de 3 minutos con la finalidad de tener más registros del mismo paciente. Así que luego que cada señal haya sido filtrada y tenga la linea base corregida, se segmentó y separó la señal en intervalos de 3 minutos, hasta tener como máximo 10 señales de 3 minutos de duración de cada paciente.
 
 \subsection{Detección de eventos cardíacos}
 
@@ -1115,7 +1122,7 @@ Con el fin de probar que la representación compacta del latido promedio obtenid
 
 \subsection{Algoritmo}
 
-En la subsección \ref{subsec:NN} se explicó detalladamente lo que es una red neuronal, cómo se asemejan estas a una red de tipo biológica, se habló de la unidad básica que se equipara con una neurona y de las dos fases de modelización de una red neuronal. Hoy en día, el diseño a detalle de uno de estos programas se suele hacer sobre interfaces que facilitan la implementación de estos. A estas interfaces se les conoce como frameworks\footnote{Marcos de trabajo}, uno de los más conocidos y usados es \textbf{TensorFlow} \cite{tensorflow15} este es un ecosistema completo que ayuda a resolver problemas complejos con aprendizaje automático ofreciendo varios niveles de abstracción con el fin de adecuarse a las necesidad del usuario, con la API (interfaz de programación de aplicación, por sus siglas en inglés) de alto nivel de Keras \cite{keras15}, que ayuda a que los primeros pasos con TensorFlow y el aprendizaje automático sean sencillos. 
+En la subsección \ref{subsec:NN} se explicó detalladamente lo que es una red neuronal, cómo se asemejan estas a una red de tipo biológica, se habló de la unidad básica que se equipara con una neurona y de las dos fases de modelización de una red neuronal. Hoy en día, el diseño a detalle de uno de estos programas se suele hacer sobre interfaces que facilitan la implementación de estos. A estas interfaces se les conoce como frameworks\footnote{Marcos de trabajo.}, uno de los más conocidos y usados es \textbf{TensorFlow} \cite{tensorflow15} este es un ecosistema completo que ayuda a resolver problemas complejos con aprendizaje automático ofreciendo varios niveles de abstracción con el fin de adecuarse a las necesidad del usuario, con la API (interfaz de programación de aplicación, por sus siglas en inglés) de alto nivel de Keras \cite{keras15}, que ayuda a que los primeros pasos con TensorFlow y el aprendizaje automático sean sencillos. 
 
 Si bien TensorFlow permite construir una red neuronal apilando capas como bloques Lego, es decir, este framework proporciona un esquema modular que simplifica el ensamble de las redes neuronales, además, elegir otros hiperparámetros de la red, como las funciones de activación de cada capa, resulta intuitivo. Sin embargo, es crucial enfatizar que los principios matemáticos permanecen idénticos a una implementación manual que se hiciera desde cero, estos son: 
 \begin{enumerate}
@@ -1352,12 +1359,33 @@ Para las tareas de clasificación, las redes neuronales fueron evaluadas en su c
 
 \subsection{Dendrograma}
 
-Un dendrograma es un diagrama que muestra la relación jerárquica entre objetos. Por lo general, se crea como resultado de un agrupamiento jerárquico. El uso principal de un dendrograma es encontrar la mejor manera de asignar objetos a grupos. El dendrograma siguiente, figura \ref{fig:dendro} muestra la agrupación jerárquica de seis observaciones que se muestran en el diagrama de dispersión de la izquierda %poner cita necesaria.
+Un dendrograma es un diagrama que muestra la relación jerárquica entre objetos. Por lo general, se crea como resultado de un agrupamiento jerárquico. El uso principal de un dendrograma es encontrar la mejor manera de asignar objetos a grupos. El dendrograma siguiente, figura \ref{fig:dispersion_dendrograma} muestra la agrupación jerárquica de seis observaciones que se muestran en el diagrama de dispersión de la izquierda \cite{whatsdendro}
 
-%Insertar imagen hecha ṕor mi, montar eso rapidito en cualquier tiempo libre 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Dispersion_diagrama_1.png}
+	\caption{Diagrama de dispersión y su dendrograma.}
+	\label{fig:dispersion_dendrograma}
+\end{figure}
 
 La clave para interpretar un dendrograma es centrarse en la altura a la que se unen dos objetos. En el ejemplo anterior, podemos ver que E y F son más similares, ya que la altura del enlace que los une es la más pequeña. Los siguientes dos objetos son más similares son A y B. 
-%Falta terminar esta parte
+
+En el dendrograma anterior, la altura indica el orden en el que se unieron los grupos. Se puede crear un dendrograma más informativo donde las alturas reflejan la distancia entre los grupos, como se muestra en la figura \ref{fig:dispersion_dendrograma}. En este caso, el dendrograma muestra que la gran diferencia entre los conglomerados está entre el conglomerado de A y B versus el de C, D, E y F.
+
+Es importante apreciar que el dendrograma es un resumen de la matriz de distancias y, como ocurre con la mayoría de los resúmenes, se pierde información. Por ejemplo, el dendrograma sugiere que C y D están mucho más cerca entre sí que C a B, pero los datos originales (que se muestran en el diagrama de dispersión) muestran que esto no es cierto. La consecuencia de la pérdida de información es que los dendrogramas son más precisos en la parte inferior, mostrando qué elementos son muy similares \cite{whatsdendro}
+
+\subsubsection{Asignar observaciones a conglomerados}
+
+Las observaciones se asignan a los conglomerados trazando una línea horizontal a través del dendrograma. Las observaciones que se unen por debajo de la línea están agrupadas. En la figura \ref{fig:dispersion_dendrograma_2}
+se tienen dos grupos. Un grupo combina A y B, y un segundo grupo combina C, D, E y F.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Dispersion_diagrama_2.png}
+	\caption{Asignación de observaciones a conglomerados.}
+	\label{fig:dispersion_dendrograma_2}
+\end{figure}
+
+Un error común que se comete al leer dendrogramas es asumir que la forma del dendrograma da una pista de cuántos grupos existen. En el ejemplo anterior, la interpretación (incorrecta) es que el dendrograma muestra que hay dos grupos, ya que la distancia entre los grupos (los segmentos verticales del dendrograma) es mayor entre dos y tres grupos. Los dendrogramas a menudo sugieren un número correcto de agrupaciones cuando no hay evidencia real que apoye la conclusión \cite{whatsdendro}.
 
 \subsection{Repetibilidad}
 
@@ -1368,9 +1396,56 @@ y manteniendo constantes las condiciones de entrenamiento y validación. Este en
 \subsection{Consideraciones éticas}
 
 El proceso metodológico implementado en esta investigación considera de forma estricta los principios éticos asociados al manejo de datos biomédicos. Los registros de ECG utilizados fueron anonimizados para preservar la confidencialidad de la información clínica de los participantes, cumpliendo con las normativas internacionales de protección de datos. 
+% Se enfatiza que la interpretacion y uso de los modelos automaticos debe estar siempre supervisada por expertos clinicos, reconociendo que las decisiones medicas requieres una evaluacion integral que los algoritmos no pueden sustituir, sino complementar de manera responsable.
+%Poner eso en las recomendaciones
 
 
 \chapter{Resultados}
+
+\section{Descripción general de los datos}
+
+\subsection{Distribuciones de los sujetos sanos por sexo y grupos etarios}
+
+\subsection{Distribuciones de los sujetos patológicos por sexo y grupos etarios}
+
+\section{Descripción general de PCA}
+
+\subsection{Método de la varianza acumulada}
+Pequeña discusión
+
+\subsection{Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}
+Y su respectivo análisis o discusión
+
+\section{Resultados de clasificación usando los datos de PCA}
+¿se ponen los gráficos de entrenamiento de las redes?
+
+\subsection{Metricas de desempeño}
+¿Correr varias veces para calcular a posteriori alguna estadística?
+
+
+\subsection{Matrices de confusión}
+análisis de este
+
+\section{Resultados de identificacion de pacientes}
+
+\subsection{metricas de desempeño}
+
+\subsection{Matrices de confusión}
+
+\subsection{Discusion sobre la viabilidad de la huella digital cardíaca}
+
+
+\section{Analisis exploratorio tsne}
+¿Se puede mostrar quizas algunas graficas en 2d de tsne donde se vean los pequeños agrupamientos?
+
+\section{Resultados de clasificacion usando los datos de tsne}
+
+\subsection{Metricas de desempeño}
+
+\subsection{Matrices de confusion}
+análisis de estas
+
+\subsection{Dendrogramas}
 
 
 

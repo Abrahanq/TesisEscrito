@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.19)  28 OCT 2025 21:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  30 OCT 2025 19:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -36,7 +36,7 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 Package: babel 2022/01/26 3.70 The Babel package
 \babel@savecnt=\count194
 \U@D=\dimen139
-\l@unhyphenated=\language87
+\l@unhyphenated=\language3
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -44,14 +44,23 @@ Package: babel 2022/01/26 3.70 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Spanish' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 51.
+
+Package babel Info: Hyphen rules for 'spanish' set to \l@english
+(babel)             (\language0). Reported on input line 52.
 \es@quottoks=\toks18
 \es@quotdepth=\count196
 Package babel Info: Making " an active character on input line 570.
 Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
@@ -834,7 +843,7 @@ LaTeX Info: Redefining \nameref on input line 61.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<Sem_1/figuras/ulaLogo.png, id=300, 199.74625pt x 216.81pt>
+<Sem_1/figuras/ulaLogo.png, id=368, 199.74625pt x 216.81pt>
 File: Sem_1/figuras/ulaLogo.png Graphic file (type png)
 <use Sem_1/figuras/ulaLogo.png>
 Package pdftex.def Info: Sem_1/figuras/ulaLogo.png  used on input line 67.
@@ -855,24 +864,18 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (3.7542pt too wide) in paragraph at lines 14--14
- [][] [][]\T1/cmr/m/n/12 Comparison of FCM, PCA and WT tech-ni-ques for clas-si
--fi-ca-tion ECG arrhyth- 
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has 
-been already used, duplicate ignored
+)pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 ...ceptrÃ³n multicapa.}{28}{subsection.2.3.9}
+l.39 ...2.3.9}Arquitectura.}{27}{subsection.2.3.9}
                                                   % [1
 
-])
+] [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2] [1
+ [3] [1
 
 ]
 Cap\'{\i }tulo 1.
@@ -892,6 +895,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [4
 
 ]
+Overfull \hbox (19.08714pt too wide) in paragraph at lines 179--179
+[]\T1/cmr/bx/n/14.4 A Wavelet-Based ECG De-lin-eator: Eval-u-a-tion on Stan-dar
+d Databas-
+ []
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\@ifnextchar' on input line 179.
@@ -934,7 +942,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 394--397
  []
 
 [10]
-<Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png, id=515, 1041.8925pt x 1027.
+<Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png, id=604, 1041.8925pt x 1027.
 84pt>
 File: Sem_1/figuras/1038px-SinusRhythmLabels-es.svg.png Graphic file (type png)
 
@@ -988,7 +996,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 427--430
  []
 
 [13]
-<Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg, id=537, 1281.78876pt x 749.8
+<Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg, id=626, 1281.78876pt x 749.8
 0125pt>
 File: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg Graphic file (type jpg)
 <use Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg>
@@ -999,7 +1007,7 @@ Package pdftex.def Info: Sem_1/figuras/Sistema_de_conduccion_corazon.jpeg  used
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Sem_1/figuras/fonocardiograma.jpeg, id=541, 834.11626pt x 752.8125pt>
+<Sem_1/figuras/fonocardiograma.jpeg, id=630, 834.11626pt x 752.8125pt>
 File: Sem_1/figuras/fonocardiograma.jpeg Graphic file (type jpg)
 <use Sem_1/figuras/fonocardiograma.jpeg>
 Package pdftex.def Info: Sem_1/figuras/fonocardiograma.jpeg  used on input line
@@ -1015,51 +1023,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 522--524
  []
 
 [20] [21]
-<Sem_1/figuras/suma_acumulada_varianza.png, id=602, 867.24pt x 722.7pt>
+<Sem_1/figuras/suma_acumulada_varianza.png, id=692, 867.24pt x 722.7pt>
 File: Sem_1/figuras/suma_acumulada_varianza.png Graphic file (type png)
 <use Sem_1/figuras/suma_acumulada_varianza.png>
 Package pdftex.def Info: Sem_1/figuras/suma_acumulada_varianza.png  used on inp
 ut line 583.
 (pdftex.def)             Requested size: 400.38872pt x 333.65906pt.
- [22 <./Sem_1/figuras/suma_acumulada_varianza.png>] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 628--629
-
- []
-
-[24]
-<Sem_1/figuras/neurona.png, id=641, 927.465pt x 499.8675pt>
+ [22 <./Sem_1/figuras/suma_acumulada_varianza.png>]
+<Sem_1/figuras/neurona.png, id=699, 927.465pt x 499.8675pt>
 File: Sem_1/figuras/neurona.png Graphic file (type png)
 <use Sem_1/figuras/neurona.png>
 Package pdftex.def Info: Sem_1/figuras/neurona.png  used on input line 668.
 (pdftex.def)             Requested size: 300.29344pt x 161.84482pt.
- [25 <./Sem_1/figuras/neurona.png>]
-<Sem_1/figuras/Perceptron.png, id=656, 2569.6pt x 1682.285pt>
+ [23] [24 <./Sem_1/figuras/neurona.png>]
+<Sem_1/figuras/Perceptron.png, id=725, 2569.6pt x 1682.285pt>
 File: Sem_1/figuras/Perceptron.png Graphic file (type png)
 <use Sem_1/figuras/Perceptron.png>
 Package pdftex.def Info: Sem_1/figuras/Perceptron.png  used on input line 702.
 (pdftex.def)             Requested size: 400.38872pt x 262.11197pt.
- [26 <./Sem_1/figuras/Perceptron.png>]
+ [25 <./Sem_1/figuras/Perceptron.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 717--719
 
  []
 
-<Sem_1/figuras/funciones_de_activacion.png, id=674, 939.51pt x 216.81pt>
+<Sem_1/figuras/funciones_de_activacion.png, id=739, 939.51pt x 216.81pt>
 File: Sem_1/figuras/funciones_de_activacion.png Graphic file (type png)
 <use Sem_1/figuras/funciones_de_activacion.png>
 Package pdftex.def Info: Sem_1/figuras/funciones_de_activacion.png  used on inp
 ut line 739.
 (pdftex.def)             Requested size: 450.43253pt x 103.9452pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[27] [28 <./Sem_1/figuras/funciones_de_activacion.png>]
-<Sem_1/figuras/RedNeuronalArtificial.png, id=695, 178.86826pt x 99.7326pt>
+[26 <./Sem_1/figuras/funciones_de_activacion.png>]
+<Sem_1/figuras/RedNeuronalArtificial.png, id=756, 178.86826pt x 99.7326pt>
 File: Sem_1/figuras/RedNeuronalArtificial.png Graphic file (type png)
 <use Sem_1/figuras/RedNeuronalArtificial.png>
 Package pdftex.def Info: Sem_1/figuras/RedNeuronalArtificial.png  used on input
  line 767.
 (pdftex.def)             Requested size: 350.33727pt x 195.36497pt.
- [29 <./Sem_1/figuras/RedNeuronalArtificial.png>] [30] [31]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[27] [28 <./Sem_1/figuras/RedNeuronalArtificial.png>] [29]
 Underfull \hbox (badness 10000) in paragraph at lines 878--883
 
  []
@@ -1069,122 +1073,138 @@ Underfull \hbox (badness 10000) in paragraph at lines 878--883
 
  []
 
-[32]
+[30] [31]
 Cap\'{\i }tulo 3.
-[33
+[32
 
 ]
-<Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg, id=768, 672.8337pt x 812.555
-7pt>
+<Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg, id=837, 2807.48875pt x 3381.
+63374pt>
 File: Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg Graphic file (type jpg)
 <use Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>
 Package pdftex.def Info: Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg  used
- on input line 910.
-(pdftex.def)             Requested size: 500.484pt x 604.43105pt.
- [34] [35 <./Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>] [36]
-[37]
-Overfull \hbox (4.29668pt too wide) in paragraph at lines 962--962
+ on input line 916.
+(pdftex.def)             Requested size: 500.484pt x 602.83708pt.
+ [33] [34 <./Sem_1/figuras/Diagrama_de_flujo_metodologico.jpg>] [35]
+[36]
+Overfull \hbox (4.29668pt too wide) in paragraph at lines 969--969
  []|\T1/cmr/bx/n/12 Hombres| 
  []
 
 
-Overfull \hbox (3.47536pt too wide) in paragraph at lines 962--962
+Overfull \hbox (3.47536pt too wide) in paragraph at lines 969--969
  []|\T1/cmr/bx/n/12 Mujeres| 
  []
 
 
-Overfull \hbox (0.9088pt too wide) in paragraph at lines 962--962
+Overfull \hbox (0.9088pt too wide) in paragraph at lines 969--969
  []|\T1/cmr/bx/n/12 Sanos| 
  []
 
 
-Overfull \hbox (3.87251pt too wide) in paragraph at lines 962--962
+Overfull \hbox (3.87251pt too wide) in paragraph at lines 969--969
  []|\T1/cmr/bx/n/12 Patológicos| 
  []
 
 
-Overfull \hbox (3.20412pt too wide) in paragraph at lines 962--962
+Overfull \hbox (3.20412pt too wide) in paragraph at lines 969--969
  []|\T1/cmr/bx/n/12 Adultos 
  []
 
 
-Overfull \hbox (3.20412pt too wide) in paragraph at lines 962--962
+Overfull \hbox (2.55145pt too wide) in paragraph at lines 969--969
+ \T1/cmr/bx/n/12 Jóvenes| 
+ []
+
+
+Overfull \hbox (3.20412pt too wide) in paragraph at lines 969--969
  []|\T1/cmr/bx/n/12 Adultos 
  []
 
 
-Overfull \hbox (3.20412pt too wide) in paragraph at lines 962--962
+Overfull \hbox (3.20412pt too wide) in paragraph at lines 969--969
  []|\T1/cmr/bx/n/12 Adultos 
  []
 
 
-Overfull \hbox (2.11617pt too wide) in paragraph at lines 962--963
+Overfull \hbox (2.11617pt too wide) in paragraph at lines 969--970
  []|\T1/cmr/bx/n/12 Total| 
  []
 
 
-Overfull \hbox (1.34904pt too wide) in paragraph at lines 964--964
+Overfull \hbox (1.34904pt too wide) in paragraph at lines 971--971
 []|\T1/cmr/bx/n/12 Cantidad
  []
 
 
-Overfull \hbox (8.43172pt too wide) in paragraph at lines 960--967
+Overfull \hbox (8.43172pt too wide) in paragraph at lines 967--974
  [] 
  []
 
-[38] [39]
-<Sem_1/figuras/Baseline Wander Sharma.png, id=839, 1256.695pt x 871.255pt>
+[37] [38] [39]
+<Sem_1/figuras/Baseline Wander Sharma.png, id=919, 1256.695pt x 871.255pt>
 File: Sem_1/figuras/Baseline Wander Sharma.png Graphic file (type png)
 <use Sem_1/figuras/Baseline Wander Sharma.png>
 Package pdftex.def Info: Sem_1/figuras/Baseline Wander Sharma.png  used on inpu
-t line 1028.
+t line 1035.
 (pdftex.def)             Requested size: 425.41444pt x 294.93324pt.
- [40] [41 <./Sem_1/figuras/Baseline Wander Sharma.png>]
-<Sem_1/figuras/ECG_procesado_10s_delimitado.png, id=865, 1387.584pt x 726.3135p
+ [40 <./Sem_1/figuras/Baseline Wander Sharma.png>]
+<Sem_1/figuras/ECG_procesado_10s_delimitado.png, id=935, 1387.584pt x 726.3135p
 t>
 File: Sem_1/figuras/ECG_procesado_10s_delimitado.png Graphic file (type png)
 <use Sem_1/figuras/ECG_procesado_10s_delimitado.png>
 Package pdftex.def Info: Sem_1/figuras/ECG_procesado_10s_delimitado.png  used o
-n input line 1047.
+n input line 1054.
 (pdftex.def)             Requested size: 425.41444pt x 222.67235pt.
- [42 <./Sem_1/figuras/ECG_procesado_10s_delimitado.png>]
-<Sem_1/figuras/ecg_latidos_alineados.png, id=878, 1387.584pt x 726.3135pt>
+ [41 <./Sem_1/figuras/ECG_procesado_10s_delimitado.png>]
+<Sem_1/figuras/ecg_latidos_alineados.png, id=948, 1387.584pt x 726.3135pt>
 File: Sem_1/figuras/ecg_latidos_alineados.png Graphic file (type png)
 <use Sem_1/figuras/ecg_latidos_alineados.png>
 Package pdftex.def Info: Sem_1/figuras/ecg_latidos_alineados.png  used on input
- line 1062.
+ line 1069.
 (pdftex.def)             Requested size: 425.41444pt x 222.67235pt.
- [43 <./Sem_1/figuras/ecg_latidos_alineados.png>]
-Overfull \hbox (0.57388pt too wide) in paragraph at lines 1098--1098
+ [42 <./Sem_1/figuras/ecg_latidos_alineados.png>]
+Overfull \hbox (0.57388pt too wide) in paragraph at lines 1105--1105
  []|\T1/cmr/bx/n/12 Componente 
  []
 
-[44] [45] [46] [47]
+[43] [44] [45] [46]
 
-LaTeX Warning: Reference `tab:csummary NN estado de salud' on page 48 undefined
- on input line 1182.
+LaTeX Warning: Reference `tab:csummary NN estado de salud' on page 47 undefined
+ on input line 1189.
 
-[48] [49] [50] [51] [52]
+[47] [48] [49] [50] [51]
+<Sem_1/figuras/Dispersion_diagrama_1.png, id=1059, 1011.78pt x 361.35pt>
+File: Sem_1/figuras/Dispersion_diagrama_1.png Graphic file (type png)
+<use Sem_1/figuras/Dispersion_diagrama_1.png>
+Package pdftex.def Info: Sem_1/figuras/Dispersion_diagrama_1.png  used on input
+ line 1366.
+(pdftex.def)             Requested size: 425.41444pt x 151.93689pt.
+ [52 <./Sem_1/figuras/Dispersion_diagrama_1.png>]
+<Sem_1/figuras/Dispersion_diagrama_2.png, id=1070, 1011.78pt x 361.35pt>
+File: Sem_1/figuras/Dispersion_diagrama_2.png Graphic file (type png)
+<use Sem_1/figuras/Dispersion_diagrama_2.png>
+Package pdftex.def Info: Sem_1/figuras/Dispersion_diagrama_2.png  used on input
+ line 1383.
+(pdftex.def)             Requested size: 425.41444pt x 151.93689pt.
 
-LaTeX Warning: Reference `fig:dendro' on page 53 undefined on input line 1355.
-
-[53]
+[53 <./Sem_1/figuras/Dispersion_diagrama_2.png>]
 Cap\'{\i }tulo 4.
 [54
 
-]
+] [55]
 Cap\'{\i }tulo 5.
-(./main.bbl [55
+(./main.bbl [56
 
-] [56
+] [57
 
-] [57] [58]
+] [58] [59]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 28.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)) [59] (./main.aux
+)) [60] (./main.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
@@ -1192,43 +1212,39 @@ LaTeX Info: Redefining \% on input line 26.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F88EA7A90BDB23546B7D935E6BD8C6BD;17133.
+(rerunfilecheck)             Checksum: 81773342108303FE4701C85E205DF383;21603.
  ) 
 Here is how much of TeX's memory you used:
- 25610 strings out of 478287
- 464942 string characters out of 5849288
- 1424706 words of memory out of 5000000
- 43031 multiletter control sequences out of 15000+600000
- 492266 words of font info for 84 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 25633 strings out of 480247
+ 465820 string characters out of 5896106
+ 1417661 words of memory out of 5000000
+ 42797 multiletter control sequences out of 15000+600000
+ 488570 words of font info for 72 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
  99i,12n,103p,18256b,734s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/
-fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb><
-/usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fon
-ts/type1/public/cm-super/sfti1440.pfb></usr/share/texmf/fonts/type1/public/cm-s
-uper/sftt1200.pfb>
-Output written on main.pdf (62 pages, 3782100 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx248
+8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000
+.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/tex
+mf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/publi
+c/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.
+pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (64 pages, 3183082 bytes).
 PDF statistics:
- 1198 PDF objects out of 1200 (max. 8388607)
- 1047 compressed objects within 11 object streams
- 311 named destinations out of 1000 (max. 500000)
- 662 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1281 PDF objects out of 1440 (max. 8388607)
+ 1131 compressed objects within 12 object streams
+ 325 named destinations out of 1000 (max. 500000)
+ 808 words of extra memory for PDF output out of 10000 (max. 10000000)
 
