@@ -116,9 +116,9 @@
 	El electrocardiograma (ECG) es una técnica no invasiva que permite registrar y medir las señales eléctricas generadas por el corazón. Consiste en la captación de la variación temporal del potencial bioeléctrico durante cada ciclo cardíaco, utilizando electrodos colocados en la superficie cutánea del paciente que registran dicha actividad eléctrica y producen un gráfico que muestra el ritmo y la fuerza de los latidos del corazón, este produce un patrón muy específico, y cualquier anomalía puede indicar un problema cardíaco \cite{ZHANG2021113}. El análisis del ECG proporciona datos sobre el sistema cardiovascular, en particular, el corazón, lo que permite detectar diversas enfermedades que pueden afectar su funcionamiento óptimo. Estas enfermedades incluyen arritmias cardíacas, obstrucción de arterias, insuficiencia cardíaca y ataques al corazón \cite{MedlineECG}. \\ Según la organización mundial de la salud \cite{Who}, las enfermedades cardiovasculares (ECV) son las principal causa de muerte en hombres y mujeres en el mundo, con alrededor de 17,9 millones de personas que mueren al año a causa de estas. Entre los numerosos factores que llevan a esta consecuencia, se encuentran los errores provenientes de la interpretación manual de los electrocardiogramas (ECGs), por lo general, los médicos emplean características heurísticas diseñadas manualmente o utilizan arquitecturas de aprendizaje de características superficiales, esto puede generar como consecuencia, variabilidad entre los diagnósticos de los observadores e identificación de anomalías incorrectas que pueden llevar a ocasionar diagnósticos imprecisos y en consecuencia, tratamientos inadecuados. Además estos métodos manuales que utilizan arquitecturas de aprendizaje de características superficiales, descartan información relevante del ECG inmersa dentro de características que no son superficiales, lo que provee una baja exactitud en el diagnostico a partir de las señales por lo que siempre será necesario de la supervisión de un experto con el fin de corregir estos errores, además algunas enfermedades cardíacas, como la enfermedad de las arterias coronarias en etapa temprana, pueden no ser detectables en un ECG, también se debe resaltar, que el ECG se puede ver afectado por factores externos, como el movimiento del paciente, las interferencias electromagnéticas, la incorrecta colocación de los electrodos, estados ansiosos de los pacientes al momento de aplicarles el examen o el uso de medicamentos.
 
 \section{Justificación}
-	La interpretación manual de los ECGs está sujeta a errores humanos por fatiga, sesgos o variabilidad interobservador, lo que puede generar diagnósticos incorrectos y por ende, tratamientos inadecuados. Además, el ECG contiene información oculta (como edad, sexo o incluso identidad del paciente) que el ojo humano no puede cuantificar o identificar sistemáticamente. Aunque existen herramientas digitales para análisis de ECG, la mayoría se limitan a detectar arritmias básicas y no aprovechan el potencial que tiene el ECG como biomarcador  para extraer caracteristicas clínicas no evidentes e incluso llegar a identificar a cada paciente, es por esto que resulta importante desarrollar herramientas que puedan procesar los ECG para reducir o eliminar la presencia de ruidos e interferencias y así minimizar los errores manuales mediante algoritmos robustos y adaptables, descubriendo patrones clínicos con modelos profundos y hasta siendo capaz de identificar pacientes usando el ECG como firma biológica
+	La interpretación manual de los ECGs está sujeta a errores humanos por fatiga, sesgos o variabilidad interobservador, lo que puede generar diagnósticos incorrectos y por ende, tratamientos inadecuados. Además, el ECG contiene información oculta (como edad, sexo o incluso identidad del paciente) que el ojo humano no puede cuantificar o identificar sistemáticamente. Aunque existen herramientas digitales para análisis de ECG, la mayoría se limitan a detectar arritmias básicas y no aprovechan el potencial que tiene el ECG como biomarcador  para extraer características clínicas no evidentes e incluso llegar a identificar a cada paciente, es por esto que resulta importante desarrollar herramientas que puedan procesar los ECG para reducir o eliminar la presencia de ruidos e interferencias y así minimizar los errores manuales mediante algoritmos robustos y adaptables, descubriendo patrones clínicos con modelos profundos y hasta siendo capaz de identificar pacientes usando el ECG como firma biológica
 	
-	%Ante la necesidad de reducir los errores provenientes de la interpretación manual de los ECGs que junto con la presencia de ruidos e interferencias en las señales que complican aún más el análisis del ECG, surge la necesidad de desarrollar herramientas reduzcan estos errores. Por lo que el desarrollo de técnicas que ayuden a minimizar la presencia de ruidos e interferencias en los ECG, sin afectar la morfología real del ECG, pueden resultar muy útiles para la posterior identificación de patrones específicos y clasificación precisa en grupos de pacientes que, siguen siendo desafíos importantes, ya que los métodos tradicionales de análisis de ECGs a menudo no son lo suficientemente robustos para manejar estas complejidades de manera eficiente. Es por esto que el desarrollo de nuevas tecnologias que favorezcan la debida identificación de caracteristicas clínicas, como lo pueden ser el estado de salud, mientras se usan métodos robustos y adaptables como el aprendizaje automático, que son capaces de por ejemplo, de reducir dimensiones en la data para manejar de manera eficiente los recursos computaciones, pudieran tener un impacto positivo en posteriores estudios donde se desarrollen herramientas que utilicen principalmente estas caracteristicas clínicas, para el análisis de ECGs.
+	%Ante la necesidad de reducir los errores provenientes de la interpretación manual de los ECGs que junto con la presencia de ruidos e interferencias en las señales que complican aún más el análisis del ECG, surge la necesidad de desarrollar herramientas reduzcan estos errores. Por lo que el desarrollo de técnicas que ayuden a minimizar la presencia de ruidos e interferencias en los ECG, sin afectar la morfología real del ECG, pueden resultar muy útiles para la posterior identificación de patrones específicos y clasificación precisa en grupos de pacientes que, siguen siendo desafíos importantes, ya que los métodos tradicionales de análisis de ECGs a menudo no son lo suficientemente robustos para manejar estas complejidades de manera eficiente. Es por esto que el desarrollo de nuevas tecnologias que favorezcan la debida identificación de características clínicas, como lo pueden ser el estado de salud, mientras se usan métodos robustos y adaptables como el aprendizaje automático, que son capaces de por ejemplo, de reducir dimensiones en la data para manejar de manera eficiente los recursos computaciones, pudieran tener un impacto positivo en posteriores estudios donde se desarrollen herramientas que utilicen principalmente estas características clínicas, para el análisis de ECGs.
  
 
 \section{Objetivos}
@@ -170,7 +170,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 %
 %\textbf{Publicación:} PubMed \textbf{DOI:} 10.1007/BF02367023
 %
-%\textbf{Resumen:} En este estudio se presenta un sistema de estimación adaptativa del modelo de Hermite (AHMES) para la estimación en línea, latido a latido de las caracteristicas que describen el QRS con el modelo de Hermite. Este sistema permite una extracción eficiente de parámetros en tiempo real para la clasificación y compresión de datos.
+%\textbf{Resumen:} En este estudio se presenta un sistema de estimación adaptativa del modelo de Hermite (AHMES) para la estimación en línea, latido a latido de las características que describen el QRS con el modelo de Hermite. Este sistema permite una extracción eficiente de parámetros en tiempo real para la clasificación y compresión de datos.
 %
 %\textbf{Metodología:}
 %
@@ -206,21 +206,21 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Publicación:} IEEE.
 \textbf{DOI:} 10.1109/ICASSP.2005.1416111
 
-\textbf{Resumen:} En esta investigación, se presenta un método basado en el algoritmo de búsqueda de coincidencias para la extracción de caracteristicas de tiempo-frecuencia que pueden ser usadas para la clasificación de varios tipos de latidos anormales. Luego de esto, investigan sobre la usabilidad del análisis de componentes independientes (ICA, por sus siglas en inglés) para extraer caracteristicas espaciales de grabaciones de electrocardiogramas de varias derivaciones. El rendimiento de estos diferentes conjuntos de caracteristicas es evaluado usando las grabaciones de la base de datos MIT-BIH Arritmia \cite{arritmiadb}.
+\textbf{Resumen:} En esta investigación, se presenta un método basado en el algoritmo de búsqueda de coincidencias para la extracción de características de tiempo-frecuencia que pueden ser usadas para la clasificación de varios tipos de latidos anormales. Luego de esto, investigan sobre la usabilidad del análisis de componentes independientes (ICA, por sus siglas en inglés) para extraer características espaciales de grabaciones de electrocardiogramas de varias derivaciones. El rendimiento de estos diferentes conjuntos de características es evaluado usando las grabaciones de la base de datos MIT-BIH Arritmia \cite{arritmiadb}.
 
 \textbf{Metodología:} 
 \begin{itemize}
 	\item Habiendo detectado los latidos anotados en la base de datos y usando las dos derivaciones presentes en dicha base de datos, el bloque de ICA estima para cada latido, una matriz de proyección que minimiza la dependencia estadística entre las dimensiones proyectadas.
-	\item Las componentes de la matriz antes mencionadas, son usadas como caracteristicas para la etapa de clasificación.
-	\item La extracción de caracteristicas de tiempo-frecuencia proyecta cada latido en conjuntos diferentes de paquetes de onda que se seleccionan para que coincidan con las estructuras caracteristicas de los distintos tipos de latidos que se intentan clasifican.
-	\item Por ultimo, las caracteristicas de tiempo-frecuencia e ICA se clasifican mediante redes neuronales.
+	\item Las componentes de la matriz antes mencionadas, son usadas como características para la etapa de clasificación.
+	\item La extracción de características de tiempo-frecuencia proyecta cada latido en conjuntos diferentes de paquetes de onda que se seleccionan para que coincidan con las estructuras características de los distintos tipos de latidos que se intentan clasifican.
+	\item Por ultimo, las características de tiempo-frecuencia e ICA se clasifican mediante redes neuronales.
 \end{itemize}
 
 \textbf{Hallazgos clave:} 
 \begin{itemize}
-	\item Introducen ICA como extractor de caracteristicas para el procesamientos de los ECGs.
+	\item Introducen ICA como extractor de características para el procesamientos de los ECGs.
 	\item El rendimiento del sistema tuvo una precisión superior al $95\%$ en la clasificación de 5 tipos de latidos anormales.
-	\item La potencia computacional requerida para el sistema propuesto es bastante alta durante el entrenamiento del extractor de caracteristicas
+	\item La potencia computacional requerida para el sistema propuesto es bastante alta durante el entrenamiento del extractor de características
 \end{itemize}
 
 \subsection{Sistema de adquisición multicanal y análisis de la señal electrocardiográfica de alta resolución aplicado a pacientes chagásicos \cite{Dugarte11}}
@@ -256,16 +256,16 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 
 \textbf{Metodología:}
 \begin{itemize}
-	\item Las técnicas de extracción de caracteristicas CWT, DWT y DCT son aplicadas separadamente a la base de datos antes de su clasificación.
+	\item Las técnicas de extracción de características CWT, DWT y DCT son aplicadas separadamente a la base de datos antes de su clasificación.
 	\item Utilizan estas características extraídas para clasificar los tipos de arritmia de cada señal de ECG, usando redes neuronales perceptrónicas (NN, por sus siglas en inglés) y máquinas de soporte vectorial (SVM, por sus siglas en inglés).
 	\item Comparan el rendimiento del entrenamiento, el rendimiento de las pruebas y el tiempo de entrenamiento de cada clasificador. 
 \end{itemize}
 
 \textbf{Hallazgos clave:}
 \begin{itemize}
-	\item Los resultados muestran que el mejor método de extracción de caracteristicas dependerá del valor sustancial que se considere para el tiempo de entrenamiento y rendimiento en el entrenamiento y las pruebas.
+	\item Los resultados muestran que el mejor método de extracción de características dependerá del valor sustancial que se considere para el tiempo de entrenamiento y rendimiento en el entrenamiento y las pruebas.
 	\item El rendimiento de las pruebas, usando sólo la derivación \Romannum{2} de la señal de ECG usada muestra superioridad sobre las SVM.
-	\item El modelo que utiliza como extractor de caracteristicas las DWT y una NN como clasificador es el que tiene mejor rendimiento tanto en entrenamiento y pruebas, como en tiempo de entrenamiento.
+	\item El modelo que utiliza como extractor de características las DWT y una NN como clasificador es el que tiene mejor rendimiento tanto en entrenamiento y pruebas, como en tiempo de entrenamiento.
 \end{itemize}
 
 \subsection{Comparison of FCM, PCA and WT techniques for classification ECG arrhythmias using artificial neural network \cite{Ceylan07}.}
@@ -280,7 +280,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 
 \textbf{Metodología:}
 \begin{itemize}
-	\item Utilizando PCA y WT para reducción de caracteristicas en adición de FCM; y NN para clasificar los tipos de arritmia en las señales de ECG, comparan el desempeño de 4 tipos de estructuras propuestas, FCM-NN, PCA-NN, FCM-PCA-NN y WT-NN.
+	\item Utilizando PCA y WT para reducción de características en adición de FCM; y NN para clasificar los tipos de arritmia en las señales de ECG, comparan el desempeño de 4 tipos de estructuras propuestas, FCM-NN, PCA-NN, FCM-PCA-NN y WT-NN.
 	\item Prueban cada uno de los modelos propuestos con las señales de ECG tomadas de MIT-BIH Arritmia\cite{arritmiadb}.
 \end{itemize}
 
@@ -321,7 +321,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 
 \textbf{DOI:} 10.1186/s12911-024-02415-4
 
-\textbf{Resumen:} La insuficiencia cardíaca es un síndrome con complejas manifestaciones clínicas. Debido al creciente envejecimiento de la población, la insuficiencia cardíaca se ha convertido en uno de los mayores problemas alrededor del mundo. Este estudio, se usa la base de datos pública MIMIC-\romannum{3} para extraer las caracteristicas temporales y espaciales de las señales ECG de paciencias con insuficiencias cardíacas.
+\textbf{Resumen:} La insuficiencia cardíaca es un síndrome con complejas manifestaciones clínicas. Debido al creciente envejecimiento de la población, la insuficiencia cardíaca se ha convertido en uno de los mayores problemas alrededor del mundo. Este estudio, se usa la base de datos pública MIMIC-\romannum{3} para extraer las características temporales y espaciales de las señales ECG de paciencias con insuficiencias cardíacas.
 
 \textbf{Metodología:}
 \begin{itemize}
@@ -533,18 +533,18 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\end{equation}
 		donde:
 		\begin{itemize}
-			\item $\mu$ es la media de las caracteristicas independientes $\mu = \{\mu_1, \mu_2,\dotsb,\mu_m\}$
-			\item $\sigma$ es la desviación estándar de las caracteristicas independientes $\sigma = \{\sigma_1, \sigma_2,\dotsb,\sigma_m\}$
+			\item $\mu$ es la media de las características independientes $\mu = \{\mu_1, \mu_2,\dotsb,\mu_m\}$
+			\item $\sigma$ es la desviación estándar de las características independientes $\sigma = \{\sigma_1, \sigma_2,\dotsb,\sigma_m\}$
 		\end{itemize}
 		\item \textbf{Calcular la matriz de covarianza.}\\
-		Es necesario calcular la matriz de covarianza para ver como las caracteristicas se relacionan entre sí, si estas aumentan o disminuyen juntas. La matriz de covarianza entre dos caracteristicas $x_1$ y $x_2$ es:
+		Es necesario calcular la matriz de covarianza para ver como las características se relacionan entre sí, si estas aumentan o disminuyen juntas. La matriz de covarianza entre dos características $x_1$ y $x_2$ es:
 		\begin{equation}
 			\label{eq:covarianza}
 			\operatorname{cov}(x 1, x 2)=\frac{\sum_{i=1}^n\left(x 1_i-\bar{x} 1\right)\left(x 2_i-\bar{x} 2\right)}{n-1}
 		\end{equation}
 		donde: 
 		\begin{itemize}
-			\item $\bar{x}_1$ y $\bar{x}_2$ son los valores medios de las caracteristicas $x_1$ y $x_2$.
+			\item $\bar{x}_1$ y $\bar{x}_2$ son los valores medios de las características $x_1$ y $x_2$.
 			\item $n$ es el numero total de datos.
 		\end{itemize}
 		El valor de la covarianza puede ser positivo, negativo o cero.
@@ -573,7 +573,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 			\item Selecciona los k componentes principales que capturan la mayor parte de la varianza, como el 95\%.
 			\item Transforma el conjunto de datos original proyectándolo sobre los mejores componentes principales. 
 		\end{itemize}
-		Esto significa que se reduce el numero de caracteristicas (dimensiones) mientras se mantienen los patrones importantes que están implícitos de los datos.
+		Esto significa que se reduce el numero de características (dimensiones) mientras se mantienen los patrones importantes que están implícitos de los datos.
 	\end{enumerate}
 	
 	Hasta que no se generalizó el uso de ordenadores electrónicos, que fue posible utilizarlo con conjuntos de datos que no fueran trivialmente pequeños. Desde entonces, su uso se ha multiplicado y se han desarrollado numerosas variantes en muchas disciplinas diferentes.
@@ -610,7 +610,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		C = \sum_i KL(P_i\|Q_i)=\sum_i\sum_j p_{j\mid i}\log\frac{p_{j\mid i}}{q_{j\mid i}},
 	\end{equation}
 	en la cual $P_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $x_i$, y $Q_i$ representa la distribución de probabilidad condicional sobre todos los puntos de datos, dado el punto $y_i$ y es el resultado de esta optimización, un mapa que refleja las similitudes entre las entradas de alta dimensión.
-%	Aca estoy dudoso si tambien hablar sobre el perplexity y todo lo que viene despues de eso
+%	Aca estoy dudoso si también hablar sobre el perplexity y todo lo que viene despues de eso
 %	Al final no lo puse
 	
 %\subsection{K-medios (k-means).}
@@ -889,7 +889,7 @@ Esta tesis acoge un enfoque de investigación cuantitativa y experimental, donde
 que junto con las redes neuronales perceptrónicas (que serán los modelos predictivos) se busca identificar y clasificar patrones biomédicos específicos, a los que se denomina \emph{variables objetivo}.
 
 \subsection{Diseño de la investigación.} \label{subsec:diseno_investigacion}
-Esta investigación adopta un diseño predictivo longitudinal mediante el procesamiento de señales biomédicas provenientes de electrocardiogramas (ECG). En la primera etapa de este proyecto, se extraen atributos morfológicos y temporales, tales como los intervalos RR, complejos QRS, ondas P y T, entre otros, para esquematizar lo que será un vector de caracteristicas multidimensional. Este canal habilita la aplicación de modelos de aprendizaje automático que, mediante algoritmos de reducción de dimensionalidad, clasificación y clustering\footnote{Agrupamiento de datos basados en la similitud}, identifican patrones no lineales y tendencias latentes en los datos. Los modelos se entrenan para dos objetivos, la clasificación de variables objetivo (grupos etarios, sexo y estado de salud, estas tambien denominadas \guillemetleft variables clínicas\guillemetright) y la identificación de integraciones biométricas basadas en rasgos cardíacos únicos. Aunque los métodos como las redes neuronales perceptrónicas operan como \guillemetleft cajas negras\guillemetright \ debido a su limitada interpretabilidad intrínseca, su robustez se garantiza mediante métricas de evaluación clínicamente relevantes, lo que permite asegurar generalización en datos no vistos por los modelos y sin que esto comprometa la confiabilidad predictiva.
+Esta investigación adopta un diseño predictivo longitudinal mediante el procesamiento de señales biomédicas provenientes de electrocardiogramas (ECG). En la primera etapa de este proyecto, se extraen atributos morfológicos y temporales, tales como los intervalos RR, complejos QRS, ondas P y T, entre otros, para esquematizar lo que será un vector de características multidimensional. Este canal habilita la aplicación de modelos de aprendizaje automático que, mediante algoritmos de reducción de dimensionalidad, clasificación y clustering\footnote{Agrupamiento de datos basados en la similitud}, identifican patrones no lineales y tendencias latentes en los datos. Los modelos se entrenan para dos objetivos, la clasificación de variables objetivo (grupos etarios, sexo y estado de salud, estas también denominadas \guillemetleft variables clínicas\guillemetright) y la identificación de integraciones biométricas basadas en rasgos cardíacos únicos. Aunque los métodos como las redes neuronales perceptrónicas operan como \guillemetleft cajas negras\guillemetright \ debido a su limitada interpretabilidad intrínseca, su robustez se garantiza mediante métricas de evaluación clínicamente relevantes, lo que permite asegurar generalización en datos no vistos por los modelos y sin que esto comprometa la confiabilidad predictiva.
 
 
 \section{Diseño especifico}
@@ -968,7 +968,7 @@ Es de destacar también que todas las señales fisiológicas disponibles en Phys
 			\hline
 			& \textbf{Hombres} & \textbf{Mujeres} & \textbf{Sanos} & \textbf{Patológicos} & \textbf{Adultos Jóvenes} & \textbf{Adultos de Mediana Edad} & \textbf{Adultos Mayores} & \textbf{Total} \\
 			\hline
-			\textbf{Cantidad de ECGs} & \centering352 & 410 & 611 & 151 & 435 & 222 & 106 & 762 \\
+			\textbf{Cantidad de Pacientes} & \centering352 & 410 & 611 & 151 & 435 & 222 & 106 & 762 \\
 			\hline
 		\end{tabular}
 		\caption{Distribución de ECGs con los pacientes seleccionados para el estudio.}
@@ -1186,7 +1186,7 @@ Para iniciar con el proceso de entrenamiento de las redes neuronales es necesari
 Debido a la naturaleza diferente de cada tarea que se propone en la subsección \ref{subsec:tareas_modelado}, es necesario diseñar redes neuronales con arquitecturas que se ajusten a los requerimientos de cada tarea de modelado, es por esto que se plantean los siguientes modelos de redes neuronales:
 
 \begin{enumerate}
-	\item \textbf{Clasificación por estado de salud:} recordemos que esta tarea es un problema de clasificación binaria (\textquote{sano} vs. \textquote{patológico}), por ende, se propone una red neuronal de capas densas con topología (10-1), como se observa en la tabla \ref{tab:csummary NN estado de salud}. Estas neuronas emplean como función de activación en las capas ocultas la función ReLU y la función Sigmoide en la capa de salida, optimizada mediante el algoritmo Adam \cite{adamoptimization14}, para esta red se seleccionó la denominada entropía cruzada categórica, como función de perdida. 
+	\item \textbf{Clasificación por estado de salud:} recordemos que esta tarea es un problema de clasificación binaria (\textquote{sano} vs. \textquote{patológico}), por ende, se propone una red neuronal de capas densas con topología (10-1), como se observa en la tabla \ref{tab:summary NN estado de salud}. Estas neuronas emplean como función de activación en las capas ocultas la función ReLU y la función Sigmoide en la capa de salida, optimizada mediante el algoritmo Adam \cite{adamoptimization14}, para esta red se seleccionó la denominada entropía cruzada categórica, como función de perdida. 
 	
 	\begin{table}[ht]
 		\renewcommand{\arraystretch}{1.2}
@@ -1403,6 +1403,28 @@ El proceso metodológico implementado en esta investigación considera de forma 
 \chapter{Resultados}
 
 \section{Descripción general de los datos}
+
+Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales.
+
+Inicialmente se tiene un total de 8540 señales electrocardiográficas, en edades comprendidas entre 18 y 90 años, se establecen tres grupos etarios para poder estudiar para poder estudiar el comportamiento
+
+\begin{table}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2cm} | M{2cm} | M{0.8cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
+			\hline
+			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			(18-34)	& 5131 & 60   & 1970 & 3161 & 24.2  & 4.0  \\ \hline
+			(35-59)	& 1476 & 17.3 & 752  & 724  & 45.50 & 6.7  \\ \hline
+			(> 60)	& 1933 & 22.7 & 694  & 1239 & 73.84 & 7.7  \\ \hline
+	\textbf{Total}	& 8540 &      & 3416 & 5124 &		&	   \\ \hline
+		\end{tabular}
+	\end{center}
+	\label{}
+	\caption{}
+\end{table}
+
+
 
 \subsection{Distribuciones de los sujetos sanos por sexo y grupos etarios}
 
