@@ -1404,32 +1404,50 @@ El proceso metodológico implementado en esta investigación considera de forma 
 
 \section{Descripción general de los datos}
 
-Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales.
-
-Inicialmente se tiene un total de 8540 señales electrocardiográficas, en edades comprendidas entre 18 y 90 años, se establecen tres grupos etarios para poder estudiar para poder estudiar el comportamiento
-
-
-\begin{table}
-	\renewcommand{\arraystretch}{1.2}
-	\begin{center}
-		\begin{tabular}{| M{2cm} | M{2cm} | M{0.8cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
-			\hline
-			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
-			(18-34)	& 5131 & 60   & 1970 & 3161 & 24.2  & 4.0  \\ \hline
-			(35-59)	& 1476 & 17.3 & 752  & 724  & 45.50 & 6.7  \\ \hline
-			(> 60)	& 1933 & 22.7 & 694  & 1239 & 73.84 & 7.7  \\ \hline
-	\textbf{Total}	& 8540 &      & 3416 & 5124 &		&	   \\ \hline
-		\end{tabular}
-	\end{center}
-	\label{}
-	\caption{}
-\end{table}
-
+Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
 
 
 \subsection{Distribuciones de los sujetos sanos por sexo y grupos etarios}
 
+Inicialmente se tiene un total de 8540 señales electrocardiográficas provenientes de sujetos sanos, en edades comprendidas entre 18 y 90 años, como se explicó anteriormente, la selección de los grupos etarios permitir distinguir y estudiar las tendencias fisiológicas asociadas a cada etapa de la vida y a su vez esto pudiera facilitar la evaluación comparativa de patrones cardíacos intrínsecos entre los diferentes rangos de edad de la población. En la tabla \ref{tab:Distribucion sanos} se puede apreciar la cantidad electrocardiográficas, edad, distribución por sexo, edad promedio y desviación estándar para cada grupo etario.
+
+\begin{table}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{3cm} | M{2cm} | M{0.8cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
+			\hline
+			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			(18-34)	& 5131 & 60.0 & 1970 & 3161 & 24.2  & 4.0  \\ \hline
+			(35-59)	& 1476 & 17.3 & 752  & 724  & 45.50 & 6.7  \\ \hline
+			(> 60)	& 1933 & 22.7 & 694  & 1239 & 73.84 & 7.7  \\ \hline
+			\textbf{Total}	& 8540 &      & 3416 & 5124 &		&	   \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Distribución de sujetos sanos según la edad y sexo.}
+	\label{tab:Distribucion sanos}
+\end{table}
+
 \subsection{Distribuciones de los sujetos patológicos por sexo y grupos etarios}
+
+En este caso se tienen 7391 señales electrocardiográficas de sujetos que guardan alguna cardiopatía, en edades comprendidas entre 22 y 89. En la tabla \ref{tab:Distribucion patologicos} se puede observar la cantidad de señales ECG, edad, distribución por sexo, edad promedio y desviación estándar para cada grupo etario.
+
+\begin{table}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{3cm} | M{2cm} | M{0.9cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
+			\hline
+			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			(18-34) & 804  & 10.9 & 563  & 241 & 28.8 & 3.3 \\ \hline
+			(35-59) & 4143 & 56.1 & 3810 & 333 & 48.4 & 6.8 \\ \hline
+			(>60)   & 2445 & 33.0 & 1770 & 675 & 70.8 & 9.2 \\ \hline
+			\textbf{Total} & 7391 &  & 6143 & 1249 & & \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Distribución de sujetos patológicos según la edad y sexo.}
+	\label{tab:Distribucion patologicos}
+\end{table}
+\subsection{Distribuciones de los sujetos sanos y patológicos para los entrenamientos de las redes.}
+
 
 \section{Descripción general de PCA}
 
