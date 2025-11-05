@@ -95,10 +95,6 @@ M.~P. Correa and F.~M. Arbeláez, ``Fisiología cardiovascular,'' in {\em Texto
   de cardiología}, pp.~72--74, Sociedad Colombiana de Cardiología y Cirugía
   Cardiovascular, 2007.
 
-\bibitem{mackay03}
-D.~J.~C. MacKay, {\em Information Theory, Inference, and Learning Algorithms}.
-\newblock Cambridge University Press, 2003.
-
 \bibitem{imaNeu}
 R.~Bernabeu, ``Partes de la neurona en cerebro humano,'' 2016.
 \newblock Accedido el 10-06-2025.
@@ -233,5 +229,10 @@ D.~P. Kingma and J.~Ba, ``Adam: A method for stochastic optimization,'' 2014.
 \bibitem{whatsdendro}
 T.~Bock, ``What is a dendrogram?.'' \url{displayr.com/what-is-dendrogram/},
   2018.
+
+\bibitem{gulerECGbeatClassifier}
+İnan Güler and E.~D. Übeylı˙, ``Ecg beat classifier designed by combined
+  neural network model,'' {\em Pattern Recognition}, vol.~38, no.~2,
+  pp.~199--208, 2005.
 
 \end{thebibliography}

@@ -1072,7 +1072,7 @@ La importancia de la precisa localización de los picos R en cada ECG radica en 
 \end{figure}
 
 \subsection{Vector de características} 
-
+\label{subsec:vector caracteristicas}
 Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, lo que resulta en latidos promedios con longitudes muéstrales inconsistentes. Para garantizar la comparabilidad morfológica y la viabilidad computacional en etapas posteriores, se implementa una estandarización de longitud fija mediante remuestreo digital. Cada latido se interpola a 250 muestras, este valor preserva la resolución temporal de los eventos cardíacos clave, incluso en ECG de pacientes con trastornos del ritmo cardíaco. Estas señales estandarizadas se almacenan en un arreglo en formato (CSV), este arreglo guarda los valores que al ser graficados, representan la figura del latido promedio de cada paciente, similar a como se observa en la figura \ref{fig:latidos_alineados} (línea roja). 
 Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de características que será la base del análisis de la señal electrocardiográfica. 
 
@@ -1404,26 +1404,26 @@ El proceso metodológico implementado en esta investigación considera de forma 
 
 \section{Descripción general de los datos}
 
-Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
+Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Recordemos que cada señal electrocardiográfica fue sometida a un proceso sistemático de extracción de características, conforme se detalla en la subsección \ref{subsec:vector caracteristicas}. Como resultado, la representación empleada a partir de este punto corresponde a un vector de características, siendo este el latido promedio de la señal original. Por tanto, en lo sucesivo, cualquier referencia a \guillemetleft señal ECG\guillemetright \ o \guillemetleft señal electrocardiográfica\guillemetright \ implicará su interpretación en términos de dicha representación vectorial, la cual sintetiza la información relevante para las etapas posteriores. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
 
 
 \subsection{Distribuciones de los sujetos sanos por sexo y grupos etarios}
 
 Inicialmente se tiene un total de 8540 señales electrocardiográficas provenientes de sujetos sanos, en edades comprendidas entre 18 y 90 años, como se explicó anteriormente, la selección de los grupos etarios permitir distinguir y estudiar las tendencias fisiológicas asociadas a cada etapa de la vida y a su vez esto pudiera facilitar la evaluación comparativa de patrones cardíacos intrínsecos entre los diferentes rangos de edad de la población. En la tabla \ref{tab:Distribucion sanos} se puede apreciar la cantidad electrocardiográficas, edad, distribución por sexo, edad promedio y desviación estándar para cada grupo etario.
 
-\begin{table}
+\begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
 		\begin{tabular}{| M{3cm} | M{2cm} | M{0.8cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
 			\hline
-			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			\textbf{Grupo etario (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
 			(18-34)	& 5131 & 60.0 & 1970 & 3161 & 24.2  & 4.0  \\ \hline
 			(35-59)	& 1476 & 17.3 & 752  & 724  & 45.50 & 6.7  \\ \hline
 			(> 60)	& 1933 & 22.7 & 694  & 1239 & 73.84 & 7.7  \\ \hline
 			\textbf{Total}	& 8540 &      & 3416 & 5124 &		&	   \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{Distribución de sujetos sanos según la edad y sexo.}
+	\caption{Distribución de las señales ECG de sujetos sanos según la edad y sexo.}
 	\label{tab:Distribucion sanos}
 \end{table}
 
@@ -1431,34 +1431,61 @@ Inicialmente se tiene un total de 8540 señales electrocardiográficas provenien
 
 En este caso se tienen 7391 señales electrocardiográficas de sujetos que guardan alguna cardiopatía, en edades comprendidas entre 22 y 89. En la tabla \ref{tab:Distribucion patologicos} se puede observar la cantidad de señales ECG, edad, distribución por sexo, edad promedio y desviación estándar para cada grupo etario.
 
-\begin{table}
+\begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
 		\begin{tabular}{| M{3cm} | M{2cm} | M{0.9cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
 			\hline
-			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			\textbf{Grupos etario (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
 			(18-34) & 804  & 10.9 & 563  & 241 & 28.8 & 3.3 \\ \hline
 			(35-59) & 4143 & 56.1 & 3810 & 333 & 48.4 & 6.8 \\ \hline
 			(>60)   & 2445 & 33.0 & 1770 & 675 & 70.8 & 9.2 \\ \hline
 			\textbf{Total} & 7391 &  & 6143 & 1249 & & \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{Distribución de sujetos patológicos según la edad y sexo.}
+	\caption{Distribución de las señales ECG de sujetos patológicos según la edad y sexo.}
 	\label{tab:Distribucion patologicos}
 \end{table}
+
+
 \subsection{Distribuciones de los sujetos sanos y patológicos para los entrenamientos de las redes.}
+
+Para garantizar una representación equilibrada de los distintos grupos etarios durante la fase de entrenamiento de las distintas redes neuronales propuestas, se seleccionó aleatoriamente el 60\% de las señales ECG catalogadas como sanos y 60\% de las mismas clasificadas como patológicos dentro de cada grupo. Esta estrategia puede permitir que el modelo aprenda de manera efectiva las diferencias y las trayectorias evolutivas en los perfiles electrocardiográficos. Resulta relevante destacar, como se observa en la tabla \ref{tab:Distribucion entrenamiento}, la tendencia creciente en la prevalencia de patologías a medida que aumenta la edad, lo cual refuerza la importancia de mantener una muestra estratificada para el entrenamiento. Además, la misma tabla expone la distribución final por sexo y los valores promedio de edad de los individuos incluidos en el conjunto de entrenamiento, brindando así información adicional acerca de la representatividad demográfica de la muestra para cada grupo etario.
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.7cm} | M{1.75cm} | M{0.65cm} | M{0.75cm} | M{0.7cm} | M{1.1cm} | M{2.2cm} | M{1.8cm} | M{2.1cm} |}
+			\hline
+			\textbf{Grupos etario (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Sanos} & \textbf{Patológicos} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			(18-34)  & 3586 & 37.5 & 1540 & 2046 & 3092 & 494  & 25.7 & 4.6 \\ \hline
+			(35-59)  & 3330 & 34.8 & 2707 & 623  & 880  & 2450 & 47.3 & 6.7 \\ \hline
+			(>60)    & 2648 & 27.7 & 1494 & 1154 & 1197 & 1451 & 72.5 & 7.5 \\ \hline
+			\textbf{Total} & 9564 && 5741 & 3823 & 5169 & 4395 &      &     \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Distribución de las señales ECG para el entrenamiento de las redes según edad, sexo y estado de salud.}
+	\label{tab:Distribucion entrenamiento}
+\end{table}
 
 
 \section{Descripción general de PCA}
 
-Aca seria bueno decir que transformar la data en representaciones más apropiadas, puede facilitar el proceso de aprendizaje. for instance, usar un numero menor de parametros, a los cuales se les llama usualmente como caracteristicas, para representar las señales bajo estudio es particularmente importante para propositos de reconocimiento y diagnostico. Dado cualquier conjunto de caracteristicas para  representación de datos, es importante estimar la dificultad de aprender los conceptos subyacentes utilizando esos datos de entrenamiento
-Los estudios en la literatura muestran que el grado de dificultad en el entrenamiento de las redes neuronales es inherente al conjunto de ejemplos de entrenamiento dados. Para desarrollar una técnica para medir la dificultad del entrenamiento. % esto esta en la pag del articulo de ceylan
-El sistema de entrenamiento deberia entonces tratar de transformar las representaciones a un espacio donde sea más fácil para el aprendizaje 
-\textbf{insertar cita del articulo de guler y ubeyli, llamado ECG beat classifier designed
-	by combined neural network model}
-acomodar esto para poner en orden el orden de ideas 
+La transformación de datos en una representación más adecuada puede facilitar el proceso de aprendizaje de las redes neuronales. Por ejemplo, el uso de un número menor de parámetros, denominados en este caso como componentes principales, para representar la señal en estudio es particularmente importante para fines de reconocimiento y aprendizaje. Dado cualquier conjunto de características para la representación de datos, es importante estimar la dificultad de aprender los conceptos subyacentes utilizando esos datos de entrenamiento \cite{gulerECGbeatClassifier}. Los estudios en la literatura muestran que el grado de dificultad en el entrenamiento de las redes neuronales es inherente al conjunto de ejemplos de entrenamientos dados, es por esto que se hace la canalización del modelo de aprendizaje donde primero se busca por proyectar las señales electrocardiográficas a un espacio de menor dimensionalidad, lo que facilitará posteriores procesos de aprendizajes. Para implementar esta aproximación en este estudio, se establece al análisis de componentes principales como método de reducción de dimensionalidad, paso previo a la fase de entrenamiento de las redes neuronales, donde se busca reducir la dificultad en el entrenamiento mientras se conserva la mayor cantidad de información presente en las señales electrocardiográficas.
+
+Se introducen como datos de entrada para el análisis de componentes principales, los vectores de características mencionados en la subsección \ref{subsec:vector caracteristicas} los cuales serán sujetos de la reducción de dimensionalidad.
+
+
 \subsection{Método de la varianza acumulada}
-Pequeña discusión
+
+Para determinar el número óptimo de componentes principales a retener tras la reducción de dimensionalidad de un conjunto de datos usando PCA, se utiliza el método de la varianza acumulada. Cada componente principal representa una dirección de máxima varianza en los datos, y la varianza explicada por cada componente mide la proporción de la información original que dicho componente consigue capturar. La varianza explicada acumulada se obtiene sumando la varianza explicada de los primeros \emph{\textbf{k}} componentes seleccionados, expresada como porcentaje del total. Este valor permite identificar cuántas componentes son suficientes para conservar un porcentaje deseado de la información original (por ejemplo, 90\% o 95\%) y así lograr un equilibrio entre compacidad y capacidad explicativa del modelo resultante. Una forma de proceder muy extendida consiste en seleccionar el número de componentes mínimo a partir del cual el incremento deja de ser sustancial.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Sem_1/figuras/Varianza_acumulada.png}
+	\caption{Gráfico de la varianza acumulada explicada para 20 autovalores.}
+	\label{fig:varianza_acumulada_explicada}
+\end{figure}
 
 \subsection{Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}
 Y su respectivo análisis o discusión
