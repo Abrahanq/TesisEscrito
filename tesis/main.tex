@@ -113,7 +113,7 @@
 %\pagestyle{empty}
 {\huge\textbf{Introducción}}
 \chapter{Planteamiento del problema}
-	El electrocardiograma (ECG) es una técnica no invasiva que permite registrar y medir las señales eléctricas generadas por el corazón. Consiste en la captación de la variación temporal del potencial bioeléctrico durante cada ciclo cardíaco, utilizando electrodos colocados en la superficie cutánea del paciente que registran dicha actividad eléctrica y producen un gráfico que muestra el ritmo y la fuerza de los latidos del corazón, este produce un patrón muy específico, y cualquier anomalía puede indicar un problema cardíaco \cite{ZHANG2021113}. El análisis del ECG proporciona datos sobre el sistema cardiovascular, en particular, el corazón, lo que permite detectar diversas enfermedades que pueden afectar su funcionamiento óptimo. Estas enfermedades incluyen arritmias cardíacas, obstrucción de arterias, insuficiencia cardíaca y ataques al corazón \cite{MedlineECG}. \\ Según la organización mundial de la salud \cite{Who}, las enfermedades cardiovasculares (ECV) son las principal causa de muerte en hombres y mujeres en el mundo, con alrededor de 17,9 millones de personas que mueren al año a causa de estas. Entre los numerosos factores que llevan a esta consecuencia, se encuentran los errores provenientes de la interpretación manual de los electrocardiogramas (ECGs), por lo general, los médicos emplean características heurísticas diseñadas manualmente o utilizan arquitecturas de aprendizaje de características superficiales, esto puede generar como consecuencia, variabilidad entre los diagnósticos de los observadores e identificación de anomalías incorrectas que pueden llevar a ocasionar diagnósticos imprecisos y en consecuencia, tratamientos inadecuados. Además estos métodos manuales que utilizan arquitecturas de aprendizaje de características superficiales, descartan información relevante del ECG inmersa dentro de características que no son superficiales, lo que provee una baja exactitud en el diagnostico a partir de las señales por lo que siempre será necesario de la supervisión de un experto con el fin de corregir estos errores, además algunas enfermedades cardíacas, como la enfermedad de las arterias coronarias en etapa temprana, pueden no ser detectables en un ECG, también se debe resaltar, que el ECG se puede ver afectado por factores externos, como el movimiento del paciente, las interferencias electromagnéticas, la incorrecta colocación de los electrodos, estados ansiosos de los pacientes al momento de aplicarles el examen o el uso de medicamentos.
+	El electrocardiograma (ECG) es una técnica no invasiva que permite registrar y medir las señales eléctricas generadas por el corazón. Consiste en la captación de la variación temporal del potencial bioeléctrico durante cada ciclo cardíaco, utilizando electrodos colocados en la superficie cutánea del paciente que registran dicha actividad eléctrica y producen un gráfico que muestra el ritmo y la fuerza de los latidos del corazón, este produce un patrón muy específico, y cualquier anomalía puede indicar un problema cardíaco \cite{ZHANG2021113}. El análisis del ECG proporciona datos sobre el sistema cardiovascular, en particular, el corazón, lo que permite detectar diversas enfermedades que pueden afectar su funcionamiento óptimo. Estas enfermedades incluyen arritmias cardíacas, obstrucción de arterias, insuficiencia cardíaca y ataques al corazón \cite{MedlineECG}. \\ Según la organización mundial de la salud \cite{Who}, las enfermedades cardiovasculares (ECV) son las principal causa de muerte en hombres y mujeres en el mundo, con alrededor de 17,9 millones de personas que mueren al año a causa de estas. Entre los numerosos factores que llevan a esta consecuencia, se encuentran los errores provenientes de la interpretación manual de los electrocardiogramas (ECGs), por lo general, los médicos emplean características heurísticas diseñadas manualmente o utilizan arquitecturas de aprendizaje de características superficiales, esto puede generar como consecuencia, variabilidad entre los diagnósticos de los observadores e identificación de anomalías incorrectas que pueden llevar a ocasionar diagnósticos imprecisos y en consecuencia, tratamientos inadecuados. Además estos métodos manuales que utilizan arquitecturas de aprendizaje de características superficiales, descartan información relevante del ECG inmersa dentro de características que no son superficiales, lo que provee una baja exactitud en el diagnostico a partir de las señales, por lo que siempre será necesario de la supervisión de un experto con el fin de corregir estos errores, además algunas enfermedades cardíacas, como la enfermedad de las arterias coronarias en etapa temprana, pueden no ser detectables en un ECG, también se debe resaltar, que el ECG se puede ver afectado por factores externos, como el movimiento del paciente, las interferencias electromagnéticas, la incorrecta colocación de los electrodos, estados ansiosos de los pacientes al momento de aplicarles el examen o el uso de medicamentos.
 
 \section{Justificación}
 	La interpretación manual de los ECGs está sujeta a errores humanos por fatiga, sesgos o variabilidad interobservador, lo que puede generar diagnósticos incorrectos y por ende, tratamientos inadecuados. Además, el ECG contiene información oculta (como edad, sexo o incluso identidad del paciente) que el ojo humano no puede cuantificar o identificar sistemáticamente. Aunque existen herramientas digitales para análisis de ECG, la mayoría se limitan a detectar arritmias básicas y no aprovechan el potencial que tiene el ECG como biomarcador  para extraer características clínicas no evidentes e incluso llegar a identificar a cada paciente, es por esto que resulta importante desarrollar herramientas que puedan procesar los ECG para reducir o eliminar la presencia de ruidos e interferencias y así minimizar los errores manuales mediante algoritmos robustos y adaptables, descubriendo patrones clínicos con modelos profundos y hasta siendo capaz de identificar pacientes usando el ECG como firma biológica
@@ -124,7 +124,7 @@
 \section{Objetivos}
 
 	\subsection{Objetivo General}
-		Analizar los datos provenientes de electrocardiogramas mediante la aplicación de análisis de componentes principales (PCA) y redes neuronales, con el objetivo de identificar agrupaciones en dicha data.
+		Analizar los datos provenientes de electrocardiogramas mediante la aplicación de análisis de componentes principales (PCA) y redes neuronales, con la finalidad de identificar agrupaciones en dicha data.
 	\subsection{Objetivos específicos}
 \begin{enumerate}
 	\item Implementar técnicas avanzadas de filtrado y eliminación de artefactos para obtener señales de electrocardiogramas más limpias.
@@ -138,7 +138,7 @@
 
 \section{Antecedentes}
 	
-La electrocardiografía sigue siendo uno de los bastiones en lo que se basa la cardiología moderna para el diagnostico de cardiopatías, el electrocardiograma (ECG) suele ser el primer examen que se le realiza a cada paciente cuando se examina a profundidad, ya que es capaz de arrojar información importante del funcionamiento del sistema circulatorio y podría rociar indicios de problemas que pudieran estar pasando en otros sistemas importantes del cuerpo humano. La ciencia siempre ha acompañado la innovación y creación de nuevas tecnologías y la física, como baluarte entre las ciencias naturales, se ha interesado en contribuir en el mejoramiento de estas tecnologías, aportando eficacia y rendimiento desde ángulos no antes vistos. Esto ha conducido a investigar referentes, que permiten ampliar el panorama científico que hay detrás de un ECG. 
+La electrocardiografía sigue siendo uno de los bastiones en lo que se basa la cardiología moderna para el diagnostico de cardiopatías, el electrocardiograma (ECG) suele ser el primer examen que se le realiza a cada paciente cuando se examina a profundidad, ya que es capaz de arrojar información importante del funcionamiento del sistema circulatorio y podría rociar indicios de problemas que pudieran estar pasando en otros sistemas importantes del cuerpo humano. La ciencia siempre ha acompañado la innovación y creación de nuevas tecnologías y la física, como baluarte entre las ciencias naturales, se ha interesado en contribuir en el mejoramiento de estas tecnologías, aportando eficacia y rendimiento desde perspectivas no antes vistas. Esto ha conducido a investigar referentes, que permiten ampliar el panorama científico que hay detrás de un ECG. 
 Ahora se presentan una serie de investigaciones que continúan con esta linea de investigación, que consiste en aplicar métodos computaciones a la salud, creciente interés que ha incrementado desde finales del siglo pasado. \\
 	
 \subsection{A Real-Time QRS Detection Algorithm \cite{PanTompkins85}}
@@ -347,7 +347,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \textbf{Metodología:}
 \begin{itemize}
 	\item Utilizando datos provenientes de la MIT-BIH Arritmia \cite{arritmiadb} y datos adquiridos por el simulador de arritmias Bio-Tek BP Pump NIBP y se entrenaron cinco modelos con diferentes arquitecturas, entre estos; VGG16, ResNet-50, AlexNet y dos arquitecturas propuestas por los autores.
-	\item Todos estos modelos fueron entrenaros con el mismo numero de muestras y configuración de hiperparámetros.
+	\item Todos estos modelos fueron entrenados con el mismo numero de muestras y configuración de hiperparámetros.
 	\item Evalúan el desempeño de cada modelo, utilizando métricas comunes como exactitud, recall, F1-score y precisión (accuracy).
 \end{itemize}
 
@@ -457,7 +457,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 		\caption{Potencial de acción-relaciones de componentes \cite{textCardi}.}
 		\label{fig:fonocardio}
 	\end{figure}
-	Este potencial de acción conducido en forma adecuada es el estímulo para obtener una contracción cardíaca sincronizada. En reposo, el sodio está en el espacio extracelular en mayor concentración, al igual que el calcio, mientras que el potasio predomina en el espacio intracelular. Esto significa que la membrana tendrá una carga positiva por fuera y negativa por dentro. Al iniciarse la despolarización, ocurren cambios de la permeabilidad al sodio, lo cual permite su entrada al espacio intracelular, se invierte la carga interna, que se vuelve positiva ($+20$ mV) y la forma la fase 0 del potencial de acción. La pendiente de su ascenso regula la velocidad de conducción del tejido. Posteriormente, el cloro entra en persecución del sodio y disminuye levemente la positividad interior (fase 1). Luego baja drásticamente la permeabilidad al sodio y calcio y estos iones comienzan a disminuir su velocidad de entrada, la cual se hace básicamente a través de los canales lentos, que son voltaje dependientes y de tipo receptor de membrana que consume energía, y que inscriben una fase en meseta en el potencial de acción (Fase 2). Los canales lentos de calcio son altamente selectivos para este ion, aunque permiten la entrada también de sodio. Este mecanismo en la membrana del retículo sarcoplásmico asegura, además, que la concentración intracelular de calcio sea suficiente para los procesos contráctiles. Inmediatamente sale potasio de la célula para lograr el equilibrio de cargas eléctricas, al parecer por un súbito aumento de la permeabilidad de la membrana para este ion, disminuye la positividad y logra un potencial negativo intenso intracelular, saliendo calcio al retículo sarcoplásmico nuevamente (Fase 3). Esto repolariza la célula. Pero luego entran en acción las bombas de sodio y calcio, dependientes de ATP, que sacan Na y CA y lo intercambian por potasio, lo cual incrementa levemente el potencial intracelular (Fase 4).
+	Este potencial de acción conducido en forma adecuada es el estímulo para obtener una contracción cardíaca sincronizada. En reposo, el sodio está en el espacio extracelular en mayor concentración, al igual que el calcio, mientras que el potasio predomina en el espacio intracelular. Esto significa que la membrana tendrá una carga positiva por fuera y negativa por dentro. Al iniciarse la despolarización, ocurren cambios de la permeabilidad al sodio, lo cual permite su entrada al espacio intracelular, se invierte la carga interna, que se vuelve positiva ($+20$ mV) y la forma la fase 0 del potencial de acción. La pendiente de su ascenso regula la velocidad de conducción del tejido. Posteriormente, el cloro entra en persecución del sodio y disminuye levemente la positividad interior (fase 1). Luego baja drásticamente la permeabilidad al sodio y calcio y estos iones comienzan a disminuir su velocidad de entrada, la cual se hace básicamente a través de los canales lentos, que son voltaje dependientes y de tipo receptor de membrana que consume energía, y que inscriben una fase en meseta en el potencial de acción (Fase 2). Los canales lentos de calcio son altamente selectivos para este ion, aunque permiten la entrada también de sodio. Este mecanismo en la membrana del retículo sarcoplásmico asegura, además, que la concentración intracelular de calcio sea suficiente para los procesos contráctiles. Inmediatamente sale potasio de la célula para lograr el equilibrio de cargas eléctricas, al parecer por un súbito aumento de la permeabilidad de la membrana para este ion, disminuye la positividad y logra un potencial negativo intenso intracelular, saliendo calcio al retículo sarcoplásmico nuevamente (Fase 3). Esto repolariza la célula. Pero luego entran en acción las bombas de sodio y calcio, dependientes de ATP, que sacan Na y Ca y lo intercambian por potasio, lo cual incrementa levemente el potencial intracelular (Fase 4).
 	
 	La velocidad de ascenso de la fase 4 es lo que regula la excitabilidad y es más pronunciado en los tejidos de excitación automática. El calcio que entra en la fase 2 es aclarado de la célula por varios mecanismos como son: las bombas de calcio dependientes de ATP, el fosfolamban, y la captación de calcio hacia el interior de la mitocondria, en un proceso que también es dependiente de energía. El potencial de acción tiene una duración variable (entre 200 y 400 ms) y durante ese período, la célula se hace total o parcialmente refractaria a una excitación adicional, al parecer por la presencia de sodio dentro de la célula. El periodo refractario absoluto ocupa las fases 0, 1, 2 y 3, es decir, mientras el sodio es aún intracelular. Una vez que el sodio comienza a salir de la célula, está parcialmente disponible para volver a entrar rápidamente, por lo que la fase 4 y la parte final de la fase 3 son el período refractario relativo. El potencial más negativo que se alcanza durante la fase 4 se atenúa en presencia de Ácidosis, hipocalemia isquemia y fibrosis y se aumenta con los medicamentos antiarrítmicos en su mayoría. Existen diferencias en la configuración del potencial de acción según el tejido analizado dentro del corazón: en las células automáticas, las fases 1 y 2 son cortas y la fase 4 es plana y en las células de conducción, la fase 0 es rápida, y la fase 2 es de mayor duración. Las fases 0 y 1 corresponden a la onda P y el complejo QRS. La fase 2 corresponde al segmento ST y la fase 3 a la onda T. La fase 4 corresponde a la diástole eléctrica. La deflexión descendente de la onda T corresponde al período refractario relativo, que tiene 2 subfases: la vulnerable que es durante la cual un estímulo de suficiente intensidad es capaz de desencadenar arritmias severas, y la subfase súper-normal, que corresponde a una hiperpolarización "muy refractaria", pues no hay potasio intracelular en cantidad abundante. La velocidad a la cual se transmite el impulso varía de acuerdo con la pendiente de la fase 0, con la altura del potencial de acción, con la duración de las fases 2 y 4. Dicha velocidad en el nodo sinusal es de $5 cm/s$, en las aurículas es de $80-100 cm/s$, en el nodo AV es de $5 cm/s$, en el haz de His es de $100 cm/s$, en las fibras de Purkinje es de $400 cm/s$ y en el músculo de $90 cm/s$
 	
@@ -878,7 +878,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
  	En general, es suficiente que la red tenga tres capas, aunque a veces parece que un problema es más fácil de resolver con más de una capa oculta. Existen resultados experimentales que sugieren utilizar el menor número posible de unidades en las capas ocultas, y en caso de no lograr la convergencia de la red durante su entrenamiento, se debe aumentar el número de nodos hasta que se llegue a un tamaño final que logre el rendimiento global del sistema. Si al incrementar el número de nodos en una capa no se observan mejores en la convergencia de la red, es conveniente dividir esta capa en dos capas sucesivas \cite{perceptron}.
 	\\ \\
 	\textbf{Pesos de la red:} Los pesos de la red deberían recibir unos valores iniciales pequeños y aleatorios, generalmente entre $\pm$.\\ \\
-	\textbf{Tasa de aprendizaje:} Controla el tamaño del cambio de los pesos en cada iteración. Se deben evitar dos extremos: un ritmo de aprendizaje demasiado pequeño puede ocasionar una disminución importante en la velocidad de convergencia y la posibilidad de acaba atrapado en un mínimo local; en cambio, un ritmo de aprendizaje demasiado grande puede conducir a inestabilidades en la función de error, lo cual evitara que se produzca la convergencia debido a que se darán saltos en torno al mínimo sin alcanzarlo \cite{nnApli,stephani}. Por tanto, se recomienda elegir un ritmo de aprendizaje lo más grande posible sin que provoque grandes oscilaciones. En general, el valor de la tasa de aprendizaje suele estar comprendida entre $0.01$ y $0.25$.
+	\textbf{Tasa de aprendizaje:} Controla el tamaño del cambio de los pesos en cada iteración. Se deben evitar dos extremos: un ritmo de aprendizaje demasiado pequeño puede ocasionar una disminución importante en la velocidad de convergencia y la posibilidad de acabar atrapado en un mínimo local; en cambio, un ritmo de aprendizaje demasiado grande puede conducir a inestabilidades en la función de error, lo cual evitara que se produzca la convergencia debido a que se darán saltos en torno al mínimo sin alcanzarlo \cite{nnApli,stephani}. Por tanto, se recomienda elegir un ritmo de aprendizaje lo más grande posible sin que provoque grandes oscilaciones. En general, el valor de la tasa de aprendizaje suele estar comprendida entre $0.01$ y $0.25$.
 %\part{Segundo seminario}
 \chapter{Marco Metodológico.}
 
@@ -1072,7 +1072,7 @@ La importancia de la precisa localización de los picos R en cada ECG radica en 
 \end{figure}
 
 \subsection{Vector de características} 
-
+\label{subsec:vector caracteristicas}
 Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, lo que resulta en latidos promedios con longitudes muéstrales inconsistentes. Para garantizar la comparabilidad morfológica y la viabilidad computacional en etapas posteriores, se implementa una estandarización de longitud fija mediante remuestreo digital. Cada latido se interpola a 250 muestras, este valor preserva la resolución temporal de los eventos cardíacos clave, incluso en ECG de pacientes con trastornos del ritmo cardíaco. Estas señales estandarizadas se almacenan en un arreglo en formato (CSV), este arreglo guarda los valores que al ser graficados, representan la figura del latido promedio de cada paciente, similar a como se observa en la figura \ref{fig:latidos_alineados} (línea roja). 
 Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de características que será la base del análisis de la señal electrocardiográfica. 
 
@@ -1096,7 +1096,7 @@ Una vez determinadas las componentes principales, se proyectan los vectores de c
 	\label{eq:proyeccion_pca}
 \end{equation}
 Este proceso no es una simple comprensión, sino una reestructuración de la información morfológica de cada latido. 
-Estos vectores de características, que graficados se ven como la linea roja de la figura \ref{fig:latidos_alineados} se convierten en un vector único para cada latido promedio de cada paciente, con ahora menos dimensiones, como se observa en la tabla \ref{tab:vector_caracteristicas_proyectado}. A El conjunto de todas las proyecciones hechas se le conoce cómo la base de conocimiento de la red neuronal, estás serán usadas en las fases de entrenamiento y prueba de las redes neuronales, esta base de conocimiento se guarda en forma matricial, con las columnas debidamente identificadas con el numero de cada componente y donde cada fila corresponde al latido promedio de un segmento de ECG de cierto paciente, posteriormente dicha base de conocimiento, se guarda en un archivo de formato CSV, que será usado más adelante.
+Estos vectores de características, que graficados se ven como la linea roja de la figura \ref{fig:latidos_alineados} se convierten en un vector único para cada latido promedio de cada paciente, con ahora menos dimensiones, como se observa en la tabla \ref{tab:vector_caracteristicas_proyectado}. A el conjunto de todas las proyecciones hechas se le conoce cómo la base de conocimiento de la red neuronal, estás serán usadas en las fases de entrenamiento y prueba de las redes neuronales, esta base de conocimiento se guarda en forma matricial, con las columnas debidamente identificadas con el numero de cada componente y donde cada fila corresponde al latido promedio de un segmento de ECG de cierto paciente, posteriormente dicha base de conocimiento, se guarda en un archivo de formato CSV, que será usado más adelante.
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
@@ -1404,26 +1404,26 @@ El proceso metodológico implementado en esta investigación considera de forma 
 
 \section{Descripción general de los datos}
 
-Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
+Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Recordemos que cada señal electrocardiográfica fue sometida a un proceso sistemático de extracción de características, conforme se detalla en la subsección \ref{subsec:vector caracteristicas}. Como resultado, la representación empleada a partir de este punto corresponde a un vector de características, siendo este el latido promedio de la señal original. Por tanto, en lo sucesivo, cualquier referencia a \guillemetleft señal ECG\guillemetright \ o \guillemetleft señal electrocardiográfica\guillemetright \ implicará su interpretación en términos de dicha representación vectorial, la cual sintetiza la información relevante para las etapas posteriores. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
 
 
 \subsection{Distribuciones de los sujetos sanos por sexo y grupos etarios}
 
 Inicialmente se tiene un total de 8540 señales electrocardiográficas provenientes de sujetos sanos, en edades comprendidas entre 18 y 90 años, como se explicó anteriormente, la selección de los grupos etarios permitir distinguir y estudiar las tendencias fisiológicas asociadas a cada etapa de la vida y a su vez esto pudiera facilitar la evaluación comparativa de patrones cardíacos intrínsecos entre los diferentes rangos de edad de la población. En la tabla \ref{tab:Distribucion sanos} se puede apreciar la cantidad electrocardiográficas, edad, distribución por sexo, edad promedio y desviación estándar para cada grupo etario.
 
-\begin{table}
+\begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
 		\begin{tabular}{| M{3cm} | M{2cm} | M{0.8cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
 			\hline
-			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			\textbf{Grupo etario (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
 			(18-34)	& 5131 & 60.0 & 1970 & 3161 & 24.2  & 4.0  \\ \hline
 			(35-59)	& 1476 & 17.3 & 752  & 724  & 45.50 & 6.7  \\ \hline
 			(> 60)	& 1933 & 22.7 & 694  & 1239 & 73.84 & 7.7  \\ \hline
 			\textbf{Total}	& 8540 &      & 3416 & 5124 &		&	   \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{Distribución de sujetos sanos según la edad y sexo.}
+	\caption{Distribución de las señales ECG de sujetos sanos según la edad y sexo.}
 	\label{tab:Distribucion sanos}
 \end{table}
 
@@ -1431,38 +1431,80 @@ Inicialmente se tiene un total de 8540 señales electrocardiográficas provenien
 
 En este caso se tienen 7391 señales electrocardiográficas de sujetos que guardan alguna cardiopatía, en edades comprendidas entre 22 y 89. En la tabla \ref{tab:Distribucion patologicos} se puede observar la cantidad de señales ECG, edad, distribución por sexo, edad promedio y desviación estándar para cada grupo etario.
 
-\begin{table}
+\begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
 		\begin{tabular}{| M{3cm} | M{2cm} | M{0.9cm} | M{0.8cm} | M{0.8cm} | M{2cm} | M{2.2cm} |}
 			\hline
-			\textbf{Grupo etarios (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			\textbf{Grupos etario (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
 			(18-34) & 804  & 10.9 & 563  & 241 & 28.8 & 3.3 \\ \hline
 			(35-59) & 4143 & 56.1 & 3810 & 333 & 48.4 & 6.8 \\ \hline
 			(>60)   & 2445 & 33.0 & 1770 & 675 & 70.8 & 9.2 \\ \hline
 			\textbf{Total} & 7391 &  & 6143 & 1249 & & \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{Distribución de sujetos patológicos según la edad y sexo.}
+	\caption{Distribución de las señales ECG de sujetos patológicos según la edad y sexo.}
 	\label{tab:Distribucion patologicos}
 \end{table}
+
+
 \subsection{Distribuciones de los sujetos sanos y patológicos para los entrenamientos de las redes.}
+
+Para garantizar una representación equilibrada de los distintos grupos etarios durante la fase de entrenamiento de las distintas redes neuronales propuestas, se seleccionó aleatoriamente el 60\% de las señales ECG catalogadas como sanos y 60\% de las mismas clasificadas como patológicos dentro de cada grupo. Esta estrategia puede permitir que el modelo aprenda de manera efectiva las diferencias y las trayectorias evolutivas en los perfiles electrocardiográficos. Resulta relevante destacar, como se observa en la tabla \ref{tab:Distribucion entrenamiento}, la tendencia creciente en la prevalencia de patologías a medida que aumenta la edad, lo cual refuerza la importancia de mantener una muestra estratificada para el entrenamiento. Además, la misma tabla expone la distribución final por sexo y los valores promedio de edad de los individuos incluidos en el conjunto de entrenamiento, brindando así información adicional acerca de la representatividad demográfica de la muestra para cada grupo etario.
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.7cm} | M{1.75cm} | M{0.65cm} | M{0.75cm} | M{0.7cm} | M{1.1cm} | M{2.2cm} | M{1.8cm} | M{2.1cm} |}
+			\hline
+			\textbf{Grupos etario (años)} & \textbf{Cantidad} & \textbf{\%} & \textbf{M} & \textbf{F} & \textbf{Sanos} & \textbf{Patológicos} & \textbf{Edad promedio} & \textbf{Desviación} \\ \hline 
+			(18-34)  & 3586 & 37.5 & 1540 & 2046 & 3092 & 494  & 25.7 & 4.6 \\ \hline
+			(35-59)  & 3330 & 34.8 & 2707 & 623  & 880  & 2450 & 47.3 & 6.7 \\ \hline
+			(>60)    & 2648 & 27.7 & 1494 & 1154 & 1197 & 1451 & 72.5 & 7.5 \\ \hline
+			\textbf{Total} & 9564 && 5741 & 3823 & 5169 & 4395 &      &     \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Distribución de las señales ECG para el entrenamiento de las redes según edad, sexo y estado de salud.}
+	\label{tab:Distribucion entrenamiento}
+\end{table}
 
 
 \section{Descripción general de PCA}
 
-Aca seria bueno decir que transformar la data en representaciones más apropiadas, puede facilitar el proceso de aprendizaje. for instance, usar un numero menor de parametros, a los cuales se les llama usualmente como caracteristicas, para representar las señales bajo estudio es particularmente importante para propositos de reconocimiento y diagnostico. Dado cualquier conjunto de caracteristicas para  representación de datos, es importante estimar la dificultad de aprender los conceptos subyacentes utilizando esos datos de entrenamiento
-Los estudios en la literatura muestran que el grado de dificultad en el entrenamiento de las redes neuronales es inherente al conjunto de ejemplos de entrenamiento dados. Para desarrollar una técnica para medir la dificultad del entrenamiento. % esto esta en la pag del articulo de ceylan
-El sistema de entrenamiento deberia entonces tratar de transformar las representaciones a un espacio donde sea más fácil para el aprendizaje 
-\textbf{insertar cita del articulo de guler y ubeyli, llamado ECG beat classifier designed
-	by combined neural network model}
-acomodar esto para poner en orden el orden de ideas 
+La transformación de datos en una representación más adecuada puede facilitar el proceso de aprendizaje de las redes neuronales. Por ejemplo, el uso de un número menor de parámetros, denominados en este caso como componentes principales, para representar la señal en estudio es particularmente importante para fines de reconocimiento y aprendizaje. Dado cualquier conjunto de características para la representación de datos, es importante estimar la dificultad de aprender los conceptos subyacentes utilizando esos datos de entrenamiento \cite{gulerECGbeatClassifier}. Los estudios en la literatura muestran que el grado de dificultad en el entrenamiento de las redes neuronales es inherente al conjunto de ejemplos de entrenamientos dados, es por esto que se hace la canalización del modelo de aprendizaje donde primero se busca por proyectar las señales electrocardiográficas a un espacio de menor dimensionalidad, lo que facilitará posteriores procesos de aprendizajes. Para implementar esta aproximación en este estudio, se establece al análisis de componentes principales como método de reducción de dimensionalidad, paso previo a la fase de entrenamiento de las redes neuronales, donde se busca reducir la dificultad en el entrenamiento mientras se conserva la mayor cantidad de información presente en las señales electrocardiográficas.
+
+Se introducen como datos de entrada para el análisis de componentes principales, los vectores de características mencionados en la subsección \ref{subsec:vector caracteristicas} los cuales serán sujetos de la reducción de dimensionalidad.
+
+
 \subsection{Método de la varianza acumulada}
-Pequeña discusión
+
+Para determinar el número óptimo de componentes principales a retener tras la reducción de dimensionalidad de un conjunto de datos usando PCA, se utiliza el método de la varianza acumulada. Cada componente principal representa una dirección de máxima varianza en los datos, y la varianza explicada por cada componente mide la proporción de la información original que dicho componente consigue capturar. La varianza explicada acumulada se obtiene sumando la varianza explicada de los primeros \emph{\textbf{k}} componentes seleccionados, expresada como porcentaje del total. Este valor permite identificar cuántas componentes son suficientes para conservar un porcentaje deseado de la información original (por ejemplo, 90\% o 95\%) y así lograr un equilibrio entre compacidad y capacidad explicativa del modelo resultante. Una forma de proceder muy extendida consiste en seleccionar el número de componentes mínimo a partir del cual el incremento deja de ser sustancial. Como se observa en la figura \ref{fig:varianza_acumulada_explicada}, las primeras 8 componentes principales ya suman una varianza acumulada del $90\%$, por lo que se podrían tomar estas, sin embargo se eligió tomar las primeras 20 componentes principales, que acumulan una varianza del $99\%$, esto debido a que posteriormente se observó mejor desempeño de las redes neuronales ante este aumento de componentes principales de entrada.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Sem_1/figuras/Varianza_acumulada.png}
+	\caption{Gráfico de la varianza acumulada explicada para 20 autovalores.}
+	\label{fig:varianza_acumulada_explicada}
+\end{figure}
 
 \subsection{Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}
-Y su respectivo análisis o discusión
 
+Graficando las primeras dos componentes principales (PC1 vs PC2) revela un solapamiento considerable entre las distribuciones de los grupos sano (rojo) y patológico (azul), como se aprecia en las curvas de densidad que se observan en el costado izquierdo y región superior de la figura \ref{fig:pc1vspc2}. Aunque ambas poblaciones comparten una región central común, se observa una separabilidad parcial caracterizadas por diferencias en la dispersión espacial, es decir, el grupo sano exhibe una distribución más compacta y centrada, con un pico de densidad claramente definido en valores intermedios de PC1 y ligeramente negativos de PC2 y una distribución bimodal menos pronunciada, con extensiones hacia valores más negativos de PC2 y positivos de PC1. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/PC1_vs_PC2_std.png}
+	\caption{Gráfico de dispersión de las componentes principales 1 vs 2 de cada registro.}
+	\label{fig:pc1vspc2}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/PC1_vs_PC3_std.png}
+	\caption{caption}
+	\label{fig:1label}
+\end{figure}
 \section{Resultados de clasificación usando los datos de PCA}
 
 
@@ -1486,6 +1528,9 @@ análisis de este
 
 
 \section{Analisis exploratorio tsne}
+
+La figura \ref{fig:pc1vspc2} parece sugerir que si bien PC1 y PC2 capturan cierta variabilidad discriminatoria entre estados de salud, la separación lineal en este subespacio bidimensional resulta insuficiente para una clasificación robusta, esto justifica el uso de técnicas como t-SNE o modelos no lineales que aprovechen componentes adicionales y relaciones más complejas en el espacio de características. 
+
 ¿Se puede mostrar quizas algunas graficas en 2d de tsne donde se vean los pequeños agrupamientos?
 
 \section{Resultados de clasificacion usando los datos de tsne}

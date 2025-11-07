@@ -53,43 +53,43 @@ Warning--empty journal in physionet2000
 Warning--empty year in physionet2000
 You've used 47 entries,
             1876 wiz_defined-function locations,
-            761 strings with 12584 characters,
-and the built_in function-call counts, 12875 in all, are:
-= -- 1132
-> -- 707
+            763 strings with 12645 characters,
+and the built_in function-call counts, 13051 in all, are:
+= -- 1153
+> -- 711
 < -- 0
-+ -- 256
-- -- 209
-* -- 939
-:= -- 1859
-add.period$ -- 50
++ -- 257
+- -- 210
+* -- 956
+:= -- 1880
+add.period$ -- 49
 call.type$ -- 47
-change.case$ -- 45
+change.case$ -- 46
 chr.to.int$ -- 0
 cite$ -- 49
-duplicate$ -- 545
-empty$ -- 1198
-format.name$ -- 209
-if$ -- 3109
+duplicate$ -- 553
+empty$ -- 1208
+format.name$ -- 210
+if$ -- 3154
 int.to.chr$ -- 0
 int.to.str$ -- 47
-missing$ -- 29
-newline$ -- 150
+missing$ -- 28
+newline$ -- 149
 num.names$ -- 49
-pop$ -- 207
+pop$ -- 202
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 475
+skip$ -- 489
 stack$ -- 0
-substring$ -- 757
-swap$ -- 232
+substring$ -- 785
+swap$ -- 240
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 102
+while$ -- 104
 width$ -- 49
-write$ -- 421
+write$ -- 423
 (There were 6 error messages)
