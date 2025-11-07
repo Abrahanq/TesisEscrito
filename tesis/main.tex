@@ -1487,32 +1487,50 @@ Para determinar el número óptimo de componentes principales a retener tras la 
 	\label{fig:varianza_acumulada_explicada}
 \end{figure}
 
-\subsection{Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}
+\subsection{Gráficas de dispersión de los registros electrocardiográficos entre componentes principales.}
 
-Graficando las primeras dos componentes principales (PC1 vs PC2) revela un solapamiento considerable entre las distribuciones de los grupos sano (rojo) y patológico (azul), como se aprecia en las curvas de densidad que se observan en el costado izquierdo y región superior de la figura \ref{fig:pc1vspc2}. Aunque ambas poblaciones comparten una región central común, se observa una separabilidad parcial caracterizadas por diferencias en la dispersión espacial, es decir, el grupo sano exhibe una distribución más compacta y centrada, con un pico de densidad claramente definido en valores intermedios de PC1 y ligeramente negativos de PC2 y una distribución bimodal menos pronunciada, con extensiones hacia valores más negativos de PC2 y positivos de PC1. 
+El gráfico de las primeras dos componentes principales (PC1 vs PC2) (véase fig. \ref{fig:pc1vspc2}) revela un solapamiento considerable entre las distribuciones de los grupos sano (rojo) y patológico (azul), como se aprecia en las curvas de densidad que se observan en el costado izquierdo y región superior de la figura \ref{fig:pc1vspc2}. Aunque ambas poblaciones comparten una región central común, se observa una separabilidad parcial caracterizadas por diferencias en la dispersión espacial, es decir, el grupo sano exhibe una distribución más compacta y centrada, con un pico de densidad claramente definido en valores intermedios de PC1 y ligeramente negativos de PC2 y una distribución bimodal menos pronunciada, con extensiones hacia valores más negativos de PC2 y positivos de PC1. \\
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/PC1_vs_PC2_std.png}
-	\caption{Gráfico de dispersión de las componentes principales 1 vs 2 de cada registro.}
+	\caption{Gráfico de dispersión de las componentes principales 1 vs 2 de cada registro con distribuciones de densidad marginales.}
 	\label{fig:pc1vspc2}
 \end{figure}
 
+La proyección de las señales electrocardiográficas sobre la primera y la tercera componente principal (PC1 y PC3) (véase fig. \ref{fig:pc1vspc3}) muestra un patrón de solapamiento significativamente mayor que el observado en el plano PC1-PC2, como se evidencia en las curvas de densidad marginal prácticamente superpuestas para ambos grupos. La distribución bidimensional muestra una nube de puntos altamente entremezclada, donde las poblaciones sanas (rojo) y patológicas (azul)  ocupan regiones espaciales similares, concentrándose principalmente en la región central del plano con extensiones dispersas hacia valores extremos. Las distribuciones marginales confirman esta observación: tanto con PC1 como en PC3, los picos de densidad de ambos grupos coinciden en valores cercanos a cero, con formas y amplitudes muy similares, lo que sugiere que PC3 puede capturar variabilidad intragrupo más que diferencias discriminativas entre estados de salud. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/PC1_vs_PC3_std.png}
-	\caption{caption}
-	\label{fig:1label}
+	\caption{Gráfico de dispersión de las componentes principales 1 vs 3 de cada registro con distribuciones de densidad marginales.}
+	\label{fig:pc1vspc3}
 \end{figure}
+
+
 \section{Resultados de clasificación usando los datos de PCA}
 
 
 
-¿se ponen los gráficos de entrenamiento de las redes?
+\subsection{Configuración y Métricas de desempeño por modelo}
 
-\subsection{Metricas de desempeño}
-¿Correr varias veces para calcular a posteriori alguna estadística?
+Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con caracteristicas especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la precisión (véase \ref{eq:precision}). Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
+			\hline 
+			\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Precisión (\%)} \\ \hline
+			Estado de salud & 0.001 & 100 & RMSprop & Entropía binaria cruzada & 96.6 \\ \hline
+			Grupos etarios & 0.001 & 100 & RMSprop & Entropía cruzada & 87.1 \\ \hline
+			Sexo & 0.001 & 100 & Adam & Entropía binaria cruzada & 98.6 \\ \hline
+			Trastorno & 0.001 & 100 & RMSprop & Entropía cruzada & 96.3 \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{}
+	\label{tab:configuracion y desempeño}
+\end{table}
 
 
 \subsection{Matrices de confusión}
