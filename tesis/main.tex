@@ -1489,11 +1489,13 @@ Para determinar el número óptimo de componentes principales a retener tras la 
 
 \subsection{Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}
 
+Graficando las primeras dos componentes principales (PC1 vs PC2) revela un solapamiento considerable entre las distribuciones de los grupos sano (rojo) y patológico (azul), como se aprecia en las curvas de densidad que se observan en el costado izquierdo y región superior de la figura \ref{fig:pc1vspc2}. Aunque ambas poblaciones comparten una región central común, se observa una separabilidad parcial caracterizadas por diferencias en la dispersión espacial, es decir, el grupo sano exhibe una distribución más compacta y centrada, con un pico de densidad claramente definido en valores intermedios de PC1 y ligeramente negativos de PC2 y una distribución bimodal menos pronunciada, con extensiones hacia valores más negativos de PC2 y positivos de PC1. 
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/PC1_vs_PC2_std.png}
-	\caption{caption}
-	\label{fig:label}
+	\caption{Gráfico de dispersión de las componentes principales 1 vs 2 de cada registro.}
+	\label{fig:pc1vspc2}
 \end{figure}
 
 
@@ -1526,6 +1528,9 @@ análisis de este
 
 
 \section{Analisis exploratorio tsne}
+
+La figura \ref{fig:pc1vspc2} parece sugerir que si bien PC1 y PC2 capturan cierta variabilidad discriminatoria entre estados de salud, la separación lineal en este subespacio bidimensional resulta insuficiente para una clasificación robusta, esto justifica el uso de técnicas como t-SNE o modelos no lineales que aprovechen componentes adicionales y relaciones más complejas en el espacio de características. 
+
 ¿Se puede mostrar quizas algunas graficas en 2d de tsne donde se vean los pequeños agrupamientos?
 
 \section{Resultados de clasificacion usando los datos de tsne}
