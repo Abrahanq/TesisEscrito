@@ -1211,6 +1211,7 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
 				Densa & 10 & ReLU    \\ \hline
 				Densa & 15 & ReLU    \\ \hline
+				Densa & 15 & ReLU    \\ \hline
 				Densa & 10 & ReLU    \\ \hline
 				Densa & 3 & Sigmoide \\
 				\hline
@@ -1510,8 +1511,6 @@ La proyección de las señales electrocardiográficas sobre la primera y la terc
 
 \section{Resultados de clasificación usando los datos de PCA}
 
-
-
 \subsection{Configuración y Métricas de desempeño por modelo}
 
 Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con caracteristicas especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la precisión (véase \ref{eq:precision}). Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
@@ -1534,7 +1533,15 @@ Para cada una de las redes neuronales desarrolladas, se presentan los parámetro
 
 
 \subsection{Matrices de confusión}
-análisis de este
+
+Queda pendiente por hacer las demas matrices de confusion 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_etarios.png}
+	\caption{sadf}
+	\label{fig:label}
+\end{figure}
 
 \section{Resultados de identificacion de pacientes}
 
