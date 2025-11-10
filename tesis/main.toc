@@ -88,13 +88,15 @@
 \contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{58}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Configuración y Métricas de desempeño por modelo}{58}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{59}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Resultados de identificacion de pacientes}{59}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}metricas de desempeño}{59}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Matrices de confusión}{59}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Discusion sobre la viabilidad de la huella digital cardíaca}{59}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Analisis exploratorio tsne}{59}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Resultados de clasificacion usando los datos de tsne}{60}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{60}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{60}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{60}{subsection.4.6.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{62}{chapter.5}%
+\contentsline {subsubsection}{Matriz de confusión - Estado de salud (Sanos vs Patológicos)}{59}{section*.13}%
+\contentsline {subsubsection}{Matriz de confusión - Trastornos de salud (4 clases)}{60}{section*.14}%
+\contentsline {section}{\numberline {4.4}Resultados de identificacion de pacientes}{61}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}metricas de desempeño}{61}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Matrices de confusión}{61}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Discusion sobre la viabilidad de la huella digital cardíaca}{61}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Analisis exploratorio tsne}{61}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Resultados de clasificacion usando los datos de tsne}{62}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{62}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{62}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{62}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{64}{chapter.5}%

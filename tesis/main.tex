@@ -1160,13 +1160,13 @@ El diseño de las tareas de modelado en esta investigación se fundamente en el 
 		\begin{center}
 			\begin{tabular}{| M{5cm} | M{8cm} |}
 				\hline
-				\textbf{Tipos de trastornos} & \textbf{Descripción} \\ \hline
+				\textbf{Tipos de trastornos clínicos} & \textbf{Descripción} \\ \hline
 				Trastornos de la respiración durante el sueño & Pacientes con apnea de sueño \\ \hline
 				Trastornos del ritmo cardíaco & Pacientes con problemas arrítmicos \\ \hline
 				Trastornos de la función de bomba del corazón & Pacientes con insuficiencias cardíacas \\ \hline
 				Sanos & Pacientes catalogados como sanos. \\ \hline
 			\end{tabular}
-		\caption{Tipos de trastornos encontrados.}
+		\caption{Tipos de trastornos clínicos encontrados.}
 		\label{tab:tipos_trastornos}
 		\end{center}
 	\end{table}
@@ -1239,7 +1239,7 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 		\label{tab:summary NN clasificacion por sexo}
 	\end{table}
 	
-	\item \textbf{Clasificación por tipo de trastorno de salud:} Para el modelo de clasificación multiclase por estados de salud, se diseñó una red neuronal con 3 capas densas y una capa de salida con 4 neuronas correspondientes a las 4 categorías de tipos de trastornos mencionados en la tabla \ref{tab:tipos_trastornos}, la cantidad de neuronas por capa y su función de activación se detallan en la tabla \ref{tab:summary NN clasificacion por trastorno}
+	\item \textbf{Clasificación por tipo de trastorno de salud:} Para el modelo de clasificación multiclase por estados de salud, se diseñó una red neuronal con 3 capas densas y una capa de salida con 4 neuronas correspondientes a las 4 categorías de tipos de trastornos clínicos mencionados en la tabla \ref{tab:tipos_trastornos}, la cantidad de neuronas por capa y su función de activación se detallan en la tabla \ref{tab:summary NN clasificacion por trastorno}
 	\begin{table}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{center}
@@ -1513,7 +1513,7 @@ La proyección de las señales electrocardiográficas sobre la primera y la terc
 
 \subsection{Configuración y Métricas de desempeño por modelo}
 
-Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con caracteristicas especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la precisión (véase \ref{eq:precision}). Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
+Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con caracteristicas especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos clínicos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la precisión (véase \ref{eq:precision}). Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
 
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
@@ -1534,13 +1534,40 @@ Para cada una de las redes neuronales desarrolladas, se presentan los parámetro
 
 \subsection{Matrices de confusión}
 
-Queda pendiente por hacer las demas matrices de confusion 
+Con el propósito de evaluar visualmente el desempeño de las redes neuronales anteriormente desarrolladas y analizar en detalle los patrones de clasificación obtenidos, se construyeron matrices de confusión para cada una de las tareas implementadas. Dichas matrices permiten cuantificar e identificar qué clases específicas presentan mayor dificultad discriminativas y en qué medida el modelo confunde unas categorías con otras. Este análisis visual permite complementar las métricas numéricas presentadas previamente y facilita el entendimiento del desempeño del clasificador. A continuación, se presentan y analizan las matrices de confusión correspondientes a las tareas de clasificación de estado de salud, tipos de trastorno y grupos etarios.
+
+\subsubsection{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}
+
+La matriz de confusión para la clasificación binaria del estado de salud (véase fig. \ref{fig:mtxsalud}), muestra un desempeño notable del modelo, con una exactitud general elevada, esto se evidencia por los valores diagonales dominantes. Del total de casos sanos, $2840$ fueron correctamente identificados, mientras que solo 116 fueron incorrectamente clasificados como patológicos, lo que representa una sensibilidad superior al $96\%$. Por otro lado, de los casos sanos, $3255$ fueron correctamente identificados y unicamente 165 fueron clasificados erróneamente como sanos, alcanzando una especifidad cercana al $95\%$. Este patrón indica que el modelo basado en componentes principales logra discriminar efectivamente entre ambas categorías, con un bajo numero de falsos positivos y de falsos negativos, lo cual resulta relevante desde el punto de vista clínico, donde minimizar falsos negativos resulta critico para evitar pasar por alto patologías en pacientes que las presentan.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_salud_pca.png}
+	\caption{Matriz de confusión para clasificación de estado de salud.}
+	\label{fig:mtxsalud}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Trastornos de salud (4 clases).}
+
+
+La matriz de confusión multiclase para la clasificación de trastornos clínicos (mencionados en la tabla \ref{tab:tipos_trastornos}) revela un desempeño diferenciado según la categoría (véase fig. \ref{fig:mtxtrastornos}). La clase "Sanos" presenta la mayor capacidad discriminatoria, con 3314 identificaciones correctas y muy pocos errores de clasificación hacia otras categorías, alcanzando una precisión superior al $98\%$. La categoría "Sueño", que corresponde a los pacientes con trastornos de la respiración durante el sueño, también muestra un rendimiento robusto con 1162 aciertos, aunque esta presenta una mayor confusión con la clase "Sanos" (83 casos). Por su parte, la clase "Ritmo", correspondiente a los pacientes con trastornos del ritmo cardíaco, obtiene 1059 clasificaciones correctas pero exhibe una confusión moderada con la clase "Sueño" (31 casos) y "Sanos" (37 casos). La categoría "Insuficiencia", correspondiente a los pacientes con trastornos de la función de bomba del corazón, es la que presenta mayor dificultad, con 550 aciertos y las tasas de confusión relativamente más altas, particularmente con la clase "Ritmo" (20 casos), Este patrón sugiere que, si bien el modelo logra separar adecuadamente los casos sanos y ciertos trastornos específicos, la diferenciación entre estos subtipos de patologías puede presentar desafíos adicionales, posiblemente debido a solapamientos en los perfiles electrocardiográficos de las distintas condiciones que se presentan.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_etarios.png}
-	\caption{sadf}
-	\label{fig:label}
+	\caption{Matriz de confusión para clasificación por grupos etarios.}
+	\label{fig:mtxetarios}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}
+
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_trastornos_pca.png}
+	\caption{Matriz de confusión para la clasificación de trastornos clínicos.}
+	\label{fig:mtxtrastornos}
 \end{figure}
 
 \section{Resultados de identificacion de pacientes}
