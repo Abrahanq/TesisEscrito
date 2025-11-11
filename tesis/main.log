@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.19)  9 NOV 2025 13:43
-=======
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  10 NOV 2025 19:44
->>>>>>> 09a8d0ee674f12b6bb4154c9af1e269ce303d51d
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.10.19)  10 NOV 2025 22:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1374,32 +1370,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Sem_1/figuras/Matriz_etarios.png Graphic file (type png)
 <use Sem_1/figuras/Matriz_etarios.png>
 Package pdftex.def Info: Sem_1/figuras/Matriz_etarios.png  used on input line 1
-<<<<<<< HEAD
-541.
-=======
 557.
->>>>>>> 09a8d0ee674f12b6bb4154c9af1e269ce303d51d
 (pdftex.def)             Requested size: 425.41444pt x 425.41449pt.
-[58 <./Sem_1/figuras/PC1_vs_PC2_std.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<<<<<<< HEAD
-[59 <./Sem_1/figuras/PC1_vs_PC3_std.png>] [60] [61 <./Sem_1/figuras/Matriz_etar
-ios.png>]
-=======
-<Sem_1/figuras/Matriz_trastornos_pca.png, id=1148, 867.24pt x 867.24pt>
+[60]
+<Sem_1/figuras/Matriz_trastornos_pca.png, id=1157, 867.24pt x 867.24pt>
 File: Sem_1/figuras/Matriz_trastornos_pca.png Graphic file (type png)
 <use Sem_1/figuras/Matriz_trastornos_pca.png>
 Package pdftex.def Info: Sem_1/figuras/Matriz_trastornos_pca.png  used on input
- line 1566.
+ line 1568.
 (pdftex.def)             Requested size: 425.41444pt x 425.41449pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[60] [61 <./Sem_1/figuras/Matriz_salud_pca.png>] [62 <./Sem_1/figuras/Matriz_et
-arios.png>] [63 <./Sem_1/figuras/Matriz_trastornos_pca.png>]
->>>>>>> 09a8d0ee674f12b6bb4154c9af1e269ce303d51d
+[61 <./Sem_1/figuras/Matriz_salud_pca.png>] [62 <./Sem_1/figuras/Matriz_etarios
+.png>] [63 <./Sem_1/figuras/Matriz_trastornos_pca.png>]
 Cap\'{\i }tulo 5.
 (./main.bbl [64
 
@@ -1419,17 +1407,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7910E1338C7D905BDF3072F1551DCD5A;22385.
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 25683 strings out of 478287
- 467141 string characters out of 5849288
+ 25712 strings out of 478287
+ 467881 string characters out of 5849288
  1426706 words of memory out of 5000000
- 43080 multiletter control sequences out of 15000+600000
-=======
- 25714 strings out of 480247
- 467916 string characters out of 5896106
- 1421661 words of memory out of 5000000
- 42850 multiletter control sequences out of 15000+600000
->>>>>>> 09a8d0ee674f12b6bb4154c9af1e269ce303d51d
+ 43100 multiletter control sequences out of 15000+600000
  489269 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,103p,18256b,734s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1453,14 +1434,10 @@ c/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sftt1200.pfb>
-<<<<<<< HEAD
-Output written on main.pdf (70 pages, 3944802 bytes).
-=======
-Output written on main.pdf (72 pages, 4099043 bytes).
->>>>>>> 09a8d0ee674f12b6bb4154c9af1e269ce303d51d
+Output written on main.pdf (72 pages, 4105705 bytes).
 PDF statistics:
- 1371 PDF objects out of 1440 (max. 8388607)
- 1199 compressed objects within 12 object streams
- 346 named destinations out of 1000 (max. 500000)
+ 1374 PDF objects out of 1440 (max. 8388607)
+ 1201 compressed objects within 13 object streams
+ 347 named destinations out of 1000 (max. 500000)
  846 words of extra memory for PDF output out of 10000 (max. 10000000)
 
