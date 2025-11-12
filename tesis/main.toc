@@ -84,17 +84,20 @@
 \contentsline {subsection}{\numberline {4.1.3}Distribuciones de los sujetos sanos y patológicos para los entrenamientos de las redes.}{55}{subsection.4.1.3}%
 \contentsline {section}{\numberline {4.2}Descripción general de PCA}{56}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Método de la varianza acumulada}{56}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}{56}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{56}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Metricas de desempeño}{56}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{57}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Resultados de identificacion de pacientes}{57}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}metricas de desempeño}{57}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Matrices de confusión}{57}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Discusion sobre la viabilidad de la huella digital cardíaca}{57}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Analisis exploratorio tsne}{57}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Resultados de clasificacion usando los datos de tsne}{58}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{58}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{58}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{58}{subsection.4.6.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{60}{chapter.5}%
+\contentsline {subsection}{\numberline {4.2.2}Gráficas de dispersión de los registros electrocardiográficos entre componentes principales.}{56}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{58}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Configuración y Métricas de desempeño por modelo}{58}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{59}{subsection.4.3.2}%
+\contentsline {subsubsection}{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}{59}{section*.13}%
+\contentsline {subsubsection}{Matriz de confusión - Trastornos de salud (4 clases).}{60}{section*.14}%
+\contentsline {subsubsection}{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}{60}{section*.15}%
+\contentsline {section}{\numberline {4.4}Resultados de identificacion de pacientes}{62}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}metricas de desempeño}{62}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Matrices de confusión}{62}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Discusion sobre la viabilidad de la huella digital cardíaca}{62}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Analisis exploratorio tsne}{62}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Resultados de clasificacion usando los datos de tsne}{63}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{63}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{63}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{63}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{64}{chapter.5}%

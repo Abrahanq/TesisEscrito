@@ -259,8 +259,8 @@
 \newlabel{item:clasificacion_salud}{{1}{45}{Tareas de modelado propuestas}{Item.39}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Rangos de los grupos etarios.}}{46}{table.3.3}\protected@file@percent }
 \newlabel{tab:grupos_etarios}{{3.3}{46}{Rangos de los grupos etarios}{table.3.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Tipos de trastornos encontrados.}}{46}{table.3.4}\protected@file@percent }
-\newlabel{tab:tipos_trastornos}{{3.4}{46}{Tipos de trastornos encontrados}{table.3.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Tipos de trastornos clínicos encontrados.}}{46}{table.3.4}\protected@file@percent }
+\newlabel{tab:tipos_trastornos}{{3.4}{46}{Tipos de trastornos clínicos encontrados}{table.3.4}{}}
 \citation{adamoptimization14}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7.3}Preparación de datos}{47}{subsection.3.7.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.7.4}Arquitecturas empleadas (casos con PCA)}{47}{subsection.3.7.4}\protected@file@percent }
@@ -315,28 +315,39 @@
 \newlabel{tab:Distribucion entrenamiento}{{4.3}{55}{Distribución de las señales ECG para el entrenamiento de las redes según edad, sexo y estado de salud}{table.4.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Descripción general de PCA}{56}{section.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Método de la varianza acumulada}{56}{subsection.4.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Gráficas de pca de los datos, 2 componentes, probando varias combinaciones}{56}{subsection.4.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{56}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Metricas de desempeño}{56}{subsection.4.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Gráficas de dispersión de los registros electrocardiográficos entre componentes principales.}{56}{subsection.4.2.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Gráfico de la varianza acumulada explicada para 20 autovalores.}}{57}{figure.4.1}\protected@file@percent }
 \newlabel{fig:varianza_acumulada_explicada}{{4.1}{57}{Gráfico de la varianza acumulada explicada para 20 autovalores}{figure.4.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{57}{subsection.4.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Resultados de identificacion de pacientes}{57}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}metricas de desempeño}{57}{subsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Matrices de confusión}{57}{subsection.4.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Discusion sobre la viabilidad de la huella digital cardíaca}{57}{subsection.4.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Analisis exploratorio tsne}{57}{section.4.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces caption}}{58}{figure.4.2}\protected@file@percent }
-\newlabel{fig:label}{{4.2}{58}{caption}{figure.4.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Resultados de clasificacion usando los datos de tsne}{58}{section.4.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{58}{subsection.4.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{58}{subsection.4.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{58}{subsection.4.6.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces caption}}{59}{figure.4.3}\protected@file@percent }
-\newlabel{fig:1label}{{4.3}{59}{caption}{figure.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Gráfico de dispersión de las componentes principales 1 vs 2 de cada registro con distribuciones de densidad marginales.}}{58}{figure.4.2}\protected@file@percent }
+\newlabel{fig:pc1vspc2}{{4.2}{58}{Gráfico de dispersión de las componentes principales 1 vs 2 de cada registro con distribuciones de densidad marginales}{figure.4.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{58}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Configuración y Métricas de desempeño por modelo}{58}{subsection.4.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Gráfico de dispersión de las componentes principales 1 vs 3 de cada registro con distribuciones de densidad marginales.}}{59}{figure.4.3}\protected@file@percent }
+\newlabel{fig:pc1vspc3}{{4.3}{59}{Gráfico de dispersión de las componentes principales 1 vs 3 de cada registro con distribuciones de densidad marginales}{figure.4.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{59}{subsection.4.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}{59}{section*.13}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces }}{60}{table.4.4}\protected@file@percent }
+\newlabel{tab:configuracion y desempeño}{{4.4}{60}{}{table.4.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Matriz de confusión - Trastornos de salud (4 clases).}{60}{section*.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}{60}{section*.15}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Matriz de confusión para clasificación de estado de salud.}}{61}{figure.4.4}\protected@file@percent }
+\newlabel{fig:mtxsalud}{{4.4}{61}{Matriz de confusión para clasificación de estado de salud}{figure.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Matriz de confusión para clasificación por grupos etarios.}}{62}{figure.4.5}\protected@file@percent }
+\newlabel{fig:mtxetarios}{{4.5}{62}{Matriz de confusión para clasificación por grupos etarios}{figure.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Resultados de identificacion de pacientes}{62}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}metricas de desempeño}{62}{subsection.4.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Matrices de confusión}{62}{subsection.4.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Discusion sobre la viabilidad de la huella digital cardíaca}{62}{subsection.4.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Analisis exploratorio tsne}{62}{section.4.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Matriz de confusión para la clasificación de trastornos clínicos.}}{63}{figure.4.6}\protected@file@percent }
+\newlabel{fig:mtxtrastornos}{{4.6}{63}{Matriz de confusión para la clasificación de trastornos clínicos}{figure.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Resultados de clasificacion usando los datos de tsne}{63}{section.4.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{63}{subsection.4.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{63}{subsection.4.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{63}{subsection.4.6.3}\protected@file@percent }
 \bibstyle{ieeetr}
 \bibdata{bibliografia.bib}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusiones}{60}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusiones}{64}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
@@ -387,4 +398,4 @@
 \bibcite{adamoptimization14}{45}
 \bibcite{whatsdendro}{46}
 \bibcite{gulerECGbeatClassifier}{47}
-\gdef \@abspage@last{68}
+\gdef \@abspage@last{72}
