@@ -1527,7 +1527,7 @@ Para cada una de las redes neuronales desarrolladas, se presentan los parámetro
 			Trastorno & 0.001 & 100 & RMSprop & Entropía cruzada & 96.3 \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{}
+	\caption{Valores de configuración y desempeño de las redes neuronales propuestas.}
 	\label{tab:configuracion y desempeño}
 \end{table}
 
@@ -1538,11 +1538,11 @@ Con el propósito de evaluar visualmente el desempeño de las redes neuronales a
 
 \subsubsection{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}
 
-La matriz de confusión para la clasificación binaria del estado de salud (véase fig. \ref{fig:mtxsalud}), muestra un desempeño notable del modelo, con una exactitud general elevada, esto se evidencia por los valores diagonales dominantes. Del total de casos sanos, $2840$ fueron correctamente identificados, mientras que solo 116 fueron incorrectamente clasificados como patológicos, lo que representa una sensibilidad superior al $96\%$. Por otro lado, de los casos sanos, $3255$ fueron correctamente identificados y unicamente 165 fueron clasificados erróneamente como sanos, alcanzando una especifidad cercana al $95\%$. Este patrón indica que el modelo basado en componentes principales logra discriminar efectivamente entre ambas categorías, con un bajo numero de falsos positivos y de falsos negativos, lo cual resulta relevante desde el punto de vista clínico, donde minimizar falsos negativos resulta critico para evitar pasar por alto patologías en pacientes que las presentan.
+La matriz de confusión para la clasificación binaria del estado de salud (véase fig. \ref{fig:mtxsalud}), muestra un desempeño notable del modelo, con una exactitud general elevada, esto se evidencia por los valores diagonales dominantes. Del total de casos patológicos, $2840$ fueron correctamente identificados, mientras que solo 116 fueron incorrectamente clasificados como sanos, lo que representa una sensibilidad superior al $96\%$. Por otro lado, de los casos sanos, $3255$ fueron correctamente identificados y unicamente 165 fueron clasificados erróneamente como patológicos, alcanzando una especifidad cercana al $95\%$. Este patrón indica que el modelo basado en componentes principales logra discriminar efectivamente entre ambas categorías, con un bajo numero de falsos positivos y de falsos negativos, lo cual puede resultar relevante desde el punto de vista clínico, donde minimizar falsos negativos resulta crítico para evitar pasar por alto patologías en pacientes que las presentan.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_salud_pca.png}
+	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_salud_pca.png}
 	\caption{Matriz de confusión para clasificación de estado de salud.}
 	\label{fig:mtxsalud}
 \end{figure}
@@ -1550,35 +1550,47 @@ La matriz de confusión para la clasificación binaria del estado de salud (véa
 \subsubsection{Matriz de confusión - Trastornos de salud (4 clases).}
 
 
-La matriz de confusión multiclase para la clasificación de trastornos clínicos (mencionados en la tabla \ref{tab:tipos_trastornos}) revela un desempeño diferenciado según la categoría (véase fig. \ref{fig:mtxtrastornos}). La clase "Sanos" presenta la mayor capacidad discriminatoria, con 3314 identificaciones correctas y muy pocos errores de clasificación hacia otras categorías, alcanzando una precisión superior al $98\%$. La categoría "Sueño", que corresponde a los pacientes con trastornos de la respiración durante el sueño, también muestra un rendimiento robusto con 1162 aciertos, aunque esta presenta una mayor confusión con la clase "Sanos" (83 casos). Por su parte, la clase "Ritmo", correspondiente a los pacientes con trastornos del ritmo cardíaco, obtiene 1059 clasificaciones correctas pero exhibe una confusión moderada con la clase "Sueño" (31 casos) y "Sanos" (37 casos). La categoría "Insuficiencia", correspondiente a los pacientes con trastornos de la función de bomba del corazón, es la que presenta mayor dificultad, con 550 aciertos y las tasas de confusión relativamente más altas, particularmente con la clase "Ritmo" (20 casos), Este patrón sugiere que, si bien el modelo logra separar adecuadamente los casos sanos y ciertos trastornos específicos, la diferenciación entre estos subtipos de patologías puede presentar desafíos adicionales, posiblemente debido a solapamientos en los perfiles electrocardiográficos de las distintas condiciones que se presentan.
+La matriz de confusión multiclase para la clasificación de trastornos clínicos (mencionados en la tabla \ref{tab:tipos_trastornos}) revela un desempeño diferenciado según la categoría (véase fig. \ref{fig:mtxtrastornos}). La clase \guillemetleft Sanos\guillemetright \ presenta la mayor capacidad discriminatoria, con 3314 identificaciones correctas y muy pocos errores de clasificación hacia otras categorías, alcanzando una precisión superior al $98\%$. La categoría \guillemetleft Sueño\guillemetright, que corresponde a los pacientes con trastornos de la respiración durante el sueño, también muestra un rendimiento robusto con 1162 aciertos, aunque esta presenta una mayor confusión con la clase \guillemetleft Sanos\guillemetright \ (83 casos). Por su parte, la clase \guillemetleft Ritmo\guillemetright, correspondiente a los pacientes con trastornos del ritmo cardíaco, obtiene 1059 clasificaciones correctas pero exhibe una confusión moderada con la clase \guillemetleft Sueño\guillemetright (31 casos) y \guillemetleft Sanos\guillemetright (37 casos). La categoría \guillemetleft Insuficiencia\guillemetright, correspondiente a los pacientes con trastornos de la función de bomba del corazón, presenta 550 aciertos y muestra una confusión relativamente alta (en comparación a casos anteriores), con la clase \guillemetleft Ritmo \guillemetright \ (20 casos), Este patrón sugiere que, si bien el modelo logra separar adecuadamente los casos sanos y ciertos trastornos específicos, la diferenciación entre estos subtipos de patologías puede presentar desafíos adicionales, posiblemente debido a solapamientos en los perfiles electrocardiográficos de las distintas condiciones que se presentan.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_etarios.png}
-	\caption{Matriz de confusión para clasificación por grupos etarios.}
-	\label{fig:mtxetarios}
-\end{figure}
-
-\subsubsection{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}
-
-La matriz de confusión para la clasificación por grupos etarios (véase fig. \ref{fig:mtxetarios}), muestra un desempeño desigual entre las tres categorías. El grupo de "Mayores" presenta la mejor capacidad de identificación con 1404 clasificaciones correctas y relativamente pocos errores (139 confusiones con jóvenes y 187 con mediana edad), alcanzando una exactitud aproximada del $81\%$. El grupo de "Mediana edad" también muestra un rendimiento aceptable con 1871 aciertos, aunque presenta mayor confusión con los otros grupos (331 casos con jóvenes y 187 con mayores), lo que representa una exactitud cercana al $82\%$. Sin embargo, el grupo de "Jóvenes" exhibe la mayor dificultad discriminativa, con 1985 identificaciones correctas pero con confusiones significativas hacia el grupo de mediana edad (258 casos) y mayores (113 casos), resultando en un exactitud aproximada del $84\%$. Estos resultados sugieren que los patrones electrocardiográficos asociados a la edad presentan una transición gradual y continua en lugar de limites discretos claramente definidos, especialmente en las fronteras entre grupos contiguos, lo cual dificulta la clasificación categórica estricta y refuerza la naturaleza evolutiva de las características cardíacas a los largo del ciclo vital.
-
-\textbf{Corregir las comillas}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_trastornos_pca.png}
+	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_trastornos_pca.png}
 	\caption{Matriz de confusión para la clasificación de trastornos clínicos.}
 	\label{fig:mtxtrastornos}
 \end{figure}
 
-\section{Resultados de identificacion de pacientes}
+\subsubsection{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}
 
-\subsection{metricas de desempeño}
+La matriz de confusión para la clasificación por grupos etarios (véase fig. \ref{fig:mtxetarios}), muestra un desempeño desigual entre las tres categorías. El grupo de \guillemetleft Mayores\guillemetright \ presenta la mejor capacidad de identificación con $1404$ clasificaciones correctas y relativamente pocos errores (139 confusiones con jóvenes y 187 con mediana edad), alcanzando una exactitud aproximada del $81\%$. El grupo de \guillemetleft Mediana edad\guillemetright \ también muestra un rendimiento aceptable con $1871$ aciertos, aunque presenta mayor confusión con los otros grupos (331 casos con jóvenes y 88 con mayores), lo que representa una precisión cercana al $82\%$. Sin embargo, el grupo de \guillemetleft Jóvenes\guillemetright exhibe la mayor dificultad discriminativa, con 1985 identificaciones correctas pero con confusiones significativas hacia el grupo de mediana edad (258 casos) y mayores (113 casos), resultando en un precisión aproximada del $81\%$. Estos resultados sugieren que los patrones electrocardiográficos asociados a la edad presentan una transición gradual y continua en lugar de limites discretos claramente definidos, especialmente en las fronteras entre grupos contiguos, lo cual dificulta la clasificación categórica estricta y refuerza la naturaleza evolutiva de las características cardíacas a lo largo del ciclo vital.
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_etarios.png}
+	\caption{Matriz de confusión para clasificación por grupos etarios.}
+	\label{fig:mtxetarios}
+\end{figure}
+
+\section{Resultados de identificación de pacientes}
+
+\subsection{Métricas de desempeño}
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{|  M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
+			\hline 
+			\textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Precisión (\%)} \\ \hline
+			0.0011 & 200 & Adam & Error cuadrático medio & 75.3\% \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{}
+	\label{}
+\end{table}
 
 \subsection{Matrices de confusión}
 
-\subsection{Discusion sobre la viabilidad de la huella digital cardíaca}
+\subsection{Discusión sobre la viabilidad de la huella digital cardíaca}
 
 
 \section{Analisis exploratorio tsne}
