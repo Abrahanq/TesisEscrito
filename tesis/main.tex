@@ -522,7 +522,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	Esto significa que «preservar tanta variabilidad como sea posible» se traduce en encontrar nuevas variables que sean funciones lineales de las del conjunto de datos original, que maximicen sucesivamente la varianza y que no estén correlacionadas entre sí. PCA usa álgebra lineal para transformar datos a unas variables llamadas componentes principales (PC). Estas se encuentras calculando los autovectores (direcciones) y autovalores (importancia) de una matriz de covarianza. PCA selecciona los componentes principales con los autovalores más altos y proyecta los datos sobre ellos, para simplificar el conjunto de datos. Para esto se debe: \\
 	\begin{enumerate}
 		\item \textbf{Estandarizar los datos.} \\
-		Las diferentes caracteristicas que están presentes en el conjunto de datos pueden tener diferentes unidades y escalas. Para comparar estas equitativamente, primero se debe estandarizar los datos haciendo que cada característica tenga: 
+		Las diferentes características que están presentes en el conjunto de datos pueden tener diferentes unidades y escalas. Para comparar estas equitativamente, primero se debe estandarizar los datos haciendo que cada característica tenga: 
 		\begin{itemize}
 			\item Una media de $0$.
 			\item Una desviación estándar de $1$.
@@ -1072,7 +1072,7 @@ La importancia de la precisa localización de los picos R en cada ECG radica en 
 \end{figure}
 
 \subsection{Vector de características} 
-\label{subsec:vector caracteristicas}
+\label{subsec:vector características}
 Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, lo que resulta en latidos promedios con longitudes muéstrales inconsistentes. Para garantizar la comparabilidad morfológica y la viabilidad computacional en etapas posteriores, se implementa una estandarización de longitud fija mediante remuestreo digital. Cada latido se interpola a 250 muestras, este valor preserva la resolución temporal de los eventos cardíacos clave, incluso en ECG de pacientes con trastornos del ritmo cardíaco. Estas señales estandarizadas se almacenan en un arreglo en formato (CSV), este arreglo guarda los valores que al ser graficados, representan la figura del latido promedio de cada paciente, similar a como se observa en la figura \ref{fig:latidos_alineados} (línea roja). 
 Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de características que será la base del análisis de la señal electrocardiográfica. 
 
@@ -1513,7 +1513,7 @@ La proyección de las señales electrocardiográficas sobre la primera y la terc
 
 \subsection{Configuración y Métricas de desempeño por modelo}
 
-Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con caracteristicas especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos clínicos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la precisión (véase \ref{eq:precision}). Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
+Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con características especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos clínicos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la precisión (véase \ref{eq:precision}). Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
 
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
@@ -1575,20 +1575,35 @@ La matriz de confusión para la clasificación por grupos etarios (véase fig. \
 
 \subsection{Métricas de desempeño}
 
+Según se presenta en la tabla \ref{tab:configuracion y desempeño identificar ecgs}, el modelo de identificación de pacientes logró precisiones del 91.1\%, durante la fase de entrenamiento, demostrando una capacidad notable para aprender los patrones discriminativos presentes en las representaciones electrocardiográficas. Durante la fase de validación, el modelo mantuvo un desempeño elevado con una precisión del 88.2\%, lo que sugiere una adecuada capacidad de generalización a datos no vistos durante el entrenamiento. Sin embargo, al evaluar el modelo con el conjunto de datos de producción (datos completamente independientes), la precisión disminuyó significativamente a 67.1\%, evidenciando una degradación en el rendimiento que podría atribuirse a diferencias en la distribución de los datos. 
+
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
-		\begin{tabular}{|  M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
+		\begin{tabular}{|  M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} |  M{2cm} | M{2cm} | M{2cm} |}
 			\hline 
-			\textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Precisión (\%)} \\ \hline
-			0.0011 & 200 & Adam & Error cuadrático medio & 75.3\% \\ \hline
+			\textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Exactitud durante entrenamiento (\%)} & \textbf{Exactitud durante validación (\%)} & \textbf{Exactitud durante producción (\%)} \\ \hline
+			0.0011 & 200 & Adam & Error cuadrático medio & 91.1\% & 88.3\% & 67.1\% \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{}
-	\label{}
+	\caption{Valores de configuración y métricas de desempeño de la red neuronal encargada de identificar pacientes.}
+	\label{tab:configuracion y desempeño identificar ecgs}
 \end{table}
 
-\subsection{Matrices de confusión}
+\subsection{Histograma de precisiones por paciente}
+
+Con el fin de obtener un gráfico que represente visualmente los resultados de la red neuronal para la identificación de pacientes y debido a que hacer una matriz de más de setecientas clases resulta intratable visualmente, se calcularon los porcentajes de precisión por clase con el fin de poder obtener posteriormente un histograma de frecuencia de dichos porcentajes de precisión. Este histograma (véase fig. \ref{fig:histograma de precisiones identificaciones ecgs}) revela una distribución bimodal fuertemente asimétrica, con una concentración predominante en valores superiores al 95\%. La barra más alta del histograma, con una frecuencia superior a 80 casos, corresponde al intervalo de precisiones superiores al 96\% aproximadamente, lo que indica que la mayoría de las instancias evaluadas alcanzaron niveles prácticamente perfectos. Este patrón sugiere que, para una porción significativa de los datos de validación, el modelo logra una clasificación casi sin errores, demostrando una capacidad robusta de discriminación en condiciones favorables.
+
+Sin embargo, la distribución también presenta una cola extendida hacia valores bajos de precisión, con frecuencias notables distribuidas entre el 10\% y el 80\%. Esto evidencia la presencia de un subconjunto de casos problemáticos donde el modelo experimenta dificultades considerables, posiblemente asociados a individuos con características electrocardiográficas atípicas, señales ruidosas o patrones que se solapan significativamente con otros pacientes. La curva de densidad suavizada (linea roja) confirma esta tendencia bimodal, mostrando un pico principal en el extremo derecho y un segundo modo menos pronunciado en la región intermedia.
+
+Esta variabilidad en el desempeño individual sugiere que existe heterogeneidad en la dificultad de identificación entre diferentes pacientes. Esto puede estar relacionado con factores como la variabilidad temporal de los registros electrocardiográficos de un mismo individuo así como con limitaciones en la cobertura del conjunto de datos de entrenamiento.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/histo_porcen_precisiones.png}
+	\caption{Histograma de los porcentajes de las }
+	\label{fig:histograma de precisiones identificaciones ecgs}
+\end{figure}
 
 \subsection{Discusión sobre la viabilidad de la huella digital cardíaca}
 

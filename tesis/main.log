@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  11 NOV 2025 15:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  18 NOV 2025 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1190,6 +1190,10 @@ Package pdftex.def Info: Sem_1/figuras/Dispersion_diagrama_2.png  used on input
  [53 <./Sem_1/figuras/Dispersion_diagrama_2.png>]
 Cap\'{\i }tulo 4.
 
+LaTeX Warning: Reference `subsec:vector caracteristicas' on page 54 undefined o
+n input line 1408.
+
+
 Overfull \hbox (0.658pt too wide) in paragraph at lines 1420--1420
  []|\T1/cmr/bx/n/12 Desviación| 
  []
@@ -1322,13 +1326,16 @@ Overfull \hbox (2.74126pt too wide) in paragraph at lines 1459--1467
  []
 
 [55]
-<Sem_1/figuras/Varianza_acumulada.png, id=1107, 867.24pt x 722.7pt>
+
+LaTeX Warning: Reference `subsec:vector caracteristicas' on page 56 undefined o
+n input line 1477.
+
+<Sem_1/figuras/Varianza_acumulada.png, id=1105, 867.24pt x 722.7pt>
 File: Sem_1/figuras/Varianza_acumulada.png Graphic file (type png)
 <use Sem_1/figuras/Varianza_acumulada.png>
 Package pdftex.def Info: Sem_1/figuras/Varianza_acumulada.png  used on input li
 ne 1486.
 (pdftex.def)             Requested size: 450.43253pt x 375.36505pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1338,7 +1345,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1493--1494
  []
 
 [56]
-<Sem_1/figuras/PC1_vs_PC2_std.png, id=1118, 867.24pt x 726.3135pt>
+<Sem_1/figuras/PC1_vs_PC2_std.png, id=1116, 867.24pt x 726.3135pt>
 File: Sem_1/figuras/PC1_vs_PC2_std.png Graphic file (type png)
 <use Sem_1/figuras/PC1_vs_PC2_std.png>
 Package pdftex.def Info: Sem_1/figuras/PC1_vs_PC2_std.png  used on input line 1
@@ -1348,7 +1355,7 @@ Package pdftex.def Info: Sem_1/figuras/PC1_vs_PC2_std.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Sem_1/figuras/PC1_vs_PC3_std.png, id=1120, 867.24pt x 726.3135pt>
+<Sem_1/figuras/PC1_vs_PC3_std.png, id=1118, 867.24pt x 726.3135pt>
 File: Sem_1/figuras/PC1_vs_PC3_std.png Graphic file (type png)
 <use Sem_1/figuras/PC1_vs_PC3_std.png>
 Package pdftex.def Info: Sem_1/figuras/PC1_vs_PC3_std.png  used on input line 1
@@ -1369,7 +1376,7 @@ Overfull \hbox (2.74257pt too wide) in paragraph at lines 1523--1523
 
 [58 <./Sem_1/figuras/PC1_vs_PC2_std.png>] [59 <./Sem_1/figuras/PC1_vs_PC3_std.p
 ng>]
-<Sem_1/figuras/Matriz_salud_pca.png, id=1144, 867.24pt x 867.24pt>
+<Sem_1/figuras/Matriz_salud_pca.png, id=1142, 867.24pt x 867.24pt>
 File: Sem_1/figuras/Matriz_salud_pca.png Graphic file (type png)
 <use Sem_1/figuras/Matriz_salud_pca.png>
 Package pdftex.def Info: Sem_1/figuras/Matriz_salud_pca.png  used on input line
@@ -1379,7 +1386,7 @@ Package pdftex.def Info: Sem_1/figuras/Matriz_salud_pca.png  used on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Sem_1/figuras/Matriz_trastornos_pca.png, id=1147, 867.24pt x 867.24pt>
+<Sem_1/figuras/Matriz_trastornos_pca.png, id=1145, 867.24pt x 867.24pt>
 File: Sem_1/figuras/Matriz_trastornos_pca.png Graphic file (type png)
 <use Sem_1/figuras/Matriz_trastornos_pca.png>
 Package pdftex.def Info: Sem_1/figuras/Matriz_trastornos_pca.png  used on input
@@ -1389,7 +1396,7 @@ Package pdftex.def Info: Sem_1/figuras/Matriz_trastornos_pca.png  used on input
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [60]
-<Sem_1/figuras/Matriz_etarios.png, id=1157, 867.24pt x 867.24pt>
+<Sem_1/figuras/Matriz_etarios.png, id=1155, 867.24pt x 867.24pt>
 File: Sem_1/figuras/Matriz_etarios.png Graphic file (type png)
 <use Sem_1/figuras/Matriz_etarios.png>
 Package pdftex.def Info: Sem_1/figuras/Matriz_etarios.png  used on input line 1
@@ -1399,41 +1406,76 @@ Package pdftex.def Info: Sem_1/figuras/Matriz_etarios.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (2.8153pt too wide) in paragraph at lines 1583--1583
+[61 <./Sem_1/figuras/Matriz_salud_pca.png>]
+Overfull \hbox (2.8153pt too wide) in paragraph at lines 1585--1585
  []|\T1/cmr/bx/n/12 Optimizador| 
  []
 
 
-Overfull \hbox (2.74257pt too wide) in paragraph at lines 1583--1583
- []|\T1/cmr/bx/n/12 Precisión 
+Overfull \hbox (0.879pt too wide) in paragraph at lines 1585--1585
+ []|\T1/cmr/bx/n/12 Exactitud 
  []
 
-[61 <./Sem_1/figuras/Matriz_salud_pca.png>] [62 <./Sem_1/figuras/Matriz_trastor
-nos_pca.png>] [63 <./Sem_1/figuras/Matriz_etarios.png>] [64]
+
+Overfull \hbox (0.879pt too wide) in paragraph at lines 1585--1585
+ []|\T1/cmr/bx/n/12 Exactitud 
+ []
+
+
+Overfull \hbox (0.879pt too wide) in paragraph at lines 1585--1585
+ []|\T1/cmr/bx/n/12 Exactitud 
+ []
+
+
+Overfull \hbox (4.97133pt too wide) in paragraph at lines 1583--1588
+ [] 
+ []
+
+[62 <./Sem_1/figuras/Matriz_trastornos_pca.png>]
+<Sem_1/figuras/histo_porcen_precisiones.png, id=1170, 580.3281pt x 622.2447pt>
+File: Sem_1/figuras/histo_porcen_precisiones.png Graphic file (type png)
+<use Sem_1/figuras/histo_porcen_precisiones.png>
+Package pdftex.def Info: Sem_1/figuras/histo_porcen_precisiones.png  used on in
+put line 1603.
+(pdftex.def)             Requested size: 350.33727pt x 375.64742pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[63 <./Sem_1/figuras/Matriz_etarios.png>] [64] [65 <./Sem_1/figuras/histo_porce
+n_precisiones.png>]
 Cap\'{\i }tulo 5.
-(./main.bbl [65
+(./main.bbl [66
 
-] [66
+] [67
 
-] [67]
+] [68]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [68]) [69] (./main.aux
+) [69]) [70] (./main.aux
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9CA92C13D50D59BA46987117A81AE81A;22394.
+
+LaTeX Warning: There were undefined references.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 3B8705EB276A547E8F71E41A694FBFE3;22406
+(rerunfilecheck)             After:  B667B9C6F8371306F671CE566C4FB32A;22482.
  ) 
 Here is how much of TeX's memory you used:
- 25715 strings out of 480247
- 467900 string characters out of 5896106
+ 25726 strings out of 480247
+ 468360 string characters out of 5896106
  1421661 words of memory out of 5000000
- 42848 multiletter control sequences out of 15000+600000
+ 42856 multiletter control sequences out of 15000+600000
  489269 words of font info for 73 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,12n,103p,18256b,734s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1457,10 +1499,10 @@ c/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sftt1200.pfb>
-Output written on main.pdf (73 pages, 4101760 bytes).
+Output written on main.pdf (74 pages, 4151936 bytes).
 PDF statistics:
- 1382 PDF objects out of 1440 (max. 8388607)
- 1208 compressed objects within 13 object streams
- 349 named destinations out of 1000 (max. 500000)
- 846 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1389 PDF objects out of 1440 (max. 8388607)
+ 1212 compressed objects within 13 object streams
+ 351 named destinations out of 1000 (max. 500000)
+ 851 words of extra memory for PDF output out of 10000 (max. 10000000)
 
