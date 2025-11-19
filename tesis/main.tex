@@ -1265,10 +1265,16 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
 				\hline
 				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 256 & ReLU \\ \hline
+				Densa & 128 & ReLU \\ \hline
 				Densa & 40 & ReLU \\ \hline
 				Densa & 35 & ReLU \\ \hline
 				Densa & 25 & ReLU \\ \hline
 				Densa & 25 & ReLU \\ \hline
+				Densa & 25 & ReLU \\ \hline
+				Densa & 25 & ReLU \\ \hline
+				Densa & 15 & ReLU \\ \hline
+				Densa & 15 & ReLU \\ \hline
 				Densa & 15 & ReLU \\ \hline
 				Densa & 10 & Hard\_sigmoide \\
 				\hline
@@ -1343,7 +1349,7 @@ En la tabla \ref{tab:summary NN salidas problemas tsne} se contemplan las caract
 	\label{tab:summary NN salidas problemas tsne}
 \end{table}
 
-%No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se logró usando tsne
+%No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se obtuvo usando tsne
 %\subsection{K-means}
 
 
@@ -1605,7 +1611,13 @@ Esta variabilidad en el desempeño individual sugiere que existe heterogeneidad 
 	\label{fig:histograma de precisiones identificaciones ecgs}
 \end{figure}
 
-\subsection{Discusión sobre la viabilidad de la huella digital cardíaca}
+\subsection{Viabilidad de la huella digital cardíaca como rasgo biométrico}
+
+Las señales electrocardiográficas han sido empleadas exitosamente para desempeñar reconocimiento biométrico en un amplio rango de aplicaciones. Sin embargo, los sistemas biométricos basados en señales electrocardiográficas usualmente son menos precisos que las tecnologías basadas en otras características fisiológicas, como las huellas dactilares o el reconocimiento facial. Para incrementar su rendimiento, es necesario estudiar aproximaciones novedosas. En este aspecto, el proceso de reconocimiento biométrico mediante señales electrocardiográficas requiere de la implementación secuencial de dos fases criticas: en primer lugar, la extracción y selección de características relevantes que capturen las particularidades morfológicas del complejo QRS, intervalos temporales y variabilidad de cada individuo, transformando las señales de alta dimensionalidad en vectores de características compactos; posteriormente, se emplea una red neuronal que, mediante aprendizaje supervisado, pueda modelar las relaciones lineales o no lineales existentes entre dichas características permitiendo así la identificación de cada sujeto. Las señales fisiológicas presentan importantes ventajas para aplicaciones biométricas: i) la dificultad de falsificar dichas señales, ii) todos los individuos vivos presentan estas señales de manera inherente, iii) estas señales contienen información acerca de condiciones clínicas o estados fisiológicos, lo cual puede ser provechoso para otras aplicaciones; iv) la adquisición de dichos registros por largos periodos de tiempo no requiere de acciones explicitas de los usuarios, lo que facilita sus aplicaciones por re-autenticaciones periódicas \cite{labati_ecg_biometric_recognition_using_cnn}. 
+
+Entre las técnicas de análisis de señales fisiológicas, los electrocardiogramas destacan por su madurez y difusión. Además, estudios recientes han demostrado que con el reconocimiento biométrico se puede obtener una precisión satisfactoria para diferentes tipos de aplicaciones \cite{Irvine2009_sequent_individual_verification}. Sin embargo, los sistemas biométricos basados en electrocardiogramas tienen que hacer frente a un conjunto de problemas incluyendo: i) variabilidad intraclase alta causada por la frecuencia cardíaca y actividades realizadas, ii) falta de estudios que demuestren la discriminabilidad en datasets grandes; iii) cambios a largo plazo en las características del ECG de una persona.
+
+Tras una visión exhaustiva de la literatura científica relacionada con el reconocimiento biométrico mediante señales electrocardiográficas y diversos modelos de aprendizaje automático, hasta donde es de nuestro conocimiento, el flujo de trabajo propuesto en este estudio no ha sido aplicado previamente para la identificación biométricas de pacientes utilizando la combinación de análisis de componentes principales y redes neuronales perceptrónicas multicapa de la manera especifica en que se implementa en esta investigación. Los resultados obtenidos demuestran que no solo se alcanzan niveles de exactitud comparables con los reportados en trabajos previos que emplean arquitecturas de aprendizaje profundo más complejas como redes neuronales convolucionales (CNN) o redes recurrentes, como las LSTM (memoria larga a corto plazo, por sus siglas en inglés), sino que además se logra la reducción significativa en el costo computacional asociado tanto al entrenamiento como a la inferencia del modelo. Esta eficiencia computacional representa una ventaja importante para aplicaciones en tiempo real o en dispositivos vestibles que son de recursos limitados, sin comprometer la capacidad discriminativa del sistema biométrico
 
 
 \section{Analisis exploratorio tsne}
