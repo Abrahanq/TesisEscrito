@@ -96,8 +96,8 @@
 \contentsline {subsection}{\numberline {4.4.2}Histograma de precisiones por paciente}{63}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Viabilidad de la huella digital cardíaca como rasgo biométrico}{64}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Análisis exploratorio usando t-SNE}{66}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Resultados de clasificación usando los datos de tsne}{67}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{67}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{67}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{67}{subsection.4.6.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{68}{chapter.5}%
+\contentsline {section}{\numberline {4.6}Resultados de clasificación usando los datos de tsne}{68}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Metricas de desempeño}{68}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Matrices de confusion}{68}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{68}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{69}{chapter.5}%
