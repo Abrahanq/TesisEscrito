@@ -708,7 +708,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\item \textbf{Señales de entrada $(x_1, x_2,\dotsb,x_n)$:} pueden ser datos originales o provenientes de otras neuronas.
 		\item \textbf{Señales de salida $(y_1,y_2,\dotsb,y_m)$:} que corresponde con los resultados de la red (clasificación o predicción en esta investigación).
 		\item \textbf{Los pesos sinápticos $w_{1k},w_{2y},\dotsb,w_{nk}$:} A las entradas que provienen de otras neuronas se les asigna un peso, es decir, una determinada importancia. El peso es el numero que se modifica durante el entrenamiento de la red neuronal y que permite a la red adaptarse para conseguir la respuesta correcta.
-		\item \textbf{Regla de propagación:} Se realizan diferentes operaciones con las entradas y los pesos. Con esto se busca obtener el valor del potencial que posteriormente se utilizara para realizar el procesamiento. Una de las operaciones más comunes es la suma ponderada. Otra regla puede ser la distancia euclidiana, que es utilizada por los mapas auto-organizados y las redes de función de base radial. 
+		\item \textbf{Regla de propagación:} Se realizan diferentes operaciones con las entradas y los pesos. Con esto se busca obtener el valor del potencial que posteriormente se utilizará para realizar el procesamiento. Una de las operaciones más comunes es la suma ponderada. Otra regla puede ser la distancia euclidiana, que es utilizada por los mapas auto-organizados y las redes de función de base radial. 
 		\item \textbf{La función de activación}: El valor obtenido en la regla de propagación se envía a través de la función de activación y esta define el nuevo estado o la salida de la capa. Según el entrenamiento de la red neuronal se elige la función de activación que pueden ser: lineal, escalón, sigmoidea, gaussiana o ReLU \cite{stephani}.
 	\end{itemize}
 
@@ -1072,7 +1072,7 @@ La importancia de la precisa localización de los picos R en cada ECG radica en 
 \end{figure}
 
 \subsection{Vector de características} 
-\label{subsec:vector características}
+\label{subsec:vector_características}
 Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, lo que resulta en latidos promedios con longitudes muéstrales inconsistentes. Para garantizar la comparabilidad morfológica y la viabilidad computacional en etapas posteriores, se implementa una estandarización de longitud fija mediante remuestreo digital. Cada latido se interpola a 250 muestras, este valor preserva la resolución temporal de los eventos cardíacos clave, incluso en ECG de pacientes con trastornos del ritmo cardíaco. Estas señales estandarizadas se almacenan en un arreglo en formato (CSV), este arreglo guarda los valores que al ser graficados, representan la figura del latido promedio de cada paciente, similar a como se observa en la figura \ref{fig:latidos_alineados} (línea roja). 
 Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de características que será la base del análisis de la señal electrocardiográfica. 
 
@@ -1411,7 +1411,7 @@ El proceso metodológico implementado en esta investigación considera de forma 
 
 \section{Descripción general de los datos}
 
-Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Recordemos que cada señal electrocardiográfica fue sometida a un proceso sistemático de extracción de características, conforme se detalla en la subsección \ref{subsec:vector caracteristicas}. Como resultado, la representación empleada a partir de este punto corresponde a un vector de características, siendo este el latido promedio de la señal original. Por tanto, en lo sucesivo, cualquier referencia a \guillemetleft señal ECG\guillemetright \ o \guillemetleft señal electrocardiográfica\guillemetright \ implicará su interpretación en términos de dicha representación vectorial, la cual sintetiza la información relevante para las etapas posteriores. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
+Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Recordemos que cada señal electrocardiográfica fue sometida a un proceso sistemático de extracción de características, conforme se detalla en la subsección \ref{subsec:vector_características}. Como resultado, la representación empleada a partir de este punto corresponde a un vector de características, siendo este el latido promedio de la señal original. Por tanto, en lo sucesivo, cualquier referencia a \guillemetleft señal ECG\guillemetright \ o \guillemetleft señal electrocardiográfica\guillemetright \ implicará su interpretación en términos de dicha representación vectorial, la cual sintetiza la información relevante para las etapas posteriores. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
 
 
 \subsection{Distribuciones de los sujetos sanos por sexo y grupos etarios}
@@ -1480,7 +1480,7 @@ Para garantizar una representación equilibrada de los distintos grupos etarios 
 
 La transformación de datos en una representación más adecuada puede facilitar el proceso de aprendizaje de las redes neuronales. Por ejemplo, el uso de un número menor de parámetros, denominados en este caso como componentes principales, para representar la señal en estudio es particularmente importante para fines de reconocimiento y aprendizaje. Dado cualquier conjunto de características para la representación de datos, es importante estimar la dificultad de aprender los conceptos subyacentes utilizando esos datos de entrenamiento \cite{gulerECGbeatClassifier}. Los estudios en la literatura muestran que el grado de dificultad en el entrenamiento de las redes neuronales es inherente al conjunto de ejemplos de entrenamientos dados, es por esto que se hace la canalización del modelo de aprendizaje donde primero se busca por proyectar las señales electrocardiográficas a un espacio de menor dimensionalidad, lo que facilitará posteriores procesos de aprendizajes. Para implementar esta aproximación en este estudio, se establece al análisis de componentes principales como método de reducción de dimensionalidad, paso previo a la fase de entrenamiento de las redes neuronales, donde se busca reducir la dificultad en el entrenamiento mientras se conserva la mayor cantidad de información presente en las señales electrocardiográficas.
 
-Se introducen como datos de entrada para el análisis de componentes principales, los vectores de características mencionados en la subsección \ref{subsec:vector caracteristicas} los cuales serán sujetos de la reducción de dimensionalidad.
+Se introducen como datos de entrada para el análisis de componentes principales, los vectores de características mencionados en la subsección \ref{subsec:vector_características} los cuales serán sujetos de la reducción de dimensionalidad.
 
 
 \subsection{Método de la varianza acumulada}
@@ -1516,10 +1516,10 @@ La proyección de las señales electrocardiográficas sobre la primera y la terc
 
 
 \section{Resultados de clasificación usando los datos de PCA}
+\label{sec:redes_pca}
+\subsection{Configuración y métricas de desempeño por modelo}
 
-\subsection{Configuración y Métricas de desempeño por modelo}
-
-Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con características especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos clínicos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la exactitud (véase \ref{eq:exactitud}), cabe destacar que el tamaño del lote (\emph{batch size}) fue el mismo para el entrenamiento de todas las redes, teniendo este un valor de 32. Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
+Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con características especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos clínicos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la exactitud (véase ecuación \ref{eq:exactitud}), cabe destacar que el tamaño del lote (\emph{batch size}) fue el mismo para el entrenamiento de todas las redes, teniendo este un valor de 32. Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase tabla \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
 
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
@@ -1651,7 +1651,13 @@ t-SNE se ha vuelvo ampliamente popular debido a su casi mágica habilidad para c
 
 \section{Resultados de clasificación usando los datos de tsne}
 
-\subsection{Metricas de desempeño}
+Con el objetivo de profundizar en la interpretación de las representaciones generadas por t-SNE, se utilizarán redes neuronales perceptrónicas como modelos traductores entre las componentes no lineales de t-SNE y las variables clínicas de interés. Esta aproximación habilita la extracción de inferencias clínicas relevantes a partir de la estructura latente descubierta por t-SNE en los datos originales.
+
+\subsection{Configuración y métricas de desempeño por modelo}
+
+De manera similar que en la sección \ref{sec:redes_pca}, la siguiente subsección especifica los valores de configuración de cada red neuronal usada para extraer inferencias clínicas relevantes a partir de la estructura latente de las representaciones generadas por t-SNE. Es importante destacar que en este caso se usó un 50\% de la data para entrenamiento y el resto para producción
+
+\subsection{Métricas de desempeño}
 
 \subsection{Matrices de confusion}
 análisis de estas
