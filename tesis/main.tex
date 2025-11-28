@@ -1524,7 +1524,7 @@ Para cada una de las redes neuronales desarrolladas, se presentan los parámetro
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
-		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
+		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{2cm} |}
 			\hline 
 			\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Exactitud (\%)} \\ \hline
 			Estado de salud & 0.001 & 100 & RMSprop & Entropía binaria cruzada & 96.6 \\ \hline
@@ -1544,7 +1544,9 @@ Con el propósito de evaluar visualmente el desempeño de las redes neuronales a
 
 \subsubsection{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}
 
-La matriz de confusión para la clasificación binaria del estado de salud (véase fig. \ref{fig:mtxsalud}), muestra un desempeño notable del modelo, con una exactitud general elevada, esto se evidencia por los valores diagonales dominantes. Del total de casos patológicos, $2840$ fueron correctamente identificados, mientras que solo 116 fueron incorrectamente clasificados como sanos, lo que representa una sensibilidad superior al $96\%$. Por otro lado, de los casos sanos, $3255$ fueron correctamente identificados y unicamente 165 fueron clasificados erróneamente como patológicos, alcanzando una especifidad cercana al $95\%$. Este patrón indica que el modelo basado en componentes principales logra discriminar efectivamente entre ambas categorías, con un bajo numero de falsos positivos y de falsos negativos, lo cual puede resultar relevante desde el punto de vista clínico, donde minimizar falsos negativos resulta crítico para evitar pasar por alto patologías en pacientes que las presentan.
+La matriz de confusión para la clasificación binaria del estado de salud revela un desempeño excepcional del modelo entrenado sobre las componentes principales. Del total de casos patológicos evaluados, $2840$ fueron correctamente identificados, representando una sensibilidad del $94.5\%$ mientras que unicamente 165 casos ($5.5\%$) fueron erróneamente clasificados como sanos, constituyendo los falsos negativos del sistema. Por otro lado, de los casos sanos, $3255$ fueron correctamente clasificados, alcanzando una especifidad del $96.6\%$, con solo 116 casos ($3.4\%$) incorrectamente clasificados como patológicos.
+
+Estos resultados demuestran que el modelo presenta un balance notable entre sensibilidad y especifidad, con una tasa de acierto superior al $95\%$ en ambas clases. Lo cual puede resultar relevante desde el punto de vista clínico, donde minimizar falsos positivos resulta critico para evitar pasar por alto patologías en pacientes que las presentan. 
 
 \begin{figure}[h]
 	\centering
@@ -1553,10 +1555,21 @@ La matriz de confusión para la clasificación binaria del estado de salud (véa
 	\label{fig:mtxsalud}
 \end{figure}
 
+\subsubsection{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}
+
+La matriz de confusión para la clasificación por grupos etarios  (véase fig. \ref{fig:mtxetarios}), evidencia un desempeño heterogéneo entre las tres categorías, El grupo \guillemetleft Jóvenes\guillemetright alcanza una exactitud del $84.3\%$, con 1985 clasificaciones correctas, aunque exhibe cierta confusión principalmente hacia \guillemetleft Mediana edad\guillemetright (258 clasificaciones incorrectas) y en menor medida hacia \guillemetleft Mayores\guillemetright (113 casos, 4.5\%). El grupo de \guillemetleft Mediana edad\guillemetright presenta un rendimiento de 81.7\% de aciertos (1871 casos) y muestra la mayor tasa de error hacia \guillemetleft Jóvenes\guillemetright con 331 casos (14,5\%). Por su parte, el grupo de \guillemetleft Mayores\guillemetright logra una precisión del 81.2\% (1404 clasificaciones correctas), con errores distribuidos principalmente hacia \guillemetleft Mediana edad\guillemetright (187 casos) y en menor proporción hacia \guillemetleft Jóvenes\guillemetright (139 casos, 8.0\%). Estos resultados evidencian que los patrones electrocardiográficos asociados a la edad presentan una transición gradual en lugar de limites discretos claramente definidos. Las confusiones más frecuentes ocurren entre categorías adyacentes (Jóvenes-Mediana edad y Mediana edad-Mayores), lo cual dificulta la clasificación categórica estricta y refuerza la naturaleza evolutiva de las caracteristicas cardíacas a lo largo del ciclo vital.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_etarios_pca.png}
+	\caption{Matriz de confusión para clasificación por grupos etarios.}
+	\label{fig:mtxetarios}
+\end{figure}
+
+
 \subsubsection{Matriz de confusión - Trastornos de salud (4 clases).}
 
-
-La matriz de confusión multiclase para la clasificación de trastornos clínicos (mencionados en la tabla \ref{tab:tipos_trastornos}) revela un desempeño diferenciado según la categoría (véase fig. \ref{fig:mtxtrastornos}). La clase \guillemetleft Sanos\guillemetright \ presenta la mayor capacidad discriminatoria, con 3314 identificaciones correctas y muy pocos errores de clasificación hacia otras categorías, alcanzando una precisión superior al $98\%$. La categoría \guillemetleft Sueño\guillemetright, que corresponde a los pacientes con trastornos de la respiración durante el sueño, también muestra un rendimiento robusto con 1162 aciertos, aunque esta presenta una mayor confusión con la clase \guillemetleft Sanos\guillemetright \ (83 casos). Por su parte, la clase \guillemetleft Ritmo\guillemetright, correspondiente a los pacientes con trastornos del ritmo cardíaco, obtiene 1059 clasificaciones correctas pero exhibe una confusión moderada con la clase \guillemetleft Sueño\guillemetright (31 casos) y \guillemetleft Sanos\guillemetright (37 casos). La categoría \guillemetleft Insuficiencia\guillemetright, correspondiente a los pacientes con trastornos de la función de bomba del corazón, presenta 550 aciertos y muestra una confusión relativamente alta (en comparación a casos anteriores), con la clase \guillemetleft Ritmo \guillemetright \ (20 casos), Este patrón sugiere que, si bien el modelo logra separar adecuadamente los casos sanos y ciertos trastornos específicos, la diferenciación entre estos subtipos de patologías puede presentar desafíos adicionales, posiblemente debido a solapamientos en los perfiles electrocardiográficos de las distintas condiciones que se presentan.
+La matriz de confusión multiclase para la clasificación de trastornos clínicos (mencionados en la tabla \ref{tab:tipos_trastornos}) revela un desempeño diferenciado según la categoría (véase fig. \ref{fig:mtxtrastornos}). La clase \guillemetleft Sanos\guillemetright presenta la mayor capacidad discriminatoria con una precisión del 98.3\% (3314 clasificaciones correctas), exhibiendo tasas de error mínimas (0.4\%, 1.0\% y 0.2\%) distribuidas entre \guillemetleft Sueño\guillemetright, \guillemetleft Ritmo\guillemetright, \guillemetleft Insuficiencia\guillemetright respectivamente. La categoría \guillemetleft Insuficiencia\guillemetright, correspondiente a pacientes con trastornos de la función de bomba del corazón, alcanza un rendimiento notable del 94.2\% con 550 aciertos y confusiones residuales principalmente hacia \guillemetleft Ritmo\guillemetright y \guillemetleft Sanos\guillemetright con 20 y 10 casos respectivamente. Por su parte, la clase \guillemetleft Ritmo\guillemetright, correspondiente a trastornos del ritmo cardíaco, logra una precisión del 93.1\% con 1059 clasificaciones correctas, aunque presenta confusiones moderadas con \guillemetleft Sueño\guillemetright y \guillemetleft Sanos\guillemetright con 2.7\% y 3.3\% de los casos respectivamente. Finalmente, la categoría \guillemetleft Sueño\guillemetright, que agrupa pacientes con trastornos respiratorios durante el sueño, obtiene una precisión del 90.5\% (1162 aciertos), siendo la clase con mayor tasa de error hacia \guillemetleft Sanos\guillemetright, seguida de confusiones menores con \guillemetleft Ritmo\guillemetright e \guillemetleft Insuficiencia\guillemetright con (2.6\% y 0.4\% de los casos). Este patrón sugiere que, si bien el modelo logra separar adecuadamente los casos sanos y las distintas patologías con alta precisión global, la diferenciación entre ciertos subtipos patológicos presenta desafíos adicionales, posiblemente debido a solapamientos en los perfiles electrocardiográficos de las distintas condiciones que se manifiestan clinicamente.
 
 \begin{figure}[h]
 	\centering
@@ -1565,16 +1578,17 @@ La matriz de confusión multiclase para la clasificación de trastornos clínico
 	\label{fig:mtxtrastornos}
 \end{figure}
 
-\subsubsection{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}
+\subsubsection{Matriz de confusión - Sexo (Masculino y femenino)}
 
-La matriz de confusión para la clasificación por grupos etarios (véase fig. \ref{fig:mtxetarios}), muestra un desempeño desigual entre las tres categorías. El grupo de \guillemetleft Mayores\guillemetright \ presenta la mejor capacidad de identificación con $1404$ clasificaciones correctas y relativamente pocos errores (139 confusiones con jóvenes y 187 con mediana edad), alcanzando una exactitud aproximada del $81\%$. El grupo de \guillemetleft Mediana edad\guillemetright \ también muestra un rendimiento aceptable con $1871$ aciertos, aunque presenta mayor confusión con los otros grupos (331 casos con jóvenes y 88 con mayores), lo que representa una precisión cercana al $82\%$. Sin embargo, el grupo de \guillemetleft Jóvenes\guillemetright exhibe la mayor dificultad discriminativa, con 1985 identificaciones correctas pero con confusiones significativas hacia el grupo de mediana edad (258 casos) y mayores (113 casos), resultando en un precisión aproximada del $81\%$. Estos resultados sugieren que los patrones electrocardiográficos asociados a la edad presentan una transición gradual y continua en lugar de limites discretos claramente definidos, especialmente en las fronteras entre grupos contiguos, lo cual dificulta la clasificación categórica estricta y refuerza la naturaleza evolutiva de las características cardíacas a lo largo del ciclo vital.
+La matriz de confusión binaria para la clasificación por sexo revela un desempeño diferenciado (véase fig. \ref{fig:mtxsex}). Se obtuvieron 2368 aciertos en la clase \guillemetleft Masculino\guillemetright que corresponden al 92.8\% del total de pacientes masculinos en la muestra y con una confusión de 183 casos que corresponden al restante 7.2\% de la muestra. En el caso de los pacientes femenino, se obtuvo un 96.8\% de precisión en esta clase que corresponden a 3704 casos, confundiéndose en solo 121 casos (3.2\%). 
 
+Estos resultados demuestran que el modelo es capaz de capturar diferencias electrocardiográficas inherentes al sexo biológico de los pacientes, lo cual tiene relevancia clínica considerable. Las diferencias en las caracteristicas del ECG entre hombres y mujeres están bien documentadas en la literatura medica. La alta precisión alcanza valida que las componentes principales extraídas capturan efectivamente estas diferencias sutiles pero consistentes, lo que sugiere que el modelo podría emplearse para la clasificación por sexo. Ademas, este hallazgo resalta la importancia de considerar el sexo como variable relevante en el análisis de señales electrocardiográficas, dado que ignorar estas diferencias podría introducir sesgos en los sistemas de clasificación automática y afectar la precisión diagnostica en poblaciones mixtas.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_etarios.png}
-	\caption{Matriz de confusión para clasificación por grupos etarios.}
-	\label{fig:mtxetarios}
+	\includegraphics[width=0.8\linewidth]{Sem_1/figuras/matrix_sex_pca.png}
+	\caption{Matriz de confusión para la clasificación por sexo.}
+	\label{fig:mtxsex}
 \end{figure}
 
 \section{Resultados de identificación de pacientes}

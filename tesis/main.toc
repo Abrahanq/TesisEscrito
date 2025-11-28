@@ -89,16 +89,17 @@
 \contentsline {subsection}{\numberline {4.3.1}Configuración y métricas de desempeño por modelo}{59}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{60}{subsection.4.3.2}%
 \contentsline {subsubsection}{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}{60}{section*.13}%
-\contentsline {subsubsection}{Matriz de confusión - Trastornos de salud (4 clases).}{61}{section*.14}%
-\contentsline {subsubsection}{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}{61}{section*.15}%
-\contentsline {section}{\numberline {4.4}Resultados de identificación de pacientes}{62}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Métricas de desempeño}{62}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Histograma de precisiones por paciente}{63}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Viabilidad de la huella digital cardíaca como rasgo biométrico}{64}{subsection.4.4.3}%
+\contentsline {subsubsection}{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}{61}{section*.14}%
+\contentsline {subsubsection}{Matriz de confusión - Trastornos de salud (4 clases).}{61}{section*.15}%
+\contentsline {subsubsection}{Matriz de confusión - Sexo (Masculino y femenino)}{62}{section*.16}%
+\contentsline {section}{\numberline {4.4}Resultados de identificación de pacientes}{63}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Métricas de desempeño}{63}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Histograma de precisiones por paciente}{64}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Viabilidad de la huella digital cardíaca como rasgo biométrico}{65}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Análisis exploratorio usando t-SNE}{66}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Resultados de clasificación usando los datos de tsne}{68}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Configuración y métricas de desempeño por modelo}{68}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Métricas de desempeño}{68}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Matrices de confusion}{68}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Dendrogramas}{68}{subsection.4.6.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{69}{chapter.5}%
+\contentsline {subsection}{\numberline {4.6.2}Métricas de desempeño}{69}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Matrices de confusion}{69}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Dendrogramas}{69}{subsection.4.6.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{70}{chapter.5}%
