@@ -1526,7 +1526,7 @@ Para cada una de las redes neuronales desarrolladas, se presentan los parámetro
 	\begin{center}
 		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
 			\hline 
-			\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Precisión (\%)} \\ \hline
+			\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Exactitud (\%)} \\ \hline
 			Estado de salud & 0.001 & 100 & RMSprop & Entropía binaria cruzada & 96.6 \\ \hline
 			Grupos etarios & 0.001 & 100 & RMSprop & Entropía cruzada & 87.1 \\ \hline
 			Sexo & 0.001 & 100 & Adam & Entropía binaria cruzada & 98.6 \\ \hline
@@ -1655,9 +1655,27 @@ Con el objetivo de profundizar en la interpretación de las representaciones gen
 
 \subsection{Configuración y métricas de desempeño por modelo}
 
-De manera similar que en la sección \ref{sec:redes_pca}, la siguiente subsección especifica los valores de configuración de cada red neuronal usada para extraer inferencias clínicas relevantes a partir de la estructura latente de las representaciones generadas por t-SNE. Es importante destacar que en este caso se usó un 50\% de la data para entrenamiento y el resto para producción
+De manera similar que en la sección \ref{sec:redes_pca}, la siguiente subsección especifica los valores de configuración de cada red neuronal usada (véase tabla \ref{tab:configuracion y desempeño traductor tsne}) para extraer inferencias clínicas relevantes a partir de la estructura latente de las representaciones generadas por t-SNE. Es importante destacar que en este caso se usó un 50\% de la data para entrenamiento y el resto para producción.
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
+		\hline 
+		\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Exactitud (\%)} \\ \hline
+			Estado de salud & 0.001 & 300 & Adam & Entropía binaria cruzada & 98.6\%  \\ \hline
+			Grupos etarios  & 0.001 & 300 & Adam & Entropía cruzada & 95.5\%  \\ \hline
+			Sexo            & 0.001 & 300 & Adam & Entropía binaria cruzada & 96.3\%  \\ \hline
+			Trastorno       & 0.001 & 300 & Adam & Entropía cruzada & 96.8\%  \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Valores de configuración y métricas de desempeño de las redes neuronales encargadas de interpretar los datos de t-SNE.}
+	\label{tab:configuracion y desempeño traductor tsne}
+\end{table}
 
 \subsection{Métricas de desempeño}
+
+
 
 \subsection{Matrices de confusion}
 análisis de estas
