@@ -99,7 +99,10 @@
 \contentsline {section}{\numberline {4.5}Análisis exploratorio usando t-SNE}{66}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Resultados de clasificación usando los datos de tsne}{68}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Configuración y métricas de desempeño por modelo}{68}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Métricas de desempeño}{69}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Matrices de confusion}{69}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Dendrogramas}{69}{subsection.4.6.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{70}{chapter.5}%
+\contentsline {subsection}{\numberline {4.6.2}Matrices de confusión}{69}{subsection.4.6.2}%
+\contentsline {subsubsection}{Matriz de confusión - Estado de salud}{69}{section*.17}%
+\contentsline {subsubsection}{Matriz de confusión - Grupos etarios}{70}{section*.18}%
+\contentsline {subsubsection}{Matriz de confusión - Trastorno de salud}{71}{section*.19}%
+\contentsline {subsubsection}{Matriz de confusión - Sexo}{72}{section*.20}%
+\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{73}{subsection.4.6.3}%
+\contentsline {chapter}{\numberline {5}Conclusiones}{74}{chapter.5}%

@@ -1687,12 +1687,64 @@ De manera similar que en la sección \ref{sec:redes_pca}, la siguiente subsecci�
 	\label{tab:configuracion y desempeño traductor tsne}
 \end{table}
 
-\subsection{Métricas de desempeño}
+\subsection{Matrices de confusión}
+
+\subsubsection{Matriz de confusión - Estado de salud}
+
+La matriz de confusión para la clasificación binaria del estado de salud en el espacio de t-SNE revela un desempeño excepcional y superior al obtenido en el espacio de PCA, como se observa en la figura \ref{fig:mtxsaludtsne}. La clase \guillemetleft Sano\guillemetright alcanza una precisión del 99.6\% (4199 identificaciones correctas), con unicamente 17 casos (0.4\%) erróneamente clasificados como patológicos, lo que representa una tasa de falsos positivos extremadamente baja. Por su parte, la clase \guillemetleft Patológico\guillemetright presenta una precisión del 97.4\% (3658 aciertos), con 96 casos incorrectamente (2.6\%) clasificados como sanos, constituyendo los falsos negativos del sistema. 
+
+Estos resultados demuestran que la representación no lineal proporcionada por t-SNE captura de manera más efectiva las diferencias estructurales entre los estados de salud en comparación con el espacio lineal de PCA. La reducción significativa en la tasa de falsos negativos (de 5.5\% en PCA a 2.6\% en t-SNE) es particularmente relevante desde el punto de vista clínico, ya que disminuye el riesgo de pasar por alto pacientes con condiciones patológicas. Asimismo, la especifidad del 99.6\% confirma que prácticamente todos los individuos sanos son correctamente identificados, minimizando intervenciones innecesarias. Este desempeño superior valida la hipótesis de que t-SNE preserva relaciones locales y no lineales críticas para la discriminación entre estados de salud, superando las limitaciones de los métodos lineales tradicionales en tareas de clasificación biomédica compleja. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Sem_1/figuras/Matriz_salud_tsne.png}
+	\caption{Matriz de confusión para la clasificación por estado de salud en el espacio de t-SNE.}
+	\label{fig:mtxsaludtsne}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Grupos etarios}
+
+La matriz de confusión para la clasificación por grupos etarios en el espacio de t-SNE muestra un desempeño notablemente mejorado respecto al espacio PCA (véase fig. \ref{fig:mtxetariostsne}). El grupo \guillemetleft Mayores\guillemetright exhibe la mejor precisión con un 97.0\% (2110 clasificaciones correctas), presentando errores mínimos hacia \guillemetleft Jóvenes\guillemetright y \guillemetleft Mediana edad\guillemetright con 21 y 40 casos incorrectamente identificados. El grupo \guillemetleft Mediana edad\guillemetright alcanza una precisión del 95.4\% (2706 aciertos), con confusiones principalmente hacia \guillemetleft Jóvenes\guillemetright (70 casos, 2.5\%) y en menor medida hacia \guillemetleft Mayores\guillemetright (60 casos, 2.1\%). Por su parte, el grupo \guillemetleft Jóvenes\guillemetright logra una precisión del 94.5\% (2797 identificaciones correctas), mostrando la mayor tasa relativa de confusión hacia \guillemetleft Mediana edad\guillemetright (117 casos 4,0\%) y confusiones menores hacia \guillemetleft Mayores\guillemetright (45 casos, 1.5\%).
+
+La mejora sustancia mostrada en los resultados antes mencionados en comparación con PCA, donde los resultados rondaban el 81\%, elevándose ahora a un rango del 94.5\%-97\% demuestra la mejora significativa que confirma que la representación no lineal de t-SNE captura de manera más efectiva las transiciones graduales en los patrones electrocardiográficos asociados a la edad. Aunque persiste cierta confusión entre grupos contiguos (especialmente Jóvenes-Mediana Edad), las tasas de error se han reducido considerablemente, validando la capacidad de t-SNE para resolver mejor las fronteras difusas entre categorías etarias adyacentes y reforzando su utilidad para aplicaciones de clasificación que requieren discriminación de patrones evolutivos continuos en señales biomédicas.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/Matriz_etarios_tsne.png}
+	\caption{Matriz de confusión para clasificación por grupos etarios en el espacio de t-SNE.}
+	\label{fig:mtxetariostsne}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Trastorno de salud}
+
+Al igual que con las matrices de confusión anteriores, la matriz de confusión multiclase para la clasificación de trastornos clínicos en el espacio de t-SNE evidencia un desempeño extraordinario y sustancialmente mejorado respecto al espacio PCA (véase fig. \ref{fig:mtxtrastornotsne}). La clase \guillemetleft Sanos\guillemetright alcanza la mayor precisión con un 98.5\% (4152 clasificaciones correctas), exhibiendo tasas de error mínimas distribuidas entre \guillemetleft Sueño\guillemetright (0.7\%, 31 casos), \guillemetleft Ritmo\guillemetright (0.5\%, 22 casos) e \guillemetleft Insuficiencia\guillemetright (0.3\%, 11 casos). La categoría \guillemetleft Sueño\guillemetright, correspondiente a trastornos respiratorios durante el sueño, logra una precisión del 95.1\% (1534 aciertos), con confusiones principalmente hacia \guillemetleft Sanos\guillemetright (3.2\%, 51 casos), \guillemetleft Insuficiencia\guillemetright (1.5\%, 24 casos) y prácticamente ninguna hacia \guillemetleft Ritmo\guillemetright (0.2\%, 4 casos).
+
+El grupo \guillemetleft Ritmo\guillemetright asociado a trastornos del ritmo cardíaco, presenta una precisión del 94.8\% (1344 clasificaciones correctas), mostrando confusiones moderadas hacia \guillemetleft Sanos\guillemetright (2.5\%, 36 casos), \guillemetleft Sueño\guillemetright (1.5\%, 21 casos) e \guillemetleft Insuficiencia\guillemetright (1.1\%, 16 casos). Finalmente, la categoría \guillemetleft Insuficiencia\guillemetright, correspondiente a trastornos de la función de bomba del corazón, obtiene una precisión del 94.5\% (684 aciertos), con errores distribuidos principalmente hacia \guillemetleft Sanos\guillemetright con 3.0\% de error y 22 casos incorrectamente identificados, \guillemetleft Sueño\guillemetright (2.3\% y 17 casos) y mínimamente hacia \guillemetleft Ritmo\guillemetright (0.1\%, 1 caso).
+
+Comparando con PCA (donde las precisiones variaban entre 90.5\%-98.3\%), t-SNE mantiene e incluso mejora ligeramente el desempeño en algunas categorías, alcanzando un rango de 94.8\%-98.5\%. Este resultado confirma que la representación no lineal de t-SNE preserva eficazmente las sutilezas discriminativas entre subtipos patológicos con perfiles electrocardiográficos potencialmente solapados, lo que valida su aplicabilidad en tareas complejas de diagnostico diferencial automatizado.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/Matriz_trastornos_tsne.png}
+	\caption{Matriz de confusión para la clasificación de trastornos clínicos en el espacio de t-SNE.}
+	\label{fig:mtxtrastornotsne}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Sexo}
+
+La matriz de confusión binaria para la clasificación por sexo en el espacio de t-SNE revela un desempeño robusto, aunque ahora con resultados mixtos en comparación con PCA (véase fig. \ref{fig:mtxsextsne}). La clase \guillemetleft Masculino\guillemetright alcanza una precisión del 98.0\% (4724 clasificaciones correctas), con unicamente 98 casos (2.0\%) erróneamente clasificados como femeninos, lo que representa una mejora sustancial frente al 92.8\% obtenido en PCA. Sin embargo, la clase \guillemetleft Femenino\guillemetright presenta una precisión del 93.9\% (2955 casos correctamente identificados), confundiéndose en 193 casos (6.1\%) como masculinos, lo cual representa una ligera disminución respecto al 96.8\% alcanzado en PCA.
+
+Este patrón asimétrico sugiere que, mientras t-SNE mejora significativamente la identificación de pacientes masculinos al reducir los falsos positivos a la mitad (de 7.2\% a 2.0\%), la representación no lineal introduce mayor variabilidad en la clase femenina, casi duplicando su tasa de error (de 3.2\% a 6.1\%). Esta diferencia podría atribuirse a que t-SNE, al optimizar la preservación de vecindarios locales, captura de manera más efectiva las características distintivas de los patrones electrocardiográficos masculinos, pero simultáneamente introduce mayor dispersión en el subespacio correspondiente a las muestras femeninas. A pesar de esta asimetría, el modelo mantiene una exactitud global superior al 96\% (véase tabla \ref{tab:configuracion y desempeño traductor tsne}), validando que ambas técnicas de reducción de dimensionalidad capturan efectivamente las diferencias electrocardiográficas inherentes al sexo biológico.\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/matriz_sex_tsne.png}
+	\caption{Matriz de confusión para la clasificación por sexo en el espacio de t-SNE.}
+	\label{fig:mtxsextsne}
+\end{figure}
 
 
-
-\subsection{Matrices de confusion}
-análisis de estas
+En conjunto, los resultados obtenidos mediante la clasificación en el espacio de t-SNE demuestran la eficacia superior de las representaciones no lineales para la mayoría de las tareas evaluadas. En comparación con PCA, t-SNE logra mejoras sustanciales en la clasificación de estado de salud (incremento de 2.9 puntos porcentuales en precisión para la clase patológica y 3.0 puntos en precisión para sanos), así como mejoras notables en la discriminación de grupos etarios (incrementos de 10 a a casi 16 puntos porcentuales en las tres categorías). Para la clasificación de tipos de trastorno, t-SNE mantiene un desempeño ligeramente superior al de PCA, consolidando precisiones superiores al 94\% en todas las categorías patológicas. La clasificación por sexo presenta resultados mixtos, con mejora significativa para la clase masculina pero ligera reducción en la femenina, sugiriendo que la preservación de vecindarios locales favorece asimétricamente ciertas características discriminativas. Estos hallazgos validan la hipótesis de que t-SNE captura relaciones no lineales críticas en los datos electrocardiográficos que las proyecciones lineales no pueden resolver completamente, reforzando su utilidad como herramienta complementaria en el análisis exploratorio y clasificación de señales biomédicas complejas.
 
 \subsection{Dendrogramas}
 
