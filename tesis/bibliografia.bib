@@ -646,3 +646,34 @@ urldate = {01-07-2025}
 	keywords = {Combined neural network model, ECG beats classification, Diagnostic accuracy, Discrete wavelet transform},
 	abstract = {This paper illustrates the use of combined neural network model to guide model selection for classification of electrocardiogram (ECG) beats. The ECG signals were decomposed into time-frequency representations using discrete wavelet transform and statistical features were calculated to depict their distribution. The first level networks were implemented for ECG beats classification using the statistical features as inputs. To improve diagnostic accuracy, the second level networks were trained using the outputs of the first level networks as input data. Four types of ECG beats (normal beat, congestive heart failure beat, ventricular tachyarrhythmia beat, atrial fibrillation beat) obtained from the Physiobank database were classified with the accuracy of 96.94% by the combined neural network. The combined neural network model achieved accuracy rates which were higher than that of the stand-alone neural network model.}
 }
+
+@article{labati_ecg_biometric_recognition_using_cnn,
+	title = {Deep-ECG: Convolutional Neural Networks for ECG biometric recognition},
+	journal = {Pattern Recognition Letters},
+	volume = {126},
+	pages = {78-85},
+	year = {2019},
+	note = {Robustness, Security and Regulation Aspects in Current Biometric Systems},
+	issn = {0167-8655},
+	doi = {https://doi.org/10.1016/j.patrec.2018.03.028},
+	url = {https://www.sciencedirect.com/science/article/pii/S0167865518301077},
+	author = {Ruggero {Donida Labati} and Enrique Muñoz and Vincenzo Piuri and Roberto Sassi and Fabio Scotti},
+	keywords = {Biometrics, ECG, Deep learning},
+	abstract = {Electrocardiographic (ECG) signals have been successfully used to perform biometric recognition in a wide range of applications. However, ECG-based biometric systems are usually less accurate than technologies based on other physiological traits. To increase their performance, it is necessary to study novel approaches. Deep learning methods, like Convolutional Neural Networks (CNNs), can automatically extract distinctive features, and have demonstrated their effectiveness for other biometric systems. In this paper, we present Deep-ECG, a CNN-based biometric approach for ECG signals. To the best of our knowledge, this is the first study in the literature that uses a CNN for ECG biometrics. Deep-ECG extracts significant features from one or more leads using a deep CNN and compares biometric templates by computing simple and fast distance functions, obtaining remarkable accuracy for identification, verification and periodic re-authentication. Furthermore, using a simple quantization procedure, Deep-ECG can obtain binary templates that can facilitate the use of ECG-based biometric systems in conjunction with cryptographic applications. We also propose a simple method to enlarge the training dataset of ECG samples, which can increase the performance of deep neural networks. We performed experiments on large sets of samples acquired in uncontrolled conditions, proving the accuracy and robustness ofDeep-ECG in non-ideal scenarios. Furthermore, we evaluated the performance of Deep-ECG for the PTB Diagnostic ECG Database, obtaining identification accuracy better or comparable to the best performing methods in the literature, also for signals with different characteristics with respect to the ones used to train the CNN.}
+}
+
+@article{Irvine2009_sequent_individual_verification,
+	author = {Irvine, John M. and Israel, Steven A.},
+	title = {A Sequential Procedure for Individual Identity Verification Using ECG},
+	journal = {EURASIP Journal on Advances in Signal Processing},
+	year = {2009},
+	volume = {2009},
+	number = {1},
+	pages = {243215},
+	month = {may},
+	date = {2009-05-11},
+	issn = {1687-6180},
+	doi = {10.1155/2009/243215},
+	url = {https://doi.org/10.1155/2009/243215},
+	abstract = {The electrocardiogram (ECG) is an emerging novel biometric for human identification. One challenge for the practical use of ECG as a biometric is minimizing the time needed to acquire user data. We present a methodology for identity verification that quantifies the minimum number of heartbeats required to authenticate an enrolled individual. The approach rests on the statistical theory of sequential procedures. The procedure extracts fiducial features from each heartbeat to compute the test statistics. Sampling of heartbeats continues until a decision is reached—either verifying that the acquired ECG matches the stored credentials of the individual or that the ECG clearly does not match the stored credentials for the declared identity. We present the mathematical formulation of the sequential procedure and illustrate the performance with measured data. The initial test was performed on a limited population, twenty-nine individuals. The sequential procedure arrives at the correct decision in fifteen heartbeats or fewer in all but one instance and in most cases the decision is reached with half as many heartbeats. Analysis of an additional 75 subjects measured under different conditions indicates similar performance. Issues of generalizing beyond the laboratory setting are discussed and several avenues for future investigation are identified.}
+}

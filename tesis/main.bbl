@@ -235,4 +235,16 @@ T.~Bock, ``What is a dendrogram?.'' \url{displayr.com/what-is-dendrogram/},
   neural network model,'' {\em Pattern Recognition}, vol.~38, no.~2,
   pp.~199--208, 2005.
 
+\bibitem{labati_ecg_biometric_recognition_using_cnn}
+R.~{Donida Labati}, E.~Muñoz, V.~Piuri, R.~Sassi, and F.~Scotti, ``Deep-ecg:
+  Convolutional neural networks for ecg biometric recognition,'' {\em Pattern
+  Recognition Letters}, vol.~126, pp.~78--85, 2019.
+\newblock Robustness, Security and Regulation Aspects in Current Biometric
+  Systems.
+
+\bibitem{Irvine2009_sequent_individual_verification}
+J.~M. Irvine and S.~A. Israel, ``A sequential procedure for individual identity
+  verification using ecg,'' {\em EURASIP Journal on Advances in Signal
+  Processing}, vol.~2009, p.~243215, may 2009.
+
 \end{thebibliography}

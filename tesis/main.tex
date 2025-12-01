@@ -522,7 +522,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 	Esto significa que «preservar tanta variabilidad como sea posible» se traduce en encontrar nuevas variables que sean funciones lineales de las del conjunto de datos original, que maximicen sucesivamente la varianza y que no estén correlacionadas entre sí. PCA usa álgebra lineal para transformar datos a unas variables llamadas componentes principales (PC). Estas se encuentras calculando los autovectores (direcciones) y autovalores (importancia) de una matriz de covarianza. PCA selecciona los componentes principales con los autovalores más altos y proyecta los datos sobre ellos, para simplificar el conjunto de datos. Para esto se debe: \\
 	\begin{enumerate}
 		\item \textbf{Estandarizar los datos.} \\
-		Las diferentes caracteristicas que están presentes en el conjunto de datos pueden tener diferentes unidades y escalas. Para comparar estas equitativamente, primero se debe estandarizar los datos haciendo que cada característica tenga: 
+		Las diferentes características que están presentes en el conjunto de datos pueden tener diferentes unidades y escalas. Para comparar estas equitativamente, primero se debe estandarizar los datos haciendo que cada característica tenga: 
 		\begin{itemize}
 			\item Una media de $0$.
 			\item Una desviación estándar de $1$.
@@ -708,7 +708,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
 		\item \textbf{Señales de entrada $(x_1, x_2,\dotsb,x_n)$:} pueden ser datos originales o provenientes de otras neuronas.
 		\item \textbf{Señales de salida $(y_1,y_2,\dotsb,y_m)$:} que corresponde con los resultados de la red (clasificación o predicción en esta investigación).
 		\item \textbf{Los pesos sinápticos $w_{1k},w_{2y},\dotsb,w_{nk}$:} A las entradas que provienen de otras neuronas se les asigna un peso, es decir, una determinada importancia. El peso es el numero que se modifica durante el entrenamiento de la red neuronal y que permite a la red adaptarse para conseguir la respuesta correcta.
-		\item \textbf{Regla de propagación:} Se realizan diferentes operaciones con las entradas y los pesos. Con esto se busca obtener el valor del potencial que posteriormente se utilizara para realizar el procesamiento. Una de las operaciones más comunes es la suma ponderada. Otra regla puede ser la distancia euclidiana, que es utilizada por los mapas auto-organizados y las redes de función de base radial. 
+		\item \textbf{Regla de propagación:} Se realizan diferentes operaciones con las entradas y los pesos. Con esto se busca obtener el valor del potencial que posteriormente se utilizará para realizar el procesamiento. Una de las operaciones más comunes es la suma ponderada. Otra regla puede ser la distancia euclidiana, que es utilizada por los mapas auto-organizados y las redes de función de base radial. 
 		\item \textbf{La función de activación}: El valor obtenido en la regla de propagación se envía a través de la función de activación y esta define el nuevo estado o la salida de la capa. Según el entrenamiento de la red neuronal se elige la función de activación que pueden ser: lineal, escalón, sigmoidea, gaussiana o ReLU \cite{stephani}.
 	\end{itemize}
 
@@ -1072,7 +1072,7 @@ La importancia de la precisa localización de los picos R en cada ECG radica en 
 \end{figure}
 
 \subsection{Vector de características} 
-\label{subsec:vector caracteristicas}
+\label{subsec:vector_características}
 Debido a que cada señal ECG ha sido grabada con diferentes modelos de electrocardiógrafos y cada uno de estos posee una frecuencia de muestreo distinta, lo que resulta en latidos promedios con longitudes muéstrales inconsistentes. Para garantizar la comparabilidad morfológica y la viabilidad computacional en etapas posteriores, se implementa una estandarización de longitud fija mediante remuestreo digital. Cada latido se interpola a 250 muestras, este valor preserva la resolución temporal de los eventos cardíacos clave, incluso en ECG de pacientes con trastornos del ritmo cardíaco. Estas señales estandarizadas se almacenan en un arreglo en formato (CSV), este arreglo guarda los valores que al ser graficados, representan la figura del latido promedio de cada paciente, similar a como se observa en la figura \ref{fig:latidos_alineados} (línea roja). 
 Este arreglo encapsula de manera compacta la dinámica completa y variaciones inter-paciente en morfología del ciclo cardíaco. Esta representación es fundamental ya que permite que PCA pueda detectar patrones correlacionados entre intervalos, segmentos y demás métricas intrínsecas del latido promedio, además la estructura vectorial numérica es algo que PCA maneja de manera eficiente. Este latido promedio es el denominado vector de características que será la base del análisis de la señal electrocardiográfica. 
 
@@ -1265,10 +1265,16 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 			\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
 				\hline
 				\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+				Densa & 256 & ReLU \\ \hline
+				Densa & 128 & ReLU \\ \hline
 				Densa & 40 & ReLU \\ \hline
 				Densa & 35 & ReLU \\ \hline
 				Densa & 25 & ReLU \\ \hline
 				Densa & 25 & ReLU \\ \hline
+				Densa & 25 & ReLU \\ \hline
+				Densa & 25 & ReLU \\ \hline
+				Densa & 15 & ReLU \\ \hline
+				Densa & 15 & ReLU \\ \hline
 				Densa & 15 & ReLU \\ \hline
 				Densa & 10 & Hard\_sigmoide \\
 				\hline
@@ -1282,10 +1288,10 @@ Debido a la naturaleza diferente de cada tarea que se propone en la subsección 
 
 \subsection{Entrenamiento} 
 
-En esta etapa se busca ajustar los pesos sinápticos de la red para minimizar el error que existe entre las salidas predichas y las deseadas, ya que esto es lo que permite que cada red, que ha sido previamente diseñada, aprenda los patrones relevantes de las señales electrocardiográficas dimensionalmente reducidas. Entrenar una red neuronal es un trabajo complejo, matemáticamente hablando, ya que los pesos de cada capa están conectados entre sí y son dependientes unos de otros, es por esto que la modificación de un sólo peso de la capa de entrada repercutirá no sólo en la neurona directamente conectada, sino que se propagará a todas las capas siguientes y por consiguiente a la capa final de la red. Existen bibliotecas computacionales dedicadas al aprendizaje automático, y más específicamente a redes neuronales, estas tienen implementadas funciones y métodos que automatizan el entrenamiento, pero resulta importante conocer dichos procesos para entender cómo las redes adquieren este aprendizaje pudiendo reconfigurar ciertos parámetros para mejorar este aprendizaje. En el área de las redes neuronales hablar de funciones de pérdida o de costo se suele usar como sinónimo y existe una amplia variedad de estas, se selecciona la apropiada para la red neuronal de acuerdo al tipo de problema que se desea solucionar, por ejemplo, para los problemas de clasificación binaria como la clasificación por estado de salud o sexo, se hace uso de la entropía cruzada binaria que no es más que un caso particular de la entropía cruzada categórica utilizada para problemas multiclase, esta función de perdida antes mencionada fue seleccionada para las redes de identificación de grupos etarios y para la red de clasificación por tipo de trastorno de salud. Es importante mencionar que para la red de identificación por paciente, se utilizó el error cuadrático medio como función de perdida. En estos modelos se usó una estrategia de aprendizaje supervisado, dada las características previas de las etiquetas (grupos etarios, tipo de trastorno, sexo e ID de cada paciente) asociadas a los distintos problemas de identificación, se implementó el algoritmo de retropropagación de error, utilizando optimizadores adaptativos como \textit{Adam} y \textit{RMSprop}. La selección de estos optimizadores en cada caso se realizó mediante una evaluación comparativa de su desempeño, optándose por aquel que exhibió las mejores métricas de convergencia en el entrenamiento para la tarea específica bajo consideración. Una vez que los modelos han sido entrenados y se ha obtenido el mejor desempeño, midiéndose este usando la \textit{precisión} (Accuracy, como se conoce en inglés) que no es más que la proporción de todas las clasificaciones que fueron correctas y que se define matemáticamente como se observa en la ecuación \ref{eq:precision}. Una vez se encuentran los parámetros de la red que maximizan la precisión, estos se guardan para la fase de Test.
+En esta etapa se busca ajustar los pesos sinápticos de la red para minimizar el error que existe entre las salidas predichas y las deseadas, ya que esto es lo que permite que cada red, que ha sido previamente diseñada, aprenda los patrones relevantes de las señales electrocardiográficas dimensionalmente reducidas. Entrenar una red neuronal es un trabajo complejo, matemáticamente hablando, ya que los pesos de cada capa están conectados entre sí y son dependientes unos de otros, es por esto que la modificación de un sólo peso de la capa de entrada repercutirá no sólo en la neurona directamente conectada, sino que se propagará a todas las capas siguientes y por consiguiente a la capa final de la red. Existen bibliotecas computacionales dedicadas al aprendizaje automático, y más específicamente a redes neuronales, estas tienen implementadas funciones y métodos que automatizan el entrenamiento, pero resulta importante conocer dichos procesos para entender cómo las redes adquieren este aprendizaje pudiendo reconfigurar ciertos parámetros para mejorar este aprendizaje. En el área de las redes neuronales hablar de funciones de pérdida o de costo se suele usar como sinónimo y existe una amplia variedad de estas, se selecciona la apropiada para la red neuronal de acuerdo al tipo de problema que se desea solucionar, por ejemplo, para los problemas de clasificación binaria como la clasificación por estado de salud o sexo, se hace uso de la entropía cruzada binaria que no es más que un caso particular de la entropía cruzada categórica utilizada para problemas multiclase, esta función de perdida antes mencionada fue seleccionada para las redes de identificación de grupos etarios y para la red de clasificación por tipo de trastorno de salud. Es importante mencionar que para la red de identificación por paciente, se utilizó el error cuadrático medio como función de perdida. En estos modelos se usó una estrategia de aprendizaje supervisado, dada las características previas de las etiquetas (grupos etarios, tipo de trastorno, sexo e ID de cada paciente) asociadas a los distintos problemas de identificación, se implementó el algoritmo de retropropagación de error, utilizando optimizadores adaptativos como \textit{Adam} y \textit{RMSprop}. La selección de estos optimizadores en cada caso se realizó mediante una evaluación comparativa de su desempeño, optándose por aquel que exhibió las mejores métricas de convergencia en el entrenamiento para la tarea específica bajo consideración. Una vez que los modelos han sido entrenados y se ha obtenido el mejor desempeño, midiéndose este usando la \textit{exactitud} (Accuracy, como se conoce en inglés) que no es más que la proporción de todas las clasificaciones que fueron correctas y que se define matemáticamente como se observa en la ecuación \ref{eq:exactitud}. Una vez se encuentran los parámetros de la red que maximizan la exactitud, estos se guardan para la fase de test.
 \begin{equation}
-	\label{eq:precision}
-	Precision = \frac{Clasificaciones \ correctas}{Clasificaciones \ totales}
+	\label{eq:exactitud}
+	Exactitud = \frac{Clasificaciones \ correctas}{Clasificaciones \ totales}
 \end{equation}
 
 \subsection{Test}
@@ -1343,7 +1349,7 @@ En la tabla \ref{tab:summary NN salidas problemas tsne} se contemplan las caract
 	\label{tab:summary NN salidas problemas tsne}
 \end{table}
 
-%No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se logró usando tsne
+%No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se obtuvo usando tsne
 %\subsection{K-means}
 
 
@@ -1405,7 +1411,7 @@ El proceso metodológico implementado en esta investigación considera de forma 
 
 \section{Descripción general de los datos}
 
-Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Recordemos que cada señal electrocardiográfica fue sometida a un proceso sistemático de extracción de características, conforme se detalla en la subsección \ref{subsec:vector caracteristicas}. Como resultado, la representación empleada a partir de este punto corresponde a un vector de características, siendo este el latido promedio de la señal original. Por tanto, en lo sucesivo, cualquier referencia a \guillemetleft señal ECG\guillemetright \ o \guillemetleft señal electrocardiográfica\guillemetright \ implicará su interpretación en términos de dicha representación vectorial, la cual sintetiza la información relevante para las etapas posteriores. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
+Cabe destacar que las señales electrocardiográficas que se tienen provienen de la segmentación de las señales originales tomadas de la cantidad total de pacientes reflejados en la tabla \ref{tab:distriECGs}, es por esto que se observará en las siguientes tablas, un aumento significativo de estas señales. Recordemos que cada señal electrocardiográfica fue sometida a un proceso sistemático de extracción de características, conforme se detalla en la subsección \ref{subsec:vector_características}. Como resultado, la representación empleada a partir de este punto corresponde a un vector de características, siendo este el latido promedio de la señal original. Por tanto, en lo sucesivo, cualquier referencia a \guillemetleft señal ECG\guillemetright \ o \guillemetleft señal electrocardiográfica\guillemetright \ implicará su interpretación en términos de dicha representación vectorial, la cual sintetiza la información relevante para las etapas posteriores. Además se establecen tres grupos etarios con el objetivo de analizar el comportamiento dinámico de las señales ECG en función del envejecimiento, esto para las señales electrocardiográficas de los pacientes sanos y patológicos.
 
 
 \subsection{Distribuciones de los sujetos sanos por sexo y grupos etarios}
@@ -1474,7 +1480,7 @@ Para garantizar una representación equilibrada de los distintos grupos etarios 
 
 La transformación de datos en una representación más adecuada puede facilitar el proceso de aprendizaje de las redes neuronales. Por ejemplo, el uso de un número menor de parámetros, denominados en este caso como componentes principales, para representar la señal en estudio es particularmente importante para fines de reconocimiento y aprendizaje. Dado cualquier conjunto de características para la representación de datos, es importante estimar la dificultad de aprender los conceptos subyacentes utilizando esos datos de entrenamiento \cite{gulerECGbeatClassifier}. Los estudios en la literatura muestran que el grado de dificultad en el entrenamiento de las redes neuronales es inherente al conjunto de ejemplos de entrenamientos dados, es por esto que se hace la canalización del modelo de aprendizaje donde primero se busca por proyectar las señales electrocardiográficas a un espacio de menor dimensionalidad, lo que facilitará posteriores procesos de aprendizajes. Para implementar esta aproximación en este estudio, se establece al análisis de componentes principales como método de reducción de dimensionalidad, paso previo a la fase de entrenamiento de las redes neuronales, donde se busca reducir la dificultad en el entrenamiento mientras se conserva la mayor cantidad de información presente en las señales electrocardiográficas.
 
-Se introducen como datos de entrada para el análisis de componentes principales, los vectores de características mencionados en la subsección \ref{subsec:vector caracteristicas} los cuales serán sujetos de la reducción de dimensionalidad.
+Se introducen como datos de entrada para el análisis de componentes principales, los vectores de características mencionados en la subsección \ref{subsec:vector_características} los cuales serán sujetos de la reducción de dimensionalidad.
 
 
 \subsection{Método de la varianza acumulada}
@@ -1510,24 +1516,24 @@ La proyección de las señales electrocardiográficas sobre la primera y la terc
 
 
 \section{Resultados de clasificación usando los datos de PCA}
+\label{sec:redes_pca}
+\subsection{Configuración y métricas de desempeño por modelo}
 
-\subsection{Configuración y Métricas de desempeño por modelo}
-
-Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con caracteristicas especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos clínicos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la precisión (véase \ref{eq:precision}). Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
+Para cada una de las redes neuronales desarrolladas, se presentan los parámetros de configuración y las métricas de desempeño obtenidas. Dado que cada modelo fue diseñado para abordar tareas de clasificación con características especificas (clasificación por grupo etario, sexo, estado de salud, tipo de trastornos clínicos e identificación de pacientes), fue necesario ajustar de forma independiente los hiperparámetros clave de cada arquitectura, incluyendo la tasa de aprendizaje (\emph{learning rate}), el número de épocas (\emph{epochs}), el algoritmo de optimización empleado, la función de pérdida utilizada (\emph{loss function}), y la métrica principal de evaluación de desempeño que en este caso, será la exactitud (véase ecuación \ref{eq:exactitud}), cabe destacar que el tamaño del lote (\emph{batch size}) fue el mismo para el entrenamiento de todas las redes, teniendo este un valor de 32. Estos ajustes permiten que cada red alcance el mejor desempeño adaptándose a la complejidad y naturaleza intrínseca de cada problema de clasificación planteado. A continuación se detallan en forma tabular (véase tabla \ref{tab:configuracion y desempeño}) los parámetros específicos configurados para cada modelo, junto con las métricas de desempeño alcanzadas durante las fases de entrenamiento y validación. 
 
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
-		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
+		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{2cm} |}
 			\hline 
-			\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Precisión (\%)} \\ \hline
+			\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Exactitud (\%)} \\ \hline
 			Estado de salud & 0.001 & 100 & RMSprop & Entropía binaria cruzada & 96.6 \\ \hline
 			Grupos etarios & 0.001 & 100 & RMSprop & Entropía cruzada & 87.1 \\ \hline
 			Sexo & 0.001 & 100 & Adam & Entropía binaria cruzada & 98.6 \\ \hline
 			Trastorno & 0.001 & 100 & RMSprop & Entropía cruzada & 96.3 \\ \hline
 		\end{tabular}
 	\end{center}
-	\caption{}
+	\caption{Valores de configuración y desempeño de las redes neuronales propuestas.}
 	\label{tab:configuracion y desempeño}
 \end{table}
 
@@ -1538,61 +1544,207 @@ Con el propósito de evaluar visualmente el desempeño de las redes neuronales a
 
 \subsubsection{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}
 
-La matriz de confusión para la clasificación binaria del estado de salud (véase fig. \ref{fig:mtxsalud}), muestra un desempeño notable del modelo, con una exactitud general elevada, esto se evidencia por los valores diagonales dominantes. Del total de casos sanos, $2840$ fueron correctamente identificados, mientras que solo 116 fueron incorrectamente clasificados como patológicos, lo que representa una sensibilidad superior al $96\%$. Por otro lado, de los casos sanos, $3255$ fueron correctamente identificados y unicamente 165 fueron clasificados erróneamente como sanos, alcanzando una especifidad cercana al $95\%$. Este patrón indica que el modelo basado en componentes principales logra discriminar efectivamente entre ambas categorías, con un bajo numero de falsos positivos y de falsos negativos, lo cual resulta relevante desde el punto de vista clínico, donde minimizar falsos negativos resulta critico para evitar pasar por alto patologías en pacientes que las presentan.
+La matriz de confusión para la clasificación binaria del estado de salud revela un desempeño excepcional del modelo entrenado sobre las componentes principales. Del total de casos patológicos evaluados, $2840$ fueron correctamente identificados, representando una sensibilidad del $94.5\%$ mientras que unicamente 165 casos ($5.5\%$) fueron erróneamente clasificados como sanos, constituyendo los falsos negativos del sistema. Por otro lado, de los casos sanos, $3255$ fueron correctamente clasificados, alcanzando una especifidad del $96.6\%$, con solo 116 casos ($3.4\%$) incorrectamente clasificados como patológicos.
+
+Estos resultados demuestran que el modelo presenta un balance notable entre sensibilidad y especifidad, con una tasa de acierto superior al $95\%$ en ambas clases. Lo cual puede resultar relevante desde el punto de vista clínico, donde minimizar falsos positivos resulta critico para evitar pasar por alto patologías en pacientes que las presentan. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_salud_pca.png}
+	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_salud_pca.png}
 	\caption{Matriz de confusión para clasificación de estado de salud.}
 	\label{fig:mtxsalud}
 \end{figure}
 
-\subsubsection{Matriz de confusión - Trastornos de salud (4 clases).}
+\subsubsection{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}
 
-
-La matriz de confusión multiclase para la clasificación de trastornos clínicos (mencionados en la tabla \ref{tab:tipos_trastornos}) revela un desempeño diferenciado según la categoría (véase fig. \ref{fig:mtxtrastornos}). La clase "Sanos" presenta la mayor capacidad discriminatoria, con 3314 identificaciones correctas y muy pocos errores de clasificación hacia otras categorías, alcanzando una precisión superior al $98\%$. La categoría "Sueño", que corresponde a los pacientes con trastornos de la respiración durante el sueño, también muestra un rendimiento robusto con 1162 aciertos, aunque esta presenta una mayor confusión con la clase "Sanos" (83 casos). Por su parte, la clase "Ritmo", correspondiente a los pacientes con trastornos del ritmo cardíaco, obtiene 1059 clasificaciones correctas pero exhibe una confusión moderada con la clase "Sueño" (31 casos) y "Sanos" (37 casos). La categoría "Insuficiencia", correspondiente a los pacientes con trastornos de la función de bomba del corazón, es la que presenta mayor dificultad, con 550 aciertos y las tasas de confusión relativamente más altas, particularmente con la clase "Ritmo" (20 casos), Este patrón sugiere que, si bien el modelo logra separar adecuadamente los casos sanos y ciertos trastornos específicos, la diferenciación entre estos subtipos de patologías puede presentar desafíos adicionales, posiblemente debido a solapamientos en los perfiles electrocardiográficos de las distintas condiciones que se presentan.
+La matriz de confusión para la clasificación por grupos etarios  (véase fig. \ref{fig:mtxetarios}), evidencia un desempeño heterogéneo entre las tres categorías, El grupo \guillemetleft Jóvenes\guillemetright alcanza una exactitud del $84.3\%$, con 1985 clasificaciones correctas, aunque exhibe cierta confusión principalmente hacia \guillemetleft Mediana edad\guillemetright (258 clasificaciones incorrectas) y en menor medida hacia \guillemetleft Mayores\guillemetright (113 casos, 4.5\%). El grupo de \guillemetleft Mediana edad\guillemetright presenta un rendimiento de 81.7\% de aciertos (1871 casos) y muestra la mayor tasa de error hacia \guillemetleft Jóvenes\guillemetright con 331 casos (14,5\%). Por su parte, el grupo de \guillemetleft Mayores\guillemetright logra una precisión del 81.2\% (1404 clasificaciones correctas), con errores distribuidos principalmente hacia \guillemetleft Mediana edad\guillemetright (187 casos) y en menor proporción hacia \guillemetleft Jóvenes\guillemetright (139 casos, 8.0\%). Estos resultados evidencian que los patrones electrocardiográficos asociados a la edad presentan una transición gradual en lugar de limites discretos claramente definidos. Las confusiones más frecuentes ocurren entre categorías adyacentes (Jóvenes-Mediana edad y Mediana edad-Mayores), lo cual dificulta la clasificación categórica estricta y refuerza la naturaleza evolutiva de las caracteristicas cardíacas a lo largo del ciclo vital.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_etarios.png}
+	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_etarios_pca.png}
 	\caption{Matriz de confusión para clasificación por grupos etarios.}
 	\label{fig:mtxetarios}
 \end{figure}
 
-\subsubsection{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}
 
-La matriz de confusión para la clasificación por grupos etarios (véase fig. \ref{fig:mtxetarios}), muestra un desempeño desigual entre las tres categorías. El grupo de "Mayores" presenta la mejor capacidad de identificación con 1404 clasificaciones correctas y relativamente pocos errores (139 confusiones con jóvenes y 187 con mediana edad), alcanzando una exactitud aproximada del $81\%$. El grupo de "Mediana edad" también muestra un rendimiento aceptable con 1871 aciertos, aunque presenta mayor confusión con los otros grupos (331 casos con jóvenes y 187 con mayores), lo que representa una exactitud cercana al $82\%$. Sin embargo, el grupo de "Jóvenes" exhibe la mayor dificultad discriminativa, con 1985 identificaciones correctas pero con confusiones significativas hacia el grupo de mediana edad (258 casos) y mayores (113 casos), resultando en un exactitud aproximada del $84\%$. Estos resultados sugieren que los patrones electrocardiográficos asociados a la edad presentan una transición gradual y continua en lugar de limites discretos claramente definidos, especialmente en las fronteras entre grupos contiguos, lo cual dificulta la clasificación categórica estricta y refuerza la naturaleza evolutiva de las características cardíacas a los largo del ciclo vital.
+\subsubsection{Matriz de confusión - Trastornos de salud (4 clases).}
 
-\textbf{Corregir las comillas}
+La matriz de confusión multiclase para la clasificación de trastornos clínicos (mencionados en la tabla \ref{tab:tipos_trastornos}) revela un desempeño diferenciado según la categoría (véase fig. \ref{fig:mtxtrastornos}). La clase \guillemetleft Sanos\guillemetright presenta la mayor capacidad discriminatoria con una precisión del 98.3\% (3314 clasificaciones correctas), exhibiendo tasas de error mínimas (0.4\%, 1.0\% y 0.2\%) distribuidas entre \guillemetleft Sueño\guillemetright, \guillemetleft Ritmo\guillemetright, \guillemetleft Insuficiencia\guillemetright respectivamente. La categoría \guillemetleft Insuficiencia\guillemetright, correspondiente a pacientes con trastornos de la función de bomba del corazón, alcanza un rendimiento notable del 94.2\% con 550 aciertos y confusiones residuales principalmente hacia \guillemetleft Ritmo\guillemetright y \guillemetleft Sanos\guillemetright con 20 y 10 casos respectivamente. Por su parte, la clase \guillemetleft Ritmo\guillemetright, correspondiente a trastornos del ritmo cardíaco, logra una precisión del 93.1\% con 1059 clasificaciones correctas, aunque presenta confusiones moderadas con \guillemetleft Sueño\guillemetright y \guillemetleft Sanos\guillemetright con 2.7\% y 3.3\% de los casos respectivamente. Finalmente, la categoría \guillemetleft Sueño\guillemetright, que agrupa pacientes con trastornos respiratorios durante el sueño, obtiene una precisión del 90.5\% (1162 aciertos), siendo la clase con mayor tasa de error hacia \guillemetleft Sanos\guillemetright, seguida de confusiones menores con \guillemetleft Ritmo\guillemetright e \guillemetleft Insuficiencia\guillemetright con (2.6\% y 0.4\% de los casos). Este patrón sugiere que, si bien el modelo logra separar adecuadamente los casos sanos y las distintas patologías con alta precisión global, la diferenciación entre ciertos subtipos patológicos presenta desafíos adicionales, posiblemente debido a solapamientos en los perfiles electrocardiográficos de las distintas condiciones que se manifiestan clinicamente.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Matriz_trastornos_pca.png}
+	\includegraphics[width=0.80\linewidth]{Sem_1/figuras/Matriz_trastornos_pca.png}
 	\caption{Matriz de confusión para la clasificación de trastornos clínicos.}
 	\label{fig:mtxtrastornos}
 \end{figure}
 
-\section{Resultados de identificacion de pacientes}
+\subsubsection{Matriz de confusión - Sexo (Masculino y femenino)}
 
-\subsection{metricas de desempeño}
+La matriz de confusión binaria para la clasificación por sexo revela un desempeño diferenciado (véase fig. \ref{fig:mtxsex}). Se obtuvieron 2368 aciertos en la clase \guillemetleft Masculino\guillemetright que corresponden al 92.8\% del total de pacientes masculinos en la muestra y con una confusión de 183 casos que corresponden al restante 7.2\% de la muestra. En el caso de los pacientes femenino, se obtuvo un 96.8\% de precisión en esta clase que corresponden a 3704 casos, confundiéndose en solo 121 casos (3.2\%). 
+
+Estos resultados demuestran que el modelo es capaz de capturar diferencias electrocardiográficas inherentes al sexo biológico de los pacientes, lo cual tiene relevancia clínica considerable. Las diferencias en las caracteristicas del ECG entre hombres y mujeres están bien documentadas en la literatura medica. La alta precisión alcanza valida que las componentes principales extraídas capturan efectivamente estas diferencias sutiles pero consistentes, lo que sugiere que el modelo podría emplearse para la clasificación por sexo. Ademas, este hallazgo resalta la importancia de considerar el sexo como variable relevante en el análisis de señales electrocardiográficas, dado que ignorar estas diferencias podría introducir sesgos en los sistemas de clasificación automática y afectar la precisión diagnostica en poblaciones mixtas.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Sem_1/figuras/matrix_sex_pca.png}
+	\caption{Matriz de confusión para la clasificación por sexo.}
+	\label{fig:mtxsex}
+\end{figure}
+
+\section{Resultados de identificación de pacientes}
+
+\subsection{Métricas de desempeño}
+
+Según se presenta en la tabla \ref{tab:configuracion y desempeño identificar ecgs}, el modelo de identificación de pacientes logró precisiones del 91.1\%, durante la fase de entrenamiento, demostrando una capacidad notable para aprender los patrones discriminativos presentes en las representaciones electrocardiográficas. Durante la fase de validación, el modelo mantuvo un desempeño elevado con una precisión del 88.2\%, lo que sugiere una adecuada capacidad de generalización a datos no vistos durante el entrenamiento. Sin embargo, al evaluar el modelo con el conjunto de datos de producción (datos completamente independientes), la precisión disminuyó significativamente a 67.1\%, evidenciando una degradación en el rendimiento que podría atribuirse a diferencias en la distribución de los datos. 
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{|  M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} |  M{2cm} | M{2cm} | M{2cm} |}
+			\hline 
+			\textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Exactitud durante entrenamiento (\%)} & \textbf{Exactitud durante validación (\%)} & \textbf{Exactitud durante producción (\%)} \\ \hline
+			0.0011 & 200 & Adam & Error cuadrático medio & 91.1\% & 88.3\% & 67.1\% \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Valores de configuración y métricas de desempeño de la red neuronal encargada de identificar pacientes.}
+	\label{tab:configuracion y desempeño identificar ecgs}
+\end{table}
+
+\subsection{Histograma de precisiones por paciente}
+
+Con el fin de obtener un gráfico que represente visualmente los resultados de la red neuronal para la identificación de pacientes y debido a que hacer una matriz de más de setecientas clases resulta intratable visualmente, se calcularon los porcentajes de precisión por clase con el fin de poder obtener posteriormente un histograma de frecuencia de dichos porcentajes de precisión. Este histograma (véase fig. \ref{fig:histograma de precisiones identificaciones ecgs}) revela una distribución bimodal fuertemente asimétrica, con una concentración predominante en valores superiores al 95\%. La barra más alta del histograma, con una frecuencia superior a 80 casos, corresponde al intervalo de precisiones superiores al 96\% aproximadamente, lo que indica que la mayoría de las instancias evaluadas alcanzaron niveles prácticamente perfectos. Este patrón sugiere que, para una porción significativa de los datos de validación, el modelo logra una clasificación casi sin errores, demostrando una capacidad robusta de discriminación en condiciones favorables.
+
+Sin embargo, la distribución también presenta una cola extendida hacia valores bajos de precisión, con frecuencias notables distribuidas entre el 10\% y el 80\%. Esto evidencia la presencia de un subconjunto de casos problemáticos donde el modelo experimenta dificultades considerables, posiblemente asociados a individuos con características electrocardiográficas atípicas, señales ruidosas o patrones que se solapan significativamente con otros pacientes. La curva de densidad suavizada (linea roja) confirma esta tendencia bimodal, mostrando un pico principal en el extremo derecho y un segundo modo menos pronunciado en la región intermedia.
+
+Esta variabilidad en el desempeño individual sugiere que existe heterogeneidad en la dificultad de identificación entre diferentes pacientes. Esto puede estar relacionado con factores como la variabilidad temporal de los registros electrocardiográficos de un mismo individuo así como con limitaciones en la cobertura del conjunto de datos de entrenamiento.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/histo_porcen_precisiones.png}
+	\caption{Histograma de frecuencia de los porcentajes de la precisión por clase obtenida por la red neuronal para la identificación de pacientes.}
+	\label{fig:histograma de precisiones identificaciones ecgs}
+\end{figure}
+
+\subsection{Viabilidad de la huella digital cardíaca como rasgo biométrico}
+
+Las señales electrocardiográficas han sido empleadas exitosamente para desempeñar reconocimiento biométrico en un amplio rango de aplicaciones. Sin embargo, los sistemas biométricos basados en señales electrocardiográficas usualmente son menos precisos que las tecnologías basadas en otras características fisiológicas, como las huellas dactilares o el reconocimiento facial. Para incrementar su rendimiento, es necesario estudiar aproximaciones novedosas. En este aspecto, el proceso de reconocimiento biométrico mediante señales electrocardiográficas requiere de la implementación secuencial de dos fases criticas: en primer lugar, la extracción y selección de características relevantes que capturen las particularidades morfológicas del complejo QRS, intervalos temporales y variabilidad de cada individuo, transformando las señales de alta dimensionalidad en vectores de características compactos; posteriormente, se emplea una red neuronal que, mediante aprendizaje supervisado, pueda modelar las relaciones lineales o no lineales existentes entre dichas características permitiendo así la identificación de cada sujeto. Las señales fisiológicas presentan importantes ventajas para aplicaciones biométricas: i) la dificultad de falsificar dichas señales, ii) todos los individuos vivos presentan estas señales de manera inherente, iii) estas señales contienen información acerca de condiciones clínicas o estados fisiológicos, lo cual puede ser provechoso para otras aplicaciones; iv) la adquisición de dichos registros por largos periodos de tiempo no requiere de acciones explicitas de los usuarios, lo que facilita sus aplicaciones por re-autenticaciones periódicas \cite{labati_ecg_biometric_recognition_using_cnn}. 
+
+Entre las técnicas de análisis de señales fisiológicas, los electrocardiogramas destacan por su madurez y difusión. Además, estudios recientes han demostrado que con el reconocimiento biométrico se puede obtener una precisión satisfactoria para diferentes tipos de aplicaciones \cite{Irvine2009_sequent_individual_verification}. Sin embargo, los sistemas biométricos basados en electrocardiogramas tienen que hacer frente a un conjunto de problemas incluyendo: i) variabilidad intraclase alta causada por la frecuencia cardíaca y actividades realizadas, ii) falta de estudios que demuestren la discriminabilidad en datasets grandes; iii) cambios a largo plazo en las características del ECG de una persona.
+
+Tras una visión exhaustiva de la literatura científica relacionada con el reconocimiento biométrico mediante señales electrocardiográficas y diversos modelos de aprendizaje automático, hasta donde es de nuestro conocimiento, el flujo de trabajo propuesto en este estudio no ha sido aplicado previamente para la identificación biométrica de pacientes utilizando la combinación de análisis de componentes principales y redes neuronales perceptrónicas multicapa de la manera especifica en que se implementa en esta investigación. Los resultados obtenidos demuestran que no solo se alcanzan niveles de exactitud comparables con los reportados en trabajos previos que emplean arquitecturas de aprendizaje profundo más complejas como redes neuronales convolucionales (CNN) o redes recurrentes, como las LSTM (memoria larga a corto plazo, por sus siglas en inglés), sino que además se logra la reducción significativa en el costo computacional asociado tanto al entrenamiento como a la inferencia del modelo. Esta eficiencia computacional representa una ventaja importante para aplicaciones en tiempo real o en dispositivos vestibles que son de recursos computacionales limitados, sin comprometer la capacidad discriminativa del sistema biométrico.
+
+
+\section{Análisis exploratorio usando t-SNE}
+
+Aprovechando la flexibilidad de t-SNE como técnica de reducción de dimensionalidad no lineal, puede utilizarse para explorar y visualizar conjuntos de datos complejos de alta dimensión proyectando la información en espacios bidimensionales o tridimensionales de manera que se preserven tanto las relaciones de vecindad local como la estructura global relevante entre las muestras. Entre las principales ventajas de t-SNE destacan su capacidad para revelar agrupamientos y patrones ocultos que no son detectables mediante métodos lineales como PCA y la preservación de relaciones no lineales intrínsecas en los datos. En esta sección, se presentan visualizaciones bidimensionales del agrupamiento obtenido mediante t-SNE donde se evidencia la formación de cúmulos que pueden representar subpoblaciones diferenciadas y además, la inspección visual de las proyecciones resultantes es fundamental para evaluar empíricamente si los parámetros de t-SNE, como la perplejidad y el número de iteraciones, han sido adecuadamente optimizados para preservar la estructura local y global relevante de los datos en el espacio reducido.
+
+En la figura \ref{fig:tsne1_vs_tsne2} se observa un patrón de agrupamiento más complejo y definido, con agrupaciones densas y bien delimitadas entre ellas, en comparación con mostrado en la figura \ref{fig:pc1vspc2}. Aunque sigue existiendo un solapamiento considerable entre ambas poblaciones, t-SNE consigue segmentar clusters. Las distribuciones marginales encima y a la derecha del diagrama muestran las regiones con alta densidad en valores negativos de tsne2 y cerca del cero en tsne1 para pacientes patológicos, mientras los sanos presentan mayor dispersión en tsne1 y dos modos hacia valores positivos de tsne2, lo que sugiere subpoblaciones específicas dentro de cada grupo. Es de mencionar que se usaron como datos de entrada de t-SNE, las primeras 40 componentes principales obtenidas de paso anterior, en la tabla \ref{tab:valores_tsne} se reflejan los demás valores de configuración de t-SNE. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/tsne1_vs_tsne2.png}
+	\caption{Gráfico de dispersión entre tsne1 y tsne2.}
+	\label{fig:tsne1_vs_tsne2}
+\end{figure}
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{2.5cm} | M{2.5cm} | M{2.5cm} |}
+			\hline
+			\textbf{N° componentes de entrada} & \textbf{Perplejidad} & \textbf{N° de iteraciones} & \textbf{N° componentes de salida} \\ \hline
+			40 & 25 & 1000 & 3 \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Valores de configuración de t-SNE.}
+	\label{tab:valores_tsne}
+\end{table}
+
+t-SNE se ha vuelvo ampliamente popular debido a su casi mágica habilidad para crear \guillemetleft mapas\guillemetright a partir de la data que puede tener cientos o miles de dimensiones. Aunque impresionante, estas imágenes pueden llevar a interpretaciones erróneas, es por esto que resulta necesario usar otras herramientas para interpretar estos \guillemetleft mapas\guillemetright
+
+
+\section{Resultados de clasificación usando los datos de tsne}
+
+Con el objetivo de profundizar en la interpretación de las representaciones generadas por t-SNE, se utilizarán redes neuronales perceptrónicas como modelos traductores entre las componentes no lineales de t-SNE y las variables clínicas de interés. Esta aproximación habilita la extracción de inferencias clínicas relevantes a partir de la estructura latente descubierta por t-SNE en los datos originales.
+
+\subsection{Configuración y métricas de desempeño por modelo}
+
+De manera similar que en la sección \ref{sec:redes_pca}, la siguiente subsección especifica los valores de configuración de cada red neuronal usada (véase tabla \ref{tab:configuracion y desempeño traductor tsne}) para extraer inferencias clínicas relevantes a partir de la estructura latente de las representaciones generadas por t-SNE. Es importante destacar que en este caso se usó un 50\% de la data para entrenamiento y el resto para producción.
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{2.4cm} | M{1.8cm} | M{2.5cm} | M{2cm} | M{1.8cm} |}
+		\hline 
+		\textbf{Tipo de clasificación} & \textbf{Tasa de aprendizaje} & \textbf{Épocas} & \textbf{Optimizador} & \textbf{Función de perdida} & \textbf{Exactitud (\%)} \\ \hline
+			Estado de salud & 0.001 & 300 & Adam & Entropía binaria cruzada & 98.6\%  \\ \hline
+			Grupos etarios  & 0.001 & 300 & Adam & Entropía cruzada & 95.5\%  \\ \hline
+			Sexo            & 0.001 & 300 & Adam & Entropía binaria cruzada & 96.3\%  \\ \hline
+			Trastorno       & 0.001 & 300 & Adam & Entropía cruzada & 96.8\%  \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Valores de configuración y métricas de desempeño de las redes neuronales encargadas de interpretar los datos de t-SNE.}
+	\label{tab:configuracion y desempeño traductor tsne}
+\end{table}
 
 \subsection{Matrices de confusión}
 
-\subsection{Discusion sobre la viabilidad de la huella digital cardíaca}
+\subsubsection{Matriz de confusión - Estado de salud}
+
+La matriz de confusión para la clasificación binaria del estado de salud en el espacio de t-SNE revela un desempeño excepcional y superior al obtenido en el espacio de PCA, como se observa en la figura \ref{fig:mtxsaludtsne}. La clase \guillemetleft Sano\guillemetright alcanza una precisión del 99.6\% (4199 identificaciones correctas), con unicamente 17 casos (0.4\%) erróneamente clasificados como patológicos, lo que representa una tasa de falsos positivos extremadamente baja. Por su parte, la clase \guillemetleft Patológico\guillemetright presenta una precisión del 97.4\% (3658 aciertos), con 96 casos incorrectamente (2.6\%) clasificados como sanos, constituyendo los falsos negativos del sistema. 
+
+Estos resultados demuestran que la representación no lineal proporcionada por t-SNE captura de manera más efectiva las diferencias estructurales entre los estados de salud en comparación con el espacio lineal de PCA. La reducción significativa en la tasa de falsos negativos (de 5.5\% en PCA a 2.6\% en t-SNE) es particularmente relevante desde el punto de vista clínico, ya que disminuye el riesgo de pasar por alto pacientes con condiciones patológicas. Asimismo, la especifidad del 99.6\% confirma que prácticamente todos los individuos sanos son correctamente identificados, minimizando intervenciones innecesarias. Este desempeño superior valida la hipótesis de que t-SNE preserva relaciones locales y no lineales críticas para la discriminación entre estados de salud, superando las limitaciones de los métodos lineales tradicionales en tareas de clasificación biomédica compleja. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Sem_1/figuras/Matriz_salud_tsne.png}
+	\caption{Matriz de confusión para la clasificación por estado de salud en el espacio de t-SNE.}
+	\label{fig:mtxsaludtsne}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Grupos etarios}
+
+La matriz de confusión para la clasificación por grupos etarios en el espacio de t-SNE muestra un desempeño notablemente mejorado respecto al espacio PCA (véase fig. \ref{fig:mtxetariostsne}). El grupo \guillemetleft Mayores\guillemetright exhibe la mejor precisión con un 97.0\% (2110 clasificaciones correctas), presentando errores mínimos hacia \guillemetleft Jóvenes\guillemetright y \guillemetleft Mediana edad\guillemetright con 21 y 40 casos incorrectamente identificados. El grupo \guillemetleft Mediana edad\guillemetright alcanza una precisión del 95.4\% (2706 aciertos), con confusiones principalmente hacia \guillemetleft Jóvenes\guillemetright (70 casos, 2.5\%) y en menor medida hacia \guillemetleft Mayores\guillemetright (60 casos, 2.1\%). Por su parte, el grupo \guillemetleft Jóvenes\guillemetright logra una precisión del 94.5\% (2797 identificaciones correctas), mostrando la mayor tasa relativa de confusión hacia \guillemetleft Mediana edad\guillemetright (117 casos 4,0\%) y confusiones menores hacia \guillemetleft Mayores\guillemetright (45 casos, 1.5\%).
+
+La mejora sustancia mostrada en los resultados antes mencionados en comparación con PCA, donde los resultados rondaban el 81\%, elevándose ahora a un rango del 94.5\%-97\% demuestra la mejora significativa que confirma que la representación no lineal de t-SNE captura de manera más efectiva las transiciones graduales en los patrones electrocardiográficos asociados a la edad. Aunque persiste cierta confusión entre grupos contiguos (especialmente Jóvenes-Mediana Edad), las tasas de error se han reducido considerablemente, validando la capacidad de t-SNE para resolver mejor las fronteras difusas entre categorías etarias adyacentes y reforzando su utilidad para aplicaciones de clasificación que requieren discriminación de patrones evolutivos continuos en señales biomédicas.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/Matriz_etarios_tsne.png}
+	\caption{Matriz de confusión para clasificación por grupos etarios en el espacio de t-SNE.}
+	\label{fig:mtxetariostsne}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Trastorno de salud}
+
+Al igual que con las matrices de confusión anteriores, la matriz de confusión multiclase para la clasificación de trastornos clínicos en el espacio de t-SNE evidencia un desempeño extraordinario y sustancialmente mejorado respecto al espacio PCA (véase fig. \ref{fig:mtxtrastornotsne}). La clase \guillemetleft Sanos\guillemetright alcanza la mayor precisión con un 98.5\% (4152 clasificaciones correctas), exhibiendo tasas de error mínimas distribuidas entre \guillemetleft Sueño\guillemetright (0.7\%, 31 casos), \guillemetleft Ritmo\guillemetright (0.5\%, 22 casos) e \guillemetleft Insuficiencia\guillemetright (0.3\%, 11 casos). La categoría \guillemetleft Sueño\guillemetright, correspondiente a trastornos respiratorios durante el sueño, logra una precisión del 95.1\% (1534 aciertos), con confusiones principalmente hacia \guillemetleft Sanos\guillemetright (3.2\%, 51 casos), \guillemetleft Insuficiencia\guillemetright (1.5\%, 24 casos) y prácticamente ninguna hacia \guillemetleft Ritmo\guillemetright (0.2\%, 4 casos).
+
+El grupo \guillemetleft Ritmo\guillemetright asociado a trastornos del ritmo cardíaco, presenta una precisión del 94.8\% (1344 clasificaciones correctas), mostrando confusiones moderadas hacia \guillemetleft Sanos\guillemetright (2.5\%, 36 casos), \guillemetleft Sueño\guillemetright (1.5\%, 21 casos) e \guillemetleft Insuficiencia\guillemetright (1.1\%, 16 casos). Finalmente, la categoría \guillemetleft Insuficiencia\guillemetright, correspondiente a trastornos de la función de bomba del corazón, obtiene una precisión del 94.5\% (684 aciertos), con errores distribuidos principalmente hacia \guillemetleft Sanos\guillemetright con 3.0\% de error y 22 casos incorrectamente identificados, \guillemetleft Sueño\guillemetright (2.3\% y 17 casos) y mínimamente hacia \guillemetleft Ritmo\guillemetright (0.1\%, 1 caso).
+
+Comparando con PCA (donde las precisiones variaban entre 90.5\%-98.3\%), t-SNE mantiene e incluso mejora ligeramente el desempeño en algunas categorías, alcanzando un rango de 94.8\%-98.5\%. Este resultado confirma que la representación no lineal de t-SNE preserva eficazmente las sutilezas discriminativas entre subtipos patológicos con perfiles electrocardiográficos potencialmente solapados, lo que valida su aplicabilidad en tareas complejas de diagnostico diferencial automatizado.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/Matriz_trastornos_tsne.png}
+	\caption{Matriz de confusión para la clasificación de trastornos clínicos en el espacio de t-SNE.}
+	\label{fig:mtxtrastornotsne}
+\end{figure}
+
+\subsubsection{Matriz de confusión - Sexo}
+
+La matriz de confusión binaria para la clasificación por sexo en el espacio de t-SNE revela un desempeño robusto, aunque ahora con resultados mixtos en comparación con PCA (véase fig. \ref{fig:mtxsextsne}). La clase \guillemetleft Masculino\guillemetright alcanza una precisión del 98.0\% (4724 clasificaciones correctas), con unicamente 98 casos (2.0\%) erróneamente clasificados como femeninos, lo que representa una mejora sustancial frente al 92.8\% obtenido en PCA. Sin embargo, la clase \guillemetleft Femenino\guillemetright presenta una precisión del 93.9\% (2955 casos correctamente identificados), confundiéndose en 193 casos (6.1\%) como masculinos, lo cual representa una ligera disminución respecto al 96.8\% alcanzado en PCA.
+
+Este patrón asimétrico sugiere que, mientras t-SNE mejora significativamente la identificación de pacientes masculinos al reducir los falsos positivos a la mitad (de 7.2\% a 2.0\%), la representación no lineal introduce mayor variabilidad en la clase femenina, casi duplicando su tasa de error (de 3.2\% a 6.1\%). Esta diferencia podría atribuirse a que t-SNE, al optimizar la preservación de vecindarios locales, captura de manera más efectiva las características distintivas de los patrones electrocardiográficos masculinos, pero simultáneamente introduce mayor dispersión en el subespacio correspondiente a las muestras femeninas. A pesar de esta asimetría, el modelo mantiene una exactitud global superior al 96\% (véase tabla \ref{tab:configuracion y desempeño traductor tsne}), validando que ambas técnicas de reducción de dimensionalidad capturan efectivamente las diferencias electrocardiográficas inherentes al sexo biológico.\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Sem_1/figuras/matriz_sex_tsne.png}
+	\caption{Matriz de confusión para la clasificación por sexo en el espacio de t-SNE.}
+	\label{fig:mtxsextsne}
+\end{figure}
 
 
-\section{Analisis exploratorio tsne}
-
-La figura \ref{fig:pc1vspc2} parece sugerir que si bien PC1 y PC2 capturan cierta variabilidad discriminatoria entre estados de salud, la separación lineal en este subespacio bidimensional resulta insuficiente para una clasificación robusta, esto justifica el uso de técnicas como t-SNE o modelos no lineales que aprovechen componentes adicionales y relaciones más complejas en el espacio de características. 
-
-¿Se puede mostrar quizas algunas graficas en 2d de tsne donde se vean los pequeños agrupamientos?
-
-\section{Resultados de clasificacion usando los datos de tsne}
-
-\subsection{Metricas de desempeño}
-
-\subsection{Matrices de confusion}
-análisis de estas
+En conjunto, los resultados obtenidos mediante la clasificación en el espacio de t-SNE demuestran la eficacia superior de las representaciones no lineales para la mayoría de las tareas evaluadas. En comparación con PCA, t-SNE logra mejoras sustanciales en la clasificación de estado de salud (incremento de 2.9 puntos porcentuales en precisión para la clase patológica y 3.0 puntos en precisión para sanos), así como mejoras notables en la discriminación de grupos etarios (incrementos de 10 a a casi 16 puntos porcentuales en las tres categorías). Para la clasificación de tipos de trastorno, t-SNE mantiene un desempeño ligeramente superior al de PCA, consolidando precisiones superiores al 94\% en todas las categorías patológicas. La clasificación por sexo presenta resultados mixtos, con mejora significativa para la clase masculina pero ligera reducción en la femenina, sugiriendo que la preservación de vecindarios locales favorece asimétricamente ciertas características discriminativas. Estos hallazgos validan la hipótesis de que t-SNE captura relaciones no lineales críticas en los datos electrocardiográficos que las proyecciones lineales no pueden resolver completamente, reforzando su utilidad como herramienta complementaria en el análisis exploratorio y clasificación de señales biomédicas complejas.
 
 \subsection{Dendrogramas}
 
