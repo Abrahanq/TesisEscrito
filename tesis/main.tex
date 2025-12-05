@@ -139,7 +139,7 @@
 \section{Antecedentes}
 	
 La electrocardiografía sigue siendo uno de los bastiones en lo que se basa la cardiología moderna para el diagnostico de cardiopatías, el electrocardiograma (ECG) suele ser el primer examen que se le realiza a cada paciente cuando se examina a profundidad, ya que es capaz de arrojar información importante del funcionamiento del sistema circulatorio y podría rociar indicios de problemas que pudieran estar pasando en otros sistemas importantes del cuerpo humano. La ciencia siempre ha acompañado la innovación y creación de nuevas tecnologías y la física, como baluarte entre las ciencias naturales, se ha interesado en contribuir en el mejoramiento de estas tecnologías, aportando eficacia y rendimiento desde perspectivas no antes vistas. Esto ha conducido a investigar referentes, que permiten ampliar el panorama científico que hay detrás de un ECG. 
-Ahora se presentan una serie de investigaciones que continúan con esta linea de investigación, que consiste en aplicar métodos computaciones a la salud, creciente interés que ha incrementado desde finales del siglo pasado. \\
+Ahora se presentan una serie de investigaciones que continúan con esta línea de investigación, que consiste en aplicar métodos computaciones a la salud, creciente interés que ha incrementado desde finales del siglo pasado. \\
 	
 \subsection{A Real-Time QRS Detection Algorithm \cite{PanTompkins85}}
 \textbf{Autores:} Pan, Jiapu; Tompkins, Willis J. 
@@ -152,7 +152,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 
 \textbf{Metodología:} 
 \begin{enumerate}
-	\item \textbf{Filtro pasa-banda:} Como primer paso, se aplica un filtro pasa-banda, a la señal del ECG, para incrementar la relación señal-ruido, se sugiere un filtro con un ancho de banda de 5-15 Hz para maximizar el QRS y también reducir el ruido producido por el movimiento de los músculos y el desplazamiento de la linea base.
+	\item \textbf{Filtro pasa-banda:} Como primer paso, se aplica un filtro pasa-banda, a la señal del ECG, para incrementar la relación señal-ruido, se sugiere un filtro con un ancho de banda de 5-15 Hz para maximizar el QRS y también reducir el ruido producido por el movimiento de los músculos y el desplazamiento de la línea base.
 	\item \textbf{Filtro derivativo:} Se aplica un filtro derivativo para proveer información acerca de la pendiente del QRS.
 	\item \textbf{Cuadratura e integración:} La señal filtrada se eleva al cuadrado para realzar los picos dominantes (QRS) y reducir la posibilidad de reconocer erróneamente una onda T como pico R. A continuación, se aplica un filtro de media móvil para proporcionar información sobre la duración del complejo QRS.
 \end{enumerate}
@@ -311,7 +311,7 @@ Ahora se presentan una serie de investigaciones que continúan con esta linea de
 \begin{itemize}
 	\item La técnica propuesta en este articulo, tiene un mejor desempeño que la aproximación basada en EMD para remover el BW.
 	\item También se observa que la HVD es computacionalmente eficiente. 
-	\item El método propuesto es capaz de desempeñarse mejor bajo condiciones de severa distorsión de la linea base sin afectar la morfología real del ECG.
+	\item El método propuesto es capaz de desempeñarse mejor bajo condiciones de severa distorsión de la línea base sin afectar la morfología real del ECG.
 \end{itemize}
 
 \subsection{Heart failure classification using deep learning to extract spatiotemporal features from ECG \cite{Zhang24}}
@@ -932,7 +932,7 @@ El recurso Physionet tiene tres componentes interdependientes:
 	\item Una colección de tutoriales y materiales educativos populares, que ofrece orientación experta en enfoques para explorar y analizar datos sanitarios y señales fisiológicas. Un tema unificador de estos recursos es la extracción de información \guillemetleft oculta\guillemetright a partir de datos biomédicos, información que puede tener valor diagnostico o pronostico en medicina, o poder explicativo o predictivo en investigación básica.
 \end{itemize}
 
-Physionet no es solo el nombre los Recursos de Investigación de Señales Fisiológicas Complejas, es también un sitio web. Este sitio web fue creado como mecanismo de difusión y el intercambio gratuito y abierto de señales biomédicas grabadas y el software de código abierto para analizarlas, proporcionando instalaciones para el análisis cooperativo de datos y la evaluación de nuevos algoritmos. Además de proporcionar acceso electrónico gratuito a datos y programas informáticos, el sitio web de Physionet ofrece servicios y formación a través de tutoriales en linea para ayudar a los usuarios principiantes y avanzados. En colaboración con la conferencia anual \guillemetleft Computación en Cardiología\guillemetright, Physionet organiza una serie anual de desafíos, en los que investigadores y estudiantes abordan problemas no resueltos de interés clínico o científico básico utilizando datos y software proporcionados por Physionet \cite{physionet2000}.
+Physionet no es solo el nombre los Recursos de Investigación de Señales Fisiológicas Complejas, es también un sitio web. Este sitio web fue creado como mecanismo de difusión y el intercambio gratuito y abierto de señales biomédicas grabadas y el software de código abierto para analizarlas, proporcionando instalaciones para el análisis cooperativo de datos y la evaluación de nuevos algoritmos. Además de proporcionar acceso electrónico gratuito a datos y programas informáticos, el sitio web de Physionet ofrece servicios y formación a través de tutoriales en línea para ayudar a los usuarios principiantes y avanzados. En colaboración con la conferencia anual \guillemetleft Computación en Cardiología\guillemetright, Physionet organiza una serie anual de desafíos, en los que investigadores y estudiantes abordan problemas no resueltos de interés clínico o científico básico utilizando datos y software proporcionados por Physionet \cite{physionet2000}.
 
 
 \subsection{Criterios de selección.} 
@@ -983,8 +983,8 @@ Para garantizar la confiabilidad de los posteriores análisis es critico el prep
 \begin{enumerate}
 	\item \textbf{Estandarización de la señal:} En el análisis de datos, la estandarización es una de las herramientas básicas y comúnmente utilizadas, existen varios tipos y dependerá de los datos cual usar.
 	\item \textbf{Filtrado de ruido:} Es necesario reducir o eliminar el ruido provocado por la actividad muscular y la interferencia de la red eléctrica, para esto se usan filtros digitales (Butterworth, por ejemplo) con frecuencias de corte ajustadas a las bandas típicas del ECG.
-	\item \textbf{Eliminación del desplazamiento de la linea base:} también conocido como \emph{baseline wander}, es un ruido de baja frecuencia ($<0.5\ Hz$) que distorsiona la morfología del ECG llegando a afectar la detección de las ondas P y T. Para esto se aplica el algoritmo de Sharma \& Sharma \cite{Sharma15} para preservar la morfología real del ECG.
-	\item \textbf{Extracción de segmentos ECG:} Debido a que el algoritmo propuesto por Sharma \& Sharma \cite{Sharma15} se desempeña mejor conforme más largo es el segmento a ser tratado por el mismo, se extraen los segmentos de los ECG (de duración fija) luego de haber sido filtrados y que haya sido eliminado el desplazamiento de la linea base. Para homogenizar el análisis, se selecciona una duración fija de 3 minutos, que permitan equilibrar la captura de la variabilidad de los latidos cardíacos. 
+	\item \textbf{Eliminación del desplazamiento de la línea base:} también conocido como \emph{baseline wander}, es un ruido de baja frecuencia ($<0.5\ Hz$) que distorsiona la morfología del ECG llegando a afectar la detección de las ondas P y T. Para esto se aplica el algoritmo de Sharma \& Sharma \cite{Sharma15} para preservar la morfología real del ECG.
+	\item \textbf{Extracción de segmentos ECG:} Debido a que el algoritmo propuesto por Sharma \& Sharma \cite{Sharma15} se desempeña mejor conforme más largo es el segmento a ser tratado por el mismo, se extraen los segmentos de los ECG (de duración fija) luego de haber sido filtrados y que haya sido eliminado el desplazamiento de la línea base. Para homogenizar el análisis, se selecciona una duración fija de 3 minutos, que permitan equilibrar la captura de la variabilidad de los latidos cardíacos. 
 	\item \textbf{Detección de eventos cardíacos:} Seleccionando algoritmos basados en el robusto algoritmo de Pan-Tompkins \cite{PanTompkins85} se busca la identificación precisa de los complejos QRS (picos R) como referencia temporal de cada latido.
 \end{enumerate}
 
@@ -993,14 +993,14 @@ Para garantizar la confiabilidad de los posteriores análisis es critico el prep
 La estandarización de los datos se suele hacer por dos razones:
 \begin{enumerate}
 	\item Cada electrocardiógrafo digitaliza la señal ECG a diferente factor de conversión analógico-digital (ADC) ---lo que resulta en señales con escalas dinámicas diferentes, es decir, valores en mV representados con rangos numéricos distintos--- por lo que se requiere regularizar las escalas dinámicas de los datos.
-	\item La linea base de la señal ECG suele no estar situada en el centro común del papel milimetrado donde queda grabada la señal, es por esto que se debe eliminar el \emph{offset}\footnote{Se refiere al desplazamiento en la señal producto de un voltaje constante propio del instrumento que se suma a la señal que se busca medir} del instrumento y así centrar la linea base del ECG.
+	\item La línea base de la señal ECG suele no estar situada en el centro común del papel milimetrado donde queda grabada la señal, es por esto que se debe eliminar el \emph{offset}\footnote{Se refiere al desplazamiento en la señal producto de un voltaje constante propio del instrumento que se suma a la señal que se busca medir} del instrumento y así centrar la línea base del ECG.
 \end{enumerate}
 Entre los distintos tipos de regularización de datos existentes, es importante señalar que el uso de cada tipo de regularización dependerá de los datos y del problema a solucionar, en esta investigación se usará la siguiente transformación lineal:
 \begin{equation}
 	\label{eq:normalizacion}
 	\mathrm{X}=\frac{\mathrm{x}-\overline{\mathrm{x}}}{\sigma}
 \end{equation}
-siendo $\mathrm{X}$ el nuevo vector de datos estandarizado, $\mathrm{x}$ la variable de entrada, $\overline{\mathrm{x}}$ su valor medio y $\sigma$ la desviación estándar. Este tipo de regularización tendrá valor medio cero y la desviación estándar igual a uno, con lo que se evitaran tendencias de las entradas fuera de los rangos considerados como normales, debido a los desplazamientos de la linea base de la señal. Por otra parte su uso preserva la estructura original de los datos lo que permite que las correlaciones se mantengan, siendo esto lo apropiado para posteriores algoritmos como PCA y redes neuronales.
+siendo $\mathrm{X}$ el nuevo vector de datos estandarizado, $\mathrm{x}$ la variable de entrada, $\overline{\mathrm{x}}$ su valor medio y $\sigma$ la desviación estándar. Este tipo de regularización tendrá valor medio cero y la desviación estándar igual a uno, con lo que se evitaran tendencias de las entradas fuera de los rangos considerados como normales, debido a los desplazamientos de la línea base de la señal. Por otra parte su uso preserva la estructura original de los datos lo que permite que las correlaciones se mantengan, siendo esto lo apropiado para posteriores algoritmos como PCA y redes neuronales.
 \subsection{Filtrado de ruido}
 
 Para la etapa de filtrado, es necesario identificar la banda que maximice la energía del QRS, siendo esta ($0.5 - 15 \ Hz$) \cite{PanTompkins85}, posteriormente se diseña un filtro digital tipo Butterworth de orden 10 y tipo pasabanda usando el corte de bandas antes mencionado. La rapidez de este tipo de filtrado permite que pueda ser implementado en tiempo real dejando suficientes recursos computacionales para posteriores tareas. 
@@ -1024,12 +1024,12 @@ En esta investigación, usando la técnica de la descomposición vibracional de 
 	x_1(t) = a_1(t)\cos \left(\int \omega_1(t)dt \right)
 	\label{eq:baseline_wander}
 \end{equation}
-esta corresponde con el desplazamiento de la linea base. Por consiguiente, la señal residual $x^{\prime}(t)$ es la combinación de las demás componentes de más bajas amplitudes que resultan ser la señal original sin los artefactos introducidos por el desplazamiento de la linea base y sin cambios en la morfología original de la misma, dicho de otra manera, la señal ECG con la linea base corregida es obtenida sustrayendo el BW de la señal ECG original, esto es:
+esta corresponde con el desplazamiento de la línea base. Por consiguiente, la señal residual $x^{\prime}(t)$ es la combinación de las demás componentes de más bajas amplitudes que resultan ser la señal original sin los artefactos introducidos por el desplazamiento de la línea base y sin cambios en la morfología original de la misma, dicho de otra manera, la señal ECG con la línea base corregida es obtenida sustrayendo el BW de la señal ECG original, esto es:
 \begin{equation}
 	x^{\prime}(t)=x(t)-x_1(t)
 	\label{eq:senal_sin_bw}
 \end{equation}
-Esta técnica se desempeña mejor conforma la señal sea más prolongada, es por esto que esta remoción de la linea base se hace previo a la segmentación de la señal ECG en intervalos de tiempo más cortos. Como se puede observar en la figura \ref{fig:remocion_bw}, la HVD es capaz de mantener la morfología real del ECG mientras elimina cualquier artefacto de baja frecuencia que haga variar la linea base.
+Esta técnica se desempeña mejor conforma la señal sea más prolongada, es por esto que esta remoción de la línea base se hace previo a la segmentación de la señal ECG en intervalos de tiempo más cortos. Como se puede observar en la figura \ref{fig:remocion_bw}, la HVD es capaz de mantener la morfología real del ECG mientras elimina cualquier artefacto de baja frecuencia que haga variar la línea base.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.85\linewidth]{Sem_1/figuras/Baseline Wander Sharma.png}
@@ -1041,7 +1041,7 @@ Esta técnica se desempeña mejor conforma la señal sea más prolongada, es por
  	
 \subsection{Extracción de segmentos}
 
-Debido a que las señales ECG que se tienen, son señales con duraciones mayores a 20 minutos, se pensó en aumentar la cantidad de señales segmentando cada una de estas en intervalos de 3 minutos con la finalidad de tener más registros del mismo paciente. Así que luego que cada señal haya sido filtrada y tenga la linea base corregida, se segmentó y separó la señal en intervalos de 3 minutos, hasta tener como máximo 10 señales de 3 minutos de duración de cada paciente.
+Debido a que las señales ECG que se tienen, son señales con duraciones mayores a 20 minutos, se pensó en aumentar la cantidad de señales segmentando cada una de estas en intervalos de 3 minutos con la finalidad de tener más registros del mismo paciente. Así que luego que cada señal haya sido filtrada y tenga la línea base corregida, se segmentó y separó la señal en intervalos de 3 minutos, hasta tener como máximo 10 señales de 3 minutos de duración de cada paciente.
 
 \subsection{Detección de eventos cardíacos}
 
@@ -1096,7 +1096,7 @@ Una vez determinadas las componentes principales, se proyectan los vectores de c
 	\label{eq:proyeccion_pca}
 \end{equation}
 Este proceso no es una simple comprensión, sino una reestructuración de la información morfológica de cada latido. 
-Estos vectores de características, que graficados se ven como la linea roja de la figura \ref{fig:latidos_alineados} se convierten en un vector único para cada latido promedio de cada paciente, con ahora menos dimensiones, como se observa en la tabla \ref{tab:vector_caracteristicas_proyectado}. A el conjunto de todas las proyecciones hechas se le conoce cómo la base de conocimiento de la red neuronal, estás serán usadas en las fases de entrenamiento y prueba de las redes neuronales, esta base de conocimiento se guarda en forma matricial, con las columnas debidamente identificadas con el numero de cada componente y donde cada fila corresponde al latido promedio de un segmento de ECG de cierto paciente, posteriormente dicha base de conocimiento, se guarda en un archivo de formato CSV, que será usado más adelante.
+Estos vectores de características, que graficados se ven como la línea roja de la figura \ref{fig:latidos_alineados} se convierten en un vector único para cada latido promedio de cada paciente, con ahora menos dimensiones, como se observa en la tabla \ref{tab:vector_caracteristicas_proyectado}. A el conjunto de todas las proyecciones hechas se le conoce cómo la base de conocimiento de la red neuronal, estás serán usadas en las fases de entrenamiento y prueba de las redes neuronales, esta base de conocimiento se guarda en forma matricial, con las columnas debidamente identificadas con el numero de cada componente y donde cada fila corresponde al latido promedio de un segmento de ECG de cierto paciente, posteriormente dicha base de conocimiento, se guarda en un archivo de formato CSV, que será usado más adelante.
 \begin{table}[ht]
 	\renewcommand{\arraystretch}{1.2}
 	\begin{center}
@@ -1614,7 +1614,7 @@ Según se presenta en la tabla \ref{tab:configuracion y desempeño identificar e
 
 Con el fin de obtener un gráfico que represente visualmente los resultados de la red neuronal para la identificación de pacientes y debido a que hacer una matriz de más de setecientas clases resulta intratable visualmente, se calcularon los porcentajes de precisión por clase con el fin de poder obtener posteriormente un histograma de frecuencia de dichos porcentajes de precisión. Este histograma (véase fig. \ref{fig:histograma de precisiones identificaciones ecgs}) revela una distribución bimodal fuertemente asimétrica, con una concentración predominante en valores superiores al 95\%. La barra más alta del histograma, con una frecuencia superior a 80 casos, corresponde al intervalo de precisiones superiores al 96\% aproximadamente, lo que indica que la mayoría de las instancias evaluadas alcanzaron niveles prácticamente perfectos. Este patrón sugiere que, para una porción significativa de los datos de validación, el modelo logra una clasificación casi sin errores, demostrando una capacidad robusta de discriminación en condiciones favorables.
 
-Sin embargo, la distribución también presenta una cola extendida hacia valores bajos de precisión, con frecuencias notables distribuidas entre el 10\% y el 80\%. Esto evidencia la presencia de un subconjunto de casos problemáticos donde el modelo experimenta dificultades considerables, posiblemente asociados a individuos con características electrocardiográficas atípicas, señales ruidosas o patrones que se solapan significativamente con otros pacientes. La curva de densidad suavizada (linea roja) confirma esta tendencia bimodal, mostrando un pico principal en el extremo derecho y un segundo modo menos pronunciado en la región intermedia.
+Sin embargo, la distribución también presenta una cola extendida hacia valores bajos de precisión, con frecuencias notables distribuidas entre el 10\% y el 80\%. Esto evidencia la presencia de un subconjunto de casos problemáticos donde el modelo experimenta dificultades considerables, posiblemente asociados a individuos con características electrocardiográficas atípicas, señales ruidosas o patrones que se solapan significativamente con otros pacientes. La curva de densidad suavizada (línea roja) confirma esta tendencia bimodal, mostrando un pico principal en el extremo derecho y un segundo modo menos pronunciado en la región intermedia.
 
 Esta variabilidad en el desempeño individual sugiere que existe heterogeneidad en la dificultad de identificación entre diferentes pacientes. Esto puede estar relacionado con factores como la variabilidad temporal de los registros electrocardiográficos de un mismo individuo así como con limitaciones en la cobertura del conjunto de datos de entrenamiento.
 
@@ -1748,12 +1748,38 @@ En conjunto, los resultados obtenidos mediante la clasificación en el espacio d
 
 \subsection{Dendrogramas}
 
+Con el propósito de corroborar cuantitativamente las diferencias inherentes entre los perfiles electrocardiográficos de pacientes sanos y patológicos, se empleó la distancia de Mahalanobis sobre las representaciones obtenidas en el espacio no lineal de t-SNE. Para analizar la estructura jerárquica entre estos perfiles, se construyó un dendrograma a partir de un esquema de agrupamiento jerárquico utilizando dicha distancia como métrica de similitud. Dado el elevado costo computacional asociado al calculo de la matriz completa de distancias pareadas, el análisis se realizó sobre una muestra aleatoria representativa correspondiente al 10\% de las representaciones electrocardiográficas de los pacientes en el espacio de t-SNE, preservando así la estructura multivariada relevante y permitiendo visualizar de forma clara las agrupaciones entre estados de salud.
 
+El dendrograma (véase fig. \ref{fig:dendro_10_percent}) muestra una bifurcación principal definida en la línea de clasificación ($sigma=7.621$) que corresponde a la línea verde punteada en la figura \ref{fig:dendro_10_percent}, que divide claramente a los pacientes en dos grandes grupos: pacientes sanos (naranjas, parte superior) y pacientes patológicos (azul, parte inferior). Esta separación temprana y a gran distancia indica que las características electrocardiográficas entre ambos estados de salud son diferenciadas en el espacio multivariado. Además se observa que los pacientes sanos forman un clúster muy compacto y homogéneo, con fusiones que ocurren predominantes a distancia bajas (menores a 6), lo que sugiere alta similitud entre los perfiles electrocardiográficos de individuos sin patologías. Por el contrario, los pacientes patológicos presentan mayor heterogeneidad interna, con sub-agrupamientos que se fusionan a distancias variables, reflejando la diversidad de trastornos cardíacos presentes en este grupo.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Sem_1/figuras/Mahala_10_percent.png}
+	\caption{Dendrograma de clasificación con etiquetas de estado de salud del 10\% de los pacientes.}
+	\label{fig:dendro_10_percent}
+\end{figure}
+
+A fin de corroborar la reproducibilidad de la estructura jerárquica detectada, se construyó un segundo dendrograma basado en el 30\% de los datos, permitiendo evaluar la estabilidad de los clusters identificados ante variaciones en el tamaño de la muestra analizada. 
+
+El dendrograma mostrado en la figura \ref{fig:dendro_30_percent} presenta características estructurales muy similares al dendrograma del 10\%, este dendrograma de la figura \ref{fig:dendro_30_percent} revela tres clusters principales claramente diferenciados por colores: rojo (inferior), morado (medio) y azul (superior). La primera bifurcación crítica ocurre en $sigma=7.621$ (línea punteada negra de la izquierda) dicho valor es idéntico al de la línea de clasificación del dendrograma de la figura \ref{fig:dendro_10_percent}, este valor de $sigma$ parece separar nuevamente los pacientes patológicos de los pacientes sanos. Una segunda bifurcación importante (línea punteada de la derecha, $sigma=4.55$) subdivide a el grupo superior en dos subclusters (morado y azul), sugiriendo una estructura jerárquica más compleja con mayor resolución. 
+
+Esta distribución tricolor delimita tres regiones en el dendrograma, dentro de las cuales la distancia de Mahalanobis aplicada a las representaciones electrocardiográficas en el espacio de t-SNE permite clasificar a los pacientes en estados de salud sanos y patológicos con altos niveles de precisión. En cada una de estas zonas es posible cuantificar el rendimiento del esquema de agrupamiento, obteniéndose porcentajes de acierto específicos por clase que reflejan cómo varía la capacidad discriminativa del método a lo largo del eje de distancias. 
+
+En la primera zona (clúster rojo) se alcanza una precisión de 30\% para la clase \guillemetleft Sano\guillemetright y de 70\% para la clase \guillemetleft Patológico\guillemetright; en la segunda zona (clúster morado), se obtiene una precisión del 69.4\% para la clase \guillemetleft Sano\guillemetright y un 30.6\% para la clase \guillemetleft Patológico\guillemetright; y en la tercera zona (clúster azul) se consigue una precisión para la clase \guillemetleft Sano\guillemetright del 95.3\% y para la clase patológico del 4.7\% restante. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\linewidth]{Sem_1/figuras/Mahala_30_percent.png}
+	\caption{Dendrograma de clasificación con etiquetas de estado de salud del 30\% de los pacientes.}
+	\label{fig:dendro_30_percent}
+\end{figure}
+
+En conjunto, estos resultados sugieren que, aun utilizando exclusivamente la distancia de Mahalanobis sobre un subconjunto de pacientes, es posible estimar con las precisiones previamente reportadas la probabilidad de que las representaciones electrocardiográficas en el espacio de t-SNE correspondan a individuos sanos o con algún tipo de patología. Esto pone de manifiesto el poder discriminativo de la métrica en el espacio reducido; sin embargo, también evidencia que dicho enfoque sigue siendo lineal en el sentido de la frontera de decisión y, por tanto, no explota completamente la estructura no lineal del espacio latente. En este contexto, el uso de redes neuronales resulta especialmente ventajoso, ya que permite aprender de manera automática características más sutiles y patrones latentes dentro del espacio de t-SNE, mejorando la capacidad del sistema para distinguir con mayor precisión el estado de salud asociado a cada electrocardiograma.
 
 %\part{Conclusiones}
 \chapter{Conclusiones}
 
-...
+
 
 % Bibliografía
 \bibliographystyle{ieeetr}
