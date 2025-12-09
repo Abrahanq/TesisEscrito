@@ -105,4 +105,6 @@
 \contentsline {subsubsection}{Matriz de confusión - Trastorno de salud}{71}{section*.19}%
 \contentsline {subsubsection}{Matriz de confusión - Sexo}{72}{section*.20}%
 \contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{73}{subsection.4.6.3}%
-\contentsline {chapter}{\numberline {5}Conclusiones}{76}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Conclusiones y recomendaciones}{76}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{76}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Recomendaciones}{76}{section.5.2}%
