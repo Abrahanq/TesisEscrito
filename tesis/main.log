@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  9 DEC 2025 17:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  9 DEC 2025 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1562,7 +1562,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1816--1817
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1822--1823
+Underfull \hbox (badness 10000) in paragraph at lines 1818--1819
 
  []
 
@@ -1574,7 +1574,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1824--1825
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1830--1831
+Underfull \hbox (badness 10000) in paragraph at lines 1826--1827
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1832--1833
 
  []
 
@@ -1622,7 +1627,7 @@ ic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440
 mf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sfti1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.
 pfb>
-Output written on main.pdf (86 pages, 5102937 bytes).
+Output written on main.pdf (86 pages, 5103902 bytes).
 PDF statistics:
  1530 PDF objects out of 1728 (max. 8388607)
  1323 compressed objects within 14 object streams
