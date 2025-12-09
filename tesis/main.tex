@@ -1400,13 +1400,6 @@ Para garantizar la repetibilidad de los resultados, se realizaron múltiples eje
 y manteniendo constantes las condiciones de entrenamiento y validación. Este enfoque permite certificar que los modelos ofrecen resultados fiables independientemente de las condiciones iniciales, y que los patrones, que son identificados por las redes neuronales, son reproducibles y no producto del azar. 
 
 
-\subsection{Consideraciones éticas}
-
-El proceso metodológico implementado en esta investigación considera de forma estricta los principios éticos asociados al manejo de datos biomédicos. Los registros de ECG utilizados fueron anonimizados para preservar la confidencialidad de la información clínica de los participantes, cumpliendo con las normativas internacionales de protección de datos. 
-% Se enfatiza que la interpretacion y uso de los modelos automaticos debe estar siempre supervisada por expertos clinicos, reconociendo que las decisiones medicas requieres una evaluacion integral que los algoritmos no pueden sustituir, sino complementar de manera responsable.
-%Poner eso en las recomendaciones
-
-
 \chapter{Resultados}
 
 \section{Descripción general de los datos}
@@ -1794,6 +1787,12 @@ Se recomienda extender la base de datos incorporando un numero significativament
 Resulta aconsejable utilizar bases de datos que incluyan diagnósticos clínicos más detallados y estandarizados, idealmente anotados por múltiples especialistas y respaldados por criterios diagnósticos consensuados. La incorporación de etiquetas mas finas permitiría entrenar modelos multiclase o jerárquicos capaces de distinguir no solo entre estado sano y patológico, sino entre fenotipos patológicos concretos. Además, la existencia de anotaciones interobservador posibilitaría estudiar la concordancia diagnostica y cuantificar el potencial de las redes neuronales para reducir la variabilidad entre expertos.\\
 
 Se recomienda ampliar el análisis incorporando, además de la derivación II, un conjunto mayor de derivaciones (por ejemplo, las 12 derivaciones convencionales) o, al menos, un subconjunto representativo de derivaciones precordiales y de miembros. El uso de múltiples canales permitiría capturar de forma más completa la distribución espacial de la actividad eléctrica cardíaca, mejorando la sensibilidad a fenómenos localizados como isquemias regionales, bloqueos de rama o hipertrofias ventriculares. Desde un punto de vista metodológico, esto abriría la puerta al empleo de modelos que exploten explícitamente la estructura multicanal, lo que potencialmente incrementaría la capacidad discriminativa tanto para clasificación clínica como para identificación biométrica basada en ECG.
+
+\subsection{Consideraciones éticas}
+
+El proceso metodológico implementado en esta investigación considera de forma estricta los principios éticos asociados al manejo de datos biomédicos. Los registros de ECG utilizados fueron anonimizados para preservar la confidencialidad de la información clínica de los participantes, cumpliendo con las normativas internacionales de protección de datos. \\
+
+Se enfatiza que la interpretación y uso de los modelos automáticos debe estar siempre supervisada por expertos clínicos, reconociendo que las decisiones medicas requieres una evaluación integral que los algoritmos no pueden sustituir, sino complementar de manera responsable.
 
 % Bibliografía
 \bibliographystyle{ieeetr}
