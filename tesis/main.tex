@@ -842,7 +842,7 @@ Para efectuar un ECG no se precisa ninguna preparación en concreto, además que
  	\begin{itemize}
  		\item \textbf{La neurona $j$ es una neurona de salida:} En este caso podemos obtener el segundo termino a partir de la ecuación \ref{eq:error_a_minimizar} ya que el subíndice $j$ es igual al subíndice $k$
  		\begin{equation}
- 			\frac{\partial e_p}{\partial Y_{pj}} = \frac{\partial \frac{1}{2} \sum_{j=1}^{M} (D_{pj} - Y_{pj})^2}{\partial Y_{pj}} = -(D_{pj} - Y_{pj})
+ 			\frac{\partial e_p}{\partial Y_{p j}}=\frac{\partial \frac{1}{2} \sum_{j=1}^M\left(D_{p j}-Y_{p j}\right)^2}{\partial Y_{p j}}=-\left(D_{p j}-Y_{p j}\right)
  		\end{equation}
  		Así, la variación de los pesos de una conexión que va hacia la capa externa de la red se calcula como:
  		\begin{equation}
@@ -955,7 +955,7 @@ Se usaran señales provenientes de las siguientes bases de datos públicas prese
 	\item ECGs de larga duración: Esta es una colección de 7 grabaciones electrocardiográficas de larga duración (entre 14 y 22 horas cada uno), con anotaciones manuales de los tipos de latidos extraños presentes en cada grabación. Esta base de datos fue desarrollada para apoyar la investigación en el campo de la detección de las arritmias cardíacas y sus análisis, los pacientes de los registros no son pacientes sanos \cite{longtermdb}.
 	\item Ritmo sinusal normal: Esta base de datos incluye 18 grabaciones de larga duración de electrocardiograma de pacientes referidos del Laboratorio de arritmias del Beth Israel Hospital (BIH) de Boston. Se comprobó que los sujetos incluidos en esta base de datos no presentaban arritmias significativas, por lo que es de destacar, que estos pacientes están considerados como pacientes sanos por al menos 2 cardiólogos \cite{normalsinusrhythmdb}. 
 	\item La base de datos polisomnográficos (MIT-BIH Polysomnographic Database) es una colección de grabaciones de múltiples señales fisiológicas durante el sueño, entre ellas, se tiene la derivación \Romannum{2} de cada grabación de cada paciente. Cada uno de estos pacientes fueron monitorizados en el Laboratorio de Sueño del BIH de Boston para evaluar el síndrome de apnea obstructiva crónica del sueño y comprobar los efectos de la presión positiva constante en las vías respiratorias, una intervención terapéutica estándar que suele prevenir o reducir sustancialmente la obstrucción de las vías respiratorias en estos sujetos \cite{polysomnogradb}.
-	\item La base de datos PTB diagnostica (PTB Diagnostic ECG Database) es una colección de electrocardiogramas que fueron obtenidos usando un prototipo no comercial, esta base de datos contiene 549 grabaciones de 290 sujetos (de edades comprendidas entre los 17 y 87 años). Cada sujeto tiene entre 1 y 5 registros electrocardiográficos de 2 minutos de duración. Cada registro incluye 15 señales medidas simultáneamente: las 12 derivaciones convencionales y las 3 derivaciones de Frank (vx, vy, vz) \cite{PTB_database}. Cabe destacar que esta ultima base de datos fue usada solo con la finalidad de comparar el rendimiento de modelo propuesto en este proyecto con modelos más avanzados propuestos en la literatura, por lo que estos registros no se encuentran presentes en la tabla \ref{tab:distriECGs}.
+	\item La base de datos PTB diagnostica (PTB Diagnostic ECG Database) es una colección de electrocardiogramas que fueron obtenidos usando un prototipo no comercial, esta base de datos contiene 549 grabaciones de 290 sujetos (de edades comprendidas entre los 17 y 87 años) de los cuales 52 sujetos corresponden a pacientes sanos. Cada sujeto tiene entre 1 y 5 registros electrocardiográficos de 2 minutos de duración. Cada registro incluye 15 señales medidas simultáneamente: las 12 derivaciones convencionales y las 3 derivaciones de Frank (vx, vy, vz) \cite{PTB_database}. Cabe destacar que esta ultima base de datos fue usada solo con la finalidad de comparar el rendimiento de modelo propuesto en este proyecto con modelos más avanzados propuestos en la literatura, por lo que estos registros no se encuentran presentes en la tabla \ref{tab:distriECGs}.
 %	\item Base de datos de electrocardiogramas de 12 derivaciones a gran escala para el estudio de arritmias: Esta colección fue creada bajo los auspicios de la Universidad de Chapman, el hospital de la gente de Shaoxing y el primer hospital de Ningbo. Posee mas de cuarenta y cinco mil grabaciones de 10 segundos de duración de las 12 derivaciones de un electrocardiograma, este paquete de señales puede utilizarse para diseñar y comparar y poner a punto técnicas estadísticas clásicas y de aprendizaje automático nuevas y clásicas en estudios centrados en la arritmia y otras afecciones cardiovasculares \cite{largeescale12leaddb}. PONER ESTO SI Y SOLO SI SE USA ESTA BASE DE DATOS
 \end{itemize}
 Los ECG provenientes de las bases de datos antes mencionadas, están distribuidos como se muestra en la tabla \ref{tab:distriECGs}, según las variables objetivo tomadas de los criterios antes mencionados. 
@@ -1352,6 +1352,25 @@ En la tabla \ref{tab:summary NN salidas problemas tsne} se contemplan las caract
 %No se hizo una red neuronal para identificar a los pacientes, debido a la baja accuracy que se obtuvo usando tsne
 %\subsection{K-means}
 
+\subsection{Análisis comparativo de desempeño usando la base de datos PTB-ECG}
+
+A fin de validar la eficiencia computacional y el desempeño de la cadena de procesamiento propuesta en condiciones análogas a las reportadas en la literatura, se aplicó el esquema completo de preprocesamiento, segmentado de las señales ECG, extracción de características mediante PCA y clasificación con una red neuronal perceptrónica (véase tabla \ref{tab:red_identifica_ptb} para ver la arquitectura de la red propuesta) sobre la base de datos PTB-ECG, empleando una partición 70\%-30\% para entrenamiento y validación, respectivamente. 
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{3cm} | M{3cm} |}
+			\hline
+			\textbf{Capa (tipo)} & \textbf{Número de neuronas} & \textbf{Función activación} \\ \hline
+			Densa & 40 & ReLU    \\ \hline
+			Densa & 20 & ReLU    \\ \hline
+			Densa & 15 & ReLU    \\ \hline
+			Densa & 52 & Softmax    \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Arquitectura de la red neuronal propuesta para validar y comparar la eficiencia y desempeño de la cadena de procesamiento propuesta.}
+	\label{tab:red_identifica_ptb}
+\end{table}
 
 
 \section{Validez y confiabilidad}
@@ -1769,6 +1788,24 @@ En la primera zona (clúster rojo) se alcanza una precisión de 30\% para la cla
 
 En conjunto, estos resultados sugieren que, aun utilizando exclusivamente la distancia de Mahalanobis sobre un subconjunto de pacientes, es posible estimar con las precisiones previamente reportadas la probabilidad de que las representaciones electrocardiográficas en el espacio de t-SNE correspondan a individuos sanos o con algún tipo de patología. Esto pone de manifiesto el poder discriminativo de la métrica en el espacio reducido; sin embargo, también evidencia que dicho enfoque sigue siendo lineal en el sentido de la frontera de decisión y, por tanto, no explota completamente la estructura no lineal del espacio latente. En este contexto, el uso de redes neuronales resulta especialmente ventajoso, ya que permite aprender de manera automática características más sutiles y patrones latentes dentro del espacio de t-SNE, mejorando la capacidad del sistema para distinguir con mayor precisión el estado de salud asociado a cada electrocardiograma.
 
+\subsection{Análisis comparativo de desempeño usando PTB-ECG}
+
+Los resultados evidencian una mejora sustancial en coste computacional y una ligera reducción en exactitud: mientras que el tiempo de entrenamiento se redujo de aproximadamente 9 horas a solo 13 segundos, la exactitud del modelo bajó al 96\%. En comparación a los valores reportados en trabajos previos, estos obtienen exactitudes en el rango entre el 97\% al 100\% (véase tabla \ref{tab:comparacion_ptb}). Estos hallazgos confirman que la combinación de técnicas de preprocesamiento robusto, reducción de dimensionalidad lineal mediante PCA y arquitecturas neuronales simples constituye una alternativa eficiente para identificación de registros electrocardiográficos en comparación con métodos más complejos o que operan directamente sobre señales crudas de alta dimensión.
+
+\begin{table}[ht]
+	\renewcommand{\arraystretch}{1.2}
+	\begin{center}
+		\begin{tabular}{| M{2.5cm} | M{3cm} | M{3.5cm} |}
+			\hline
+			\textbf{Método} & \textbf{Exactitud (\%)} & \textbf{Tiempo de entrenamiento} \\ \hline
+			Deep-ECG\cite{labati_ecg_biometric_recognition_using_cnn} & 100 & 9h 22m \\ \hline
+			Propio & 96 & 12 s \\ \hline
+		\end{tabular}
+	\end{center}
+	\caption{Valores de exactitud y tiempo de entrenamiento entre diferentes métodos para la base de datos PTB-ECG.}
+	\label{tab:comparacion_ptb}
+\end{table}
+
 %\part{Conclusiones}
 \chapter{Conclusiones y recomendaciones}
 
@@ -1779,6 +1816,8 @@ La implementación conjunta del algoritmo clásico de detección de complejos QR
 Los modelos de redes neuronales perceptrónicas propuestas para la identificación de pacientes y clasificación según variables clínicas alcanzaron exactitudes superiores al 85\% cuando se entrenaron con representaciones en el espacio de PCA y superiores al 95\% cuando se utilizaron las incrustaciones obtenidas con t-SNE. Estos resultados evidencian que las técnicas de reducción de dimensionalidad empleadas logran concentrar información discriminativa relevante en un espacio de menor dimensión, optimizando el costo computacional y facilitando que los modelos de aprendizaje automático aprendas relaciones no triviales entre los patrones electrocardiográficos y las variables clínicas de interés. \\
 
 En conjunto, la cadena de procesamiento propuesta ---basada en un preprocesamiento robusto del ECG, reducción de dimensionalidad mediante PCA y t-SNE y posterior modelado con redes neuronales--- demuestra ser una estrategia efectiva para abordar los objetivos específicos del estudio. El preprocesamiento garantiza señales depuradas, las proyecciones en espacios reducidos capturan las características más informativas de los perfiles electrocardiográficos y los modelos predictivos alcanzan niveles de exactitud elevados tanto en tareas de identificación como de clasificación clínica, respaldando la viabilidad del ECG como marcador biométrico.
+
+
 
 \section{Recomendaciones}
 
