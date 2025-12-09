@@ -55,28 +55,28 @@
 \contentsline {subsection}{\numberline {3.4.2}Filtrado de ruido}{39}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{39}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{40}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Detección de eventos cardíacos}{41}{subsection.3.4.5}%
-\contentsline {section}{\numberline {3.5}Extracción de características}{42}{section.3.5}%
+\contentsline {subsection}{\numberline {3.4.5}Detección de eventos cardíacos}{40}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}Extracción de características}{41}{section.3.5}%
 \contentsline {subsection}{\numberline {3.5.1}Alineamiento}{42}{subsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.5.2}Vector de características}{42}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Reducción de dimensionalidad}{43}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{43}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{44}{subsection.3.6.1}%
 \contentsline {section}{\numberline {3.7}Modelado predictivo}{44}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Algoritmo}{44}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Tareas de modelado propuestas}{45}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Preparación de datos}{47}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.3}Preparación de datos}{46}{subsection.3.7.3}%
 \contentsline {subsection}{\numberline {3.7.4}Arquitecturas empleadas (casos con PCA)}{47}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{48}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{49}{subsection.3.7.5}%
 \contentsline {subsection}{\numberline {3.7.6}Test}{50}{subsection.3.7.6}%
 \contentsline {section}{\numberline {3.8}Reducción no lineal de dimensionalidad (t-SNE)}{50}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Arquitecturas de redes neuronales para interpretación de t-SNE}{50}{subsection.3.8.1}%
-\contentsline {section}{\numberline {3.9}Validez y confiabilidad}{52}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}Validación de modelos}{52}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.8.1}Arquitecturas de redes neuronales para interpretación de t-SNE}{51}{subsection.3.8.1}%
+\contentsline {section}{\numberline {3.9}Validez y confiabilidad}{51}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Validación de modelos}{51}{subsection.3.9.1}%
 \contentsline {subsection}{\numberline {3.9.2}Clasificación}{52}{subsection.3.9.2}%
 \contentsline {subsection}{\numberline {3.9.3}Dendrograma}{52}{subsection.3.9.3}%
 \contentsline {subsubsection}{Asignar observaciones a conglomerados}{53}{section*.12}%
 \contentsline {subsection}{\numberline {3.9.4}Repetibilidad}{53}{subsection.3.9.4}%
-\contentsline {subsection}{\numberline {3.9.5}Consideraciones éticas}{53}{subsection.3.9.5}%
+\contentsline {subsection}{\numberline {3.9.5}Consideraciones éticas}{54}{subsection.3.9.5}%
 \contentsline {chapter}{\numberline {4}Resultados}{55}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Descripción general de los datos}{55}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Distribuciones de los sujetos sanos por sexo y grupos etarios}{55}{subsection.4.1.1}%

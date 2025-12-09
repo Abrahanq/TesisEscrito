@@ -37,59 +37,61 @@ Warning--entry type for "longtermdb" isn't style-file defined
 --line 442 of file bibliografia.bib
 Warning--entry type for "normalsinusrhythmdb" isn't style-file defined
 --line 451 of file bibliografia.bib
-You're missing a field name---line 481 of file bibliografia.bib
+Warning--I'm ignoring PTB_database's extra "title" field
+--line 474 of file bibliografia.bib
+You're missing a field name---line 495 of file bibliografia.bib
  :  note = {Number: 1},  
  :                       % Opcional si quieres especificar el número de artículo
 I'm skipping whatever remains of this entry
 Warning--entry type for "wfdb" isn't style-file defined
---line 484 of file bibliografia.bib
+--line 498 of file bibliografia.bib
 Warning--entry type for "biopeaks_software20" isn't style-file defined
---line 493 of file bibliografia.bib
+--line 507 of file bibliografia.bib
 Name 2 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
 Name 6 in "Zhang, Chang-Jiang and Yuan-Lu, and Tang, Fu-Qin and Cai, Hai-Peng and Qian, Yin-Fen and Chao-Wang," has a comma at the end for entry Zhang24
 while executing---line 969 of file ieeetr.bst
 Warning--empty journal in physionet2000
 Warning--empty year in physionet2000
-You've used 49 entries,
+You've used 50 entries,
             1876 wiz_defined-function locations,
-            776 strings with 13203 characters,
-and the built_in function-call counts, 13665 in all, are:
-= -- 1217
-> -- 736
+            785 strings with 13405 characters,
+and the built_in function-call counts, 14010 in all, are:
+= -- 1255
+> -- 747
 < -- 0
-+ -- 266
-- -- 217
-* -- 996
-:= -- 1964
-add.period$ -- 52
-call.type$ -- 49
-change.case$ -- 48
++ -- 270
+- -- 220
+* -- 1022
+:= -- 2010
+add.period$ -- 53
+call.type$ -- 50
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 51
-duplicate$ -- 588
-empty$ -- 1257
-format.name$ -- 217
-if$ -- 3310
+cite$ -- 52
+duplicate$ -- 605
+empty$ -- 1287
+format.name$ -- 220
+if$ -- 3395
 int.to.chr$ -- 0
-int.to.str$ -- 49
-missing$ -- 30
-newline$ -- 156
-num.names$ -- 51
-pop$ -- 205
+int.to.str$ -- 50
+missing$ -- 31
+newline$ -- 159
+num.names$ -- 52
+pop$ -- 206
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 521
+skip$ -- 535
 stack$ -- 0
-substring$ -- 817
-swap$ -- 260
+substring$ -- 849
+swap$ -- 269
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 109
-width$ -- 51
-write$ -- 445
+while$ -- 113
+width$ -- 52
+write$ -- 456
 (There were 6 error messages)

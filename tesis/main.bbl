@@ -170,6 +170,11 @@ Y.~Ichimaru and G.~B. Moody, ``Development of the polysomnographic database on
   cd-rom,'' {\em Psychiatry and clinical neurosciences}, vol.~53, no.~2,
   pp.~175--177, 1999.
 
+\bibitem{PTB_database}
+R.~Bousseljot, D.~Kreiseler, and A.~Schnabel, ``Nutzung der ekg-signaldatenbank
+  cardiodat der ptb über das internet,'' {\em Biomedical Engineering /
+  Biomedizinische Technik}, vol.~40, no.~s1, pp.~317--318, 1995.
+
 \bibitem{wfdb}
 C.~Xie, L.~McCullum, A.~Johnson, T.~Pollard, B.~Gow, and B.~Moody, ``Waveform
   database software package (wfdb) for python (version 4.1.0),'' 2023.
