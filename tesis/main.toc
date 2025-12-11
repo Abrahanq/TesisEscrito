@@ -1,112 +1,112 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {1}Planteamiento del problema}{2}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Justificación}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Objetivos}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Objetivo General}{3}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Objetivos específicos}{3}{subsection.1.2.2}%
-\contentsline {chapter}{\numberline {2}Marco Teórico}{4}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Antecedentes}{4}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}A Real-Time QRS Detection Algorithm \cite {PanTompkins85}}{4}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}A Wavelet-Based ECG Delineator: Evaluation on Standard Databases \cite {Martinez04}}{5}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Feature extraction for heartbeat classification using independent component analysis and matching pursuits \cite {Herrero05}}{6}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Sistema de adquisición multicanal y análisis de la señal electrocardiográfica de alta resolución aplicado a pacientes chagásicos \cite {Dugarte11}}{6}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}A comparative study of DWT, CWT and DCT transformations in ECG arrhythmias classification \cite {Khorrami10}.}{7}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Comparison of FCM, PCA and WT techniques for classification ECG arrhythmias using artificial neural network \cite {Ceylan07}.}{8}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Baseline wander removal of ECG signals using Hilbert vibration decomposition \cite {Sharma15}.}{8}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Heart failure classification using deep learning to extract spatiotemporal features from ECG \cite {Zhang24}}{9}{subsection.2.1.8}%
-\contentsline {subsection}{\numberline {2.1.9}Clasificación de arritmias cardíacas usando redes neuronales convolucionales en muestras de ECG \cite {Astudillo24}}{10}{subsection.2.1.9}%
-\contentsline {section}{\numberline {2.2}Conceptos básicos}{10}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}El corazón}{10}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Introducción al Electrocardiograma (ECG)}{11}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}El sistema de conducción}{13}{subsection.2.2.3}%
-\contentsline {subsubsection}{Sistema de His-Purkinje}{14}{section*.4}%
-\contentsline {subsection}{\numberline {2.2.4}Interpretación de un electrocardiograma}{17}{subsection.2.2.4}%
-\contentsline {subsubsection}{Onda P}{17}{section*.6}%
-\contentsline {subsubsection}{Segmento P-R}{17}{section*.7}%
-\contentsline {subsubsection}{Complejos QRS}{17}{section*.8}%
-\contentsline {subsubsection}{Segmento ST}{18}{section*.9}%
-\contentsline {subsubsection}{Onda T}{18}{section*.10}%
-\contentsline {subsection}{\numberline {2.2.5}Realización de un electrocardiograma}{18}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Conceptos específicos}{19}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Aprendizaje Automático.}{19}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Análisis de Componentes Principales (PCA).}{20}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Incrustación de vecinos estocásticos distribuidos en t (t-SNE).}{22}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Redes Neuronales.}{23}{subsection.2.3.4}%
-\contentsline {subsection}{\numberline {2.3.5}Redes neuronales biológicas.}{23}{subsection.2.3.5}%
-\contentsline {subsection}{\numberline {2.3.6}El perceptrón.}{24}{subsection.2.3.6}%
-\contentsline {subsection}{\numberline {2.3.7}Función de activación de las neuronas.}{26}{subsection.2.3.7}%
-\contentsline {subsection}{\numberline {2.3.8}El perceptrón multicapa.}{27}{subsection.2.3.8}%
-\contentsline {subsection}{\numberline {2.3.9}Arquitectura.}{27}{subsection.2.3.9}%
-\contentsline {subsection}{\numberline {2.3.10}Algoritmo de retropropagación.}{28}{subsection.2.3.10}%
-\contentsline {subsubsection}{Etapa de aprendizaje.}{28}{section*.11}%
-\contentsline {subsection}{\numberline {2.3.11}Dimensiones de la red.}{31}{subsection.2.3.11}%
-\contentsline {chapter}{\numberline {3}Marco Metodológico.}{32}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Enfoque general}{32}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Tipo de investigación.}{32}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Diseño de la investigación.}{32}{subsection.3.1.2}%
-\contentsline {section}{\numberline {3.2}Diseño especifico}{32}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Flujo de procesamiento}{32}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Población y muestra}{35}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Fuente de datos.}{35}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Criterios de selección.}{36}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Muestra}{36}{subsection.3.3.3}%
-\contentsline {section}{\numberline {3.4}Preprocesamiento de la señal}{37}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Estandarización}{38}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Filtrado de ruido}{39}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{39}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{40}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Detección de eventos cardíacos}{40}{subsection.3.4.5}%
-\contentsline {section}{\numberline {3.5}Extracción de características}{41}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Alineamiento}{42}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Vector de características}{42}{subsection.3.5.2}%
-\contentsline {section}{\numberline {3.6}Reducción de dimensionalidad}{43}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{44}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Modelado predictivo}{44}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{45}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Tareas de modelado propuestas}{45}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}Preparación de datos}{47}{subsection.3.7.3}%
-\contentsline {subsection}{\numberline {3.7.4}Arquitecturas empleadas (casos con PCA)}{47}{subsection.3.7.4}%
-\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{48}{subsection.3.7.5}%
-\contentsline {subsection}{\numberline {3.7.6}Test}{50}{subsection.3.7.6}%
-\contentsline {section}{\numberline {3.8}Reducción no lineal de dimensionalidad (t-SNE)}{50}{section.3.8}%
-\contentsline {subsection}{\numberline {3.8.1}Arquitecturas de redes neuronales para interpretación de t-SNE}{51}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Análisis comparativo de desempeño usando la base de datos PTB-ECG}{52}{subsection.3.8.2}%
-\contentsline {section}{\numberline {3.9}Validez y confiabilidad}{52}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}Validación de modelos}{52}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}Clasificación}{53}{subsection.3.9.2}%
-\contentsline {subsection}{\numberline {3.9.3}Dendrograma}{53}{subsection.3.9.3}%
-\contentsline {subsubsection}{Asignar observaciones a conglomerados}{54}{section*.12}%
-\contentsline {subsection}{\numberline {3.9.4}Repetibilidad}{54}{subsection.3.9.4}%
-\contentsline {chapter}{\numberline {4}Resultados}{55}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Descripción general de los datos}{55}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Distribuciones de los sujetos sanos por sexo y grupos etarios}{55}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Distribuciones de los sujetos patológicos por sexo y grupos etarios}{56}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Distribuciones de los sujetos sanos y patológicos para los entrenamientos de las redes.}{56}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Descripción general de PCA}{57}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Método de la varianza acumulada}{57}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Gráficas de dispersión de los registros electrocardiográficos entre componentes principales.}{57}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{59}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Configuración y métricas de desempeño por modelo}{59}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{60}{subsection.4.3.2}%
-\contentsline {subsubsection}{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}{60}{section*.13}%
-\contentsline {subsubsection}{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}{61}{section*.14}%
-\contentsline {subsubsection}{Matriz de confusión - Trastornos de salud (4 clases).}{61}{section*.15}%
-\contentsline {subsubsection}{Matriz de confusión - Sexo (Masculino y femenino)}{62}{section*.16}%
-\contentsline {section}{\numberline {4.4}Resultados de identificación de pacientes}{63}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Métricas de desempeño}{63}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Histograma de precisiones por paciente}{64}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Viabilidad de la huella digital cardíaca como rasgo biométrico}{65}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Análisis exploratorio usando t-SNE}{66}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Resultados de clasificación usando los datos de tsne}{68}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Configuración y métricas de desempeño por modelo}{68}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Matrices de confusión}{69}{subsection.4.6.2}%
-\contentsline {subsubsection}{Matriz de confusión - Estado de salud}{69}{section*.17}%
-\contentsline {subsubsection}{Matriz de confusión - Grupos etarios}{70}{section*.18}%
-\contentsline {subsubsection}{Matriz de confusión - Trastorno de salud}{71}{section*.19}%
-\contentsline {subsubsection}{Matriz de confusión - Sexo}{72}{section*.20}%
-\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{73}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Análisis comparativo de desempeño usando PTB-ECG}{76}{subsection.4.6.4}%
-\contentsline {chapter}{\numberline {5}Conclusiones y recomendaciones}{77}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Conclusiones}{77}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Recomendaciones}{78}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Consideraciones éticas}{78}{subsection.5.2.1}%
+\contentsline {chapter}{\numberline {1}Planteamiento del problema}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Justificación}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objetivos}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Objetivo General}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Objetivos específicos}{5}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Marco Teórico}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Antecedentes}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}A Real-Time QRS Detection Algorithm \cite {PanTompkins85}}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}A Wavelet-Based ECG Delineator: Evaluation on Standard Databases \cite {Martinez04}}{7}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Feature extraction for heartbeat classification using independent component analysis and matching pursuits \cite {Herrero05}}{8}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Sistema de adquisición multicanal y análisis de la señal electrocardiográfica de alta resolución aplicado a pacientes chagásicos \cite {Dugarte11}}{8}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}A comparative study of DWT, CWT and DCT transformations in ECG arrhythmias classification \cite {Khorrami10}.}{9}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}Comparison of FCM, PCA and WT techniques for classification ECG arrhythmias using artificial neural network \cite {Ceylan07}.}{10}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Baseline wander removal of ECG signals using Hilbert vibration decomposition \cite {Sharma15}.}{10}{subsection.2.1.7}%
+\contentsline {subsection}{\numberline {2.1.8}Heart failure classification using deep learning to extract spatiotemporal features from ECG \cite {Zhang24}}{11}{subsection.2.1.8}%
+\contentsline {subsection}{\numberline {2.1.9}Clasificación de arritmias cardíacas usando redes neuronales convolucionales en muestras de ECG \cite {Astudillo24}}{12}{subsection.2.1.9}%
+\contentsline {section}{\numberline {2.2}Conceptos básicos}{12}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}El corazón}{12}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Introducción al Electrocardiograma (ECG)}{13}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}El sistema de conducción}{15}{subsection.2.2.3}%
+\contentsline {subsubsection}{Sistema de His-Purkinje}{16}{section*.7}%
+\contentsline {subsection}{\numberline {2.2.4}Interpretación de un electrocardiograma}{19}{subsection.2.2.4}%
+\contentsline {subsubsection}{Onda P}{19}{section*.9}%
+\contentsline {subsubsection}{Segmento P-R}{19}{section*.10}%
+\contentsline {subsubsection}{Complejos QRS}{19}{section*.11}%
+\contentsline {subsubsection}{Segmento ST}{20}{section*.12}%
+\contentsline {subsubsection}{Onda T}{20}{section*.13}%
+\contentsline {subsection}{\numberline {2.2.5}Realización de un electrocardiograma}{20}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}Conceptos específicos}{21}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Aprendizaje Automático.}{21}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Análisis de Componentes Principales (PCA).}{22}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Incrustación de vecinos estocásticos distribuidos en t (t-SNE).}{24}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Redes Neuronales.}{25}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Redes neuronales biológicas.}{25}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}El perceptrón.}{26}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}Función de activación de las neuronas.}{28}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}El perceptrón multicapa.}{29}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}Arquitectura.}{29}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.10}Algoritmo de retropropagación.}{30}{subsection.2.3.10}%
+\contentsline {subsubsection}{Etapa de aprendizaje.}{30}{section*.14}%
+\contentsline {subsection}{\numberline {2.3.11}Dimensiones de la red.}{33}{subsection.2.3.11}%
+\contentsline {chapter}{\numberline {3}Marco Metodológico.}{34}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Enfoque general}{34}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Tipo de investigación.}{34}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Diseño de la investigación.}{34}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Diseño especifico}{34}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Flujo de procesamiento}{34}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Población y muestra}{37}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Fuente de datos.}{37}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Criterios de selección.}{38}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Muestra}{38}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Preprocesamiento de la señal}{39}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Estandarización}{40}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Filtrado de ruido}{41}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Remoción del desplazamiento de la línea base}{41}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Extracción de segmentos}{42}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Detección de eventos cardíacos}{42}{subsection.3.4.5}%
+\contentsline {section}{\numberline {3.5}Extracción de características}{43}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Alineamiento}{44}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Vector de características}{44}{subsection.3.5.2}%
+\contentsline {section}{\numberline {3.6}Reducción de dimensionalidad}{45}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Proyección de los vectores de características al nuevo espacio}{46}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Modelado predictivo}{46}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Algoritmo}{47}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Tareas de modelado propuestas}{47}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Preparación de datos}{48}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Arquitecturas empleadas (casos con PCA)}{49}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Entrenamiento}{51}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Test}{52}{subsection.3.7.6}%
+\contentsline {section}{\numberline {3.8}Reducción no lineal de dimensionalidad (t-SNE)}{52}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Arquitecturas de redes neuronales para interpretación de t-SNE}{53}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Análisis comparativo de desempeño usando la base de datos PTB-ECG}{53}{subsection.3.8.2}%
+\contentsline {section}{\numberline {3.9}Validez y confiabilidad}{54}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Validación de modelos}{54}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Clasificación}{55}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}Dendrograma}{55}{subsection.3.9.3}%
+\contentsline {subsubsection}{Asignar observaciones a conglomerados}{55}{section*.15}%
+\contentsline {subsection}{\numberline {3.9.4}Repetibilidad}{56}{subsection.3.9.4}%
+\contentsline {chapter}{\numberline {4}Resultados}{57}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Descripción general de los datos}{57}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Distribuciones de los sujetos sanos por sexo y grupos etarios}{57}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Distribuciones de los sujetos patológicos por sexo y grupos etarios}{58}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Distribuciones de los sujetos sanos y patológicos para los entrenamientos de las redes.}{58}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2}Descripción general de PCA}{59}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Método de la varianza acumulada}{59}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Gráficas de dispersión de los registros electrocardiográficos entre componentes principales.}{59}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Resultados de clasificación usando los datos de PCA}{61}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Configuración y métricas de desempeño por modelo}{61}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Matrices de confusión}{62}{subsection.4.3.2}%
+\contentsline {subsubsection}{Matriz de confusión - Estado de salud (Sanos vs Patológicos).}{62}{section*.16}%
+\contentsline {subsubsection}{Matriz de confusión - Grupos etarios (Jóvenes, Mediana edad, Mayores).}{63}{section*.17}%
+\contentsline {subsubsection}{Matriz de confusión - Trastornos de salud (4 clases).}{63}{section*.18}%
+\contentsline {subsubsection}{Matriz de confusión - Sexo (Masculino y femenino)}{64}{section*.19}%
+\contentsline {section}{\numberline {4.4}Resultados de identificación de pacientes}{65}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Métricas de desempeño}{65}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Histograma de precisiones por paciente}{66}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Viabilidad de la huella digital cardíaca como rasgo biométrico}{67}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Análisis exploratorio usando t-SNE}{68}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Resultados de clasificación usando los datos de tsne}{70}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Configuración y métricas de desempeño por modelo}{70}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Matrices de confusión}{71}{subsection.4.6.2}%
+\contentsline {subsubsection}{Matriz de confusión - Estado de salud}{71}{section*.20}%
+\contentsline {subsubsection}{Matriz de confusión - Grupos etarios}{72}{section*.21}%
+\contentsline {subsubsection}{Matriz de confusión - Trastorno de salud}{73}{section*.22}%
+\contentsline {subsubsection}{Matriz de confusión - Sexo}{74}{section*.23}%
+\contentsline {subsection}{\numberline {4.6.3}Dendrogramas}{75}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Análisis comparativo de desempeño usando PTB-ECG}{78}{subsection.4.6.4}%
+\contentsline {chapter}{\numberline {5}Conclusiones y recomendaciones}{79}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{79}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Recomendaciones}{80}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Consideraciones éticas}{80}{subsection.5.2.1}%
