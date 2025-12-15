@@ -106,18 +106,57 @@
 % \end{abstract}
 % \end{otherlanguage}
 
-\tableofcontents*
+
 \mainmatter
 
+\cleardoublepage
+\thispagestyle{empty}
 
+\vspace*{0.25\textheight}
+
+\begin{flushright}
+	\textit{El que tenga miedo a morir \\ que no nazca}\\[0.5cm]
+	Anónimo
+\end{flushright}
+
+\cleardoublepage
 %\part{Primer Seminario}
 %\pagestyle{empty}
 \chapter*{Agradecimientos}
 
-\chapter*{Resumen}
+\cleardoublepage
+\begin{center}
+	Universidad de Los Andes \\
+	Facultad de Ciencias \\
+	Departamento de Física \\ [1cm]
 
-Este es el resumen de mi tesis
 
+\textbf{``Búsqueda de agrupaciones en data proveniente de electrocardiogramas (ECG), mediante el Análisis de Componentes Principales (PCA) y el uso de Redes Neuronales.}\\[0.6cm]
+
+Trabajo especial de grado como requisito para optar al Título de Licenciado en Física.
+\end{center}
+
+\vspace{0.8cm}
+
+\hfill
+\begin{flushright}
+	\textbf{Autor:}  Br. Abrahan David Quintero Teran\\
+	\textbf{Tutor:} Prof. Juan Villegas\\
+	Mérida-Venezuela, enero de 2026
+\end{flushright}
+
+\vspace{1cm}
+
+\begin{center}
+	\textbf{Resumen}
+\end{center}
+
+\noindent
+Las enfermedades cardiovasculares son la principal causa de muerte entre hombres y mujeres en el mundo, con alrededor de 17.9 millones personas que mueren al año a causa de estas. Los errores provenientes de la interpretación manual de los electrocardiogramas y la variabilidad interobservador de los diagnósticos contribuyen a esta mortalidad. Es por esto que surge la necesidad de presentar un sistema que permita usar eficientemente en términos de cómputo, la información inherente de los electrocardiogramas, empleando una cadena de trabajo que presenta en sus eslabones técnicas como el análisis de componentes principales y la incrustación de vecinos estocásticos como extractores de características junto con redes neuronales perceptrónicas para la identificación de variables clínicas de relevancia, como lo pueden ser el tipo de trastorno cardiovascular presente, grupos etarios o sexo de cada paciente, logrando exactitudes superiores al 85\% para las tareas de identificación previamente mencionadas, reduciendo el costo computacional de forma considerable. Además se propone el uso del electrocardiograma como identificador biométrico y usando el mismo flujo de trabajo antes mencionado, se obtienen exactitudes superiores al 95\% lo que se compara con modelos propuestos en la literatura que aplican técnicas más complejas y costosas en términos económicos y computacionales.
+
+\vspace{0.8cm}
+
+\noindent\textbf{Palabras clave:} Electrocardiograma, derivación II, análisis de componentes principales (PCA), redes neuronales perceptrónicas (NN), matriz de confusión, incrustación de vecinos estocásticos distribuidos en t (t-SNE), dendrograma, distancia de mahalanobis.
 \chapter*{Introducción}
 %{\huge\textbf{Introducción}}\\
 
@@ -127,6 +166,8 @@ La presente tesis propone y evalúa una cadena de procesamiento para el análisi
 Sobre estas señales preprocesadas, se emplean técnicas de reducción de dimensionalidad lineal (PCA) y no lineal (t-SNE) para proyectar las representaciones electrocardiográficas hacia espacios de menor dimensión que preserven, en la medida de los posible, la estructura relevante de los datos. A partir de dichas representaciones, se entrenan redes neuronales perceptrónicas para abordar distintas tareas: identificación biométrica de pacientes, discriminación entre estados de salud (sanos vs patológicos), clasificación por grupos etarios, clasificación por sexo y diferenciación entre tipos específicos de trastornos clínicos. Adicionalmente, se utilizan herramientas como matrices de confusión, histogramas de precisión y dendrogramas basados en distancias de Mahalanobis para explorar la estructura latente de los datos y evaluar la separabilidad entre clases desde una perspectiva tanto cuantitativa como visual. \\
 
 Finalmente, la metodología propuesta se valida externamente sobre la base de datos PTB-ECG, replicando esquemas de partición de datos reportados en la literatura (70\% entrenamiento, 30\% validación) con el fin de comparar de manera directa el desempeño y el costo computacional frente a enfoques previos. Los resultados obtenidos permiten analizar hasta qué punto una cadena de procesamiento basada en modelos relativamente simples, pero apoyando en una extracción de características adecuada, puede alcanzar niveles de exactitud cercanos o superiores a los de arquitecturas más complejas, reduciendo de forma significativa los requerimientos computacionales. 
+
+\tableofcontents*
 
 \chapter{Planteamiento del problema}
 	El electrocardiograma (ECG) es una técnica no invasiva que permite registrar y medir las señales eléctricas generadas por el corazón. Consiste en la captación de la variación temporal del potencial bioeléctrico durante cada ciclo cardíaco, utilizando electrodos colocados en la superficie cutánea del paciente que registran dicha actividad eléctrica y producen un gráfico que muestra el ritmo y la fuerza de los latidos del corazón, este produce un patrón muy específico, y cualquier anomalía puede indicar un problema cardíaco \cite{ZHANG2021113}. El análisis del ECG proporciona datos sobre el sistema cardiovascular, en particular, el corazón, lo que permite detectar diversas enfermedades que pueden afectar su funcionamiento óptimo. Estas enfermedades incluyen arritmias cardíacas, obstrucción de arterias, insuficiencia cardíaca y ataques al corazón \cite{MedlineECG}. \\ Según la organización mundial de la salud \cite{Who}, las enfermedades cardiovasculares (ECV) son las principal causa de muerte en hombres y mujeres en el mundo, con alrededor de 17,9 millones de personas que mueren al año a causa de estas. Entre los numerosos factores que llevan a esta consecuencia, se encuentran los errores provenientes de la interpretación manual de los electrocardiogramas (ECGs), por lo general, los médicos emplean características heurísticas diseñadas manualmente o utilizan arquitecturas de aprendizaje de características superficiales, esto puede generar como consecuencia, variabilidad entre los diagnósticos de los observadores e identificación de anomalías incorrectas que pueden llevar a ocasionar diagnósticos imprecisos y en consecuencia, tratamientos inadecuados. Además estos métodos manuales que utilizan arquitecturas de aprendizaje de características superficiales, descartan información relevante del ECG inmersa dentro de características que no son superficiales, lo que provee una baja exactitud en el diagnostico a partir de las señales, por lo que siempre será necesario de la supervisión de un experto con el fin de corregir estos errores, además algunas enfermedades cardíacas, como la enfermedad de las arterias coronarias en etapa temprana, pueden no ser detectables en un ECG, también se debe resaltar, que el ECG se puede ver afectado por factores externos, como el movimiento del paciente, las interferencias electromagnéticas, la incorrecta colocación de los electrodos, estados ansiosos de los pacientes al momento de aplicarles el examen o el uso de medicamentos.
