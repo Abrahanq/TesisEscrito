@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  15 DEC 2025 16:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.26)  18 DEC 2025 13:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1220,7 +1220,7 @@ on_diagrama_2.png>]
 Cap\'{\i }tulo 4.
 
 Overfull \hbox (0.658pt too wide) in paragraph at lines 1495--1495
- []|\T1/cmr/bx/n/12 Desviación| 
+ []|\T1/cmr/bx/n/12 Desviación 
  []
 
 
@@ -1252,7 +1252,7 @@ Overfull \hbox (0.73198pt too wide) in paragraph at lines 1499--1499
 
 ]
 Overfull \hbox (0.658pt too wide) in paragraph at lines 1515--1515
- []|\T1/cmr/bx/n/12 Desviación| 
+ []|\T1/cmr/bx/n/12 Desviación 
  []
 
 
@@ -1292,7 +1292,7 @@ Overfull \hbox (3.87251pt too wide) in paragraph at lines 1536--1536
 
 
 Overfull \hbox (3.50302pt too wide) in paragraph at lines 1536--1536
- []|\T1/cmr/bx/n/12 Desviación| 
+ []|\T1/cmr/bx/n/12 Desviación 
  []
 
 
@@ -1642,7 +1642,7 @@ ic/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728
 .pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/tex
 mf/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sftt1200.pfb>
-Output written on main.pdf (89 pages, 5107436 bytes).
+Output written on main.pdf (89 pages, 5107437 bytes).
 PDF statistics:
  1541 PDF objects out of 1728 (max. 8388607)
  1333 compressed objects within 14 object streams
